@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+apps=(
+    bartender
+    firefox
+    flux
+    google-chrome
+    google-drive
+    hacker-menu
+    istat-menus
+    iterm2-beta
+    skype
+    spectacle
+    the-unarchiver
+    virtualbox
+    vlc
+)
+
+brew cask install ${apps[@]} --appdir=/Applications
