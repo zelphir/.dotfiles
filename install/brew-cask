@@ -1,19 +1,42 @@
 #!/usr/bin/env bash
 
 apps=(
-    bartender
-    firefox
-    flux
-    google-chrome
+    # essential
+    dropbox
     google-drive
-    hacker-menu
+
+    # browsers
+    firefox
+    google-chrome
+    
+    # utility
+    bartender
+    flux
     istat-menus
-    iterm2-beta
-    skype
     spectacle
     the-unarchiver
+
+    # dev
+    iterm2-beta
+    sublime-text3
     virtualbox
+
+    # others
+    hacker-menu
+    skype
     vlc
+    
+    # quicklook plugins
+    qlcolorcode
+    qlstephen
+    qlmarkdown
+    quicklook-json
+    qlprettypatch
+    quicklook-csv
+    betterzipql
+    qlimagesize
+    webpquicklook
+    suspicious-package
 )
 
 brew cask install ${apps[@]} --appdir=/Applications

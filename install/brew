@@ -9,5 +9,7 @@ brew_install_or_upgrade neovim --HEAD
 brew_install_or_upgrade zsh
 brew_install_or_upgrade git
 brew_install_or_upgrade nvm
+brew_install_or_upgrade ack
+brew_install_or_upgrade ag
 brew_install_or_upgrade reattach-to-user-namespace
 brew_install_or_upgrade highlight
