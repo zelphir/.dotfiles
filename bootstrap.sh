@@ -23,6 +23,7 @@ check_xcode
 # Install homebrew
 if type_exists 'brew'; then
 	brew update
+	brew upgrade --all
 else
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
@@ -56,19 +57,31 @@ e_success "Done!"
 
 
 ################################################################################
-# Install Vundle and vim plugins
+# Install Neovim config and plugins
 ################################################################################
 
-#e_running "Installing Vundle and vim plugins..."
-#if [ -d $HOME/.vim/bundle ]; then
-#  rm -rf $HOME/.vim/bundle
-#fi
-#git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-#cp -R $DOTFILES_DIR/vim/colors $HOME/.vim # So vim won't complain about solarized not being found.
-#vim +PluginInstall +qall
-#rm -rf $HOME/.vim/colors
-#
-#e_success "Done!"
+e_running "Installing Neovim config and plugins..."
+
+if [ ! -d ~/.config/nvim ]; then
+  mkdir ~/.config/nvim
+fi
+
+install_nvim_folder
+
+e_success "Done!"
+
+
+################################################################################
+# Install tmux config
+################################################################################
+
+e_running "Installing tmux config..."
+
+if [ ! -f ~/.tmux.conf ]; then
+  ln -sf $DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf
+fi
+
+e_success "Done!"
 
 
 ################################################################################

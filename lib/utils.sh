@@ -164,4 +164,18 @@ brew_launchctl_restart() {
   launchctl load "$HOME/Library/LaunchAgents/$plist" >/dev/null
 }
 
+install_plug_nvim() {
+  curl -fLo ~/.config/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+}
 
+install_nvim_folder() {
+  if [ ! -d ~/.config/nvim/autoload ]; then
+    mkdir -p ~/.config/nvim/autoload
+  fi
+
+  install_plug_nvim
+  
+  ln -sf $DOTFILES_DIR/neovim/spell/dictionary.utf-8.add ~/.config/nvim/dictionary.utf-8.add
+  ln -sf $DOTFILES_DIR/neovim/UltiSnips ~/.config/nvim/UltiSnips
+  ln -sf $DOTFILES_DIR/neovim/init.vim ~/.config/nvim/init.vim
+}
