@@ -2,7 +2,10 @@
 
 brew update
 
-brew_install_or_upgrade 'dockutil'
-brew_install_or_upgrade 'trash'
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'wget'
+brew install dockutil
+brew install trash
+brew install tree
+brew install wget
+brew install https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb
+brew install --HEAD neovim
+brew install zsh

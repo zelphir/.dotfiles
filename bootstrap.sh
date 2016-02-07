@@ -7,62 +7,8 @@
 # other development preferences.
 ################################################################################
 
-
-################################################################################
-# First, some helpful functions borrowed from Laptop. Thank you, thoughtbot. :)
-################################################################################
-
 # include my library helpers for colorized echo and require_brew, etc
-source ./lib/helper.sh
-
-brew_install_or_upgrade() {
-  if brew_is_installed "$1"; then
-    if brew_is_upgradable "$1"; then
-      running "Upgrading %s ..." "$1"
-      brew upgrade "$@"
-    else
-      warn "Already using the latest version of %s. Skipping ..." "$1"
-    fi
-  else
-    running "Installing %s ..." "$1"
-    brew install "$@"
-  fi
-}
-
-brew_is_installed() {
-  local name="$(brew_expand_alias "$1")"
-
-  brew list -1 | grep -Fqx "$name"
-}
-
-brew_is_upgradable() {
-  local name="$(brew_expand_alias "$1")"
-
-  ! brew outdated --quiet "$name" >/dev/null
-}
-
-brew_tap() {
-  brew tap "$1" 2> /dev/null
-}
-
-brew_expand_alias() {
-  brew info "$1" 2>/dev/null | head -1 | awk '{gsub(/:/, ""); print $1}'
-}
-
-brew_launchctl_restart() {
-  local name="$(brew_expand_alias "$1")"
-  local domain="homebrew.mxcl.$name"
-  local plist="$domain.plist"
-
-  running "Restarting %s ..." "$1"
-  mkdir -p "$HOME/Library/LaunchAgents"
-  ln -sfv "/usr/local/opt/$name/$plist" "$HOME/Library/LaunchAgents"
-
-  if launchctl list | grep -Fq "$domain"; then
-    launchctl unload "$HOME/Library/LaunchAgents/$plist" >/dev/null
-  fi
-  launchctl load "$HOME/Library/LaunchAgents/$plist" >/dev/null
-}
+source $HOME/.dotfiles/lib/helper.sh
 
 
 ################################################################################
@@ -78,7 +24,6 @@ set -u # Prevent unset variables
 ################################################################################
 
 osname=$(uname)
-divider="====> "
 COMMANDLINE_TOOLS="/Library/Developer/CommandLineTools"
 DOTFILES_DIR=$HOME/.dotfiles
 
@@ -94,47 +39,30 @@ you can try running this script again."
   exit 1
 fi
 
-
 ################################################################################
-# 2. Install oh-my-zsh
-################################################################################
-
-#running "$divider Step 2: Installing oh-my-zsh..."
-#
-#if [ -d "$HOME/.oh-my-zsh" ]; then
-#  rm -rf $HOME/.oh-my-zsh
-#fi
-#
-#git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-#
-#ok "Done!"
-#
-
-################################################################################
-# 3. Setup dotfiles
+# Setup prezto
 ################################################################################
 
-#running "$divider Step 3: Installing dotfiles..."
-#if [[ -d $DOTFILES_DIR ]]; then
-#  running "Backing up old dotfiles to $HOME/old_dotfiles_backup..."
-#  rm -rf $OLD_DOTFILES_BACKUP
-#  cp -R $DOTFILES_DIR $OLD_DOTFILES_BACKUP
-#  rm -rf $DOTFILES_DIR
-#fi
-#
-#running "Cloning your dotfiles repo to ${DOTFILES_DIR} ..."
-#
-#git clone $DOTFILES_REPO_URL -b $DOTFILES_BRANCH $DOTFILES_DIR
-#source $DOTFILES_DIR/install.sh
-#
-#ok "Done!"
+running "Installing prezto (zsh)"
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+ok "Done!"
+
+################################################################################
+# Setup dotfiles
+################################################################################
+
+running "Installing dotfiles..."
+source $DOTFILES_DIR/dotfiles.sh
+
+ok "Done!"
 
 
 ################################################################################
-# 6. Install Powerline-patched fonts
+# Install Powerline-patched fonts
 ################################################################################
 
-running "$divider Step 6: Installing fixed-width fonts patched for use with Powerline symbols..."
+running "Installing fixed-width fonts patched for use with Powerline symbols..."
 if [ -d "$HOME/src/fonts" ]; then
   rm -rf $HOME/src/fonts
 fi
@@ -148,10 +76,10 @@ ok "Done!"
 
 
 ################################################################################
-# 7. Install Vundle and vim plugins
+# Install Vundle and vim plugins
 ################################################################################
 
-#running "$divider Step 7: Installing Vundle and vim plugins..."
+#running "Installing Vundle and vim plugins..."
 #if [ -d $HOME/.vim/bundle ]; then
 #  rm -rf $HOME/.vim/bundle
 #fi
@@ -164,21 +92,22 @@ ok "Done!"
 
 
 ################################################################################
-# 8. Install extra Homebrew packages
+# Install extra Homebrew packages
 ################################################################################
 
-running "$divider Step 8: Installing extra Homebrew formulae..."
-
+running "Installing extra Homebrew formulae..."
+brew_tap 'neovim/homebrew-neovim'
+brew_tap 'neovim/neovim'
 source "$DOTFILES_DIR/install/brew"
 
 ok "Done!"
 
 
 ################################################################################
-# 9. Install Cask and related software
+# Install Cask and related software
 ################################################################################
 
-running "$divider Step 9: Installing Cask and related software..."
+running "Installing Cask and related software..."
 
 brew_tap 'caskroom/cask'
 brew_tap 'caskroom/versions'
@@ -188,10 +117,10 @@ ok "Done!"
 
 
 ################################################################################
-# 10. Set OS X preferences
+# Set OS X preferences
 ################################################################################
 
-running "$divider Step 10: Setting OS X preferences..."
+running "Setting OS X preferences..."
 
 source "$DOTFILES_DIR/install/osx-defaults"
 source "$DOTFILES_DIR/install/osx-dock"
