@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-brew update
-
 brew_install_or_upgrade dockutil
 brew_install_or_upgrade trash
 brew_install_or_upgrade tree

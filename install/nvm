@@ -2,8 +2,6 @@
 
 # reload nvm into this environment
 NVM_DIR=$HOME/.nvm
-NVM_IOJS_RC_PREFIX=""
-NVM_ADD_SYSTEM=""
 
 source $(brew --prefix nvm)/nvm.sh
 
@@ -11,7 +9,6 @@ if [ ! -d "$HOME/.nvm" ]; then
   mkdir $HOME/.nvm
 fi
 
-nvm install stable
 nvm install 4.2
+nvm install stable
 nvm alias default stable
-nvm use default

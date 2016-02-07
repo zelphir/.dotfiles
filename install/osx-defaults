@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+source $HOME/.dotfiles/lib/vars.sh
+source $DOTFILES_DIR/lib/utils.sh
 
 ################################################################################
 # Adapted from https://mths.be/osx.
@@ -13,25 +15,12 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# include my library helpers for colorized echo and require_brew, etc
-source $HOME/.dotfiles/lib/helper.sh
-
-###############################################################################
-# Set custom variables                                                        #
-###############################################################################
-
-COMPUTER_NAME="Roberto's Macbook"
-HOST_NAME="roberto-mbp"
-LOCAL_HOST_NAME="roberto-mbp"
-NET_BIOS_NAME="roberto-mbp"
-TIME_ZONE="Europe/London"
-
 
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
 
-running "Setting General UI/UX defaults..."
+e_running "Setting General UI/UX defaults..."
 
 # Use dark menu bar and dock
 defaults write NSGlobalDomain AppleInterfaceStyle Dark
@@ -86,7 +75,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # SSD-specific tweaks                                                         #
 ###############################################################################
 
-running "Setting SSD-specific tweaks..."
+e_running "Setting SSD-specific tweaks..."
 
 # Disable the sudden motion sensor as it's not useful for SSDs
 sudo pmset -a sms 0
@@ -96,7 +85,7 @@ sudo pmset -a sms 0
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-running "Setting Trackpad, mouse, keyboard, Bluetooth accessories, and input defaults..."
+e_running "Setting Trackpad, mouse, keyboard, Bluetooth accessories, and input defaults..."
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -130,7 +119,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Finder                                                                      #
 ###############################################################################
 
-running "Setting Finder defaults..."
+e_running "Setting Finder defaults..."
 
 # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 defaults write com.apple.finder QuitMenuItem -bool true
@@ -190,7 +179,7 @@ chflags nohidden ~/Library
 # Dock                                                                        #
 ###############################################################################
 
-running "Setting dock defaults..."
+e_running "Setting dock defaults..."
 
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
@@ -215,7 +204,7 @@ defaults write com.apple.dock tilesize -int 36
 # Dashboard & Spaces                                                          #
 ###############################################################################
 
-running "Setting Dashboard and Spaces defaults..."
+e_running "Setting Dashboard and Spaces defaults..."
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -234,7 +223,7 @@ defaults write com.apple.dock mru-spaces -bool false
 # Hot corners                                                                 #
 ###############################################################################
 
-running "Setting hot corners defaults (currently no changes)..."
+e_running "Setting hot corners defaults (currently no changes)..."
 
 # Possible values:
 #  0: no-op
@@ -312,7 +301,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Mail                                                                        #
 ###############################################################################
 
-running "Setting Mail defaults..."
+e_running "Setting Mail defaults..."
 
 # Disable send and reply animations in Mail.app
 defaults write com.apple.mail DisableReplyAnimations -bool true
@@ -352,7 +341,7 @@ defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" -string "@\\
 # Time Machine                                                                #
 ###############################################################################
 
-running "Setting Time Machine defaults..."
+e_running "Setting Time Machine defaults..."
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -367,7 +356,7 @@ defaults write com.apple.TimeMachine RequiresACPower 0
 # Spotlight                                                                   #
 ###############################################################################
 
-running "Setting Spotlight defaults..."
+e_running "Setting Spotlight defaults..."
 
 # Hide Spotlight tray-icon (and subsequent helper)
 # sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -382,7 +371,7 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 # Terminal.app & iTerm 2                                                      #
 ###############################################################################
 
-running "Setting Terminal defaults..."
+e_running "Setting Terminal defaults..."
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -394,14 +383,24 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# Installing the Solarized Dark theme for iTerm (opening file)
-open "$HOME/.dotfiles/themes/gruvbox-dark.itermcolors";ok
+# Installing settings and theme for iTerm
+ITERM_THEMES=$DOTFILES_DIR/iterm/*.itermcolors
+
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "${DOTFILES_DIR}/iterm"
+defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
+
+for f in $ITERM_THEMES; do
+  THEME=$(basename "$f")
+  defaults write com.googlecode.iterm2 'Custom Color Presets' -dict-add "$THEME" "$(cat "$f")"
+done
+
+e_success "Done!"
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
 
-running "Setting Google Chrome defaults..."
+e_running "Setting Google Chrome defaults..."
 
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
