@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+apps=(
+    gulp
+    vtop
+)
+
+npm install -g ${apps[@]} 
