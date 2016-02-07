@@ -91,9 +91,6 @@ if [ ! -d "$HOME/.zprezto" ]; then
   e_running "Installing prezto (zsh)"
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
   
-  # Set zsh as default shell
-	chsh -s $(which zsh)
-  
   e_success "Done!"
 fi
 
