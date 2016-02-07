@@ -9,3 +9,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source nvm
+export NVM_DIR=~/.nvm
+
+if hash brew 2>/dev/null; then
+    source $(brew --prefix nvm)/nvm.sh
+fi

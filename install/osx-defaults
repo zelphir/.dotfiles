@@ -394,6 +394,8 @@ defaults write com.apple.terminal "Startup Window Settings" -string "Pro"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+# Installing the Solarized Dark theme for iTerm (opening file)
+open "$HOME/.dotfiles/themes/gruvbox-dark.itermcolors";ok
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #

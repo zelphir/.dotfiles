@@ -43,10 +43,13 @@ fi
 # Setup prezto
 ################################################################################
 
-running "Installing prezto (zsh)"
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+if [ ! -d "$HOME/.zprezto" ]; then
+  running "Installing prezto (zsh)"
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-ok "Done!"
+  ok "Done!"
+fi
+
 
 ################################################################################
 # Setup dotfiles
@@ -114,6 +117,15 @@ brew_tap 'caskroom/versions'
 source "$DOTFILES_DIR/install/brew-cask"
 
 ok "Done!"
+
+
+################################################################################
+# Install Node with NVM 
+################################################################################
+
+running "Installing Node via nvm"
+
+source "$DOTFILES_DIR/install/nvm"
 
 
 ################################################################################

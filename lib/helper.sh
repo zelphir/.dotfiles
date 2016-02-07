@@ -16,11 +16,15 @@ COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
 function ok() {
-    echo "$COL_GREEN[ok]$COL_RESET "$1
+    local fmt="$COL_GREEN[ok]$COL_RESET $1"; shift
+    
+    printf "$fmt\n" "$@"
 }
 
 function running() {
-    echo "$COL_YELLOW ⇒ $COL_RESET$1: "
+    local fmt="$COL_YELLOW ⇒ $COL_RESET $1"; shift
+    
+    printf "$fmt\n" "$@"
 }
 
 function warn() {
@@ -30,7 +34,9 @@ function warn() {
 }
 
 function error() {
-    echo "$COL_RED[error]$COL_RESET "$1
+    local fmt="$COL_RED[error]$COL_RESET $1"; shift
+
+    printf "$fmt\n" "$@"
 }
 
 brew_install_or_upgrade() {
