@@ -10,6 +10,12 @@
 # include my library helpers for colorized echo and require_brew, etc
 source $HOME/.dotfiles/lib/helper.sh
 
+# Install xcode command line tool
+xcode-select --install
+
+# Install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 ################################################################################
 # Next, a little more setup...
