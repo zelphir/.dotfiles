@@ -8,3 +8,4 @@ alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
