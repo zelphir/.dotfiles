@@ -22,10 +22,10 @@ check_xcode
 
 # Install homebrew
 if type_exists 'brew'; then
-	brew update
-	brew upgrade --all
+  brew update
+  brew upgrade --all
 else
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 
@@ -103,7 +103,7 @@ e_success "Done!"
 if [ ! -d "$HOME/.zprezto" ]; then
   e_running "Installing prezto (zsh)"
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  
+  chsh -s $(`which zsh`) $USER
   e_success "Done!"
 fi
 
@@ -122,7 +122,7 @@ e_success "Done!"
 
 
 ################################################################################
-# Install Node with NVM 
+# Install Node with NVM
 ################################################################################
 
 e_running "Installing Node via nvm"

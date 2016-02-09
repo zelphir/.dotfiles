@@ -1,3 +1,5 @@
+set noshowmode
+
 " ---
 " VimPlug
 " ---
@@ -13,35 +15,30 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-startify'
-Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'WolfgangMehner/lua-support'
-Plug 'tpope/vim-dispatch'
 Plug 'Chiel92/vim-autoformat'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'scrooloose/syntastic'
-"Plug 'gilligan/vim-lldb'
-Plug 'critiqjo/lldb.nvim'
+Plug 'scrooloose/syntastic'
 Plug 'ryanoasis/vim-devicons'
-Plug 'vim-scripts/c.vim'
-Plug 'tikhomirov/vim-glsl'
 Plug 'mileszs/ack.vim'
 Plug 'powerman/vim-plugin-viewdoc'
 Plug 'rizzatti/dash.vim'
-"Plug 'rdnetto/YCM-Generator'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'justinmk/vim-sneak'
+Plug 'Yggdroot/indentLine'
+Plug 'talek/obvious-resize'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --tern-completer' }
 
 call plug#end()
 
@@ -52,8 +49,8 @@ call plug#end()
 "set t_Co=256
 set background=dark
 "let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_invert_signs=0
-let g:gruvbox_sign_column='dark0'
+"let g:gruvbox_invert_signs=0
+"let g:gruvbox_sign_column='dark0'
 colorscheme gruvbox
 
 set fillchars+=vert:│
@@ -65,7 +62,10 @@ set fillchars+=vert:│
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeMinimalUI=1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-
+let g:indentLine_faster = 1
+set list          " Display unprintable characters f12 - switches
+set listchars=tab:•\ ,trail:•,extends:»,precedes:« " Unprintable chars mapping
+"let g:bufferline_echo = 0
 " ---
 " Tagbar
 " ---
@@ -75,50 +75,52 @@ let g:tagbar_compact = 1
 " You Complete Me
 " ---
 let g:ycm_register_as_syntastic_checker = 1 "default 1
-let g:Show_diagnostics_ui = 1 "default 1
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
+"let g:Show_diagnostics_ui = 1 "default 1
 
 "will put icons in Vim's gutter on lines that have a diagnostic set.
 "Turning this off will also turn off the YcmErrorLine and YcmWarningLine
 "highlighting
-let g:ycm_auto_trigger = 1
-let g:ycm_enable_diagnostic_signs = 1
-let g:ycm_enable_diagnostic_highlighting = 1
-let g:ycm_always_populate_location_list = 1 "default 0
-let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
+"let g:ycm_auto_trigger = 1
+"let g:ycm_enable_diagnostic_signs = 1
+"let g:ycm_enable_diagnostic_highlighting = 1
+"let g:ycm_always_populate_location_list = 1 "default 0
+"let g:ycm_open_loclist_on_ycm_diags = 1 "default 1
 
 "let g:ycm_autoclose_preview_window_after_completion = 1
 "let g:ycm_autoclose_preview_window_after_insertion = 1
 
-let g:ycm_complete_in_strings = 1 "default 1
-let g:ycm_collect_identifiers_from_tags_files = 1 "default 0
-"let g:ycm_path_to_python_interpreter = '' "default ''
+"let g:ycm_complete_in_strings = 1 "default 1
+"let g:ycm_collect_identifiers_from_tags_files = 1 "default 0
+"let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+"let g:ycm_server_use_vim_stdout = 0 "default 0 (logging to console)
+"let g:ycm_server_log_level = 'info' "default info
 
-let g:ycm_server_use_vim_stdout = 0 "default 0 (logging to console)
-let g:ycm_server_log_level = 'info' "default info
+"let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  "where to search for .ycm_extra_conf.py if not found
+"let g:ycm_confirm_extra_conf = 0
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'  "where to search for .ycm_extra_conf.py if not found
-let g:ycm_confirm_extra_conf = 0
+"let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
+"let g:ycm_filetype_whitelist = { '*': 1 }
+"let g:ycm_key_invoke_completion = '<C-Space>'
 
-let g:ycm_goto_buffer_command = 'same-buffer' "[ 'same-buffer', 'horizontal-split', 'vertical-split', 'new-tab' ]
-let g:ycm_filetype_whitelist = { '*': 1 }
-let g:ycm_key_invoke_completion = '<C-Space>'
+"let g:ycm_warning_symbol = '?'
+"let g:ycm_error_symbol = '!'
 
-let g:ycm_warning_symbol = '?'
-let g:ycm_error_symbol = '!'
-
-let g:ycm_semantic_triggers =  {
-    \   'c' : ['->', '.'],
-    \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-    \             're!\[.*\]\s'],
-    \   'ocaml' : ['.', '#'],
-    \   'cpp,objcpp' : ['->', '.', '::'],
-    \   'perl' : ['->'],
-    \   'php' : ['->', '::'],
-    \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-    \   'ruby' : ['.', '::'],
-    \   'lua' : ['.', ':'],
-    \   'erlang' : [':'],
-    \ }
+"let g:ycm_semantic_triggers =  {
+"    \   'c' : ['->', '.'],
+"    \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+"    \             're!\[.*\]\s'],
+"    \   'ocaml' : ['.', '#'],
+"    \   'cpp,objcpp' : ['->', '.', '::'],
+"    \   'perl' : ['->'],
+"    \   'php' : ['->', '::'],
+"    \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+"    \   'ruby' : ['.', '::'],
+"    \   'lua' : ['.', ':'],
+"    \   'erlang' : [':'],
+"    \ }
 
 nnoremap <F11> :YcmForceCompileAndDiagnostics <CR>
 
@@ -181,7 +183,6 @@ filetype plugin indent on
 set listchars=tab:›\ ,eol:¬   " Use the same symbols as TextMate for tabstops and EOLs
 
 syntax enable
-set nocompatible
 
 " Tab behavior
 set smarttab
@@ -194,12 +195,14 @@ set clipboard=unnamed
 " ---
 " Post Load Fixes
 " ---
-function CorrectColorScheme()
-  " Annoying tilde should be hidden
-  highlight EndOfBuffer ctermfg=0 guifg=#282828
+if !exists("*CorrectColorScheme")
+  function CorrectColorScheme()
+    " Annoying tilde should be hidden
+    highlight EndOfBuffer ctermfg=0 guifg=#282828
 
-  highlight VertSplit ctermbg=NONE guifg=#404040 guibg=NONE
-endfunction
+    highlight VertSplit ctermbg=NONE guifg=#404040 guibg=NONE
+  endfunction
+endif
 autocmd VimEnter * call CorrectColorScheme()
 
 " ---
@@ -228,4 +231,9 @@ nnoremap <leader>gt :YcmCompleter GetType<CR>
 nnoremap <leader>gp :YcmCompleter GetParent<CR>
 nnoremap <leader>f :YcmCompleter FixIt<CR>
 
-nmap <silent> <leader>d <Plug>DashSearch
+map <C-]> :YcmCompleter GoToImprecise<CR>
+noremap <silent> <C-Up> :<C-U>ObviousResizeUp<CR>
+noremap <silent> <C-Down> :<C-U>ObviousResizeDown<CR>
+noremap <silent> <C-Left> :<C-U>ObviousResizeLeft<CR>
+noremap <silent> <C-Right> :<C-U>ObviousResizeRight<CR>
+set viminfo='100,n$HOME/.vim/files/info/viminfo
