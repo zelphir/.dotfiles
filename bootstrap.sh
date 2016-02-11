@@ -47,8 +47,8 @@ e_success "Done!"
 ################################################################################
 
 e_running "Installing fixed-width fonts patched for use with Powerline symbols..."
-cd ~$FONTS_DIR && curl -fLo "Sauce Code Pro Light Nerd Font Complete Mono" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Light/complete/Sauce%20Code%20Pro%20Light%20Nerd%20Font%20Complete%20Mono.ttf
-cd ~$FONTS_DIR && curl -fLo "Sauce Code Pro Medium Nerd Font Plus Octicons" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Medium/additional-variations/Sauce%20Code%20Pro%20Medium%20Nerd%20Font%20Plus%20Octicons.ttf
+(cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Light Nerd Font Complete Mono" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Light/complete/Sauce%20Code%20Pro%20Light%20Nerd%20Font%20Complete%20Mono.ttf)
+(cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Medium Nerd Font Plus Octicons" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Medium/additional-variations/Sauce%20Code%20Pro%20Medium%20Nerd%20Font%20Plus%20Octicons.ttf)
 
 e_success "Done!"
 
@@ -93,8 +93,7 @@ e_success "Done!"
 
 e_running "Installing fisherman"
 curl -sL install.fisherman.sh | fish
-chsh -s $(`which fish`) $USER
-
+chsh -s `which fish` $USER
 source "$DOTFILES_DIR/install/fisherman.sh"
 
 e_success "Done!"
