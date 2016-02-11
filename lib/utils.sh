@@ -42,10 +42,10 @@ seek_confirmation() {
 # Test whether a command exists
 # $1 - cmd to test
 type_exists() {
-    if [ $(type -P $1) ]; then
-      return 0
-    fi
-    return 1
+  if [ $(type -P $1) ]; then
+    return 0
+  fi
+  return 1
 }
 
 # Test whether the result of an 'ask' is a confirmation
@@ -94,10 +94,8 @@ check_xcode() {
 
 # Install Xcode Command Line Tools
 install_xcode() {
-  # figure out what version of OS X is running
   darwin_version=$(uname -r)
 
-  # are you on Mavericks, Darwin kernal 13.0.0 or above
   if (( ${darwin_version%%.*} > 12 )); then
     e_header "Installing Xcode Command Line Tools. Follow the prompt"
     xcode-select --install
@@ -174,8 +172,6 @@ install_nvim_folder() {
   fi
 
   install_plug_nvim
-  
-  ln -sf $DOTFILES_DIR/neovim/spell/dictionary.utf-8.add ~/.config/nvim/dictionary.utf-8.add
-  ln -sf $DOTFILES_DIR/neovim/UltiSnips ~/.config/nvim/UltiSnips
+
   ln -sf $DOTFILES_DIR/neovim/init.vim ~/.config/nvim/init.vim
 }

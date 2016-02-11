@@ -39,4 +39,8 @@ apps=(
     suspicious-package
 )
 
+brew_tap 'caskroom/cask'
+brew_tap 'caskroom/versions'
+brew_tap 'neovim/neovim'
+
 brew cask install ${apps[@]} --appdir=/Applications

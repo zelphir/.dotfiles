@@ -1,8 +1,12 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+source $DOTFILES_DIR/lib/utils.sh
 
 apps=(
     gulp
     vtop
 )
 
-npm install -g ${apps[@]} 
+if !type_exists ${apps[@]}; then
+  npm install -g ${apps[@]}
+fi
