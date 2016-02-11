@@ -3,9 +3,6 @@
 # Install GNU core utilities (those that come with OS X are outdated).
 brew_install_or_upgrade coreutils
 
-# Install some other useful utilities like `sponge`.
-brew_install_or_upgrade moreutils
-
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew_install_or_upgrade findutils
 
@@ -13,7 +10,6 @@ brew_install_or_upgrade findutils
 brew_install_or_upgrade gnu-sed --with-default-names
 
 # Install some tools
-brew_install_or_upgrade bash-completion2
 brew_install_or_upgrade dockutil
 brew_install_or_upgrade trash
 brew_install_or_upgrade tree
@@ -26,17 +22,6 @@ brew_install_or_upgrade nvm
 brew_install_or_upgrade ack
 brew_install_or_upgrade ag
 brew_install_or_upgrade reattach-to-user-namespace
-brew_install_or_upgrade highlight
 brew_install_or_upgrade vim --override-system-vi
-brew_install_or_upgrade homebrew/dupes/grep
-brew_install_or_upgrade homebrew/dupes/openssh
-brew_install_or_upgrade homebrew/dupes/screen
-
-# Install font tools.
-brew tap bramstein/webfonttools
-brew_install_or_upgrade sfnt2woff
-brew_install_or_upgrade sfnt2woff-zopfli
-brew_install_or_upgrade woff2
-brew_install_or_upgrade dark-mode
 
 brew cleanup
