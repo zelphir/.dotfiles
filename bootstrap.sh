@@ -88,17 +88,6 @@ fi
 e_success "Done!"
 
 ################################################################################
-# Install fisherman for fish 
-################################################################################
-
-e_running "Installing fisherman"
-curl -sL install.fisherman.sh | fish
-chsh -s `which fish` $USER
-source "$DOTFILES_DIR/install/fisherman.sh"
-
-e_success "Done!"
-
-################################################################################
 # Install Cask and related software
 ################################################################################
 
@@ -135,8 +124,13 @@ source "$DOTFILES_DIR/install/osx-dock"
 
 e_success "Done!"
 
-echo
-echo "**********************************************************************"
-echo "**** Bootstrap script complete! Please restart your computer. ****"
-echo "**********************************************************************"
-echo
+################################################################################
+# Install fisherman for fish 
+################################################################################
+
+e_running "Installing fisherman"
+curl -sL install.fisherman.sh | fish
+chsh -s `which fish` $USER
+source "$DOTFILES_DIR/install/fisherman.sh"
+
+e_success "Done!"
