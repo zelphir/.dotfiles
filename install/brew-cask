@@ -20,6 +20,8 @@ apps=(
   iterm2-beta
   sublime-text3
   virtualbox
+  java
+  genymotion
 
   # others
   hacker-menu
