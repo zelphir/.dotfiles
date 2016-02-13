@@ -19,6 +19,7 @@ brew_tap 'neovim/neovim'
 brew_install_or_upgrade neovim --HEAD
 brew_install_or_upgrade fish --HEAD
 brew_install_or_upgrade git
+brew_install_or_upgrade gradle
 brew_install_or_upgrade python3
 brew_install_or_upgrade watchman
 brew_install_or_upgrade flow
