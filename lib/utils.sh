@@ -92,27 +92,6 @@ check_xcode() {
   fi
 }
 
-# Install Xcode Command Line Tools
-install_xcode() {
-  darwin_version=$(uname -r)
-
-  if (( ${darwin_version%%.*} > 12 )); then
-    e_header "Installing Xcode Command Line Tools. Follow the prompt"
-    xcode-select --install
-    seek_confirmation "Is Xcode done installing"
-
-    if is_confirmed; then
-      check_xcode
-    else
-      check_xcode
-    fi
-  else
-    printf "  Download them from: https://developer.apple.com/downloads\n"
-    printf "  Then run: bash ~/.dotfiles/bin/dotfiles\n"
-    exit 1
-  fi
-}
-
 brew_install_or_upgrade() {
   if brew_is_installed "$1"; then
     if brew_is_upgradable "$1"; then
@@ -163,16 +142,36 @@ brew_launchctl_restart() {
 }
 
 install_plug_nvim() {
-  curl -fLo ~/.config/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo $CONFIG_DIR/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 install_nvim_folder() {
-  if [ ! -d ~/.config/nvim/autoload ]; then
-    mkdir -p ~/.config/nvim/autoload
+  if [ ! -d $CONFIG_DIR/nvim/autoload ]; then
+    mkdir -p $CONFIG_DIR/nvim/autoload
   fi
 
   install_plug_nvim
 
   ln -sf $DOTFILES_DIR/neovim/init.vim $CONFIG_DIR/nvim/init.vim
   pip3 install neovim
+}
+
+# Install Xcode Command Line Tools
+install_xcode() {
+  darwin_version=$(uname -r)
+
+  if (( ${darwin_version%%.*} > 12 )); then
+    e_header "Installing Xcode Command Line Tools. Follow the prompt"
+    xcode-select --install
+    seek_confirmation "Is Xcode done installing"
+
+    if is_confirmed; then
+      check_xcode
+    else
+      check_xcode
+    fi
+  else
+    printf "  Download them from: https://developer.apple.com/downloads\n"
+    exit 1
+  fi
 }

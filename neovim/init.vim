@@ -36,6 +36,9 @@ Plug 'rizzatti/dash.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'Yggdroot/indentLine'
 Plug 'talek/obvious-resize'
+Plug 'Shougo/deoplete.nvim'
+Plug 'kballard/vim-fish'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -46,6 +49,11 @@ set background=dark
 colorscheme gruvbox
 
 set fillchars+=vert:│
+
+" ---
+"  Deoplete
+"  ---
+let g:deoplete#enable_at_startup = 1
 
 " ---
 " Nerdtree
