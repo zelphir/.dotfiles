@@ -7,6 +7,6 @@ apps=(
     vtop
 )
 
-if !type_exists ${apps[@]}; then
-  npm install -g ${apps[@]}
+if !(type_exists $HOME/.n/bin/${apps[@]}); then
+  $HOME/.n/bin/npm install -g ${apps[@]}
 fi

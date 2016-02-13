@@ -173,5 +173,6 @@ install_nvim_folder() {
 
   install_plug_nvim
 
-  ln -sf $DOTFILES_DIR/neovim/init.vim ~/.config/nvim/init.vim
+  ln -sf $DOTFILES_DIR/neovim/init.vim $CONFIG_DIR/nvim/init.vim
+  pip3 install neovim
 }

@@ -1,45 +1,45 @@
 #!/usr/bin/env bash
 
 apps=(
-    # essential
-    dropbox
-    google-drive
+  # essential
+  dropbox
+  google-drive
 
-    # browsers
-    firefox
-    google-chrome
-    
-    # utility
-    bartender
-    flux
-    istat-menus
-    spectacle
-    the-unarchiver
+  # browsers
+  firefox
+  google-chrome
 
-    # dev
-    iterm2-beta
-    sublime-text3
-    virtualbox
+  # utility
+  bartender
+  flux
+  istat-menus
+  spectacle
+  the-unarchiver
 
-    # others
-    hacker-menu
-    skype
-    vlc
-    
-    # quicklook plugins
-    qlcolorcode
-    qlstephen
-    qlmarkdown
-    quicklook-json
-    qlprettypatch
-    quicklook-csv
-    betterzipql
-    qlimagesize
-    webpquicklook
-    suspicious-package
+  # dev
+  iterm2-beta
+  sublime-text3
+  virtualbox
+
+  # others
+  hacker-menu
+  skype
+  vlc
+
+  # quicklook plugins
+  qlcolorcode
+  qlstephen
+  qlmarkdown
+  quicklook-json
+  qlprettypatch
+  quicklook-csv
+  betterzipql
+  qlimagesize
+  webpquicklook
+  suspicious-package
 )
 
 brew_tap 'caskroom/cask'
 brew_tap 'caskroom/versions'
 
-brew cask install ${apps[@]} --appdir=/Applications
+brew cask install ${apps[@]}

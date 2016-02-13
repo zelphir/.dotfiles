@@ -22,9 +22,10 @@ source $DOTFILES_DIR/lib/utils.sh
 ################################################################################
 
 # Install xcode command line tool
+e_header "Check Xcode"
 check_xcode
 
-e_header "Check/Install HomeBrew"
+e_header "Check/Install/Update HomeBrew"
 # Install homebrew
 if type_exists 'brew'; then
   brew update
@@ -47,8 +48,8 @@ e_success "Done!"
 ################################################################################
 
 e_running "Installing fixed-width fonts patched for use with Powerline symbols..."
-(cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Light Nerd Font Complete Mono" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Light/complete/Sauce%20Code%20Pro%20Light%20Nerd%20Font%20Complete%20Mono.ttf)
-(cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Medium Nerd Font Plus Octicons" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/SourceCodePro/Medium/additional-variations/Sauce%20Code%20Pro%20Medium%20Nerd%20Font%20Plus%20Octicons.ttf)
+cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Light Nerd Font Complete Mono.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Light/complete/Sauce%20Code%20Pro%20Light%20Nerd%20Font%20Complete%20Mono.ttf
+cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Medium Nerd Font Plus Octicons.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Medium/additional-variations/Sauce%20Code%20Pro%20Medium%20Nerd%20Font%20Plus%20Octicons.ttf
 
 e_success "Done!"
 
@@ -97,11 +98,32 @@ source "$DOTFILES_DIR/install/brew-cask"
 e_success "Done!"
 
 ################################################################################
-# Install Node with NVM
+# Install fish
 ################################################################################
 
-e_running "Installing Node via nvm"
-source "$DOTFILES_DIR/install/nvm"
+e_running "Installing fish"
+if [ ! -d $DOTFILES_DIR/fish/plugins/foreign-env ]; then
+  git clone https://github.com/oh-my-fish/plugin-foreign-env.git $DOTFILES_DIR/fish/plugins/foreign-env
+fi
+
+LINE="/usr/local/bin/fish"
+FILE=/etc/shells
+
+ln -sf $DOTFILES_DIR/fish $CONFIG_DIR/fish
+if ! grep -q "$LINE" $FILE; then
+  echo "$LINE" | sudo tee -a $FILE
+fi
+
+chsh -s `which fish` $USER
+
+e_success "Done!"
+
+################################################################################
+# Install Node with N-installer
+################################################################################
+
+e_running "Installing Node with n-installer"
+curl -L http://git.io/n-install | N_PREFIX=$HOME/.n bash -s -- -y stable lts
 
 e_success "Done!"
 
@@ -121,16 +143,5 @@ e_success "Done!"
 e_running "Setting OS X preferences..."
 source "$DOTFILES_DIR/install/osx-defaults"
 source "$DOTFILES_DIR/install/osx-dock"
-
-e_success "Done!"
-
-################################################################################
-# Install fisherman for fish 
-################################################################################
-
-e_running "Installing fisherman"
-curl -sL install.fisherman.sh | fish
-chsh -s `which fish` $USER
-source "$DOTFILES_DIR/install/fisherman.sh"
 
 e_success "Done!"
