@@ -26,6 +26,7 @@ brew_install_or_upgrade flow
 brew_install_or_upgrade android-sdk
 brew_install_or_upgrade ack
 brew_install_or_upgrade ag
+brew_install_or_upgrade ctags
 brew_tap homebrew/completions
 brew_install_or_upgrade homebrew/completions/brew-cask-completion
 brew_install_or_upgrade reattach-to-user-namespace

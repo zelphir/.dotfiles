@@ -39,14 +39,29 @@ Plug 'talek/obvious-resize'
 Plug 'Shougo/deoplete.nvim'
 Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
 " ---
 " Theme
 " ---
-set background=dark
+syntax enable
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme gruvbox
+set background=dark
+
+" ---
+" AirLine
+" ---
+" Set theme
+let g:airline_theme = 'gruvbox'
+" Show airline with single file
+set laststatus=2
+" Use powerline font
+let g:airline_powerline_fonts = 1
+" Enable tabline
+let g:airline#extensions#tabline#enabled = 1
 
 set fillchars+=vert:│
 
@@ -86,18 +101,6 @@ let g:gitgutter_sign_modified = '±'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '^'
 let g:gitgutter_sign_modified_removed = '='
-
-" ---
-" AirLine
-" ---
-" Set theme
-let g:airline_theme = 'gruvbox'
-" Show airline with single file
-set laststatus=2
-" Use powerline font
-let g:airline_powerline_fonts = 1
-" Enable tabline
-let g:airline#extensions#tabline#enabled = 1
 
 " ---
 " Settings
