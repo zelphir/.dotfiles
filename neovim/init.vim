@@ -1,5 +1,4 @@
 scriptencoding utf-8
-set noshowmode
 
 " ---
 " VimPlug
@@ -30,12 +29,10 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'ryanoasis/vim-devicons'
-Plug 'mileszs/ack.vim'
 Plug 'powerman/vim-plugin-viewdoc'
 Plug 'rizzatti/dash.vim'
-Plug 'justinmk/vim-sneak'
+Plug 'hsanson/vim-resize'
 Plug 'Yggdroot/indentLine'
-Plug 'talek/obvious-resize'
 Plug 'Shougo/deoplete.nvim'
 Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
@@ -46,24 +43,12 @@ call plug#end()
 " ---
 " Theme
 " ---
-syntax enable
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme gruvbox
+"syntax enable
+"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set noshowmode
 set background=dark
-
-" ---
-" AirLine
-" ---
-" Set theme
-let g:airline_theme = 'gruvbox'
-" Show airline with single file
-set laststatus=2
-" Use powerline font
-let g:airline_powerline_fonts = 1
-" Enable tabline
-let g:airline#extensions#tabline#enabled = 1
-
 set fillchars+=vert:│
+colorscheme gruvbox
 
 " ---
 "  Deoplete
@@ -81,11 +66,9 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 " ---
 "  IndentLine
 "  ---
-"let g:indentLine_faster = 1
 let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '·'
-let g:indentLine_char = '|'
-"let g:bufferline_echo = 0
+let g:indentLine_leadingSpaceChar = ''
+let g:indentLine_char = ''
 
 " ---
 " Tagbar
@@ -103,34 +86,43 @@ let g:gitgutter_sign_removed_first_line = '^'
 let g:gitgutter_sign_modified_removed = '='
 
 " ---
+" AirLine
+" ---
+" Set theme
+let g:airline_theme = 'gruvbox'
+" Show airline with single file
+set laststatus=2
+" Use powerline font
+let g:airline_powerline_fonts = 1
+" Enable tabline
+let g:airline#extensions#tabline#enabled = 1
+
+" ---
 " Settings
 " ---
 set hidden
 set mouse=a
-set list          " Display unprintable characters f12 - switches
-"set nowrap        " don't wrap lines
-set backspace=indent,eol,start
-" allow backspacing over everything in insert mode
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
-set number        " always show line numbers
-set shiftwidth=2  " number of spaces to use for autoindenting
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
-set smartcase     " ignore case if search pattern is all lowercase,
-" case-sensitive otherwise
-set smarttab      " insert tabs on the start of a line according to
-" shiftwidth, not tabstop
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
+set list                                  " Display unprintable characters f12 - switches
+"set nowrap                               " don't wrap lines
+set backspace=indent,eol,start            " allow backspacing over everything in insert mode
+set autoindent                            " always set autoindenting on
+set copyindent                            " copy the previous indentation on autoindenting
+set number                                " always show line numbers
+set shiftwidth=2                          " number of spaces to use for autoindenting
+set shiftround                            " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch                             " set show matching parenthesis
+set ignorecase                            " ignore case when searching
+set smartcase                             " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab                              " insert tabs on the start of a line according to shiftwidth, not tabstop
+set hlsearch                              " highlight search terms
+set incsearch                             " show search matches as you type
 
-set history=1000         " remember more commands and search history
-set undolevels=1000      " use many muchos levels of undo
+set history=1000                          " remember more commands and search history
+set undolevels=1000                       " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set title                " change the terminal's title
-set visualbell           " don't beep
-set noerrorbells         " don't beep
+set title                                 " change the terminal's title
+set visualbell                            " don't beep
+set noerrorbells                          " don't beep
 
 set nobackup
 set noswapfile
@@ -182,7 +174,7 @@ map <leader>, :bp!<CR>
 map <leader>. :bn!<CR>
 map <leader>x :bd<CR>
 
-noremap <leader> <Up> :<C-U>ObviousResizeUp<CR>
-noremap <silent> <C-Down> :<C-U>ObviousResizeDown<CR>
-noremap <silent> <C-Left> :<C-U>ObviousResizeLeft<CR>
-noremap <silent> <C-Right> :<C-U>ObviousResizeRight<CR>
+nnoremap <up> :ResizeUp<CR>
+nnoremap <down> :ResizeDown<CR>
+nnoremap <left> :ResizeLeft<CR>
+nnoremap <right> :ResizeRight<CR>

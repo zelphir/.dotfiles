@@ -4,7 +4,6 @@ source $DOTFILES_DIR/lib/utils.sh
 
 apps=(
     gulp
-    vtop
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
