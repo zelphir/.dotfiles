@@ -48,9 +48,7 @@ e_success "Done!"
 ################################################################################
 
 e_running "Installing fixed-width fonts patched for use with Powerline symbols..."
-cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Light Nerd Font Complete Mono.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Light/complete/Sauce%20Code%20Pro%20Light%20Nerd%20Font%20Complete%20Mono.ttf
-cd ~/Library/Fonts ; curl -fLo "Sauce Code Pro Medium Nerd Font Plus Octicons.ttf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/SourceCodePro/Medium/additional-variations/Sauce%20Code%20Pro%20Medium%20Nerd%20Font%20Plus%20Octicons.ttf
-
+cd ~/Library/Fonts ; curl -fLo "Inconsolata for Powerline Nerd Font Complete Mono.otf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Inconsolata/complete/Inconsolata%20for%20Powerline%20Nerd%20Font%20Complete%20Mono.otf
 e_success "Done!"
 
 ################################################################################
@@ -146,3 +144,9 @@ source "$DOTFILES_DIR/install/osx-defaults"
 source "$DOTFILES_DIR/install/osx-dock"
 
 e_success "Done!"
+
+echo
+echo "**********************************************************************"
+echo "**** Bootstrap script complete! Please restart your computer. ****"
+echo "**********************************************************************"
+echo

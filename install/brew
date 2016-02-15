@@ -25,7 +25,7 @@ brew_install_or_upgrade python3
 brew_install_or_upgrade watchman
 brew_install_or_upgrade flow
 brew_install_or_upgrade android-sdk
-brew_install_or_upgrade ack
+brew_install_or_upgrade the_silver_searcher
 brew_install_or_upgrade ag
 brew_install_or_upgrade ctags
 brew_tap homebrew/completions

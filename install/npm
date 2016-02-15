@@ -3,7 +3,12 @@
 source $DOTFILES_DIR/lib/utils.sh
 
 apps=(
-    gulp
+  gulp
+  react-native-cli
+  eslint
+  eslint_d
+  rnpm
+  npm-check
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then

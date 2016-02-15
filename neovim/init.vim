@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set shell=/bin/bash
 
 " ---
 " VimPlug
@@ -13,7 +14,6 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -37,18 +37,60 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'jaxbot/syntastic-react'
+Plug 'scrooloose/nerdcommenter'
+Plug 'rking/ag.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'Raimondi/delimitMate'
+Plug 'othree/yajs.vim'
 
 call plug#end()
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" ---
+"  Syntastic
+" ---
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_shell = '/bin/bash'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_javascript_checkers = ['eslint_d']
+let g:syntastic_javascript_eslint_exe = 'eslint_d'
+
+let g:jsx_ext_required = 0
+
+" ---
+" The Silver Searcher
+" ---
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " ---
 " Theme
 " ---
-"syntax enable
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+syntax enable
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set noshowmode
 set background=dark
 set fillchars+=vert:│
-colorscheme gruvbox
+colorscheme OceanicNext
 
 " ---
 "  Deoplete
@@ -89,7 +131,7 @@ let g:gitgutter_sign_modified_removed = '='
 " AirLine
 " ---
 " Set theme
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'oceanicnext'
 " Show airline with single file
 set laststatus=2
 " Use powerline font
@@ -98,8 +140,14 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " ---
+"  Editorconfig
+" ---
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" ---
 " Settings
 " ---
+set relativenumber
 set hidden
 set mouse=a
 set list                                  " Display unprintable characters f12 - switches
@@ -178,3 +226,5 @@ nnoremap <up> :ResizeUp<CR>
 nnoremap <down> :ResizeDown<CR>
 nnoremap <left> :ResizeLeft<CR>
 nnoremap <right> :ResizeRight<CR>
+
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>

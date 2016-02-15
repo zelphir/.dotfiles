@@ -502,9 +502,3 @@ defaults write com.divisiblebyzero.Spectacle UndoLastMove -data 62706c6973743030
 for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Mail" "Messages" "Photos" "Spectacle" "SystemUIServer" "Transmission" "Twitter" ; do
   killall "${app}" &> /dev/null
 done
-
-echo
-echo "**********************************************************************"
-echo "**** Bootstrap script complete! Please restart your computer. ****"
-echo "**********************************************************************"
-echo

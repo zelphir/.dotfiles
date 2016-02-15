@@ -24,6 +24,7 @@ apps=(
   genymotion
 
   # others
+  sketch
   hacker-menu
   skype
   vlc
