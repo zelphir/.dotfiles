@@ -245,11 +245,11 @@ function _git_ahead_verbose -d 'Print a more verbose ahead/behind state for the 
     case '0 0'  # equal to upstream
       return
     case '* 0'  # ahead of upstream
-      echo (_col blue)"$ICON_ARROW_UP$ahead"
+      echo (_col blue)"$ICON_ARROW_UP$ahead "
     case '0 *'  # behind upstream
-      echo (_col red)"$ICON_ARROW_DOWN$behind"
+      echo (_col red)"$ICON_ARROW_DOWN$behindi "
     case '*'    # diverged from upstream
-      echo (_col blue)"$ICON_ARROW_UP$ahead"(_col red)"$ICON_ARROW_DOWN$behind"
+      echo (_col blue)"$ICON_ARROW_UP$ahead"(_col red)"$ICON_ARROW_DOWN$behind "
   end
 end
 function _git_prompt_short_sha
