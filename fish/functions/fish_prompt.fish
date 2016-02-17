@@ -261,9 +261,9 @@ function _git_prompt_long_sha
   test $SHA; and echo -n -s (_col brcyan)\[(_col brgrey)$SHA(_col brcyan)\](_col_res)
 end
 
-function _node_version -d "Get the currently used node version if NVM exists"
+function _node_version -d "Get the currently used node version if node exists"
   set -l node_version
-  available nvm; and set node_version (string trim -l -c=v (node -v 2>/dev/null)) # trimmed lef 'v'; can use 'nvm current', but slower
+  available node; and set node_version (string trim -l -c=v (node -v 2>/dev/null)) # trimmed lef 'v'; can use 'nvm current', but slower
   test $node_version; and echo -n -s (_col brgreen)$ICON_NODE(_col green)$node_version(_col_res)
 end
 
