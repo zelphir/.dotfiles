@@ -135,6 +135,15 @@ e_success "Done!"
 e_running "Install npm packages..."
 source "$DOTFILES_DIR/install/npm"
 
+e_success "Done!
+
+"################################################################################
+# Install python env
+################################################################################
+
+e_running "Install python env"
+pip install virtualfish
+
 e_success "Done!"
 
 ################################################################################

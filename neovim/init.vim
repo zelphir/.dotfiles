@@ -1,5 +1,4 @@
 scriptencoding utf-8
-set shell=/bin/bash
 
 " ---
 " VimPlug
@@ -38,7 +37,7 @@ Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mxw/vim-jsx'
+"Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'jaxbot/syntastic-react'
 Plug 'scrooloose/nerdcommenter'
@@ -46,6 +45,8 @@ Plug 'rking/ag.vim'
 Plug 'mhartington/oceanic-next'
 Plug 'Raimondi/delimitMate'
 Plug 'othree/yajs.vim'
+Plug 'simnalamburt/vim-mundo'
+Plug 'kassio/neoterm'
 
 call plug#end()
 
@@ -54,19 +55,17 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " ---
 "  Syntastic
 " ---
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-let g:syntastic_shell = '/bin/bash'
+let g:jsx_ext_required = 0
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_javascript_checkers = ['eslint_d']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = 'eslint_d'
-
-let g:jsx_ext_required = 0
 
 " ---
 " The Silver Searcher
@@ -74,10 +73,8 @@ let g:jsx_ext_required = 0
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
@@ -90,6 +87,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set noshowmode
 set background=dark
 set fillchars+=vert:│
+set cursorline
+set relativenumber
+set foldenable
 colorscheme OceanicNext
 
 " ---
@@ -102,8 +102,11 @@ let g:deoplete#enable_at_startup = 1
 " ---
 " Autoclose when closing last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let NERDTreeMinimalUI=1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeRespectWildIgnore = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:NERDTreeIgnore=['\~$', '\.git$']
 
 " ---
 "  IndentLine
@@ -130,13 +133,9 @@ let g:gitgutter_sign_modified_removed = '='
 " ---
 " AirLine
 " ---
-" Set theme
 let g:airline_theme = 'oceanicnext'
-" Show airline with single file
 set laststatus=2
-" Use powerline font
 let g:airline_powerline_fonts = 1
-" Enable tabline
 let g:airline#extensions#tabline#enabled = 1
 
 " ---
@@ -144,10 +143,19 @@ let g:airline#extensions#tabline#enabled = 1
 " ---
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
+" Enable persistent undo so that undo history persists across vim sessions
+set undofile
+set undodir=~/.vim/undo
+
+" ---
+"  Mundo
+"  ---
+let g:mundo_preview_statusline = ''
+let g:mundo_tree_statusline = ''
+
 " ---
 " Settings
 " ---
-set relativenumber
 set hidden
 set mouse=a
 set list                                  " Display unprintable characters f12 - switches
@@ -167,7 +175,7 @@ set incsearch                             " show search matches as you type
 
 set history=1000                          " remember more commands and search history
 set undolevels=1000                       " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.class
 set title                                 " change the terminal's title
 set visualbell                            " don't beep
 set noerrorbells                          " don't beep
@@ -177,15 +185,12 @@ set noswapfile
 
 filetype plugin indent on
 
-set listchars=eol:¬,tab:›\ ,trail:•,extends:»,precedes:«
-
-syntax enable
+set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«
 
 " Tab behavior
 set smarttab
 set expandtab
 set tabstop=2
-set shiftwidth=2
 
 set clipboard=unnamed
 

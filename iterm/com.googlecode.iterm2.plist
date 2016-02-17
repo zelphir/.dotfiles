@@ -1150,6 +1150,12 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>7E4F8E1D-E377-487A-BCDD-89651021122B</string>
+	<key>DimBackgroundWindows</key>
+	<true/>
+	<key>DimOnlyText</key>
+	<true/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
@@ -1191,7 +1197,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 37 445 239 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 197 606 456 0 0 1440 877 </string>
+	<string>269 226 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 216 1310 657 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1933,7 +1939,7 @@
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.12411358173076924</real>
+	<real>0.2383338341346154</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>iTerm Version</key>
