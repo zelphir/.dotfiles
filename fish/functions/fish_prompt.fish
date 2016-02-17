@@ -157,7 +157,7 @@ function _UserSymbol                                                #prompt symb
   if test (id -u $USER) -eq 0
     echo "#"
   else
-    echo ">"
+    echo (_col yellow)"❯"(_col_res)
   end
 end
 
