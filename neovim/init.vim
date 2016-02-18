@@ -37,7 +37,6 @@ Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'jaxbot/syntastic-react'
 Plug 'scrooloose/nerdcommenter'
@@ -46,7 +45,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'Raimondi/delimitMate'
 Plug 'othree/yajs.vim'
 Plug 'simnalamburt/vim-mundo'
-Plug 'kassio/neoterm'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -194,18 +193,8 @@ set tabstop=2
 
 set clipboard=unnamed
 
-" ---
-" Post Load Fixes
-" ---
-if !exists("*CorrectColorScheme")
-  function CorrectColorScheme()
-    " Annoying tilde should be hidden
-    highlight EndOfBuffer ctermfg=0 guifg=#282828
-
-    highlight VertSplit ctermbg=NONE guifg=#404040 guibg=NONE
-  endfunction
-endif
-autocmd VimEnter * call CorrectColorScheme()
+set splitbelow
+set splitright
 
 " ---
 " Mappings

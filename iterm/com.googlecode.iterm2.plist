@@ -1156,6 +1156,8 @@
 	<true/>
 	<key>HideScrollbar</key>
 	<true/>
+	<key>LeftOption</key>
+	<integer>2</integer>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
@@ -1199,7 +1201,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>269 226 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 216 1310 657 0 0 1440 877 </string>
+	<string>3 115 1130 747 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 112 1130 747 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1814,7 +1816,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGMNerdFontCompleteMono 14</string>
+			<string>MesloLGSDZNerdFontPlusOcticons 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1935,7 +1937,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-12T00:45:29Z</date>
+	<date>2016-02-18T18:48:15Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>

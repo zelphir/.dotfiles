@@ -15,7 +15,15 @@ set -x PATH (brew --prefix coreutils)/libexec/gnubin /usr/local/bin /usr/bin /bi
 set fish_function_path $fish_function_path $foreign_env
 
 # Set vi-mode
-fish_vi_mode
+# fish_vi_mode
+
+# Start tmux
+if which tmux > /dev/null; and not set -q TMUX
+  exec tmux new-session -A -s main
+end
+
+# No greeting
+set fish_greeting
 
 # Alias
 alias v "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
