@@ -22,6 +22,7 @@ apps=(
   virtualbox
   java
   genymotion
+  karabiner
 
   # others
   sketch

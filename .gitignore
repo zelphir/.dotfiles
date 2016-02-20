@@ -1,6 +1,14 @@
+# Fish
 fish/plugins
 fishd.*
 fish_history*
 fish_read_history
+
+# Neovim
 tags
+neovim/autoload
+neovim/colors
+neovim/plugged
+
+# Terminal
 *.ti

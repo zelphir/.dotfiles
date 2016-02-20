@@ -1,8 +1,9 @@
 # Set env vars
-set -x N_PREFIX "$HOME/.n"
+set -x N_PREFIX $HOME/.n
 set -x fish_path $HOME/.config/fish
 set -x foreign_env $fish_path/plugins/foreign-env/functions
 set -x ANDROID_HOME /usr/local/opt/android-sdk
+set -x NEOVIM $HOME/.config/nvim/
 
 # Python virtualenv
 set -x WORKON_HOME ~/.virtualenvs

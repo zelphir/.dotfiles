@@ -1,0 +1,11 @@
+" ---
+" Theme
+" ---
+syntax enable
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark
+set fillchars+=vert:│
+set cursorline
+set relativenumber
+set foldenable
+colorscheme OceanicNext

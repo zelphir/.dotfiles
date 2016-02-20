@@ -6,7 +6,7 @@ apps=(
   gulp
   react-native-cli
   eslint
-  eslint_d
+  zelphir/eslint_d.js
   rnpm
   npm-check
 )
