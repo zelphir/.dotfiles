@@ -1,6 +1,6 @@
 #!/bin/bash
-source $HOME/.dotfiles/lib/vars.sh
-source $DOTFILES_DIR/lib/utils.sh
+
+e_running "Installing dotfiles..."
 
 DOTFILESDIR=$DOTFILES_DIR/dotfiles/*
 
@@ -9,3 +9,4 @@ for dotfile in $DOTFILESDIR; do
     ln -nfs "$dotfile" "$HOME/.${dotfile##*/}"
 done
 
+e_success "Done!"

@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+e_running "Installing Cask and related software..."
 
 apps=(
   # essential
@@ -47,3 +49,5 @@ brew_tap 'caskroom/cask'
 brew_tap 'caskroom/versions'
 
 brew cask install ${apps[@]}
+
+e_success "Done!"

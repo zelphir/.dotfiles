@@ -35,4 +35,3 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc'
 Plug 'travisjeffery/vim-auto-mkdir'
 Plug 'pbrisbin/vim-mkdir'
-

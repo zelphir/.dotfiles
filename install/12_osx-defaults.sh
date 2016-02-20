@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-source $HOME/.dotfiles/lib/vars.sh
-source $DOTFILES_DIR/lib/utils.sh
+#!/bin/bash
 
 # ~/.osx — https://mths.be/osx
 
@@ -137,9 +135,6 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
 
 ###############################################################################
 # Finder                                                                      #
@@ -502,3 +497,5 @@ defaults write com.divisiblebyzero.Spectacle UndoLastMove -data 62706c6973743030
 for app in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Mail" "Messages" "Photos" "Spectacle" "SystemUIServer" "Transmission" "Twitter" ; do
   killall "${app}" &> /dev/null
 done
+
+e_success "Done!"

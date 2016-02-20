@@ -1,4 +1,9 @@
 #!/bin/bash
+e_running "Installing extra Homebrew formulae..."
+
+# tap formulas
+brew_tap homebrew/completions
+brew_tap 'neovim/neovim'
 
 # Install GNU core utilities (those that come with OS X are outdated).
 brew_install_or_upgrade coreutils
@@ -15,7 +20,6 @@ brew_install_or_upgrade trash
 brew_install_or_upgrade tree
 brew_install_or_upgrade wget --with-iri
 brew_install_or_upgrade https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb
-brew_tap 'neovim/neovim'
 brew_install_or_upgrade neovim --HEAD
 brew_install_or_upgrade fish --HEAD
 brew_install_or_upgrade git
@@ -29,9 +33,10 @@ brew_install_or_upgrade android-sdk
 brew_install_or_upgrade the_silver_searcher
 brew_install_or_upgrade ag
 brew_install_or_upgrade ctags
-brew_tap homebrew/completions
 brew_install_or_upgrade homebrew/completions/brew-cask-completion
 brew_install_or_upgrade reattach-to-user-namespace
 brew_install_or_upgrade vim --override-system-vi
 
 brew cleanup
+
+e_success "Done!"

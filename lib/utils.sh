@@ -1,5 +1,4 @@
 #!/bin/bash
-source $HOME/.dotfiles/lib/vars.sh
 
 # Header logging
 e_header() {
@@ -61,15 +60,6 @@ is_git_repo() {
   $(git rev-parse --is-inside-work-tree &> /dev/null)
 }
 
-# Test whether a command exists
-# $1 - cmd to test
-type_exists() {
-  if [ $(type -P $1) ]; then
-    return 0
-  fi
-  return 1
-}
-
 # Test whether a Homebrew formula is already installed
 # $1 - formula name (may include options)
 formula_exists() {
@@ -80,16 +70,6 @@ formula_exists() {
 
   e_warning "Missing formula: $1"
   return 1
-}
-
-# Check if Xcode is present
-check_xcode() {
-  if type_exists 'gcc'; then
-    e_success "Xcode is installed"
-  else
-    e_warning "The Xcode Command Line Tools must be installed first."
-    install_xcode
-  fi
 }
 
 brew_install_or_upgrade() {
@@ -139,39 +119,4 @@ brew_launchctl_restart() {
     launchctl unload "$HOME/Library/LaunchAgents/$plist" >/dev/null
   fi
   launchctl load "$HOME/Library/LaunchAgents/$plist" >/dev/null
-}
-
-install_plug_nvim() {
-  curl -fLo $CONFIG_DIR/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-}
-
-install_nvim_folder() {
-  if [ ! -d $CONFIG_DIR/nvim/autoload ]; then
-    mkdir -p $CONFIG_DIR/nvim/autoload
-  fi
-
-  install_plug_nvim
-
-  ln -sf $DOTFILES_DIR/neovim/init.vim $CONFIG_DIR/nvim/init.vim
-  pip3 install neovim
-}
-
-# Install Xcode Command Line Tools
-install_xcode() {
-  darwin_version=$(uname -r)
-
-  if (( ${darwin_version%%.*} > 12 )); then
-    e_header "Installing Xcode Command Line Tools. Follow the prompt"
-    xcode-select --install
-    seek_confirmation "Is Xcode done installing"
-
-    if is_confirmed; then
-      check_xcode
-    else
-      check_xcode
-    fi
-  else
-    printf "  Download them from: https://developer.apple.com/downloads\n"
-    exit 1
-  fi
 }

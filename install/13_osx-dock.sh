@@ -1,4 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+e_running "Setting dock icons"
 
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Launchpad.app"
@@ -13,3 +15,5 @@ dockutil --no-restart --add "/Applications/Xcode.app/Contents/Developer/Applicat
 dockutil --no-restart --add "/Applications/System Preferences.app"
 
 killall Dock
+
+e_success "Done!"

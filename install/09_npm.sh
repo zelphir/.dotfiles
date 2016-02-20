@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $DOTFILES_DIR/lib/utils.sh
+e_running "Install npm packages..."
 
 apps=(
   gulp
@@ -14,3 +14,5 @@ apps=(
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
   $HOME/.n/bin/npm install -g ${apps[@]}
 fi
+
+e_success "Done!"
