@@ -2,7 +2,7 @@
 
 # ~/.osx — https://mths.be/osx
 
-e_running "Seeting osx defaults"
+e_header "Seeting osx defaults"
 
 # Ask for the administrator password upfront
 sudo -v

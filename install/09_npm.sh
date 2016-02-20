@@ -1,6 +1,6 @@
 #!/bin/bash
 
-e_running "Install npm packages..."
+e_header "Install npm packages..."
 
 apps=(
   gulp

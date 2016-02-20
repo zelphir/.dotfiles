@@ -1,6 +1,6 @@
 #!/bin/bash
 
-e_running "Installing dotfiles..."
+e_header "Installing dotfiles..."
 
 DOTFILESDIR=$DOTFILES_DIR/dotfiles/*
 

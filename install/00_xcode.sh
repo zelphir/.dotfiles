@@ -33,5 +33,3 @@ check_xcode() {
 e_header "Check Xcode"
 
 check_xcode
-
-e_success "Done!"

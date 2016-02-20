@@ -1,6 +1,6 @@
 #!/bin/bash
 
-e_running "Installing Cask and related software..."
+e_header "Installing Cask and related software..."
 
 apps=(
   # essential

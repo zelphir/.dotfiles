@@ -1,6 +1,6 @@
 #!/bin/bash
 
-e_running "Installing tmux config..."
+e_header "Installing tmux config..."
 
 if [ ! -f ~/.tmux.conf ]; then
   ln -sf $DOTFILES_DIR/tmux/tmux.conf ~/.tmux.conf

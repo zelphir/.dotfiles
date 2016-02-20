@@ -2,8 +2,14 @@
 
 # Header logging
 e_header() {
-  local fmt="$(tput setaf 7)$1$(tput sgr0)"; shift
+  local fmt="$(tput setaf 5)- $1$(tput sgr0)"; shift
   printf "$fmt\n" "$@"
+}
+
+#Finish logging
+e_finish() {
+  local fmt="$(tput setaf 64)$1$(tput sgr0)"; shift
+  printf "\n$fmt" "$@"
 }
 
 # Success logging

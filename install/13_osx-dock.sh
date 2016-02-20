@@ -1,6 +1,6 @@
 #!/bin/bash
 
-e_running "Setting dock icons"
+e_header "Setting dock icons"
 
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Launchpad.app"

@@ -1,5 +1,5 @@
 #!/bin/bash
-e_running "Installing extra Homebrew formulae..."
+e_header "Installing extra Homebrew formulae..."
 
 # tap formulas
 brew_tap homebrew/completions
