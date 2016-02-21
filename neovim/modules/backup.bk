@@ -1,0 +1,107 @@
+" Backspace is managed by vim-sensible, but I need it here too because some
+" plugins depend on it during start up.
+set backspace=indent,eol,start
+
+" Enable invisible characters.
+set list
+
+" More natural splitting.
+set splitbelow
+set splitright
+
+" Set a default indent, but vim-sleuth should adjust it.
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Enable mouse. Great for resizing windows and keeping co-workers sane.
+set mouse=a
+
+" Disable swap files.
+set noswapfile
+
+" Write files as they are, don't mess with line endings etc.
+set binary
+
+" Make session files minimal.
+"set sessionoptions=blank,curdir,folds,help,tabpages,winsize
+
+" Stops macros rendering every step.
+"set lazyredraw
+
+" Make search case insensitive, but become sensitive if an upper case character is used.
+set ignorecase
+set smartcase
+
+set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«
+set noshowmode
+
+
+"" ---
+"" Settings
+"" ---
+"set hidden
+"set mouse=a
+"set list                                  " Display unprintable characters f12 - switches
+""set nowrap                               " don't wrap lines
+"set backspace=indent,eol,start            " allow backspacing over everything in insert mode
+"set autoindent                            " always set autoindenting on
+"set copyindent                            " copy the previous indentation on autoindenting
+"set number                                " always show line numbers
+"set shiftwidth=2                          " number of spaces to use for autoindenting
+"set shiftround                            " use multiple of shiftwidth when indenting with '<' and '>'
+"set showmatch                             " set show matching parenthesis
+"set ignorecase                            " ignore case when searching
+"set smartcase                             " ignore case if search pattern is all lowercase, case-sensitive otherwise
+"set hlsearch                              " highlight search terms
+"set incsearch                             " show search matches as you type
+"
+"set history=1000                          " remember more commands and search history
+"set undolevels=1000                       " use many muchos levels of undo
+"set wildignore=*.swp,*.bak,*.class
+"set title                                 " change the terminal's title
+"set visualbell                            " don't beep
+"set noerrorbells                          " don't beep
+"
+"set nobackup
+"set noswapfile
+"
+"filetype plugin indent on
+"
+"set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«
+"
+"" Tab behavior
+"set smarttab
+"set expandtab
+"set tabstop=2
+"
+"set clipboard=unnamed
+"
+"set splitbelow
+"set splitright
+"
+"set noshowmode
+
+" ---
+" Mappings
+" ---
+let mapleader=" "
+
+" Clear highligh
+nnoremap <leader><esc> :noh<return><esc>
+
+" Learn it the hard way
+nmap <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
+map <leader>l :set list!<CR>
+map <leader>w :set wrap!<CR>
+map <leader>m :TagbarToggle<CR>
+
+map <leader>, :bp!<CR>
+map <leader>. :bn!<CR>
+map <leader>x :bd<CR>
+
+map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>

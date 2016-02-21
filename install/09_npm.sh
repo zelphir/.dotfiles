@@ -6,6 +6,10 @@ apps=(
   gulp
   react-native-cli
   eslint
+  happiness
+  jscs
+  js-beautify
+  html-beautify
   zelphir/eslint_d.js
   rnpm
   npm-check
