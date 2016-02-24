@@ -1,47 +1,62 @@
+"colorschemes
+Plug 'mhartington/oceanic-next'
+
+" utilities
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
+Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'tpope/vim-unimpaired' " mappings which are simply short normal mode aliases for commonly used ex commands
+Plug 'tpope/vim-ragtag' " endings for html, xml, etc. - ehances surround
+Plug 'tpope/vim-surround' " mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'vim-airline/vim-airline' " fancy statusline
+Plug 'vim-airline/vim-airline-themes' " themes for vim-airline
+Plug 'benekastah/neomake' " neovim replacement for syntastic using neovim's job control functonality
+Plug 'tpope/vim-fugitive' " amazing git wrapper for vim
+Plug 'tpope/vim-repeat' " enables repeating other supported plugins with the . command
+Plug 'editorconfig/editorconfig-vim' " .editorconfig support
+Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
+Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
+Plug 'sickill/vim-pasta' " context-aware pasting
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
 Plug 'easymotion/vim-easymotion'
-Plug 'mhinz/vim-startify'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Chiel92/vim-autoformat'
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
 Plug 'ryanoasis/vim-devicons'
 Plug 'powerman/vim-plugin-viewdoc'
-Plug 'rizzatti/dash.vim'
 Plug 'hsanson/vim-resize'
 Plug 'Yggdroot/indentLine'
 Plug 'Shougo/deoplete.nvim'
-Plug 'kballard/vim-fish'
 Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'scrooloose/nerdcommenter'
 Plug 'rking/ag.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'Raimondi/delimitMate'
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
 Plug 'simnalamburt/vim-mundo'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'travisjeffery/vim-auto-mkdir'
 Plug 'pbrisbin/vim-mkdir'
-"Plug 'szw/vim-tags'
-Plug 'gavocanov/vim-js-indent'
-Plug 'elzr/vim-json'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'othree/jspc.vim'
-Plug 'moll/vim-node'
 Plug 'tpope/vim-eunuch'
-Plug 'benekastah/neomake'
-Plug 'ervandew/supertab'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neoyank.vim'
+
+" language-specific plugins
+Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
+Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
+Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' } " JavaScript support
+Plug 'moll/vim-node', { 'for': 'javascript' } " node support
+Plug 'mxw/vim-jsx', { 'for': ['js', 'jsx'] } " JSX support
+Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
+Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
+Plug 'digitaltoad/vim-jade', { 'for': 'jade' } " jade support
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
+Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
+Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
+Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
+Plug 'kballard/vim-fish', { 'for': 'fish' } " fish shell support
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'othree/jspc.vim', { 'for': 'javascript' }
