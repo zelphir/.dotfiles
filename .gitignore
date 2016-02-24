@@ -9,6 +9,7 @@ tags
 neovim/autoload
 neovim/colors
 neovim/plugged
+neovim/tmp
 
 # Terminal
 *.ti
