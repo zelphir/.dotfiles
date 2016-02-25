@@ -1359,12 +1359,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15686274509803899</real>
+				<real>0.077523812651634216</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.15686274509803899</real>
+				<real>0.077522493898868561</real>
 				<key>Red Component</key>
-				<real>0.15686274509803899</real>
+				<real>0.077524803578853607</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1408,6 +1412,8 @@
 			<integer>140</integer>
 			<key>Command</key>
 			<string>/usr/local/bin/fish</string>
+			<key>Cursor Boost</key>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1777,6 +1783,8 @@
 				<key>Red Component</key>
 				<real>0.023</real>
 			</dict>
+			<key>Minimum Contrast</key>
+			<real>0.0</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -1788,7 +1796,7 @@
 			<key>Normal Font</key>
 			<string>MesloLGSDZNerdFontPlusOcticons 14</string>
 			<key>Option Key Sends</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -1831,6 +1839,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Smart Cursor Color</key>
+			<true/>
 			<key>Sync Title</key>
 			<true/>
 			<key>Tags</key>
@@ -1849,6 +1859,8 @@
 			<true/>
 			<key>Use Non-ASCII Font</key>
 			<true/>
+			<key>Use Tab Color</key>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>0.99508189006024095</real>
 			<key>Visual Bell</key>
@@ -1867,6 +1879,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>476929399.91901302</real>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>1</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>

@@ -57,7 +57,7 @@ Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
-Plug 'kballard/vim-fish', { 'for': 'fish' } " fish shell support
+Plug 'kballard/vim-fish' ", { 'for': 'fish' } fish shell support
 Plug 'othree/yajs.vim', { 'for': ['js', 'jsx'] }
 Plug 'gavocanov/vim-js-indent', { 'for': ['js', 'jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['js', 'jsx'] }

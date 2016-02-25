@@ -29,4 +29,4 @@ set fish_greeting
 # Alias
 alias v "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias vim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
-alias restore ". $fish_path/config.fish"
+alias reload ". $fish_path/config.fish"

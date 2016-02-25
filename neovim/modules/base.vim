@@ -1,6 +1,10 @@
 " Map Leaders
 let mapleader = " "
 
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 set number            " Show line numbers
 syntax enable         " Turn on syntax highlighting allowing local overrides
 
