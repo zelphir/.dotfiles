@@ -1,5 +1,6 @@
 "colorschemes
 Plug 'mhartington/oceanic-next'
+Plug 'morhetz/gruvbox'
 
 " utilities
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
@@ -38,13 +39,15 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-eunuch'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neoyank.vim'
+Plug 'myusuf3/numbers.vim'
+Plug 'mhinz/vim-startify'
 
 " language-specific plugins
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' } " JavaScript support
-Plug 'moll/vim-node', { 'for': 'javascript' } " node support
+Plug 'pangloss/vim-javascript', { 'for': ['js', 'jsx'] } " JavaScript support
+Plug 'moll/vim-node', { 'for': ['js', 'jsx'] } " node support
 Plug 'mxw/vim-jsx', { 'for': ['js', 'jsx'] } " JSX support
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
@@ -55,8 +58,9 @@ Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 Plug 'kballard/vim-fish', { 'for': 'fish' } " fish shell support
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+Plug 'othree/yajs.vim', { 'for': ['js', 'jsx'] }
+Plug 'gavocanov/vim-js-indent', { 'for': ['js', 'jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['js', 'jsx'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'othree/jspc.vim', { 'for': 'javascript' }
+Plug 'othree/jspc.vim', { 'for': ['js', 'jsx'] }
+Plug 'gregsexton/MatchTag', { 'for': 'html' }

@@ -8,4 +8,8 @@ set fillchars+=vert:│
 set cursorline
 set relativenumber
 set foldenable
-colorscheme OceanicNext
+
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='soft'
+
+colorscheme gruvbox
