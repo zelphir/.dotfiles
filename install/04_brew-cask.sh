@@ -25,6 +25,7 @@ apps=(
   java
   genymotion
   karabiner
+  psequel
 
   # others
   sketch

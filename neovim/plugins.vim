@@ -41,6 +41,7 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neoyank.vim'
 Plug 'myusuf3/numbers.vim'
 Plug 'mhinz/vim-startify'
+Plug 'djoshea/vim-autoread'
 
 " language-specific plugins
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax

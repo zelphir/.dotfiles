@@ -36,6 +36,10 @@ brew_install_or_upgrade ctags
 brew_install_or_upgrade homebrew/completions/brew-cask-completion
 brew_install_or_upgrade reattach-to-user-namespace
 brew_install_or_upgrade vim --override-system-vi
+brew_install_or_upgrade postgres
+brew_install_or_upgrade docker
+brew_install_or_upgrade docker-machine
+brew_install_or_upgrade docker-compose
 
 brew cleanup
 

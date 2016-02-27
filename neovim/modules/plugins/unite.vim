@@ -4,8 +4,9 @@ call unite#custom#source('file_mru,file_rec,file_rec/neovim,grep,locate',
       \ 'ignore_pattern', join(['\.git/', 'tmp/', 'bundle/'], '\|'))
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#profile('default', 'context', {
-      \   'direction': 'botright',
       \   'short-source-names': 1,
+      \   'vertical_preview': 1,
+      \   'auto_preview': 1,
       \ })
 
 let g:unite_source_history_yank_enable = 1
@@ -20,7 +21,7 @@ if executable('ag')
   let g:unite_source_grep_recursive_opt = ''
 endif
 
-nnoremap <C-P> :Unite -buffer-name=files -start-insert -ignorecase file_rec/neovim:!<CR>
+nnoremap <C-P> :Unite -buffer-name=files -no-split -start-insert -ignorecase file_rec/neovim:!<CR>
 nnoremap <leader>/ :Unite -vertical grep:. -buffer-name=search-buffer<CR>
 nnoremap <Leader>b :Unite -buffer-name=buffers buffer<CR>
 nnoremap <Leader>h :Unite -buffer-name=history_yank history/yank<CR>
@@ -33,5 +34,5 @@ function! s:unite_my_settings()
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
   imap <silent><buffer><expr> <C-s> unite#do_action('split')
   imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-  imap <silent><buffer><expr> <C-p> unite#do_action('preview')
+  "imap <silent><buffer><expr> p unite#do_action('preview')
 endfunction
