@@ -8,6 +8,7 @@ apps=(
   eslint
   happiness
   jscs
+  babel
   js-beautify
   html-beautify
   zelphir/eslint_d.js

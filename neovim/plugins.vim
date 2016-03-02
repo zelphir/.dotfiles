@@ -42,8 +42,12 @@ Plug 'Shougo/neoyank.vim'
 Plug 'myusuf3/numbers.vim'
 Plug 'mhinz/vim-startify'
 Plug 'djoshea/vim-autoread'
+Plug 'Shougo/neopairs.vim'
+Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/context_filetype.vim'
 
 " language-specific plugins
+Plug 'carlitux/deoplete-ternjs'
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
