@@ -49,3 +49,9 @@ set noshowcmd                                           " show incomplete comman
 set noshowmode                                          " don't show -- INSERT -- in cmdline
 
 set mouse=a
+
+"Folding
+set foldmethod=indent
+"set nofoldenable
+set foldlevelstart=99
+set foldlevel=1
