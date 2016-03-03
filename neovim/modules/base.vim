@@ -52,6 +52,5 @@ set mouse=a
 
 "Folding
 set foldmethod=indent
-"set nofoldenable
-set foldlevelstart=99
-set foldlevel=1
+set nofoldenable
+set foldlevelstart=9999
