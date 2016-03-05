@@ -1,4 +1,4 @@
-set nohlsearch                                          " Don't highlight matches
+" set nohlsearch                                          " Don't highlight matches
 set incsearch                                           " incremental searching
 set ignorecase                                          " searches are case insensitive...
 set smartcase                                           " ... unless they contain at least one capital letter
@@ -7,3 +7,5 @@ set smartcase                                           " ... unless they contai
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 endif
+
+nnoremap <silent> <esc> :noh<cr><esc>

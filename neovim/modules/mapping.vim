@@ -12,7 +12,6 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-map <leader>l :set list!<CR>
 map <leader>w :set wrap!<CR>
 map <leader>m :TagbarToggle<CR>
 
@@ -21,3 +20,7 @@ map <leader>. :bn!<CR>
 map <leader>x :bd<CR>
 
 map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" Move by visual line.
+nnoremap j gj
+nnoremap k gk

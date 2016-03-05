@@ -16,7 +16,13 @@ set synmaxcol=300
 set notimeout
 set ttimeout
 set ttimeoutlen=10
-set nowrap                                              " don't wrap lines
+set wrap                                                " don't wrap lines
+set formatoptions+=t
+set formatoptions-=l
+set showbreak=↳\ 
+set linebreak
+set breakindent
+set breakindentopt=shift:2
 set tabstop=2                                           " a tab is two spaces
 set shiftwidth=2                                        " an autoindent (with <<) is two spaces
 set expandtab                                           " use spaces, not tabs
@@ -30,7 +36,6 @@ set clipboard=unnamed
 " a one letter word remove comment leader when joining lines
 set formatoptions=crql1j
 
-set list                                                " Display tabs and whitepace
 set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«
 
 set backspace=indent,eol,start                          " backspace through everything in insert mode
@@ -38,7 +43,6 @@ set whichwrap+=<,>,h,l,[,]                              " Allow left, right, bs,
 set nrformats=                                          " Treat all numbers as decimal
 set scrolloff=5                                         " Always show at least five lines below cursor
 set sidescrolloff=10
-set cursorline
 
 set mat=3                                               " Blink matching brackets for 3 tenths of a second
 set visualbell t_vb=                                    " No Noise or bell
