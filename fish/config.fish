@@ -20,7 +20,7 @@ set fish_function_path $fish_function_path $foreign_env
 
 # Start tmux
 if which tmux > /dev/null; and not set -q TMUX
-  exec tmux new-session -A -s main
+  exec tmux new-session -A
 end
 
 # No greeting

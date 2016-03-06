@@ -7,6 +7,7 @@ apps=(
   react-native-cli
   eslint
   happiness
+  standard
   jscs
   babel
   js-beautify

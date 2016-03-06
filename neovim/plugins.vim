@@ -46,27 +46,28 @@ Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
+Plug 'vim-scripts/vim-auto-save'
 
 " language-specific plugins
-Plug 'alvan/vim-closetag', {'for': ['html', 'js']}
+Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
-Plug 'Valloric/MatchTagAlways', { 'for': 'html' } " match tags in html, similar to paren support
+Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'xml', 'javascript', 'javascript.jsx'] } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
-Plug 'pangloss/vim-javascript', { 'for': 'js' } " JavaScript support
-Plug 'moll/vim-node', { 'for': 'js' } " node support
-Plug 'mxw/vim-jsx', { 'for': 'js' } " JSX support
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] } " JavaScript support
+Plug 'moll/vim-node', { 'for': ['javascript', 'javascript.jsx'] } " node support
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] } " JSX support
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support
 Plug 'Shougo/vimproc.vim', { 'do': 'make' } " interactive command execution in vim
 Plug 'digitaltoad/vim-jade', { 'for': 'jade' } " jade support
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 Plug 'wavded/vim-stylus', { 'for': 'stylus' } " stylus support
-Plug 'lilydjwg/colorizer', { 'for': ['css', 'stylus', 'css'] } " set the background of hex color values to the color
+Plug 'lilydjwg/colorizer', { 'for': ['css', 'stylus', 'css', 'javascript', 'javascript.jsx'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 Plug 'kballard/vim-fish' ", { 'for': 'fish' } fish shell support
-Plug 'othree/yajs.vim', { 'for': 'js' }
-Plug 'gavocanov/vim-js-indent', { 'for': 'js' }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'js' }
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'othree/jspc.vim', { 'for': 'js' }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }

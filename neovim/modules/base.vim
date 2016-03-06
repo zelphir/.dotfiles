@@ -19,7 +19,7 @@ set ttimeoutlen=10
 set wrap                                                " don't wrap lines
 set formatoptions+=t
 set formatoptions-=l
-set showbreak=↳\ 
+set showbreak=↳\ \
 set linebreak
 set breakindent
 set breakindentopt=shift:2
