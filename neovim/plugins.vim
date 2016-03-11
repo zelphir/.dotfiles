@@ -45,10 +45,10 @@ Plug 'djoshea/vim-autoread' "Check for file  changes outside vim
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
-" Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
+Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
+Plug 'vim-scripts/vim-auto-save'
 
 " language-specific plugins
-Plug 'benjie/neomake-local-eslint.vim'
 Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
@@ -65,7 +65,7 @@ Plug 'wavded/vim-stylus', { 'for': 'stylus' } " stylus support
 Plug 'lilydjwg/colorizer', { 'for': ['css', 'stylus', 'css', 'javascript', 'javascript.jsx'] } " set the background of hex color values to the color
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
-Plug 'kballard/vim-fish' ", { 'for': 'fish' } fish shell support
+Plug 'kballard/vim-fish' " fish shell support
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }

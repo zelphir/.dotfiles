@@ -24,3 +24,5 @@ map <Leader>bg :let &background = ( &background == "dark"? "light" : "dark" )<CR
 " Move by visual line.
 nnoremap j gj
 nnoremap k gk
+
+noremap - :Autoformat<CR>
