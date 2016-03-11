@@ -45,7 +45,7 @@ Plug 'djoshea/vim-autoread' "Check for file  changes outside vim
 Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
-Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
+" Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
 
 " language-specific plugins
 Plug 'benjie/neomake-local-eslint.vim'
