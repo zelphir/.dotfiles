@@ -12,13 +12,7 @@ function! HasConfig(file, dir)
 endfunction
 
 autocmd BufNewFile,BufReadPre *.js let g:neomake_javascript_enabled_makers =
-      \ HasConfig('.eslintrc', expand('<amatch>:h')) ? ['eslint_d'] :
-      \ HasConfig('.jshintrc', expand('<amatch>:h')) ? ['jshint'] :
-      \ HasConfig('.jscsrc', expand('<amatch>:h')) ? ['jscs'] :
-      \     ['standard']
-
-autocmd BufNewFile,BufReadPre *.js let g:neomake_jsx_enabled_makers =
-      \ HasConfig('.eslintrc', expand('<amatch>:h')) ? ['eslint_d'] :
+      \ HasConfig('.eslintrc', expand('<amatch>:h')) ? ['eslint'] :
       \ HasConfig('.jshintrc', expand('<amatch>:h')) ? ['jshint'] :
       \ HasConfig('.jscsrc', expand('<amatch>:h')) ? ['jscs'] :
       \     ['standard']

@@ -46,9 +46,9 @@ Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
-Plug 'vim-scripts/vim-auto-save'
 
 " language-specific plugins
+Plug 'benjie/neomake-local-eslint.vim'
 Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax

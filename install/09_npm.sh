@@ -12,7 +12,6 @@ apps=(
   babel
   js-beautify
   html-beautify
-  zelphir/eslint_d.js
   rnpm
   npm-check
 )

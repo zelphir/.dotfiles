@@ -35,3 +35,6 @@ alias reload ". $fish_path/config.fish"
 if test -f $fish_path/local.fish
   source $fish_path/local.fish
 end
+
+# Set REACT editor
+set -x REACT_EDITOR atom
