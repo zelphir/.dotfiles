@@ -32,6 +32,8 @@ apps=(
   hacker-menu
   skype
   vlc
+  infinit
+  transmission
 
   # quicklook plugins
   qlcolorcode

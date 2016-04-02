@@ -46,7 +46,7 @@ Plug 'Shougo/neopairs.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
-Plug 'vim-scripts/vim-auto-save'
+" Plug 'vim-scripts/vim-auto-save'
 
 " language-specific plugins
 Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}
