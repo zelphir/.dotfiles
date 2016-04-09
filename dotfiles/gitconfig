@@ -17,6 +17,9 @@
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
+  # difftool
+  dt = difftool -y
+
   # Pull in remote changes for the current repository and all its submodules
   p = !"git pull; git submodule foreach git pull origin master"
 
@@ -137,6 +140,10 @@
 
   # Detect copies as well as renames
   renames = copies
+  tool = Kaleidoscope
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [diff "bin"]
   # Use `hexdump` to diff binary files
@@ -151,6 +158,11 @@
 
   # Include summaries of merged commits in newly created merge commit messages
   log = true
+  tool = Kaleidoscope
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
 
 [push]
 
@@ -164,4 +176,4 @@
 [credential]
   helper = osxkeychain
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://

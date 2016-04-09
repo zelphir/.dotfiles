@@ -30,6 +30,7 @@ set fish_greeting
 alias v "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias vim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias reload ". $fish_path/config.fish"
+alias a atom-beta
 
 # Source sensitive configuration
 if test -f $fish_path/local.fish
@@ -37,4 +38,4 @@ if test -f $fish_path/local.fish
 end
 
 # Set REACT editor
-set -x REACT_EDITOR atom
+set -x REACT_EDITOR atom-beta
