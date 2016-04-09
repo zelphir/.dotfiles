@@ -19,6 +19,8 @@ apps=(
   the-unarchiver
 
   # dev
+  atom
+  atom-beta
   iterm2-beta
   sublime-text3
   virtualbox

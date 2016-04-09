@@ -14,3 +14,10 @@ neovim/tmp
 
 # Terminal
 *.ti
+
+# Atom
+atom/*
+!atom/*.cson
+!atom/*.less
+!atom/*.coffee
+!atom/packages.list

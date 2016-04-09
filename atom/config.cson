@@ -1,0 +1,123 @@
+"*":
+  "autocomplete-plus":
+    suppressActivationForEditorClasses: [
+      "vim-mode-plus.normal-mode"
+      "vim-mode-plus.visual-mode"
+      "vim-mode-plus.operator-pending-mode"
+      "vim-mode-plus.insert-mode.replace"
+    ]
+  autosave:
+    enabled: true
+  blame: {}
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "linter-js-standard"
+      "react"
+      "highlight-selected"
+      "auto-indent"
+      "tab-control"
+      "nuclide"
+    ]
+    themes: [
+      "one-dark-ui"
+      "kingfisher-syntax"
+    ]
+  docblockr: {}
+  editor:
+    fontSize: 15
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+  "exception-reporting":
+    userId: "6c6a98d9-2111-055b-3833-19630a0052fc"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "find-and-replace": {}
+  "fuzzy-finder":
+    preserveLastSearch: true
+  "git-blame":
+    ignoreWhiteSpaceDiffs: true
+  "highlight-selected": {}
+  "js-hyperclick": {}
+  linter:
+    displayLinterStatus: false
+    showErrorInline: false
+    underlineIssues: false
+  "linter-eslint":
+    globalNodePath: "/Users/roberto/.n"
+  "linter-js-standard":
+    honorStyleSettings: true
+    lintMarkdownFiles: true
+    showEslintRules: true
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
+  nuclide:
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-clang-atom": {}
+    "nuclide-datatip": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-home":
+      showHome: false
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-output": {}
+    "nuclide-working-sets": {}
+  "one-dark-ui":
+    fontSize: 11
+    layoutMode: "Compact"
+  pigments:
+    extendAutocompleteToVariables: true
+  react:
+    enabledForAllJavascriptFiles: true
+  "status-bar": {}
+  "tab-control": {}
+  tabs:
+    enableVcsColoring: true
+    usePreviewTabs: true
+  "trailing-spaces":
+    enableForCursorLines: true
+    enableForIndentation: true
+  "tree-view":
+    hideIgnoredNames: true
+  "vim-mode-plus":
+    flashOnUndoRedo: true
+    flashOnUndoRedoDuration: 150
+    highlightSearch: true
+    ignoreCaseForSearch: true
+    ignoreCaseForSearchCurrentWord: true
+    incrementalSearch: true
+    setCursorToStartOfChangeOnUndoRedo: true
+    showHoverOnOperate: true
+    showHoverSearchCounter: true
+    stayOnTransformString: true
+    stayOnYank: true
+    useClipboardAsDefaultRegister: true
+    useSmartcaseForSearch: true
+    useSmartcaseForSearchCurrentWord: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".js.jsx.source":
+  editor:
+    autoIndentOnPaste: true

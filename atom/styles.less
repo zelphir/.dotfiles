@@ -1,0 +1,37 @@
+// Vim mode status
+#status-bar-vim-mode-plus-container {
+  vertical-align: middle;
+
+  div {
+    line-height: 20px;
+    border-radius: 4px;
+    padding: 0 5px;
+    color: #FFF;
+
+    &.status-bar-vim-mode-plus-insert {
+      background-color: #3D9970;
+    }
+
+    &.status-bar-vim-mode-plus-normal {
+      background-color: #0074D9;
+    }
+
+    &.status-bar-vim-mode-plus-visual {
+      background-color: #B10DC9;
+    }
+  }
+}
+
+// JS return
+atom-text-editor::shadow {
+  .flow {
+    color: #FF0095;
+    font-weight: bold;
+  }
+
+  .readwrite,
+  .other.object {
+    color: #CC8700;
+    font-style: italic;
+  }
+}
