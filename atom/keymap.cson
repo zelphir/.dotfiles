@@ -23,43 +23,43 @@
 
   'g f': 'open-this:here'
   'ctrl-w f': 'open-this:split-down'
-  'ctrl-w f': 'open-this:split-right'
+  'ctrl-w F': 'open-this:split-right'
 
   'g x': 'link:open'
   'cmd-enter': 'vim-mode-plus:maximize-pane'
 
   'ctrl-g': 'vim-mode-plus:reset-normal-mode'
-  'cmd-z': 'vim-mode-plus:toggle-fold'
   'g c': 'vim-mode-plus:select-latest-change'
-  's': 'vim-mode-plus:surround-smart-word'
+  'S': 'vim-mode-plus:surround-smart-word'
   'y s': 'vim-mode-plus:surround'
   'm s': 'vim-mode-plus:map-surround'
   'd s': 'vim-mode-plus:delete-surround-any-pair'
   'c s': 'vim-mode-plus:change-surround-any-pair'
 
-  # need vim-mode-plus-ex-mode package
+  # Need vim-mode-plus-ex-mode package
   ':': 'vim-mode-plus-ex-mode:open'
   '!': 'vim-mode-plus-ex-mode:toggle-setting'
 
   'space n': 'editor:toggle-line-numbers'
   'space i': 'user:toggle-show-invisible'
-  'space i': 'editor:toggle-indent-guide'
+  'space I': 'editor:toggle-indent-guide'
   'space w': 'editor:toggle-soft-wrap'
   'space /': 'vim-mode-plus:clear-highlight-search'
 
 # insert
-'atom-text-editor.vim-mode-plus.insert-mode':
-  'cmd-f': 'editor:move-to-end-of-word'
-  'cmd-b': 'editor:move-to-beginning-of-word'
-  'cmd-m': 'editor:select-word'
-  'ctrl-y': 'clip-history:paste'
-  'cmd-y': 'clip-history:paste-newer'
-  'ctrl-y': 'clip-history:paste-last'
-  'ctrl-i': 'vim-mode-plus:insert-last-inserted'
+# 'atom-text-editor.vim-mode-plus.insert-mode':
+#   'cmd-f': 'editor:move-to-end-of-word'
+#   'cmd-b': 'editor:move-to-beginning-of-word'
+#   'cmd-d': 'editor:delete-to-end-of-word'
+#   'cmd-m': 'editor:select-word'
+#   'ctrl-y': 'clip-history:paste'
+#   'cmd-y': 'clip-history:paste-newer'
+#   'ctrl-Y': 'clip-history:paste-last'
+#   'ctrl-i': 'vim-mode-plus:insert-last-inserted'
 
 # non-insert
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'g c': 'vim-mode-plus:camel-case'
+  'g C': 'vim-mode-plus:camel-case'
 
   'ctrl-cmd-k': 'vim-mode-plus:move-up-to-edge'
   'ctrl-cmd-j': 'vim-mode-plus:move-down-to-edge'
@@ -82,16 +82,16 @@
 
 # visual
 'atom-text-editor.vim-mode-plus.visual-mode':
-  # need vim-mode-plus-move-selected-text package
+  # Need vim-mode-plus-move-selected-text package
   'ctrl-k': 'vim-mode-plus-user:move-selected-text-up'
   'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
   'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
   'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
 
-  'cmd-k': 'vim-mode-plus-user:duplicate-selected-text-up'
-  'cmd-j': 'vim-mode-plus-user:duplicate-selected-text-down'
-  'cmd-h': 'vim-mode-plus-user:duplicate-selected-text-left'
-  'cmd-l': 'vim-mode-plus-user:duplicate-selected-text-right'
+  'cmd-K': 'vim-mode-plus-user:duplicate-selected-text-up'
+  'cmd-J': 'vim-mode-plus-user:duplicate-selected-text-down'
+  'cmd-H': 'vim-mode-plus-user:duplicate-selected-text-left'
+  'cmd-L': 'vim-mode-plus-user:duplicate-selected-text-right'
 
 # operator-pending
 'atom-text-editor.vim-mode-plus.operator-pending-mode':
@@ -101,75 +101,23 @@
 'atom-text-editor.vim-mode-plus.normal-mode, atom-text-editor.vim-mode-plus.visual-mode':
   '_': 'vim-mode-plus:replace-with-register'
 
-# input
+# Input
 # -------------------------
 'atom-text-editor.vim-mode-plus-input':
   'ctrl-g': 'vim-mode-plus:input-cancel'
 
-# search input
+# Search input
 # -------------------------
-'atom-text-editor.vim-mode-plus-search':
+'atom-text-editor.vim-mode-plus-search:not(.literal-mode)':
   '[': 'vim-mode-plus:search-visit-prev'
   ']': 'vim-mode-plus:search-visit-next'
   ';': 'vim-mode-plus:search-confirm'
-  'space': 'vim-mode-plus:search-insert-wild-pattern'
   'ctrl-g': 'vim-mode-plus:search-cancel'
 
-# other
+# Other
 # -------------------------
 '.select-list':
   ';': 'core:confirm'
   'ctrl-l': 'pane:split-right'
   'ctrl-j': 'pane:split-down'
   'ctrl-g': 'core:cancel'
-
-'atom-text-editor.vim-mode-plus.normal-mode':
-  'g c':    'vim-mode-plus:select-latest-change'
-  'ctrl-w z': 'vim-mode-plus:maximize-pane'
-  # or
-  # 'cmd-enter': 'vim-mode-plus:maximize-pane'
-
-  'g [': 'vim-mode-plus:insert-at-previous-fold-start'
-  'g ]': 'vim-mode-plus:insert-at-next-fold-start'
-
-  # Surround family
-  'y s': 'vim-mode-plus:surround'
-  'y s w': 'vim-mode-plus:surround-word'
-  'y m s':  'vim-mode-plus:map-surround'
-  # 'd s': 'vim-mode-plus:delete-surround'
-  'd s': 'vim-mode-plus:delete-surround-any-pair'
-  # 'c s': 'vim-mode-plus:change-surround'
-  'c s': 'vim-mode-plus:change-surround-any-pair'
-
-'atom-text-editor.vim-mode-plus:not(.insert-mode)':
-  'g _': 'vim-mode-plus:snake-case'
-  '_': 'vim-mode-plus:replace-with-register'
-  'g r':   'vim-mode-plus:reverse'
-
-  # 'g k': 'vim-mode-plus:move-up-to-non-blank'
-  # 'g j': 'vim-mode-plus:move-down-to-non-blank'
-
-  'ctrl-cmd-k': 'vim-mode-plus:move-up-to-edge'
-  'ctrl-cmd-j': 'vim-mode-plus:move-down-to-edge'
-
-  '[ [': 'vim-mode-plus:move-to-previous-fold-start'
-  '] [': 'vim-mode-plus:move-to-next-fold-start'
-
-  # '(': 'vim-mode-plus:move-to-previous-fold-start-with-same-indent'
-  # ')': 'vim-mode-plus:move-to-next-fold-start-with-same-indent'
-
-  '[ ]': 'vim-mode-plus:move-to-previous-fold-end'
-  '] ]': 'vim-mode-plus:move-to-next-fold-end'
-
-  '(': 'vim-mode-plus:move-to-previous-function'
-  ')': 'vim-mode-plus:move-to-next-function'
-
-  'g s': 'vim-mode-plus:move-to-next-string'
-  'g S': 'vim-mode-plus:move-to-previous-string'
-
-  'g n': 'vim-mode-plus:move-to-next-number'
-  'g N': 'vim-mode-plus:move-to-previous-number'
-
-'atom-text-editor.vim-mode-plus.visual-mode':
-  'ctrl-k': 'vim-mode-plus:move-line-up'
-  'ctrl-j': 'vim-mode-plus:move-line-down'

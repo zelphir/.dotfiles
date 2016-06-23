@@ -9,7 +9,7 @@ apps=(
 
   # browsers
   firefox
-  google-chrome
+  google-chrome-beta
 
   # utility
   bartender
@@ -17,25 +17,30 @@ apps=(
   istat-menus
   spectacle
   the-unarchiver
+  screenhero
 
   # dev
-  atom
   atom-beta
   iterm2-beta
-  sublime-text3
-  virtualbox
   java
   genymotion
   karabiner
   psequel
+  react-native-debugger
 
   # others
   sketch
   hacker-menu
   skype
+  slack
+  telegram
+  whatsapp
   vlc
   infinit
   transmission
+
+  # Fonts
+  caskroom/fonts/font-hack
 
   # quicklook plugins
   qlcolorcode

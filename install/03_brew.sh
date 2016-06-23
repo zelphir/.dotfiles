@@ -30,7 +30,6 @@ brews=(
   "cowsay"
   "htop"
   "gradle"
-  "python"
   "python3"
   "watchman"
   "flow"
@@ -40,11 +39,7 @@ brews=(
   "ctags"
   "homebrew/completions/brew-cask-completion"
   "reattach-to-user-namespace"
-  "vim --override-system-vi"
-  "postgres"
-  "docker"
-  "docker-machine"
-  "docker-compose"
+  "thefuck"
 )
 
 for i in "${brews[@]}"; do

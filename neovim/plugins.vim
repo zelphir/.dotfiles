@@ -3,6 +3,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 
 " utilities
+Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 Plug 'Raimondi/delimitMate' " automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'tpope/vim-unimpaired' " mappings which are simply short normal mode aliases for commonly used ex commands
@@ -26,11 +27,10 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'ryanoasis/vim-devicons'
 Plug 'powerman/vim-plugin-viewdoc'
 Plug 'hsanson/vim-resize'
-Plug 'Yggdroot/indentLine'
 Plug 'Shougo/deoplete.nvim'
 Plug 'terryma/vim-multiple-cursors' " Sublime-like multiple cursors (C-n).
 Plug 'rking/ag.vim'
-Plug 'simnalamburt/vim-mundo'
+" Plug 'simnalamburt/vim-mundo'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/unite.vim'
 Plug 'travisjeffery/vim-auto-mkdir'
@@ -47,6 +47,7 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/context_filetype.vim'
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
 " Plug 'vim-scripts/vim-auto-save'
+Plug 'wakatime/vim-wakatime'
 
 " language-specific plugins
 Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}

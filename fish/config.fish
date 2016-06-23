@@ -4,6 +4,7 @@ set -x fish_path $HOME/.config/fish
 set -x foreign_env $fish_path/plugins/foreign-env/functions
 set -x ANDROID_HOME /usr/local/opt/android-sdk
 set -x NEOVIM $HOME/.config/nvim/
+set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 
 # Python virtualenv
 set -x WORKON_HOME ~/.virtualenvs
@@ -31,6 +32,7 @@ alias v "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias vim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias reload ". $fish_path/config.fish"
 alias a atom-beta
+eval (thefuck --alias | tr '\n' ';')
 
 # Source sensitive configuration
 if test -f $fish_path/local.fish

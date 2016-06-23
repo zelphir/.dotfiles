@@ -16,6 +16,7 @@
 
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+  df = diff
 
   # difftool
   dt = difftool -y

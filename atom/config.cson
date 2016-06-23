@@ -1,4 +1,6 @@
 "*":
+  "atom-clock":
+    dateFormat: "ddd DD MMM - HH:mm"
   "autocomplete-plus":
     suppressActivationForEditorClasses: [
       "vim-mode-plus.normal-mode"
@@ -8,6 +10,8 @@
     ]
   autosave:
     enabled: true
+  "battery-status":
+    onlyShowWhileInFullscreen: true
   blame: {}
   core:
     customFileTypes:
@@ -22,20 +26,19 @@
         "BUCK"
       ]
     disabledPackages: [
-      "linter-js-standard"
       "react"
       "highlight-selected"
       "auto-indent"
-      "tab-control"
       "nuclide"
+      "es6-javascript"
     ]
     themes: [
       "one-dark-ui"
-      "kingfisher-syntax"
+      "gruvbox"
     ]
   docblockr: {}
   editor:
-    fontSize: 15
+    fontFamily: "Hack"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
@@ -49,6 +52,9 @@
   "git-blame":
     ignoreWhiteSpaceDiffs: true
   "highlight-selected": {}
+  "isotope-ui":
+    fontWeight: "Extra light / Thin"
+    minimalMode: true
   "js-hyperclick": {}
   linter:
     displayLinterStatus: false
@@ -57,6 +63,7 @@
   "linter-eslint":
     globalNodePath: "/Users/roberto/.n"
   "linter-js-standard":
+    checkStyleDevDependencies: true
     honorStyleSettings: true
     lintMarkdownFiles: true
     showEslintRules: true
@@ -66,41 +73,34 @@
     plugins:
       "split-diff": true
       "split-diffDecorationsZIndex": 0
-  nuclide:
-    "nuclide-arcanist": {}
-    "nuclide-buck-files": {}
-    "nuclide-clang-atom": {}
-    "nuclide-datatip": {}
-    "nuclide-debugger-hhvm": {}
-    "nuclide-flow": {}
-    "nuclide-format-js": {}
-    "nuclide-hack": {}
-    "nuclide-health": {}
-    "nuclide-home":
-      showHome: false
-    "nuclide-ios-simulator-logs": {}
-    "nuclide-ocaml": {}
-    "nuclide-output": {}
-    "nuclide-working-sets": {}
   "one-dark-ui":
     fontSize: 11
     layoutMode: "Compact"
+    tabSizing: "Even"
   pigments:
     extendAutocompleteToVariables: true
   react:
     enabledForAllJavascriptFiles: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "status-bar": {}
   "tab-control": {}
   tabs:
     enableVcsColoring: true
     usePreviewTabs: true
+  "tabs-to-spaces":
+    onSave: "untabify"
   "trailing-spaces":
     enableForCursorLines: true
     enableForIndentation: true
   "tree-view":
     hideIgnoredNames: true
   "vim-mode-plus":
-    flashOnUndoRedo: true
+    flashOnOperate: false
     flashOnUndoRedoDuration: 150
     highlightSearch: true
     ignoreCaseForSearch: true
@@ -109,11 +109,13 @@
     setCursorToStartOfChangeOnUndoRedo: true
     showHoverOnOperate: true
     showHoverSearchCounter: true
-    stayOnTransformString: true
-    stayOnYank: true
-    useClipboardAsDefaultRegister: true
     useSmartcaseForSearch: true
     useSmartcaseForSearchCurrentWord: true
+  wakatime:
+    apikey: "Saved in your ~/.wakatime.cfg file"
+    showStatusBarIcon: false
+  "wakatime-hidden":
+    lastInit: 1466633023
   welcome:
     showOnStartup: false
   whitespace:
