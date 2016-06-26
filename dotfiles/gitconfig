@@ -3,7 +3,6 @@
   name = Roberto Manzella
 
 [alias]
-
   # View abbreviated SHA, description, and history graph of the latest 20 commits
   l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
@@ -86,12 +85,10 @@
     }; f"
 
 [apply]
-
   # Detect whitespace errors when applying a patch
   whitespace = fix
 
 [core]
-
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -113,32 +110,30 @@
   editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 
 [color]
-
   # Use colors in Git commands that are capable of colored output when
   # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
   ui = auto
 
 [color "branch"]
-
   current = yellow reverse
   local = yellow
   remote = green
 
 [color "diff"]
-
   meta = yellow bold
   frag = magenta bold # line info
   old = red # deletions
   new = green # additions
 
 [color "status"]
-
   added = yellow
   changed = green
   untracked = cyan
 
-[diff]
+[difftool]
+  prompt = false
 
+[diff]
   # Detect copies as well as renames
   renames = copies
   tool = Kaleidoscope
@@ -151,12 +146,13 @@
   textconv = hexdump -v -C
 
 [help]
-
   # Automatically correct and execute mistyped commands
   autocorrect = 1
 
-[merge]
+[mergetool]
+  prompt = false
 
+[merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
   tool = Kaleidoscope
@@ -166,7 +162,6 @@
   trustExitCode = true
 
 [push]
-
   # Use the Git 1.x.x default to avoid errors on machines with old Git
   # installations. To use `simple` instead, add this to your `~/.extra` file:
   # `git config --global push.default simple`. See http://git.io/mMah-w.
@@ -176,5 +171,6 @@
 
 [credential]
   helper = osxkeychain
+
 [url "https://"]
   insteadOf = git://

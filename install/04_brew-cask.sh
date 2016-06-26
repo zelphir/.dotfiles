@@ -22,6 +22,7 @@ apps=(
   # dev
   atom-beta
   iterm2-beta
+  sublime-text-dev
   android-studio
   java
   genymotion

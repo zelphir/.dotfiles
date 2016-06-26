@@ -7,7 +7,7 @@ source $DOTFILES_DIR/lib/utils.sh
 echo
 e_running "Running Bootstrap scripts...\n"
 
-FILES=install/*.s
+FILES=install/*.sh
 
 for f in $FILES; do
   source "${f}"
