@@ -22,6 +22,7 @@ apps=(
   # dev
   atom-beta
   iterm2-beta
+  android-studio
   java
   genymotion
   karabiner

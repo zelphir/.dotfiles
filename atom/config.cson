@@ -10,8 +10,7 @@
     ]
   autosave:
     enabled: true
-  "battery-status":
-    onlyShowWhileInFullscreen: true
+  "battery-status": {}
   blame: {}
   core:
     customFileTypes:
@@ -82,7 +81,6 @@
   react:
     enabledForAllJavascriptFiles: true
   "split-diff":
-    diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
@@ -115,7 +113,7 @@
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1466633023
+    lastInit: 1466807551
   welcome:
     showOnStartup: false
   whitespace:
