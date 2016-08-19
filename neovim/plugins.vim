@@ -48,6 +48,7 @@ Plug 'Shougo/context_filetype.vim'
 Plug 'ntpeters/vim-better-whitespace' " Highlight trailing whitespace.
 " Plug 'vim-scripts/vim-auto-save'
 Plug 'wakatime/vim-wakatime'
+Plug 'jaawerth/nrun.vim'
 
 " language-specific plugins
 Plug 'alvan/vim-closetag', {'for': ['html', 'javascript', 'javascript.jsx']}

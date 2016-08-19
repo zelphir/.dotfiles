@@ -9,6 +9,7 @@ apps=(
 
   # browsers
   firefox
+  firefoxdeveloperedition
   google-chrome-beta
 
   # utility
@@ -17,9 +18,11 @@ apps=(
   istat-menus
   spectacle
   the-unarchiver
+  1password
   screenhero
 
   # dev
+  docker
   atom-beta
   iterm2-beta
   sublime-text-dev
@@ -29,6 +32,7 @@ apps=(
   karabiner
   psequel
   react-native-debugger
+  postman
 
   # others
   sketch
