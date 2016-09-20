@@ -95,23 +95,6 @@ function! g:utils#stripTrailingWhitespaces() abort
   call cursor(l:line, l:col)
 endfunction
 
-" Set SK keyboard layout with qwerty
-function! g:utils#setSKKBLayout() abort
-  silent !setxkbmap sk -variant qwerty
-endfunction
-
-" Set US keyboard layout with qwerty
-function! g:utils#setUSKBLayout() abort
-  silent !setxkbmap us
-endfunction
-
-" Generate ctags and put them into tags directory
-" gem install starscope
-function! g:utils#generateCtags() abort
-  silent execute '!starscope -e ctags'
-  echom 'Tags generated into tags file!'
-endfunction
-
 " Tab wrapper
 function! g:utils#tabComplete() abort
   let l:col = col('.') - 1
@@ -156,7 +139,7 @@ function! g:utils#uniteMRUs() abort
 endfunction
 
 function! g:utils#uniteFileBrowse() abort
-  execute 'Unite -no-split -buffer-name=project-files -start-insert file'
+  execute 'Unite -vertical -auto-preview -buffer-name=project-files -start-insert file'
 endfunction
 
 function! g:utils#uniteFileRec() abort
@@ -243,51 +226,6 @@ function! g:utils#formatFile() abort
 
   " Return back to where cursor was
   call cursor(l:line, l:col)
-endfunction
-
-" Annotate file function (only ruby support for now)
-" Needs: `gem install seeing_is_believing`
-function! g:utils#annotateFile() abort
-  let l:command_prefix = '%!'
-
-  if &filetype ==? 'ruby'
-    let l:command = 'seeing_is_believing -x'
-  endif
-
-  if exists('l:command')
-    execute l:command_prefix . l:command
-  endif
-endfunction
-
-" Mode function for Lightline statusline
-function! g:utils#lightLineMode() abort
-  let l:fname = expand('%:t')
-  return l:fname =~? 'NERD_tree' ? 'NT' :
-        \ &filetype ==? 'unite' ? 'Unite' :
-        \ winwidth(0) > 70 ? g:lightline#mode() : ''
-endfunction
-
-" File format function for Lightline statusline
-function! g:utils#lightLineFileformat() abort
-  return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-" Filetype function for Lightline statusline
-function! g:utils#lightLineFiletype() abort
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-" File encoding function for Lightline statusline
-function! g:utils#lightLineFileencoding() abort
-  return winwidth(0) > 70 ? (strlen(&fileencoding) ? &fileencoding : &encoding) : ''
-endfunction
-
-" File name function for Lightline statusline
-function! g:utils#lightLineFilename() abort
-  let l:fname = expand('%:t')
-  return l:fname =~? 'NERD_tree' ? 'NERDTree' :
-        \ &filetype ==? 'unite' ? g:unite#get_status_string() :
-        \ ('' !=# l:fname ? l:fname : '[No Name]')
 endfunction
 
 " Howdoi integration

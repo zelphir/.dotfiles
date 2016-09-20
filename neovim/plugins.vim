@@ -1,7 +1,6 @@
 " ---------------------------------------------------
 " Color Schemes {{{
 " ---------------------------------------------------
-Plug 'mhartington/oceanic-next'
 Plug 'morhetz/gruvbox'
 "}}}
 
@@ -17,6 +16,7 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
 " Snippet support (C-j)
+Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 " Commenting support (gc)
 Plug 'tpope/vim-commentary'
@@ -52,12 +52,14 @@ Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF', 'CtrlSFToggle'] }
 " Moder JS support (indent, syntax, etc)
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 " JSX syntax
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 " Typescript syntax
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 " JSON syntax
 Plug 'sheerun/vim-json'
 " Autocomplete (npm install -g tern)
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 " Autocomplete using flow (npm install -g flow-bin)
 Plug 'steelsojka/deoplete-flow'
@@ -78,7 +80,7 @@ Plug 'othree/html5.vim'
 " SCSS syntax
 Plug 'cakebaker/scss-syntax.vim'
 " Color highlighter
-Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
+Plug 'lilydjwg/colorizer', { 'for': ['vim', 'css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 " Emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 "}}}

@@ -34,11 +34,8 @@ let g:unite_source_menu_menus.utils = {
       \     'description' : 'Utility commands',
       \ }
 let g:unite_source_menu_menus.utils.command_candidates = [
-      \       ['Run XMPFilter', 'Annotate'],
       \       ['Format file', 'Format'],
       \       ['Run file', 'Run'],
-      \       ['Generate Ctags', 'GTags'],
-      \       ['Show notes', 'Notes'],
       \     ]
 
 " Git menu

@@ -8,7 +8,6 @@ if &shell =~# 'fish$'
   set shell=sh " Setting shell to sh if use fish
 endif
 
-syntax enable                               " Turn on syntax highlighting allowing local overrides
 set number                                  " Line numbers on
 set showmode                                " Always show mode
 set showcmd                                 " Show commands as you type them
@@ -32,12 +31,6 @@ set visualbell t_vb=                        " No Noise or bell
 set mouse=a
 set mat=3                                   " Blink matching brackets for 3 tenths of a second
 set autoread
-"}}}
-
-" --------------------------------
-" Setting leader {{{
-" --------------------------------
-let g:mapleader="\<Space>"
 "}}}
 
 " ----------------------------------
@@ -89,8 +82,8 @@ set ttimeoutlen=10
 " ----------------------------------
 " Spelling settings {{{
 " ----------------------------------
-set spellfile=~/.config/nvim/dictionary.utf-8.add
-set spelllang=en_us                         " Set language to US English
+" set spellfile=~/.config/nvim/dictionary.utf-8.add
+" set spelllang=en_us                         " Set language to US English
 set nospell                                 " Disable checking by default (use <F4> to toggle)
 "}}}
 
@@ -140,8 +133,8 @@ set fillchars="fold: "                      " Characters to fill the statuslines
 " ----------------------------------
 
 " Listchars highlighting {{{
-highlight NonText ctermfg=235 guifg=gray
-highlight SpecialKey ctermfg=235 guifg=gray
+" highlight NonText ctermfg=235 guifg=gray
+" highlight SpecialKey ctermfg=235 guifg=gray
 "}}}
 
 " Remove underline in folded lines {{{
@@ -204,7 +197,7 @@ let g:python3_host_prog='/usr/local/bin/python3'  " Set python 3 host program
 " Autocommands {{{
 " --------------------------------
 
-autocmd FileType javascript,json,jsx setlocal suffixesadd+=.js,.json,.jsx
+" autocmd FileType javascript,json,jsx setlocal suffixesadd+=.js,.json,.jsx
 
 " Remove trailing whitespaces automatically before save {{{
 autocmd BufWritePre * call utils#stripTrailingWhitespaces()
