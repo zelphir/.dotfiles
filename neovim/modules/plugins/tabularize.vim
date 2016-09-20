@@ -1,0 +1,1 @@
+vnoremap ,a :Tabularize /

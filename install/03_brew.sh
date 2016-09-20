@@ -17,6 +17,8 @@ brews=(
   "gnu-sed --with-default-names"
 
   # Install some tools"
+  "fzf"
+  "ranger"
   "dockutil"
   "trash"
   "tree"

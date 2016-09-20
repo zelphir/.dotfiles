@@ -5,6 +5,9 @@ set -x foreign_env $fish_path/plugins/foreign-env/functions
 set -x ANDROID_HOME /usr/local/opt/android-sdk
 set -x NEOVIM $HOME/.config/nvim/
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
+set -x FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+set -x FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -U FZF_TMUX 1
 
 # Python virtualenv
 set -x WORKON_HOME ~/.virtualenvs

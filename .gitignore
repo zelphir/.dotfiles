@@ -4,10 +4,11 @@ fishd.*
 fish_history*
 fish_read_history
 fish/local.fish
+fish/functions/__*
 
 # Neovim
 tags
-neovim/autoload
+neovim/autoload/plug.vim*
 neovim/colors
 neovim/plugged
 neovim/tmp
@@ -21,3 +22,5 @@ atom/*
 !atom/*.less
 !atom/*.coffee
 !atom/packages.list
+
+node_modules

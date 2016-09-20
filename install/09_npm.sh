@@ -6,14 +6,14 @@ apps=(
   gulp
   react-native-cli
   eslint
-  happiness
   standard
   jscs
   babel
   js-beautify
   html-beautify
-  rnpm
   npm-check
+  flow-bin
+  tern
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
