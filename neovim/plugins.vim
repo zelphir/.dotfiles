@@ -2,6 +2,11 @@
 " Color Schemes {{{
 " ---------------------------------------------------
 Plug 'morhetz/gruvbox'
+Plug 'muellan/am-colors'
+Plug 'jacoborus/tender.vim'
+Plug 'roosta/vim-srcery'
+Plug 'lifepillar/vim-wwdc16-theme'
+Plug 'rakr/vim-one'
 "}}}
 
 " ---------------------------------------------------

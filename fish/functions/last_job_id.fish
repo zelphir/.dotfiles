@@ -1,1 +1,1 @@
-/Users/roberto/.config/fisherman/last_job_id/last_job_id.fish
+/Users/popcorn/.config/fisherman/last_job_id/last_job_id.fish

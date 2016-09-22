@@ -131,3 +131,6 @@ vnoremap ,s :!sort<CR>
 " Retab
 command! Retab :call utils#retabToFourSpaces()
 command! Retab2 :call utils#retabToTwoSpaces()
+
+" Set active directory
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>

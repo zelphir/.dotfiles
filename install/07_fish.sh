@@ -20,5 +20,6 @@ fi
 chsh -s `which fish` $USER
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > $TERM.ti
 tic $TERM.ti
+tic -x $DOTFILES_DIR/tmux.terminfo
 
 e_success "Done!"

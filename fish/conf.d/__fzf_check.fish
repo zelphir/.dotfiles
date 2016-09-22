@@ -1,1 +1,1 @@
-/Users/roberto/.config/fisherman/fzf/conf.d/__fzf_check.fish
+/Users/popcorn/.config/fisherman/fzf/conf.d/__fzf_check.fish
