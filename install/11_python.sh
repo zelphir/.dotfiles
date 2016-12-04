@@ -1,6 +1,6 @@
 #!/bin/bash
 e_header "Install python env"
 
-pip install virtualfish
+pip3 install virtualfish
 
 e_success "Done!"

@@ -3,7 +3,7 @@
 e_header "Install npm packages..."
 
 apps=(
-  gulp
+  create-react-app
   react-native-cli
   eslint
   standard
@@ -12,7 +12,7 @@ apps=(
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
-  yarn ${apps[@]}
+  yarn global add ${apps[@]}
 fi
 
 e_success "Done!"
