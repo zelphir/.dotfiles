@@ -3,7 +3,7 @@ e_header "Installing extra Homebrew formulae..."
 
 # tap formulas
 brew_tap homebrew/completions
-brew_tap 'neovim/neovim'
+brew_tap neovim/neovim
 brew tap facebook/fb
 
 brews=(
@@ -17,21 +17,18 @@ brews=(
   "gnu-sed --with-default-names"
 
   # Install some tools"
+  "yarn"
   "fzf"
-  "ranger"
-  "dockutil"
   "trash"
   "tree"
   "wget --with-iri"
   "https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb"
   "neovim --HEAD"
   "fish --HEAD"
-  "buck --HEAD"
   "git"
   "fortune"
   "cowsay"
   "htop"
-  "gradle"
   "python3"
   "watchman"
   "flow"

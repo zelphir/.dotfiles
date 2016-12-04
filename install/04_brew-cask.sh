@@ -19,20 +19,15 @@ apps=(
   spectacle
   the-unarchiver
   1password
-  screenhero
 
   # dev
   docker
   atom-beta
   iterm2-beta
   sublime-text-dev
-  android-studio
   java
   genymotion
-  karabiner
-  psequel
   react-native-debugger
-  postman
 
   # others
   sketch
