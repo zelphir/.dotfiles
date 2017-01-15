@@ -1473,9 +1473,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 478 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>381 443 796 473 0 0 1680 1028 </string>
+	<string>381 404 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>191 124 1270 786 0 0 1680 1028 </string>
+	<string>174 235 1270 786 0 0 1680 1028 </string>
+	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1754,7 +1758,7 @@
 			<key>Custom Command</key>
 			<string>Yes</string>
 			<key>Custom Directory</key>
-			<string>Recycle</string>
+			<string>No</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -2186,7 +2190,7 @@
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>502561796.95117098</real>
 	<key>OpenTmuxWindowsIn</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2233,7 +2237,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-14T17:18:44Z</date>
+	<date>2017-01-15T17:19:11Z</date>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>

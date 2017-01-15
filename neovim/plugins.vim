@@ -1,8 +1,11 @@
-" ---------------------------------------------------
-" Color Schemes {{{
-" ---------------------------------------------------
+" Theme
 Plug 'mhartington/oceanic-next'
-"}}}
+
+" File search
+Plug 'cloudhead/neovim-fuzzy'
+
+" Integration with tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " ---------------------------------------------------
 " Language agnostic plugins {{{
@@ -188,8 +191,6 @@ Plug 'mhartington/oceanic-next'
 "Plug 'djoshea/vim-autoread'
 " Search with silver-searcher
 "Plug 'rking/ag.vim'
-" Integration with tmux
-Plug 'christoomey/vim-tmux-navigator'
 " Create dir
 "Plug 'travisjeffery/vim-auto-mkdir'
 "Plug 'pbrisbin/vim-mkdir'

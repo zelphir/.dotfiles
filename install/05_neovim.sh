@@ -5,6 +5,7 @@ install_nvim_folder
 
 if [ ! -d $CONFIG_DIR/nvim ]; then
   ln -sf $DOTFILES_DIR/neovim $CONFIG_DIR/nvim
+  pip install neovim
   pip3 install neovim
 fi
 

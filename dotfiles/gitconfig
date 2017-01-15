@@ -83,6 +83,7 @@
     git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
     fi \
     }; f"
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
 [apply]
   # Detect whitespace errors when applying a patch

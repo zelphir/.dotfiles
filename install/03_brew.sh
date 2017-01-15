@@ -4,7 +4,8 @@ e_header "Installing extra Homebrew formulae..."
 # tap formulas
 brew_tap homebrew/completions
 brew_tap neovim/neovim
-brew tap facebook/fb
+brew_tap facebook/fb
+brew_tap jhawthorn/fzy
 
 brews=(
   # Install GNU core utilities (those that come with OS X are outdated).
@@ -19,6 +20,7 @@ brews=(
   # Install some tools"
   "yarn --ignore-dependencies"
   "fzf"
+  "fzy"
   "trash"
   "tree"
   "wget --with-iri"
