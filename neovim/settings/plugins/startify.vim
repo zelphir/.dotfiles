@@ -26,4 +26,4 @@ let g:startify_bookmarks = [
                   \ ]
 
 let g:startify_custom_header =
-                  \ map(split(system('fortune -s computers | cowsay -f `ls /usr/local/Cellar/cowsay/3.03/share/cows/ | shuf -n 1`'), '\n'), '"   ". v:val') + ['']
+                  \ map(split(system('fortune -s computers | cowsay -f `ls /usr/local/Cellar/cowsay/*/share/cows/ | shuf -n 1`'), '\n'), '"   ". v:val') + ['']

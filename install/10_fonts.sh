@@ -1,7 +1,12 @@
 #!/bin/bash
+e_header "Install fonts"
 
-e_header "Installing fixed-width fonts patched for use with Powerline symbols..."
+FONTS=$DOTFILES_DIR/fonts/*
 
-curl --url https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/S-DZ/additional-variations/Meslo%20LG%20S%20DZ%20Regular%20for%20Powerline%20Nerd%20Font%20Plus%20Octicons.otf -o ~/Library/Fonts/Meslo.otf
+for f in $FONTS; do
+  cp $f $HOME/Library/Fonts/
+done
+
+brew cask install font-fira-code
 
 e_success "Done!"

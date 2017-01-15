@@ -17,7 +17,7 @@ brews=(
   "gnu-sed --with-default-names"
 
   # Install some tools"
-  "yarn"
+  "yarn --ignore-dependencies"
   "fzf"
   "trash"
   "tree"

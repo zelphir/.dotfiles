@@ -1,3 +1,9 @@
+" --------------------------------
+" Setting leader {{{
+" --------------------------------
+let g:mapleader="\<Space>"
+"}}}
+
 " ===================================
 " Basic settings (Neovim defaults: https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
 " ===================================
@@ -5,7 +11,7 @@
 
 
 if &shell =~# 'fish$'
-  set shell=sh " Setting shell to sh if use fish
+  set shell=bash " Setting shell to sh if use fish
 endif
 
 set number                                  " Line numbers on

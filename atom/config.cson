@@ -26,18 +26,19 @@
       ]
     disabledPackages: [
       "react"
-      "highlight-selected"
       "auto-indent"
       "nuclide"
       "es6-javascript"
+      "hyperclick"
     ]
+    telemetryConsent: "no"
     themes: [
-      "one-dark-ui"
-      "gruvbox"
+      "nova-atom-ui"
+      "nova-atom-syntax"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Hack"
+    fontFamily: "Operator Mono"
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true

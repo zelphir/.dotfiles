@@ -1,20 +1,29 @@
+.DS_Store
+
+# iTerm
+iterm/*.itermcolors
+
 # Fish
 fish/plugins
 fishd.*
 fish_history*
 fish_read_history
 fish/local.fish
-fish/functions/__*
+fish/functions
+fish/completions
+!fish/functions/fish_mode_prompt.fish
+!fish/functions/fish_prompt.fish
+!fish/functions/fish_title.fish
 
 # Neovim
 tags
+neovim/.net
+neovim/.netrwhist
 neovim/autoload/plug.vim*
 neovim/colors
 neovim/plugged
+neovim/plug
 neovim/tmp
-
-# Terminal
-*.ti
 
 # Atom
 atom/*

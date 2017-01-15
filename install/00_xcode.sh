@@ -28,7 +28,6 @@ check_xcode() {
   fi
 }
 
-
 # Install xcode command line tool
 e_header "Check Xcode"
 

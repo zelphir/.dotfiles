@@ -2,16 +2,13 @@ scriptencoding utf-8
 
 " Wraps paths to make them relative to this directory.
 function! Dot(path)
-  return $NEOVIM . a:path
+  return "$HOME/.config/nvim/" . a:path
 endfunction
 
-" --------------------------------
-" Setting leader {{{
-" --------------------------------
-let g:mapleader="\<Space>"
-"}}}
+" Init plugins
+execute 'source' Dot('plugins/init.vim')
 
 " Load all configuration modules.
-for file in split(glob(Dot('modules/*.vim')), '\n')
+for file in split(glob(Dot('settings/*.vim')), '\n')
   execute 'source' file
 endfor

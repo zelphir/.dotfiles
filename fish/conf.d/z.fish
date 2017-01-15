@@ -1,1 +1,1 @@
-/Users/popcorn/.config/fisherman/z/conf.d/z.fish
+/Users/roberto/.config/fisherman/z/conf.d/z.fish

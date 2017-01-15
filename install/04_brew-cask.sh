@@ -10,7 +10,8 @@ apps=(
   # browsers
   firefox
   firefoxdeveloperedition
-  google-chrome-beta
+  google-chrome
+  google-chrome-canary
 
   # utility
   bartender
@@ -23,8 +24,7 @@ apps=(
   # dev
   docker
   atom-beta
-  iterm2-beta
-  sublime-text-dev
+  iterm2-nightly
   java
   genymotion
   react-native-debugger
@@ -41,7 +41,6 @@ apps=(
   transmission
 
   # Fonts
-  caskroom/fonts/font-hack
 
   # quicklook plugins
   qlcolorcode
@@ -58,6 +57,7 @@ apps=(
 
 brew_tap 'caskroom/cask'
 brew_tap 'caskroom/versions'
+brew_tap 'caskroom/fonts'
 
 brew cask install ${apps[@]}
 
