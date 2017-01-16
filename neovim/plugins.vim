@@ -7,6 +7,12 @@ Plug 'cloudhead/neovim-fuzzy'
 " Integration with tmux
 Plug 'christoomey/vim-tmux-navigator'
 
+" Indent guides
+Plug 'Yggdroot/indentLine'
+
+
+
+
 " ---------------------------------------------------
 " Language agnostic plugins {{{
 " ---------------------------------------------------

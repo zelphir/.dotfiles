@@ -83,7 +83,9 @@
     git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
     fi \
     }; f"
-	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
+  # Generate .gitignore using gitignore.io
+	ig = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
 [apply]
   # Detect whitespace errors when applying a patch
@@ -108,7 +110,7 @@
   precomposeunicode = false
 
   # Use Neovim with true color
-  editor = "NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+  editor = "nvim"
 
 [color]
   # Use colors in Git commands that are capable of colored output when
