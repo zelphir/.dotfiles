@@ -9,10 +9,7 @@ if [ ! -d $CONFIG_DIR/nvim ]; then
   pip3 install neovim
 fi
 
-if [ ! -d $CONFIG_DIR/nvim/autoload ]; then
-  mkdir -p $CONFIG_DIR/nvim/autoload
-fi
-
-curl -fLo $CONFIG_DIR/nvim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 e_success "Done!"
