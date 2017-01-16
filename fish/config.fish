@@ -1,12 +1,12 @@
 # Set env vars
 set -x N_PREFIX $HOME/.n
-set GOPATH $HOME/.go
-set ANDROID_HOME /usr/local/opt/android-sdk
-set NVIM_HOME $HOME/.config/nvim/
+set -x GOPATH $HOME/.go
+set -x ANDROID_HOME /usr/local/opt/android-sdk
+set -x NVIM_HOME $HOME/.config/nvim/
 
 # Settings for Homebrew and fzf
-set HOMEBREW_CASK_OPTS "--appdir=/Applications"
-# set FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
+set -x FZF_DEFAULT_COMMAND 'rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 set FZF_LEGACY_KEYBINDINGS 0
 set FZF_TMUX 1
  

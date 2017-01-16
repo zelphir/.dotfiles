@@ -1,4 +1,5 @@
 " General settings
+
   " base
   set nocompatible                      " vim, not vi
   syntax on                             " syntax highlighting
@@ -6,6 +7,7 @@
 
   " interface
   set synmaxcol=128                     " maximum column in which to search for syntax items
+  syntax sync minlines=256
   set colorcolumn=80                    " show a column at 100 chars
   set cursorline                        " highlight current line
   set laststatus=2                      " enable airline on open

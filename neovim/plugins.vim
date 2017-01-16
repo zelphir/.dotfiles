@@ -2,7 +2,8 @@
 Plug 'mhartington/oceanic-next'
 
 " File search
-Plug 'cloudhead/neovim-fuzzy'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
 " Integration with tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -10,8 +11,11 @@ Plug 'christoomey/vim-tmux-navigator'
 " Indent guides
 Plug 'Yggdroot/indentLine'
 
+" Smooth scroll
+Plug 'yuttie/comfortable-motion.vim'
 
-
+" Fugitive
+Plug 'tpope/vim-fugitive'
 
 " ---------------------------------------------------
 " Language agnostic plugins {{{
