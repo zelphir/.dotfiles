@@ -84,6 +84,7 @@
   map <leader>f :Files<cr>
   map <leader>g :GFiles<cr>
   map <leader>t :Tags<cr>
+  map <leader>/ :Ag!<cr>
 
 " map <leader> <Plug>(easymotion-prefix)
 " nnoremap <leader>g :GitGutterToggle<CR>

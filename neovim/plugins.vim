@@ -17,6 +17,11 @@ Plug 'yuttie/comfortable-motion.vim'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
+
+
+
 " ---------------------------------------------------
 " Language agnostic plugins {{{
 " ---------------------------------------------------
