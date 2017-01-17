@@ -26,19 +26,17 @@
       ]
     disabledPackages: [
       "react"
-      "auto-indent"
       "nuclide"
-      "es6-javascript"
-      "hyperclick"
     ]
     telemetryConsent: "no"
     themes: [
-      "nova-atom-ui"
-      "nova-atom-syntax"
+      "one-dark-ui"
+      "oceanic-next"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Operator Mono"
+    fontFamily: "Fira Code"
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
