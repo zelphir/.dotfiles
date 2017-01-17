@@ -2,10 +2,13 @@
 e_header "Installing extra Homebrew formulae..."
 
 # tap formulas
-brew_tap homebrew/completions
-brew_tap neovim/neovim
-brew_tap facebook/fb
-brew_tap jhawthorn/fzy
+brew tap homebrew/completions
+brew tap neovim/neovim
+brew tap facebook/fb
+brew tap jhawthorn/fzy
+brew tap davepgreene/cask-upgrade
+brew tap caskroom/versions
+brew tap caskroom/fonts
 
 brews=(
   # Install GNU core utilities (those that come with OS X are outdated).
@@ -24,7 +27,7 @@ brews=(
   "trash"
   "tree"
   "wget --with-iri"
-  "https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb"
+  "tmux"
   "neovim --HEAD"
   "fish --HEAD"
   "ripgrep --HEAD"
@@ -32,22 +35,31 @@ brews=(
   "fortune"
   "cowsay"
   "htop"
+  "python"
   "python3"
   "watchman"
   "flow"
   "android-sdk"
-  "the_silver_searcher"
-  "ag"
   "ctags"
   "homebrew/completions/brew-cask-completion"
   "reattach-to-user-namespace"
-  "thefuck"
 )
 
 for i in "${brews[@]}"; do
-  brew_install_or_upgrade $i
+  if $(brew list $i >/dev/null); then
+    if [[ $i == *"HEAD"* ]]; then
+      brew upgrade --fetch-HEAD ${i/--HEAD/""}
+    else
+      brew upgrade $i
+    fi
+  else
+    brew install $i
+  fi
 done
 
 brew cleanup
+
+# TODO: move
+sudo gem install coderay
 
 e_success "Done!"

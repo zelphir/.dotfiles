@@ -2,7 +2,7 @@
 
 e_header "Installing atom"
 
-if [ ! -d $HOMW/.atom ]; then
+if [ ! -d $HOME/.atom ]; then
   ln -s $DOTFILES_DIR/atom $HOME/.atom
 fi
 

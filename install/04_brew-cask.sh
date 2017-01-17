@@ -55,10 +55,10 @@ apps=(
   suspicious-package
 )
 
-brew_tap 'caskroom/cask'
-brew_tap 'caskroom/versions'
-brew_tap 'caskroom/fonts'
+for i in "${apps[@]}"; do
+  $(brew cask list $i > /dev/null) && brew cu $i || brew cask install $i
+done
 
-brew cask install ${apps[@]}
+brew cask cleanup
 
 e_success "Done!"

@@ -19,7 +19,7 @@ set fish_path $HOME/.config/fish
 set default_path /usr/bin /usr/sbin /bin /sbin
 set homebrew /usr/local/bin /usr/local/sbin
 set node $N_PREFIX/bin
-set yarn $HOME/.config/yarn/global/node_modules/.bin/
+set yarn $HOME/.config/yarn/global/node_modules/.bin
 set -gx PATH $homebrew $node $yarn $default_path
  
 # Start tmux

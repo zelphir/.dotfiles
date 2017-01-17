@@ -13,4 +13,4 @@ for f in $FILES; do
   source "${f}"
 done
 
-e_finish "Bootstrap script complete! Please restart your computer.\n\n"
+e_finish "Bootstrap script complete!\n\n"

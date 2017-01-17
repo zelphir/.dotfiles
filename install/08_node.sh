@@ -1,6 +1,9 @@
 #!/bin/bash
 
 e_header "Installing Node with n-installer"
-curl -L http://git.io/n-install | N_PREFIX=$HOME/.n bash -s -- -y stable lts
+
+if [ ! -d $HOME/.n ]; then
+  curl -L http://git.io/n-install | N_PREFIX=$HOME/.n bash -s -- -y latest
+fi
 
 e_success "Done!"

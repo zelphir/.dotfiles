@@ -7,7 +7,7 @@ if [ ! -d $DOTFILES_DIR/fish ]; then
 fi
 
 # Install fisherman and plugins
-curl -Lo $DOTFILES_DIR/fish/functions/fisher.fish --create-dirs git.io/fisher
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
 fisher
 
 # Fetch iterm theme

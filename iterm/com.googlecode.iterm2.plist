@@ -1475,7 +1475,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>381 404 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>174 235 1270 786 0 0 1680 1028 </string>
+	<string>0 200 1678 828 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B_selection</key>
@@ -2191,6 +2191,8 @@
 	<real>502561796.95117098</real>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2226,6 +2228,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/roberto/.dotfiles/iterm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUEnableAutomaticChecks</key>
