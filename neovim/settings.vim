@@ -1,6 +1,7 @@
 " General settings
 
   " base
+  set encoding=utf-8
   set nocompatible                      " vim, not vi
   syntax on                             " syntax highlighting
   filetype plugin indent on             " try to recognise filetype and load plugins and indent files
@@ -47,7 +48,7 @@
   " text appearance
   set list                              " show invisible characters
   set listchars=eol:¬,tab:▸\ ,trail:•,extends:»,precedes:«
-  set showbreak=↪\ 
+  set showbreak=↪\                      " Wrap lines character
   set linebreak
   set breakindent
   set breakindentopt=shift:2

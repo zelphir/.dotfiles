@@ -2,7 +2,8 @@
 Plug 'mhartington/oceanic-next'
 
 " File search
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " Integration with tmux
@@ -13,6 +14,8 @@ Plug 'Yggdroot/indentLine'
 
 " Smooth scroll
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'CursorLineCurrentWindow'
+Plug 'RelativeNumberCurrentWindow'
 
 " Fugitive
 Plug 'tpope/vim-fugitive'
@@ -20,7 +23,16 @@ Plug 'tpope/vim-fugitive'
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
 
+" Stattus bar
+Plug 'vim-airline/vim-airline'
 
+" Aligning
+Plug 'tommcdo/vim-lion'
+
+" Utils
+Plug 'tpope/vim-repeat'
+Plug 'airblade/vim-gitgutter'
+Plug 'gorkunov/smartpairs.vim'
 
 " ---------------------------------------------------
 " Language agnostic plugins {{{

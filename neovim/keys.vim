@@ -1,4 +1,6 @@
 " Keys
+" -----------------------------------------------------------------
+
   " set leader to space
   let mapleader = " "
 
@@ -36,7 +38,7 @@
   " disable search highlighting until next search
   nnoremap <leader>c :noh<CR>
 
-  " Reset search
+  " Reset search highlight
   nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
   " Visual linewise up and down by default (and use gj gk to go quicker)
@@ -75,8 +77,17 @@
   " More logical Y (default was alias for yy)
   nnoremap Y y$
 
+  " Buffer navigation
+  nnoremap <Leader>l :bn!<CR>
+  nnoremap <Leader>h :bp!<CR>
+  nnoremap <Leader>x :bd!<CR>
 
-  " plugins
+  " Toggle wrap
+  nnoremap <leader>w :set wrap!<CR>
+
+
+" Plugins
+" -----------------------------------------------------------------
 
   " Fzf
   imap <c-x><c-o> <plug>(fzf-complete-line)
@@ -84,41 +95,4 @@
   map <leader>f :Files<cr>
   map <leader>g :GFiles<cr>
   map <leader>t :Tags<cr>
-  map <leader>/ :Ag!<cr>
-
-" map <leader> <Plug>(easymotion-prefix)
-" nnoremap <leader>g :GitGutterToggle<CR>
-" nnoremap <leader>% :MtaJumpToOtherTag<CR>
-" nnoremap <leader>n :NERDTreeToggle<CR>
-
-" " move through deoplete suggestions with tab
-" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-
-" Autocommands
-" if has("autocmd")
-
-"   " disable comment continuation
-"   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-"   " set neomake's eslint path to the local eslint, and enable it as a maker
-"   autocmd BufEnter *.js,*.jsx let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
-"   autocmd! BufEnter,BufWritePost * Neomake
-
-"   " better syntax highlighting
-"   autocmd BufNewFile,BufRead *eslintrc,*babelrc setlocal syntax=json
-
-" endif
-
-" Searching
-" if executable('ag')
-
-"   " use ag over grep
-"   set grepprg=ag\ --nogroup\ --nocolor
-
-"   " define Ag command
-"   command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-"   " bind \ to grep shortcut
-"   nnoremap \ :Ag<SPACE>
-
-" endif
+  map <leader>/ :Rg!<cr>
