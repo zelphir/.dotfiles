@@ -1,6 +1,7 @@
 " General settings
 
   " base
+  set shell=bash
   set encoding=utf-8
   set nocompatible                      " vim, not vi
   syntax on                             " syntax highlighting
@@ -26,7 +27,7 @@
   set showmatch                         " show matching brackets when text indicator is over them
   set termguicolors                     " enable true colors
   set wildmenu                          " enable wildmenu
-  set wildmode=longest:full,full        " configure wildmenu
+  set wildmode=longest:full,full        " "configure wildmenu
   set visualbell                        " No Noise or bell
   set fillchars=vert:│                  " Vertical sep for splits (unicode bar)
   set nostartofline                     " Don't jump to col1 on switch buffer
@@ -69,8 +70,8 @@
 
   " background processes
   set copyindent                        " copy the previous indentation on autoindenting
+  "autocmd FocusGained * silent! checktime
   set autoread                          " update file when changed outside of vim
-  autocmd FocusGained * silent! checktime
   set autoindent                        " copy indentation from the previous line for new line
   set clipboard=unnamed                 " use native clipboard
   set hidden                            " hides buffers instead of closing them
@@ -82,13 +83,10 @@
   set nowritebackup                     " don't save a backup while editing
   set ttyfast                           " indicates a fast terminal connection
 
-
   " persistent undo settings
-  if has('persistent_undo')
-    set undodir=~/.config/nvim/undo     " set undofile location
-    set undofile                        " maintain undo history between sessions
-    set undolevels=1000                 " store 1000 undos
-  endif
+  set undodir=~/.local/share/nvim/undo  " set undofile location
+  set undofile                          " maintain undo history between sessions
+  set undolevels=1000                   " store 1000 undos
 
   " character encoding
   if !&readonly

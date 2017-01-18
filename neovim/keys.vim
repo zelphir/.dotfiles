@@ -88,9 +88,10 @@
 
 " Plugins
 " -----------------------------------------------------------------
+  " Netrw
+  nnoremap <C-e> :Lexplore<CR>
 
   " Fzf
-  imap <c-x><c-o> <plug>(fzf-complete-line)
   map <leader>b :Buffers<cr>
   map <leader>f :Files<cr>
   map <leader>g :GFiles<cr>
@@ -98,4 +99,14 @@
   map <leader>/ :Rg!<cr>
 
   " Deoplete
-  inoremap <silent> <expr> <Tab> utils#tabComplete()
+  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+  " SuperTab like snippets behavior.
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  "imap <expr><TAB>
+  " \ pumvisible() ? "\<C-n>" :
+  " \ neosnippet#expandable_or_jumpable() ?
+  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  xmap <C-k>     <Plug>(neosnippet_expand_target)

@@ -9,6 +9,7 @@ apps=(
   standard
   babel
   tern
+  prettier
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
