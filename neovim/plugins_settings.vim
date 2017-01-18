@@ -19,9 +19,46 @@ command! -bang -nargs=* Rg
 
 " Airline
 let g:airline#extensions#neomake#enable         = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
+" let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled        = 1
 let g:airline_powerline_fonts                   = 1
 
 " Vim Lion
 let b:lion_squeeze_spaces = 1
+
+" Editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Deoplete.
+set completeopt=longest,menuone,preview
+let g:deoplete#enable_at_startup         = 1
+let g:deoplete#omni#functions            = {}
+let g:deoplete#omni#functions.javascript = [
+  \ 'tern#Complete',
+  \ 'jspc#omni'
+\]
+let g:deoplete#sources                   = {}
+let g:deoplete#sources['javascript']     = ['buffer', 'file', 'ultisnips', 'ternjs']
+let g:SuperTabClosePreviewOnPopupClose   = 1
+
+" TernJS
+let g:tern_request_timeout               = 1
+let g:tern_show_signature_in_pum         = '0'
+let g:tern#command                       = ["tern"]
+let g:tern#arguments                     = ["--persistent"]
+
+" Neomake
+function! HasConfig(file, dir)
+  return findfile(a:file, escape(a:dir, ' ') . ';') !=# ''
+endfunction
+
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+autocmd BufNewFile,BufReadPre *.js let g:neomake_javascript_enabled_makers =
+  \ HasConfig('.eslintrc', expand('<amatch>:h')) ? ['eslint'] :
+  \ HasConfig('.jshintrc', expand('<amatch>:h')) ? ['jshint'] :
+  \ HasConfig('.jscsrc', expand('<amatch>:h')) ? ['jscs'] :
+  \ ['standard']
+
+" JS/JSX
+autocmd BufNewFile,BufRead *.js  set filetype=javascript
+" let g:vim_jsx_pretty_colorful_config  = 1

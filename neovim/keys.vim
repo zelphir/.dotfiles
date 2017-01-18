@@ -96,3 +96,6 @@
   map <leader>g :GFiles<cr>
   map <leader>t :Tags<cr>
   map <leader>/ :Rg!<cr>
+
+  " Deoplete
+  inoremap <silent> <expr> <Tab> utils#tabComplete()

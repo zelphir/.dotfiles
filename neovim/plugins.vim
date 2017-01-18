@@ -21,6 +21,7 @@ Plug 'RelativeNumberCurrentWindow'
 Plug 'tpope/vim-fugitive'
 
 " Syntax highlight
+Plug 'othree/xml.vim'
 Plug 'sheerun/vim-polyglot'
 
 " Stattus bar
@@ -33,6 +34,25 @@ Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
 Plug 'gorkunov/smartpairs.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ervandew/supertab'
+Plug 'TheZoq2/neovim-auto-autoread'
+
+" Javascript
+" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
+Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+Plug 'jaawerth/nrun.vim', { 'for': 'javascript' }
+Plug 'othree/jspc.vim', { 'for': 'javascript' }
+
 
 " ---------------------------------------------------
 " Language agnostic plugins {{{
@@ -80,21 +100,21 @@ Plug 'gorkunov/smartpairs.vim'
 " ---------------------------------------------------
 
 " Moder JS support (indent, syntax, etc)
-"Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+"Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " JSX syntax
-"Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-"Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+"Plug 'othree/yajs.vim', { 'for': 'javascript' }
+"Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 " Typescript syntax
 "Plug 'leafgarland/typescript-vim'
 " JSON syntax
 "Plug 'sheerun/vim-json'
 " Autocomplete (npm install -g tern)
-"Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-"Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+"Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+"Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 " Autocomplete using flow (npm install -g flow-bin)
 "Plug 'steelsojka/deoplete-flow'
 " JavaScript Parameter Complete
-"Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
+"Plug 'othree/jspc.vim', { 'for': 'javascript' }
 " JS Documentation comments
 "Plug 'heavenshell/vim-jsdoc', { 'on': ['JsDoc'] }
 " Check linters path

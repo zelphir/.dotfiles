@@ -70,6 +70,7 @@
   " background processes
   set copyindent                        " copy the previous indentation on autoindenting
   set autoread                          " update file when changed outside of vim
+  autocmd FocusGained * silent! checktime
   set autoindent                        " copy indentation from the previous line for new line
   set clipboard=unnamed                 " use native clipboard
   set hidden                            " hides buffers instead of closing them
