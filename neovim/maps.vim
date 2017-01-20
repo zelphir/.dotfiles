@@ -42,8 +42,8 @@
   nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
   " Visual linewise up and down by default (and use gj gk to go quicker)
-  nnoremap j gj
-  nnoremap k gk
+  nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+  nnoremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
   nnoremap gj 5j
   nnoremap gk 5k
   vnoremap j gj
@@ -78,13 +78,12 @@
   nnoremap Y y$
 
   " Buffer navigation
-  nnoremap <Leader>l :bn!<CR>
-  nnoremap <Leader>h :bp!<CR>
-  nnoremap <Leader>x :bd!<CR>
+  nnoremap <C-n> :bn<CR>
+  nnoremap <C-p> :bp<CR>
+  nnoremap <C-x> :bd!<CR>
 
   " Toggle wrap
   nnoremap <leader>w :set wrap!<CR>
-
 
 " Plugins
 " -----------------------------------------------------------------
@@ -94,7 +93,7 @@
   " Fzf
   map <leader>b :Buffers<cr>
   map <leader>f :Files<cr>
-  map <leader>g :GFiles<cr>
+  map <leader>g :GFiles?<cr>
   map <leader>t :Tags<cr>
   map <leader>/ :Rg!<cr>
 

@@ -4,7 +4,7 @@ function! Dot(path)
 endfunction
 
 execute 'source' Dot('settings.vim')
-execute 'source' Dot('keys.vim')
+execute 'source' Dot('maps.vim')
 
 " Vim-plug plugins
 call plug#begin('~/.local/share/nvim/plugged')
