@@ -43,7 +43,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'matze/vim-move'
-Plug 'Chiel92/vim-autoformat'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'troydm/easytree.vim'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'

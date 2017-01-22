@@ -10,6 +10,7 @@ apps=(
   babel
   tern
   prettier
+  jsctags
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then

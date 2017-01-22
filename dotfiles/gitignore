@@ -23,7 +23,7 @@ node_modules
 # https://docs.npmjs.com/misc/config#loglevel
 
 npm-debug.log
-
+*.log
 
 # ----------------------------------------------------------------------
 # | OS X                                                               |
@@ -49,6 +49,7 @@ Icon
 .netrwhist
 Session.vim
 .tern*
+tags
 
 # ----------------------------------------------------------------------
 # | Windows                                                            |

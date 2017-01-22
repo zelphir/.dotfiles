@@ -36,10 +36,7 @@
   nnoremap <leader>r :source $MYVIMRC<CR>
 
   " disable search highlighting until next search
-  nnoremap <leader>c :noh<CR>
-
-  " Reset search highlight
-  nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+  nnoremap <silent> <Esc> :noh<CR>
 
   " Visual linewise up and down by default (and use gj gk to go quicker)
   nnoremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -85,10 +82,13 @@
   " Toggle wrap
   nnoremap <leader>w :set wrap!<CR>
 
+  " Format with standard
+  nnoremap <leader>ff :execute ':silent !standard --fix %'<CR> | execute ':redraw!'
+
 " Plugins
 " -----------------------------------------------------------------
-  " Netrw
-  nnoremap <C-e> :Lexplore<CR>
+  " EasyTree
+  nnoremap <C-e> :EasyTreeToggle<CR>
 
   " Fzf
   map <leader>b :Buffers<cr>
