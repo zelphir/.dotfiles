@@ -25,6 +25,7 @@ neovim/colors
 neovim/plugged
 neovim/plug
 neovim/tmp
+neovim/local.vim
 
 # Atom
 atom/*

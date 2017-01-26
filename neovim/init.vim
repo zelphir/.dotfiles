@@ -1,6 +1,6 @@
 " Wraps paths to make them relative to this directory.
 function! Dot(path)
-  return "$HOME/.config/nvim/" . a:path
+  return '$HOME/.config/nvim/' . a:path
 endfunction
 
 execute 'source' Dot('settings.vim')
@@ -13,3 +13,7 @@ call plug#end()
 
 execute 'source' Dot('plugins_settings.vim')
 execute 'source' Dot('theme.vim')
+
+if filereadable(glob(Dot('local.vim')))
+  execute 'source' Dot('local.vim')
+endif

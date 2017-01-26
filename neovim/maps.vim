@@ -2,7 +2,7 @@
 " -----------------------------------------------------------------
 
   " set leader to space
-  let mapleader = " "
+  let g:mapleader = ' '
 
   " adjust window size with arrow keys
   noremap <right> <C-w>>
