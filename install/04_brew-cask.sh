@@ -15,7 +15,6 @@ apps=(
 
   # utility
   bartender
-  flux
   istat-menus
   spectacle
   the-unarchiver

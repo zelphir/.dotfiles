@@ -17,7 +17,7 @@ fish/conf.d
 !fish/functions/fish_title.fish
 
 # Neovim
-tags
+tags*
 neovim/.net
 neovim/.netrwhist
 neovim/autoload/plug.vim*
