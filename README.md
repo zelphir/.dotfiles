@@ -28,6 +28,10 @@ My OSX setup (Tested on MacOS Sierra). It comes with:
 
   _Enter root password when prompted_
 
+#### Manual steps
+The installer is fully-ish automated, you should only install (double click) the iTerm theme in `~/.dotfiles/iterm`.
+I also suggest to remap the `CapsLock` key to `ESC/CTRL`.
+
 #### GitConfig
 Change user/email in `~/.gitconfig`
 
@@ -52,7 +56,7 @@ I've change the tmux prefix from `<C-b>` to `<C-a>` _(C is ctrl)_
 
 ## Custom Neovim keymaps
 The `<leader>` is the `space`.
-For the other keys check: [maps.vim](https://github.com/zelphir/.dotfiles/blob/master/neovim/maps.vim) 
+For the other keys check: [maps.vim](https://github.com/zelphir/.dotfiles/blob/master/neovim/maps.vim)
 
 ## Troubleshooting
 
