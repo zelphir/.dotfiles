@@ -27,7 +27,7 @@ brews=(
   "trash"
   "tree"
   "wget --with-iri"
-  "tmux"
+  "tmux --HEAD"
   "neovim --HEAD"
   "fish --HEAD"
   "ripgrep --HEAD"
