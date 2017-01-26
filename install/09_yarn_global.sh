@@ -11,6 +11,7 @@ apps=(
   tern
   prettier
   jsctags
+  livedown
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then

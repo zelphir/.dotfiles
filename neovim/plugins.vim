@@ -45,6 +45,7 @@ Plug 'tpope/vim-surround'
 Plug 'matze/vim-move'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'troydm/easytree.vim'
+Plug 'shime/vim-livedown'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
