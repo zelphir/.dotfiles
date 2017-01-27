@@ -29,8 +29,7 @@ My OSX setup (Tested on MacOS Sierra). It comes with:
   _Enter root password when prompted_
 
 #### Manual steps
-The installer is fully-ish automated, you should only install (double click) the iTerm theme in `~/.dotfiles/iterm`.
-I also suggest to remap the `CapsLock` key to `ESC/CTRL`.
+I suggest to remap the `CapsLock` key to `ESC/CTRL`.
 
 #### GitConfig
 Change user/email in `~/.gitconfig`

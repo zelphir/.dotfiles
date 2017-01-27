@@ -13,4 +13,8 @@ fisher
 # Fetch iterm theme
 curl -Lo $DOTFILES_DIR/iterm/Oceanic-Next.itermcolors https://raw.githubusercontent.com/mhartington/oceanic-next-iterm/master/Oceanic-Next.itermcolors
 
+rm ~/Library/Preferences/com.googlecode.iterm2.plist
+cp $DOTFILES_DIR/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+open $DOTFILES_DIR/iterm/Oceanic-Next.itermcolors
+
 e_success "Done!"
