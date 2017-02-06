@@ -19,6 +19,7 @@ apps=(
   spectacle
   the-unarchiver
   1password
+  jumpshare
 
   # dev
   docker
@@ -36,7 +37,6 @@ apps=(
   telegram
   whatsapp
   vlc
-  infinit
   transmission
 
   # Fonts

@@ -14,5 +14,6 @@ yarn global upgrade
 pip install --upgrade neovim vim-vint
 pip3 install --upgrade neovim vim-vint
 nvim +PlugUpdate +qall
+~/.tmux/plugins/tpm/bin/update_plugins all
 
 e_finish "Complete!\n\n"
