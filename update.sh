@@ -10,11 +10,11 @@ e_running "Updating...\n"
 source "install/03_brew.sh"
 source "install/04_brew-cask.sh"
 
+fish -c "fisher up"
 yarn global upgrade
 pip install --upgrade neovim vim-vint
 pip3 install --upgrade neovim vim-vint
 nvim +PlugUpdate +qall
 ~/.tmux/plugins/tpm/bin/update_plugins all
-fisher up
 
 e_finish "Complete!\n\n"

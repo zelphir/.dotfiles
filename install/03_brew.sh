@@ -2,7 +2,6 @@
 e_header "Installing extra Homebrew formulae..."
 
 # tap formulas
-brew tap homebrew/completions
 brew tap neovim/neovim
 brew tap facebook/fb
 brew tap jhawthorn/fzy
@@ -41,7 +40,7 @@ brews=(
   "flow"
   "android-sdk"
   "ctags"
-  "homebrew/completions/brew-cask-completion"
+  "brew-cask-completion"
   "reattach-to-user-namespace"
 )
 
