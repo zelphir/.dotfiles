@@ -15,5 +15,6 @@ pip install --upgrade neovim vim-vint
 pip3 install --upgrade neovim vim-vint
 nvim +PlugUpdate +qall
 ~/.tmux/plugins/tpm/bin/update_plugins all
+fisher up
 
 e_finish "Complete!\n\n"
