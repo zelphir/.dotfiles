@@ -1,11 +1,14 @@
 scriptencoding 'utf-8'
 
+" Polyglot
+let g:polyglot_disabled = ['javascript']
+
 " Indent guides
 let g:indentLine_char                = '│'
 let g:indentLine_color_gui           = '#2A3A43'
 let g:indentLine_color_term          = 155
-let g:indentLine_leadingSpaceChar    = '∙'
-let g:indentLine_leadingSpaceEnabled = 1
+" let g:indentLine_leadingSpaceChar    = '∙'
+" let g:indentLine_leadingSpaceEnabled = 1
 
 " Fzf
 let g:fzf_files_options =
@@ -62,6 +65,8 @@ function! HasConfig(file, dir)
   return findfile(a:file, escape(a:dir, ' ') . ';') !=# ''
 endfunction
 
+let g:neomake_javascript_standard_maker = {'args': ['--parser', 'babel-eslint']}
+
 augroup vimrc
   au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
   autocmd BufNewFile,BufReadPre *.js let g:neomake_javascript_enabled_makers =
@@ -73,7 +78,8 @@ augroup END
 
 " JS/JSX
 autocmd BufNewFile,BufRead *.js  set filetype=javascript
-let g:vim_jsx_pretty_colorful_config  = 1
+" let g:vim_jsx_pretty_colorful_config  = 1
+" let g:jsx_ext_required = 0
 
 " Snippets
 augroup vimrc

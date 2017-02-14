@@ -18,9 +18,6 @@ Plug 'RelativeNumberCurrentWindow'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
-" Syntax highlight
-Plug 'sheerun/vim-polyglot'
-
 " Stattus bar
 Plug 'vim-airline/vim-airline'
 
@@ -46,16 +43,22 @@ Plug 'matze/vim-move'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'troydm/easytree.vim'
 Plug 'shime/vim-livedown'
+Plug 'TheZoq2/neovim-auto-autoread'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'SirVer/ultisnips'
 
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
+
 " Javascript
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }

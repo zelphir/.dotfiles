@@ -8,6 +8,7 @@ apps=(
   eslint
   standard
   babel
+  babel-eslint
   tern
   prettier
   jsctags
