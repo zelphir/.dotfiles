@@ -25,7 +25,6 @@ apps=(
   docker
   atom-beta
   iterm2-nightly
-  java
   genymotion
   react-native-debugger
 

@@ -50,17 +50,18 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'SirVer/ultisnips'
 
-" Syntax highlight
-Plug 'sheerun/vim-polyglot'
-
 " Javascript
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
-Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
-" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'jaawerth/nrun.vim', { 'for': 'javascript' }
 Plug 'othree/jspc.vim', { 'for': 'javascript' }
+"
+" Syntax highlight
+Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/vim-jsx-improve'
+" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+" Plug 'othree/yajs.vim', { 'for': 'javascript' }
+" Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
+" Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
