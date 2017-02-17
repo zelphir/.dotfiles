@@ -27,6 +27,8 @@
     disabledPackages: [
       "react"
       "nuclide"
+      "whitespace"
+      "standard-formatter"
     ]
     telemetryConsent: "no"
     themes: [
@@ -35,7 +37,7 @@
     ]
   docblockr: {}
   editor:
-    fontFamily: "Fira Code"
+    fontFamily: "Operator Mono"
     fontSize: 15
     invisibles: {}
     showIndentGuide: true
@@ -55,16 +57,12 @@
     minimalMode: true
   "js-hyperclick": {}
   linter:
-    displayLinterStatus: false
-    showErrorInline: false
-    underlineIssues: false
+    showErrorTabLine: true
   "linter-eslint":
     globalNodePath: "/Users/roberto/.n"
   "linter-js-standard":
-    checkStyleDevDependencies: true
     honorStyleSettings: true
     lintMarkdownFiles: true
-    showEslintRules: true
   "markdown-preview":
     useGitHubStyle: true
   minimap:
@@ -77,6 +75,8 @@
     tabSizing: "Even"
   pigments:
     extendAutocompleteToVariables: true
+  "prettier-atom":
+    singleQuote: true
   react:
     enabledForAllJavascriptFiles: true
   "split-diff":
@@ -84,6 +84,7 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  "standard-formatter": {}
   "status-bar": {}
   "tab-control": {}
   tabs:
@@ -91,6 +92,12 @@
     usePreviewTabs: true
   "tabs-to-spaces":
     onSave: "untabify"
+  term3:
+    colors:
+      background: "#121e25"
+    fontFamily: "FuraCode Nerd Font"
+    fontSize: "14"
+    openPanesInSameSplit: true
   "trailing-spaces":
     enableForCursorLines: true
     enableForIndentation: true
@@ -112,7 +119,7 @@
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1485445832
+    lastInit: 1487241944
   welcome:
     showOnStartup: false
   whitespace:

@@ -22,6 +22,19 @@
   }
 }
 
+atom-text-editor.editor {
+  .syntax--storage.syntax--type.syntax--function.syntax--arrow,
+  .syntax--keyword.syntax--operator:not(.accessor),
+  .syntax--punctuation.syntax--definition {
+    font-family: "Fira Code";
+  }
+
+  .syntax--string.syntax--quoted,
+  .syntax--string.syntax--regexp {
+    -webkit-font-feature-settings: "liga" off, "calt" off;
+  }
+}
+
 // atom-workspace,
 // atom-text-editor {
 //   font-family: "Fira Code";
@@ -31,14 +44,14 @@
 //   line-height: 1.8;
 // }
 //
-// atom-text-editor::shadow {
-//     .entity.other.attribute-name {
+// atom-text-editor.editor {
+//     .syntax--entity.syntax--other.syntax--attribute-name {
 //         font-family: "Operator Mono";
 //         font-size: 14px;
 //         font-style: italic;
 //     }
 // }
-
+//
 // atom-workspace,
 // atom-text-editor {
 //    font-family: "Operator Mono";
@@ -52,8 +65,8 @@
 // .entity.other.attribute-name {
 //     font-style: italic;
 // }
-// atom-text-editor::shadow{
-//     .entity.other.attribute-name {
+// atom-text-editor.editor {
+//     .syntax--entity.syntax--other.syntax--attribute-name {
 //         font-style: italic;
 //     }
 // }

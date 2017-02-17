@@ -42,6 +42,7 @@ brews=(
   "ctags"
   "brew-cask-completion"
   "reattach-to-user-namespace"
+  "tidy-html5"
 )
 
 for i in "${brews[@]}"; do

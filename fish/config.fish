@@ -22,9 +22,9 @@ set gnubin (brew --prefix coreutils)/libexec/gnubin
 set -gx PATH $gnubin $homebrew $yarn $default_path
 
 # Start tmux
-if which tmux > /dev/null; and not set -q TMUX
-  exec env TERM=xterm-256color tmux new-session -A
-end
+#if which tmux > /dev/null; and not set Q TMUX
+#  exec env TERM=xterm256color tmux newSession A
+#end
 
 # Alias
 alias v "nvim"
