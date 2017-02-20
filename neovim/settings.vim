@@ -60,7 +60,6 @@
   set mouse=a                           " enable mouse support
   set mousehide                         " hide the mouse cursor while typing
   set whichwrap=b,s,h,l,<,>,[,]         " backspace and cursor keys wrap too
-  set esckeys                           " allow cursor keys in insert mode
 
   " searching
   set hlsearch                          " highlight search matches

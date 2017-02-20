@@ -118,5 +118,5 @@ let g:startify_bookmarks              = [
 
 " Gutentags
 let g:gutentags_ctags_executable_javascript = 'jsctags'
-let g:gutentags_exclude                     = [ 'node_modules', '.git' ]
+let g:gutentags_ctags_exclude                     = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
