@@ -1473,17 +1473,17 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>520 507 654 94 0 0 1680 1028 </string>
+	<string>520 390 654 77 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>640 675 400 129 0 0 1680 1028 </string>
+	<string>640 691 400 129 0 0 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>530 478 620 392 0 0 1680 1028 </string>
+	<string>530 494 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>381 274 918 452 0 0 1680 1028 </string>
+	<string>381 240 918 507 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>191 124 1270 786 0 0 1680 1028 </string>
+	<string>182 177 1270 786 0 0 1680 1028 </string>
 	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_7E4F8E1D-E377-487A-BCDD-89651021122B_selection</key>
@@ -2201,6 +2201,8 @@
 	<integer>0</integer>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2251,7 +2253,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-12T23:18:34Z</date>
+	<date>2017-02-18T10:46:09Z</date>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
@@ -2261,13 +2263,13 @@
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1486941568</real>
+	<real>1486941952</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.20170205-nightly</string>
+	<string>3.0.20170214-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

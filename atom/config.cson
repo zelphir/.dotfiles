@@ -63,6 +63,8 @@
   "linter-js-standard":
     honorStyleSettings: true
     lintMarkdownFiles: true
+  "linter-tidy":
+    executablePath: "/usr/local/bin/tidy"
   "markdown-preview":
     useGitHubStyle: true
   minimap:
@@ -119,7 +121,7 @@
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1487241944
+    lastInit: 1487529971
   welcome:
     showOnStartup: false
   whitespace:
