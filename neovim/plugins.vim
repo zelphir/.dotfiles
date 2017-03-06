@@ -44,6 +44,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'troydm/easytree.vim'
 Plug 'shime/vim-livedown'
 Plug 'TheZoq2/neovim-auto-autoread'
+Plug 'wakatime/vim-wakatime'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
