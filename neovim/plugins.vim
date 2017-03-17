@@ -45,14 +45,14 @@ Plug 'troydm/easytree.vim'
 Plug 'shime/vim-livedown'
 Plug 'TheZoq2/neovim-auto-autoread'
 Plug 'wakatime/vim-wakatime'
+Plug 'zoubin/vim-gotofile'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'SirVer/ultisnips'
 
 " Javascript
-Plug 'moll/vim-node', { 'for': 'javascript' }
+" Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'jaawerth/nrun.vim', { 'for': 'javascript' }

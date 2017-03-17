@@ -49,7 +49,6 @@ let g:deoplete#sources                   = {}
 let g:deoplete#sources['javascript']     = [
   \ 'buffer',
   \ 'file',
-  \ 'ultisnips',
   \ 'neosnippet',
   \ 'ternjs'
   \ ]
@@ -120,3 +119,6 @@ let g:startify_bookmarks              = [
 let g:gutentags_ctags_executable_javascript = 'jsctags'
 let g:gutentags_ctags_exclude                     = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
+
+" Neosnippets
+let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
