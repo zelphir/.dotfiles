@@ -28,6 +28,7 @@ Plug 'tommcdo/vim-lion'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
+
 Plug 'gorkunov/smartpairs.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
@@ -52,7 +53,6 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
 " Javascript
-" Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'jaawerth/nrun.vim', { 'for': 'javascript' }
