@@ -8,6 +8,7 @@ brew tap jhawthorn/fzy
 brew tap davepgreene/cask-upgrade
 brew tap caskroom/versions
 brew tap caskroom/fonts
+brew tap scaleway/scaleway
 
 brews=(
   # Install GNU core utilities (those that come with OS X are outdated).
@@ -43,6 +44,10 @@ brews=(
   "brew-cask-completion"
   "reattach-to-user-namespace"
   "tidy-html5"
+
+  # Scaleway for docker-machine
+  "scaleway/scaleway/docker-machine-driver-scaleway"
+  "scaleway/scaleway/scw --HEAD"
 )
 
 for i in "${brews[@]}"; do

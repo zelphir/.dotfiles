@@ -37,3 +37,15 @@ alias reload ". $fish_path/config.fish"
 if test -f $fish_path/local.fish
   source $fish_path/local.fish
 end
+
+# Docker
+function unsetdm -d "Unset DOCKER vars"
+  set -e DOCKER_MACHINE_NAME
+  set -e DOCKER_CERT_PATH
+  set -e DOCKER_HOST
+  set -e DOCKER_TLS_VERIFY
+end
+
+function setdm -d "Set docker machine env"
+  eval (docker-machine env $argv)
+end

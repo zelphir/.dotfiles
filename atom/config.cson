@@ -121,7 +121,7 @@
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1489082293
+    lastInit: 1491242080
   welcome:
     showOnStartup: false
   whitespace:

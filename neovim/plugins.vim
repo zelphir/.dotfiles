@@ -28,11 +28,9 @@ Plug 'tommcdo/vim-lion'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-repeat'
 Plug 'airblade/vim-gitgutter'
-
 Plug 'gorkunov/smartpairs.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'neomake/neomake' | Plug 'dojoteef/neomake-autolint'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript'] }
@@ -47,6 +45,7 @@ Plug 'shime/vim-livedown'
 Plug 'TheZoq2/neovim-auto-autoread'
 Plug 'wakatime/vim-wakatime'
 Plug 'zoubin/vim-gotofile'
+Plug 'w0rp/ale'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
@@ -55,14 +54,8 @@ Plug 'Shougo/neosnippet-snippets'
 " Javascript
 Plug 'carlitux/deoplete-ternjs', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
-Plug 'jaawerth/nrun.vim', { 'for': 'javascript' }
-Plug 'othree/jspc.vim', { 'for': 'javascript' }
-"
+
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
-Plug 'neoclide/vim-jsx-improve'
-" Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-" Plug 'othree/yajs.vim', { 'for': 'javascript' }
-" Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
-" Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
