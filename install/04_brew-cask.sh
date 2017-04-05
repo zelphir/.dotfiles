@@ -38,8 +38,6 @@ apps=(
   vlc
   transmission
 
-  # Fonts
-
   # quicklook plugins
   qlcolorcode
   qlstephen
