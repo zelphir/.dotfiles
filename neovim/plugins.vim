@@ -1,5 +1,6 @@
 " Theme
 Plug 'mhartington/oceanic-next'
+Plug 'w0ng/vim-hybrid'
 
 " File search
 Plug '/usr/local/opt/fzf'
