@@ -50,12 +50,12 @@
     "vim.leader": "<space>",
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
-        "insert": "#ec5f67",
-        "normal": "#6699cc",
-        "replace": "#c594c5",
-        "visual": "#f99157",
-        "visualblock": "#f99157",
-        "visualline": "#f99157"
+        "insert": "#85678f",
+        "normal": "#5f819d",
+        "replace": "#a54242",
+        "visual": "#8c9440",
+        "visualblock": "#5e8d87",
+        "visualline": "#8c9440"
     },
     "vim.useSystemClipboard": true,
     "vscode_custom_css.imports": [
@@ -65,10 +65,25 @@
     "vsicons.presets.jsonOfficial": true,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#6699cc",
-        "statusBar.noFolderBackground": "#6699cc",
-        "statusBar.debuggingBackground": "#6699cc"
+        "terminal.ansiBlack": "#282a2d",
+        "terminal.ansiBlue": "#5f819d",
+        "terminal.ansiBrightBlack": "#373b41",
+        "terminal.ansiBrightBlue": "#81a2be",
+        "terminal.ansiBrightCyan": "#8abeb7",
+        "terminal.ansiBrightGreen": "#b5bd68",
+        "terminal.ansiBrightMagenta": "#b294bb",
+        "terminal.ansiBrightRed": "#cc6666",
+        "terminal.ansiBrightWhite": "#c5c8c6",
+        "terminal.ansiBrightYellow": "#f0c674",
+        "terminal.ansiCyan": "#5e8d87",
+        "terminal.ansiGreen": "#8c9440",
+        "terminal.ansiMagenta": "#85678f",
+        "terminal.ansiRed": "#a54242",
+        "terminal.ansiWhite": "#707880",
+        "terminal.ansiYellow": "#de935f",
+        "terminal.background": "#1d1f21",
+        "terminal.foreground": "#c5c8c6"
     },
     "workbench.colorTheme": "Hybrid Operator",
     "workbench.iconTheme": "vscode-icons"
-  }
+}
