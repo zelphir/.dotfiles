@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 e_header "Installing Cask and related software..."
 
@@ -27,6 +27,7 @@ apps=(
   iterm2-nightly
   genymotion
   react-native-debugger
+  visual-studio-code-insider
 
   # others
   sketch

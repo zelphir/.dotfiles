@@ -1,0 +1,74 @@
+{
+    "docker.enableLinting": true,
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "Operator Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.tabSize": 2,
+    "extensions.autoUpdate": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.validate.enable": false,
+    "jsAutolint.defaultLinters": [
+        "standard"
+    ],
+    "jsAutolint.showStatus": false,
+    "prettier.singleQuote": true,
+    "standard.enable": false,
+    "standard.nodePath": "/Users/roberto/.config/yarn/global/node_modules/.bin",
+    "standard.options": {
+        "ignore": [
+            "node_modules/**"
+        ],
+        "parser": "babel-eslint"
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.fontFamily": "FuraCodeNerdFontO-Light",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.5,
+    "terminal.integrated.rightClickCopyPaste": true,
+    "vim.easymotion": true,
+    "vim.easymotionMarkerFontFamily": "Fira Code",
+    "vim.easymotionMarkerFontSize": "14",
+    "vim.easymotionMarkerForegroundColorOneChar": "#ec5f67",
+    "vim.easymotionMarkerForegroundColorTwoChar": "#99c794",
+    "vim.easymotionMarkerHeight": 16,
+    "vim.easymotionMarkerWidthPerChar": 9,
+    "vim.easymotionMarkerYOffset": 14,
+    "vim.hlsearch": true,
+    "vim.leader": "<space>",
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "insert": "#ec5f67",
+        "normal": "#6699cc",
+        "replace": "#c594c5",
+        "visual": "#f99157",
+        "visualblock": "#f99157",
+        "visualline": "#f99157"
+    },
+    "vim.useSystemClipboard": true,
+    "vscode_custom_css.imports": [
+        "file:////Users/roberto/.dotfiles/vscode/custom.css"
+    ],
+    "vsicons.presets.jsOfficial": true,
+    "vsicons.presets.jsonOfficial": true,
+    "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#6699cc",
+        "statusBar.noFolderBackground": "#6699cc",
+        "statusBar.debuggingBackground": "#6699cc"
+    },
+    "workbench.colorTheme": "Hybrid Operator",
+    "workbench.iconTheme": "vscode-icons"
+  }

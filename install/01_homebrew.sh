@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install homebrew
 e_header "Check/Install/Update HomeBrew"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 darwin_version=$(uname -r)
 

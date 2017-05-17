@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 e_header "Installing extra Homebrew formulae..."
 
 # tap formulas

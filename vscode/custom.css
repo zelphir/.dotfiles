@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Fira Code';
+    src: local('Fira Code');
+    unicode-range: U+0021-0026, U+002A-002B, U+002D-002F, U+003A-003E, U+007B-007E;
+}
+
+.view-lines {
+    font-family: 'Fira Code', 'Operator Mono' !important;
+}
+
+.dropdown.send-feedback {
+    display: none !important;
+}
+
+/*.monaco-workbench .panel.integrated-terminal {
+    background: #17252c !important;
+}
+
+.monaco-workbench > .part.panel .title {
+    background: #17252c;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.34902);
+}
+
+.part.sidebar.left {
+    border-right: 1px solid rgba(128, 128, 128, 0.34902);
+}
+
+.monaco-tree.monaco-tree-instance-1 .monaco-tree-rows > .monaco-tree-row.selected:not(.highlighted) {
+    background-color: #4F5B66 !important;
+}
+
+.settings-search-container input.input {
+    background: #17252c !important;
+}
+
+.monaco-workbench > .part.titlebar {
+    background-color: #2f2f2f !important;
+}*/
