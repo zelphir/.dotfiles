@@ -21,10 +21,14 @@ set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin (brew --prefix coreutils)/libexec/gnubin
 set -gx PATH $gnubin $homebrew $yarn $default_path
 
+# use vi-mode
+set fish_key_bindings fish_vi_key_bindings
+set fish_bind_mode insert
+
 # Start tmux
-#if which tmux > /dev/null; and not set Q TMUX
-#  exec env TERM=xterm256color tmux newSession A
-#end
+if which tmux > /dev/null; and not set -q TMUX
+  exec env TERM=xterm-256color tmux new-session -A
+end
 
 # Alias
 alias v "nvim"

@@ -18,6 +18,7 @@
     "extensions.autoUpdate": true,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "indenticator.showCurrentDepthInStatusBar": false,
     "javascript.validate.enable": false,
     "jsAutolint.defaultLinters": [
         "standard"
@@ -38,6 +39,7 @@
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.rightClickCopyPaste": true,
+    "vim.disableAnnoyingNeovimMessage": true,
     "vim.easymotion": true,
     "vim.easymotionMarkerFontFamily": "Fira Code",
     "vim.easymotionMarkerFontSize": "14",
@@ -46,8 +48,10 @@
     "vim.easymotionMarkerHeight": 16,
     "vim.easymotionMarkerWidthPerChar": 9,
     "vim.easymotionMarkerYOffset": 14,
+    "vim.enableNeovim": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
         "insert": "#85678f",
@@ -61,29 +65,17 @@
     "vscode_custom_css.imports": [
         "file:////Users/roberto/.dotfiles/vscode/custom.css"
     ],
+    "vsicons.dontShowNewVersionMessage": true,
     "vsicons.presets.jsOfficial": true,
     "vsicons.presets.jsonOfficial": true,
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "terminal.ansiBlack": "#282a2d",
-        "terminal.ansiBlue": "#5f819d",
-        "terminal.ansiBrightBlack": "#373b41",
-        "terminal.ansiBrightBlue": "#81a2be",
-        "terminal.ansiBrightCyan": "#8abeb7",
-        "terminal.ansiBrightGreen": "#b5bd68",
-        "terminal.ansiBrightMagenta": "#b294bb",
-        "terminal.ansiBrightRed": "#cc6666",
-        "terminal.ansiBrightWhite": "#c5c8c6",
-        "terminal.ansiBrightYellow": "#f0c674",
-        "terminal.ansiCyan": "#5e8d87",
-        "terminal.ansiGreen": "#8c9440",
-        "terminal.ansiMagenta": "#85678f",
-        "terminal.ansiRed": "#a54242",
-        "terminal.ansiWhite": "#707880",
-        "terminal.ansiYellow": "#de935f",
-        "terminal.background": "#1d1f21",
-        "terminal.foreground": "#c5c8c6"
+        "statusBar.background": "#85678f",
+        "statusBar.noFolderBackground": "#85678f",
+        "statusBar.debuggingBackground": "#85678f"
     },
-    "workbench.colorTheme": "Hybrid Operator",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.colorTheme": "Snazzy Operator",
+    "workbench.iconTheme": "vscode-icons",
+    "vim.disableAnnoyingGcMessage": true,
+    "typescript.check.npmIsInstalled": false
 }

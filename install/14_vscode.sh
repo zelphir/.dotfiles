@@ -9,6 +9,7 @@ rm "$VSCODE_PATH/settings.json"
 rm "$VSCODE_PATH/keybindings.json"
 rm -rf "$VSCODE_PATH/snippets"
 ln -sf $DOTFILES_DIR/vscode/settings.json "$VSCODE_PATH/settings.json"
+ln -sf $DOTFILES_DIR/vscode/custom.css "$VSCODE_PATH/custom.css"
 ln -sf $DOTFILES_DIR/vscode/keybindings.json "$VSCODE_PATH/keybindings.json"
 ln -sf $DOTFILES_DIR/vscode/snippets "$VSCODE_PATH/snippets"
 

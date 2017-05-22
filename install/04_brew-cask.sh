@@ -6,6 +6,8 @@ apps=(
   # essential
   dropbox
   google-drive
+  box-sync
+  private-internet-access
 
   # browsers
   firefox
@@ -20,14 +22,16 @@ apps=(
   the-unarchiver
   1password
   jumpshare
+  real-vnc
 
   # dev
+  insomnia
   docker
   atom-beta
   iterm2-nightly
   genymotion
-  react-native-debugger
-  visual-studio-code-insider
+  screenhero
+  visual-studio-code-insiders
 
   # others
   sketch

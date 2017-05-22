@@ -13,8 +13,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'Yggdroot/indentLine'
 
 " Improve scroll
-Plug 'CursorLineCurrentWindow'
-Plug 'RelativeNumberCurrentWindow'
+Plug 'vim-scripts/CursorLineCurrentWindow'
+Plug 'vim-scripts/RelativeNumberCurrentWindow'
 
 " Fugitive
 Plug 'tpope/vim-fugitive'
