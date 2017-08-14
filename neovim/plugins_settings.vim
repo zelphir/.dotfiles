@@ -120,3 +120,5 @@ augroup END
 
 let g:ale_javascript_standard_use_global = 1
 let g:ale_javascript_standard_options = '--parser babel-eslint'
+let g:ale_javascript_prettier_options = '--single-quote --no-semi'
+nnoremap gp :silent %!prettier --stdin --no-semi --single-quote<CR>

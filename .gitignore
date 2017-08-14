@@ -34,4 +34,7 @@ atom/*
 !atom/*.coffee
 !atom/packages.list
 
+# Karabiner
+karabiner/assets
+
 node_modules

@@ -9,6 +9,7 @@ brew tap davepgreene/cask-upgrade
 brew tap caskroom/versions
 brew tap caskroom/fonts
 brew tap scaleway/scaleway
+brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
 
 brews=(
   # Install GNU core utilities (those that come with OS X are outdated).
@@ -30,19 +31,18 @@ brews=(
   "tmux --HEAD"
   "neovim --HEAD"
   "fish --HEAD"
-  "ripgrep --HEAD"
+  "zsh"
+  "zplug"
+  "burntsushi/ripgrep/ripgrep-bin"
   "git"
-  "fortune"
-  "cowsay"
   "htop"
   "python"
   "python3"
   "watchman"
   "flow"
-  "android-sdk"
   "ctags"
   "brew-cask-completion"
-  "reattach-to-user-namespace"
+  "reattach-to-user-namespace --HEAD"
   "tidy-html5"
 
   # Scaleway for docker-machine

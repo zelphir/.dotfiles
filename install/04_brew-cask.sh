@@ -4,8 +4,9 @@ e_header "Installing Cask and related software..."
 
 apps=(
   # essential
+  karabiner-elements
   dropbox
-  google-drive
+  google-backup-and-sync
   box-sync
   private-internet-access
 
@@ -25,10 +26,13 @@ apps=(
   real-vnc
 
   # dev
+  java
+  android-sdk
   insomnia
   docker
   atom-beta
   iterm2-nightly
+  virtualbox-beta
   genymotion
   screenhero
   visual-studio-code-insiders

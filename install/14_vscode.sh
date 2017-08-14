@@ -5,6 +5,8 @@ e_header "Installing vscode config..."
 VSCODE_PATH="$HOME/Library/Application Support/Code - Insiders/User"
 EXTENSIONS=$(cat $DOTFILES_DIR/vscode/extensions)
 
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+
 rm "$VSCODE_PATH/settings.json"
 rm "$VSCODE_PATH/keybindings.json"
 rm -rf "$VSCODE_PATH/snippets"
