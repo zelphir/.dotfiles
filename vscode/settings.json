@@ -15,30 +15,58 @@
     ],
     "editor.scrollBeyondLastLine": false,
     "editor.tabSize": 2,
+    "eslint.enable": true,
+    "eslint.options": {
+        "env": {
+            "es6": true,
+            "node": true
+        },
+        "extends": [
+            "standard"
+        ],
+        "ignore": "node_modules",
+        "parser": "babel-eslint",
+        "parserOptions": {
+            "ecmaFeatures": {
+                "experimentalObjectRestSpread": true,
+                "jsx": true
+            },
+            "ecmaVersion": 8,
+            "sourceType": "module"
+        },
+        "rules": {
+            "space-before-function-paren": 0
+        }
+    },
     "extensions.autoUpdate": true,
+    "files.exclude": {
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true,
+        "**/node_modules/**": true
+    },
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "indenticator.showCurrentDepthInStatusBar": false,
     "javascript.validate.enable": false,
     "jsAutolint.defaultLinters": [
-        "standard"
+        "eslint"
     ],
     "jsAutolint.showStatus": false,
+    "material-icon-theme.showUpdateMessage": false,
+    "prettier.semi": false,
     "prettier.singleQuote": true,
-    "standard.enable": false,
-    "standard.nodePath": "/Users/roberto/.config/yarn/global/node_modules/.bin",
-    "standard.options": {
-        "ignore": [
-            "node_modules/**"
-        ],
-        "parser": "babel-eslint"
-    },
     "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.enableBold": true,
     "terminal.integrated.fontFamily": "FuraCodeNerdFontO-Light",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.rightClickCopyPaste": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "typescript.check.npmIsInstalled": false,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.easymotion": true,
     "vim.easymotionMarkerFontFamily": "Fira Code",
@@ -65,17 +93,10 @@
     "vscode_custom_css.imports": [
         "file:////Users/roberto/.dotfiles/vscode/custom.css"
     ],
-    "vsicons.dontShowNewVersionMessage": true,
-    "vsicons.presets.jsOfficial": true,
-    "vsicons.presets.jsonOfficial": true,
     "workbench.activityBar.visible": false,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#85678f",
-        "statusBar.noFolderBackground": "#85678f",
-        "statusBar.debuggingBackground": "#85678f"
-    },
-    "workbench.colorTheme": "Snazzy Operator",
-    "workbench.iconTheme": "vscode-icons",
-    "vim.disableAnnoyingGcMessage": true,
-    "typescript.check.npmIsInstalled": false
-}
+    "workbench.colorCustomizations": {},
+    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "telemetry.enableTelemetry": false
+  }

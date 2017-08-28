@@ -12,7 +12,7 @@ source "install/04_brew-cask.sh"
 
 fish -c "fisher up"
 yarn global upgrade
-pip install --upgrade neovim vim-vint
+pip2 install --upgrade neovim vim-vint
 pip3 install --upgrade neovim vim-vint
 nvim +PlugUpdate +qall
 ~/.tmux/plugins/tpm/bin/update_plugins all
