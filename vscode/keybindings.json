@@ -7,5 +7,21 @@
   {
     "key": "ctrl+k",
     "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.previousEditor"
   }
 ]
