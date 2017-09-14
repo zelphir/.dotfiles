@@ -1,8 +1,5 @@
 scriptencoding 'utf-8'
 
-" Polyglot
-let g:polyglot_disabled = ['javascript']
-
 " Indent guides
 let g:indentLine_char       = '│'
 let g:indentLine_color_gui  = '#2A3A43'
@@ -34,31 +31,11 @@ let b:lion_squeeze_spaces = 1
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" Deoplete.
-set completeopt=longest,menuone,preview
-set completeopt-=preview
-let g:deoplete#enable_at_startup         = 1
-let g:deoplete#omni#functions            = {}
-let g:deoplete#omni#functions.javascript = ['tern#Complete']
-let g:deoplete#sources                   = {}
-let g:deoplete#sources['javascript']     = [
-  \ 'buffer',
-  \ 'file',
-  \ 'neosnippet',
-  \ 'ternjs'
-  \ ]
-
 " TernJS
 let g:tern_request_timeout       = 1
 let g:tern_show_signature_in_pum = '0'
 let g:tern#command               = ['tern']
 let g:tern#arguments             = ['--persistent']
-
-" Snippets
-augroup vimrc
-  autocmd FileType javascript let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-augroup END
-" let g:UltiSnipsExpandTrigger="<C-j>"
 
 " MatchTagAlways
 let g:mta_filetypes = {
@@ -94,10 +71,11 @@ let g:gutentags_ctags_exclude               = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
 
 " Neosnippets
+let g:neosnippet#enable_completed_snippet=1
 let g:neosnippet#snippets_directory = '~/.config/nvim/snippets'
 
 " Closetag
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.js"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
 
 " Polyglot
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
@@ -121,4 +99,6 @@ augroup END
 let g:ale_javascript_standard_use_global = 1
 let g:ale_javascript_standard_options = '--parser babel-eslint'
 let g:ale_javascript_prettier_options = '--single-quote --no-semi'
-nnoremap gp :silent %!prettier --stdin --no-semi --single-quote<CR>
+
+" NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

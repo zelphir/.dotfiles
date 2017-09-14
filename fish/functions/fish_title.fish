@@ -1,1 +1,1 @@
-/Users/roberto/.config/fisherman/pure/fish_title.fish
+/Users/popcorn/.config/fisherman/pure/fish_title.fish

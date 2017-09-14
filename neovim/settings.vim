@@ -1,9 +1,10 @@
+set encoding=utf-8
+scriptencoding utf-8
+
 " General settings
 
   " base
   set shell=bash
-  set encoding=utf-8
-  set nocompatible                      " vim, not vi
   syntax on                             " syntax highlighting
   filetype plugin indent on             " try to recognise filetype and load plugins and indent files
 
@@ -71,7 +72,6 @@
   set copyindent                        " copy the previous indentation on autoindenting
   "autocmd FocusGained * silent! checktime
   set autoread                          " update file when changed outside of vim
-  autocmd VimEnter * AutoreadLoop
   set autoindent                        " copy indentation from the previous line for new line
   set clipboard=unnamed                 " use native clipboard
   set hidden                            " hides buffers instead of closing them

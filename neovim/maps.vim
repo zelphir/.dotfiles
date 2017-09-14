@@ -87,9 +87,6 @@
 
 " Plugins
 " -----------------------------------------------------------------
-  " EasyTree
-  nnoremap <C-e> :EasyTreeToggle<CR>
-
   " Fzf
   map <leader>b :Buffers<cr>
   map <leader>l :Files<cr>
@@ -97,15 +94,18 @@
   map <leader>t :Tags<cr>
   map <leader>/ :Rg!<cr>
 
-  " Deoplete
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  " Prettier
+  nnoremap gp :silent %!prettier --stdin --no-semi --single-quote<CR>
 
-  " SuperTab like snippets behavior.
-  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-  "imap <expr><TAB>
-  " \ pumvisible() ? "\<C-n>" :
-  " \ neosnippet#expandable_or_jumpable() ?
-  " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-  xmap <C-k>     <Plug>(neosnippet_expand_target)
+  " Completion Manager
+  imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+  imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-U>":"\<CR>")
+  imap <c-j>     <Plug>(neosnippet_expand_or_jump)
+  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  inoremap <silent> <c-u> <c-r>=cm#sources#neosnippet#trigger_or_popup("\<Plug>(neosnippet_expand_or_jump)")<cr>
+  vmap <c-j>     <Plug>(neosnippet_expand_or_jump)
+  vmap <c-u>     <Plug>(neosnippet_expand_target)
+
+  " NERDTree
+  map <C-e> :NERDTreeToggle<CR>
