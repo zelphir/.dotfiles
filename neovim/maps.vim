@@ -82,8 +82,9 @@
   " Toggle wrap
   nnoremap <leader>w :set wrap!<CR>
 
-  " Format with standard
-  nnoremap <leader>ff :execute ':silent !standard --fix %'<CR> | execute ':redraw!'
+  " Remap Capital letters for save and quit
+  command! -nargs=* -bang W w<bang> <args>
+  command! -nargs=* -bang Q q<bang> <args>
 
 " Plugins
 " -----------------------------------------------------------------
@@ -94,18 +95,24 @@
   map <leader>t :Tags<cr>
   map <leader>/ :Rg!<cr>
 
-  " Prettier
-  nnoremap gp :silent %!prettier --stdin --no-semi --single-quote<CR>
+  " Format with standard
+  nnoremap <leader>ff :execute ':silent !standard --fix %'<CR> | execute ':redraw!'
+
+  " Format with Prettier
+  nnoremap gp :silent %!prettier --stdin<CR>
 
   " Completion Manager
-  imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
-  imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-U>":"\<CR>")
-  imap <c-j>     <Plug>(neosnippet_expand_or_jump)
-  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-  inoremap <silent> <c-u> <c-r>=cm#sources#neosnippet#trigger_or_popup("\<Plug>(neosnippet_expand_or_jump)")<cr>
-  vmap <c-j>     <Plug>(neosnippet_expand_or_jump)
-  vmap <c-u>     <Plug>(neosnippet_expand_target)
+    " imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
+    " imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-U>":"\<CR>")
+
+    " Tabbing
+    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+    " Neosnippets
+    inoremap <silent> <c-u> <c-r>=cm#sources#neosnippet#trigger_or_popup("\<Plug>(neosnippet_expand_or_jump)")<cr>
+    imap <c-j>     <Plug>(neosnippet_expand_or_jump)
+    vmap <c-j>     <Plug>(neosnippet_expand_or_jump)
+    vmap <c-u>     <Plug>(neosnippet_expand_target)
 
   " NERDTree
   map <C-e> :NERDTreeToggle<CR>

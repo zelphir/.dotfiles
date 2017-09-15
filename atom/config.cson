@@ -25,19 +25,16 @@
         "BUCK"
       ]
     disabledPackages: [
-      "react"
       "nuclide"
       "whitespace"
-      "standard-formatter"
     ]
     telemetryConsent: "no"
     themes: [
       "one-dark-ui"
-      "oceanic-next"
+      "gruvbox"
     ]
   docblockr: {}
   editor:
-    fontFamily: "Operator Mono"
     fontSize: 15
     invisibles: {}
     showIndentGuide: true
@@ -56,8 +53,7 @@
     fontWeight: "Extra light / Thin"
     minimalMode: true
   "js-hyperclick": {}
-  linter:
-    showErrorTabLine: true
+  linter: {}
   "linter-eslint":
     globalNodePath: "/Users/roberto/.n"
   "linter-js-standard":
@@ -65,6 +61,7 @@
     lintMarkdownFiles: true
   "linter-tidy":
     executablePath: "/usr/local/bin/tidy"
+  "linter-ui-default": {}
   "markdown-preview":
     useGitHubStyle: true
   minimap:
@@ -73,7 +70,6 @@
       "split-diffDecorationsZIndex": 0
   "one-dark-ui":
     fontSize: 11
-    layoutMode: "Compact"
     tabSizing: "Even"
   pigments:
     extendAutocompleteToVariables: true
@@ -106,6 +102,8 @@
   "tree-view":
     hideIgnoredNames: true
   "vim-mode-plus":
+    clearMultipleCursorsOnEscapeInsertMode: true
+    debug: true
     flashOnOperate: false
     flashOnUndoRedoDuration: 150
     highlightSearch: true
@@ -115,13 +113,14 @@
     setCursorToStartOfChangeOnUndoRedo: true
     showHoverOnOperate: true
     showHoverSearchCounter: true
+    statusBarModeStringStyle: "long"
     useSmartcaseForSearch: true
     useSmartcaseForSearchCurrentWord: true
   wakatime:
     apikey: "Saved in your ~/.wakatime.cfg file"
     showStatusBarIcon: false
   "wakatime-hidden":
-    lastInit: 1491331662
+    lastInit: 1505398611
   welcome:
     showOnStartup: false
   whitespace:

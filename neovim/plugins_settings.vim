@@ -21,7 +21,6 @@ augroup vimrc
 augroup END
 
 " Airline
-let g:airline#extensions#neomake#enable  = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts            = 1
 
@@ -71,8 +70,8 @@ let g:gutentags_ctags_exclude               = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
 
 " Neosnippets
-let g:neosnippet#enable_completed_snippet=1
-let g:neosnippet#snippets_directory = '~/.config/nvim/snippets'
+let g:neosnippet#enable_completed_snippet = 1
+let g:neosnippet#snippets_directory       = '~/.config/nvim/snippets'
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
@@ -86,19 +85,11 @@ let g:used_javascript_libs           = 'react,underscore'
 let g:vim_jsx_pretty_colorful_config = 1
 
 " ALE
-function! HasConfig(file, dir)
-  return findfile(a:file, escape(a:dir, ' ') . ';') !=# ''
-endfunction
-
-augroup vimrc
-  autocmd BufNewFile,BufReadPre *.js let g:ale_linters =
-    \ HasConfig('.eslintrc', expand('<amatch>:h')) ? {'javascript': ['eslint']} :
-    \ {'javascript': ['standard']}
-augroup END
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_fixer   = {'javascr  ipt': ['prettier']}
 
 let g:ale_javascript_standard_use_global = 1
-let g:ale_javascript_standard_options = '--parser babel-eslint'
-let g:ale_javascript_prettier_options = '--single-quote --no-semi'
+let g:ale_javascript_standard_options    = '--parser babel-eslint'
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
