@@ -93,6 +93,9 @@ scriptencoding utf-8
     set fileencoding=utf-8
   endif
 
+ " Set filetype
+ au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs} set filetype=javascript
+
  " Python bins
  let g:python_host_prog='/usr/local/bin/python2'
  let g:python3_host_prog='/usr/local/bin/python3'

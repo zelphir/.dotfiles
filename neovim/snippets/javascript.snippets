@@ -1,19 +1,22 @@
 snippet f
-options word
-  function(${1}) { ${0:TARGET} };
+# options word
+  function(${1}) { ${0:TARGET} }
 
 snippet if
-abbr if
-options head
+# options head
   if (${1:true}) {
     ${0:TARGET}
   }
 
 snippet if-else
 abbr ife
-options head
+# options head
   if (${1:#:condition}) {
     ${2:TARGET}
   } else {
     ${3}
   }
+
+snippet cl
+# options word
+  console.log({ ${0:TARGET} })

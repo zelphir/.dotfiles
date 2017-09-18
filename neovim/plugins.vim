@@ -25,6 +25,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'terryma/vim-multiple-cursors'
 
 " Aligning
 Plug 'tommcdo/vim-lion'
@@ -54,7 +55,6 @@ Plug 'wakatime/vim-wakatime'
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
 
 " Javascript
 Plug 'w0rp/ale' " lintiing
@@ -64,3 +64,4 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
+Plug 'styled-components/vim-styled-components', { 'for': 'javascript' }

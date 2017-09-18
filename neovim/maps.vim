@@ -92,7 +92,6 @@
   map <leader>b :Buffers<cr>
   map <leader>l :Files<cr>
   map <leader>g :GFiles?<cr>
-  map <leader>t :Tags<cr>
   map <leader>/ :Rg!<cr>
 
   " Format with standard

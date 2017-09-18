@@ -70,8 +70,10 @@ let g:gutentags_ctags_exclude               = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
 
 " Neosnippets
-let g:neosnippet#enable_completed_snippet = 1
-let g:neosnippet#snippets_directory       = '~/.config/nvim/snippets'
+let g:neosnippet#enable_completed_snippet      = 1
+let g:neosnippet#disable_runtime_snippets      = {'_': 1}
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory            = '~/.config/nvim/snippets'
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
@@ -86,7 +88,7 @@ let g:vim_jsx_pretty_colorful_config = 1
 
 " ALE
 let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_fixer   = {'javascr  ipt': ['prettier']}
+let g:ale_fixer   = {'javascript': ['prettier']}
 
 let g:ale_javascript_standard_use_global = 1
 let g:ale_javascript_standard_options    = '--parser babel-eslint'
