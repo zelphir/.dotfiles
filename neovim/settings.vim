@@ -99,3 +99,7 @@ scriptencoding utf-8
  " Python bins
  let g:python_host_prog='/usr/local/bin/python2'
  let g:python3_host_prog='/usr/local/bin/python3'
+
+ " Enable Italics
+let &t_ZH = "\e[3m"
+let &t_ZR = "\e[23m"

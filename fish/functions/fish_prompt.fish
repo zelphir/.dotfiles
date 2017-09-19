@@ -1,1 +1,0 @@
-/Users/popcorn/.config/fisherman/pure/fish_prompt.fish

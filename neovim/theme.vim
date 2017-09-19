@@ -1,5 +1,6 @@
 " Theme
 set background=dark
+let g:gruvbox_italic = 1
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
 let g:hybrid_custom_term_colors = 1

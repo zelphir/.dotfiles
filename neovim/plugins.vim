@@ -63,5 +63,8 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
+" Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'}
+Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'styled-components/vim-styled-components', { 'for': 'javascript' }
+Plug 'jparise/vim-graphql'

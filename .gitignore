@@ -12,9 +12,6 @@ fish/local.fish
 fish/functions/*
 fish/completions
 fish/conf.d
-!fish/functions/fish_mode_prompt.fish
-!fish/functions/fish_prompt.fish
-!fish/functions/fish_title.fish
 
 # Neovim
 tags*

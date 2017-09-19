@@ -110,7 +110,11 @@
         "file:////Users/roberto/.dotfiles/vscode/custom.css"
     ],
     "workbench.activityBar.visible": false,
-    "workbench.colorCustomizations": {},
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#5f819d",
+        "statusBar.noFolderBackground": "#5f819d",
+        "statusBar.debuggingBackground": "#5f819d"
+    },
     "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none"

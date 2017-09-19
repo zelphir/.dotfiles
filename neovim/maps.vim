@@ -101,17 +101,14 @@
   nnoremap gp :silent %!prettier --stdin<CR>
 
   " Completion Manager
-    " imap <expr> <CR>  (pumvisible() ?  "\<c-y>\<Plug>(expand_or_nl)" : "\<CR>")
-    " imap <expr> <Plug>(expand_or_nl) (cm#completed_is_snippet() ? "\<C-U>":"\<CR>")
-
     " Tabbing
     inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
     inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
     " Neosnippets
     inoremap <silent> <c-u> <c-r>=cm#sources#neosnippet#trigger_or_popup("\<Plug>(neosnippet_expand_or_jump)")<cr>
-    imap <c-j>     <Plug>(neosnippet_expand_or_jump)
-    vmap <c-j>     <Plug>(neosnippet_expand_or_jump)
-    vmap <c-u>     <Plug>(neosnippet_expand_target)
+    imap <c-j> <Plug>(neosnippet_expand_or_jump)
+    vmap <c-j> <Plug>(neosnippet_expand_or_jump)
+    vmap <c-u> <Plug>(neosnippet_expand_target)
 
   " NERDTree
   map <C-e> :NERDTreeToggle<CR>

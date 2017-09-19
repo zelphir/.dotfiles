@@ -1,9 +1,11 @@
 scriptencoding 'utf-8'
 
 " Indent guides
-let g:indentLine_char       = '│'
-let g:indentLine_color_gui  = '#2A3A43'
-let g:indentLine_color_term = 155
+let g:indentLine_char                = '│'
+let g:indentLine_color_gui           = '#2A3A43'
+let g:indentLine_color_term          = 155
+" let g:indentLine_leadingSpaceChar    = '·'
+" let g:indentLine_leadingSpaceEnabled = 1
 
 " Fzf
 let g:fzf_files_options =
@@ -80,11 +82,11 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
 
 " Polyglot
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
-let g:jsx_ext_required  = 1
+" let g:jsx_ext_required  = 1
 
 " Javascript
-let g:used_javascript_libs           = 'react,underscore'
-let g:vim_jsx_pretty_colorful_config = 1
+" let g:used_javascript_libs           = 'react,underscore'
+" let g:vim_jsx_pretty_colorful_config = 1
 
 " ALE
 let g:ale_linters = {'javascript': ['eslint']}
@@ -95,3 +97,10 @@ let g:ale_javascript_standard_options    = '--parser babel-eslint'
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" MultipleCursors
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_next_key            ='<C-d>'
+let g:multi_cursor_prev_key            ='<C-p>'
+let g:multi_cursor_skip_key            ='<C-x>'
+let g:multi_cursor_quit_key            ='<Esc>'
