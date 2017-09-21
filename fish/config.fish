@@ -18,7 +18,7 @@ set FZF_TMUX 1
 ### PATH ###
 set fish_path $HOME/.config/fish
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /usr/local/bin /usr/local/sbin
+set homebrew /usr/local/bin
 set node $HOME/.n/bin
 set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin (brew --prefix coreutils)/libexec/gnubin

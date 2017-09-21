@@ -41,23 +41,23 @@ font:
 
   # The bold font face
   bold:
-    family: 'Fira Code'
+    family: 'FuraCode Nerd Font'
     # Style can be specified to pick a specific face.
-    # style: Bold
+    style: 'Medium'
 
   # The italic font face
   italic:
-    family: 'Fira Sans'
+    family: 'Iosevka'
     # Style can be specified to pick a specific face.
-    style: 'Light Italic'
+    style: 'Extralight Italic'
 
   # Point size of the font
-  size: 15.0
+  size: 16.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0.0
-    y: 1.5
+    y: 2.5
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -75,9 +75,12 @@ custom_cursor_colors: false
 colors:
   # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
-    background: '0x282828'
-    # soft contrast: background = '0x32302f'
+    # hard contrast
+    background: '0x1d2021'
+    # normal contrast
+    # background: '0x282828'
+    # soft contrast
+    # background: '0x32302f'
     foreground: '0xebdbb2'
 
   # Normal colors
@@ -213,13 +216,13 @@ key_bindings:
   - { key: Key0,     mods: Alt,     chars: "\x1b0"                       }
   - { key: Key1,     mods: Alt,     chars: "\x1b1"                       }
   - { key: Key2,     mods: Alt,     chars: "\x1b2"                       }
-  - { key: Key3,     mods: Alt,     chars: "\x1b3"                       }
-  - { key: Key4,     mods: Alt,     chars: "\x1b4"                       }
-  - { key: Key5,     mods: Alt,     chars: "\x1b5"                       }
-  - { key: Key6,     mods: Alt,     chars: "\x1b6"                       }
-  - { key: Key7,     mods: Alt,     chars: "\x1b7"                       }
-  - { key: Key8,     mods: Alt,     chars: "\x1b8"                       }
-  - { key: Key9,     mods: Alt,     chars: "\x1b9"                       }
+  # - { key: Key3,     mods: Alt,     chars: "\x1b3"                       }
+  # - { key: Key4,     mods: Alt,     chars: "\x1b4"                       }
+  # - { key: Key5,     mods: Alt,     chars: "\x1b5"                       }
+  # - { key: Key6,     mods: Alt,     chars: "\x1b6"                       }
+  # - { key: Key7,     mods: Alt,     chars: "\x1b7"                       }
+  # - { key: Key9,     mods: Alt,     chars: "\x1b9"                       }
+  # - { key: Key8,     mods: Alt,     chars: "\x1b8"                       }
 
 # Mouse bindings
 #

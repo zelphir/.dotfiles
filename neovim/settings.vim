@@ -9,9 +9,9 @@ scriptencoding utf-8
   filetype plugin indent on             " try to recognise filetype and load plugins and indent files
 
   " interface
-  set synmaxcol=128                     " maximum column in which to search for syntax items
-  syntax sync minlines=256
-  set colorcolumn=80                    " show a column at 100 chars
+  " set synmaxcol=128                     " maximum column in which to search for syntax items
+  " syntax sync minlines=256
+  set colorcolumn=100                   " show a column at 100 chars
   set cursorline                        " highlight current line
   set laststatus=2                      " enable airline on open
   set noshowmode                        " don't show mode as airline already does
@@ -106,7 +106,3 @@ scriptencoding utf-8
   " Python bins
   let g:python_host_prog='/usr/local/bin/python2'
   let g:python3_host_prog='/usr/local/bin/python3'
-
-  " Enable Italics
-  let &t_ZH = "\e[3m"
-  let &t_ZR = "\e[23m"

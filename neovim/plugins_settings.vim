@@ -4,8 +4,6 @@ scriptencoding 'utf-8'
 let g:indentLine_char                = '│'
 let g:indentLine_color_gui           = '#2A3A43'
 let g:indentLine_color_term          = 155
-" let g:indentLine_leadingSpaceChar    = '·'
-" let g:indentLine_leadingSpaceEnabled = 1
 
 " Fzf
 let g:fzf_files_options =
@@ -24,6 +22,7 @@ augroup END
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled     = 1
 let g:airline_powerline_fonts            = 1
 
 " Vim Lion
@@ -82,16 +81,12 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
 
 " Polyglot
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
-" let g:jsx_ext_required  = 1
-
-" Javascript
-" let g:used_javascript_libs           = 'react,underscore'
-" let g:vim_jsx_pretty_colorful_config = 1
 
 " ALE
-let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_fixer   = {'javascript': ['prettier']}
-
+let g:ale_linters                        = {'javascript': ['eslint']}
+let g:ale_fixer                          = {'javascript': ['prettier']}
+let g:ale_sign_error                     = ''
+let g:ale_sign_warning                   = ''
 let g:ale_javascript_standard_use_global = 1
 let g:ale_javascript_standard_options    = '--parser babel-eslint'
 

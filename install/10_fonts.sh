@@ -2,8 +2,8 @@
 e_header "Install fonts"
 
 
-cp $DOTFILES_DIR/fonts/*.otf $HOME/Library/Fonts/
-brew cask install font-fira-code
-brew cask install font-fira-sans
+brew cask install font-fira-sans \
+  font-firacode-nerd-font \
+  font-iosevka
 
 e_success "Done!"
