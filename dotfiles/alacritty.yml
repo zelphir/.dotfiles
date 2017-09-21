@@ -22,8 +22,8 @@ dimensions:
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
 dpi:
-  x: 218.0
-  y: 218.0
+  x: 220.0
+  y: 220.0
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -47,7 +47,7 @@ font:
 
   # The italic font face
   italic:
-    family: 'Fira Mono'
+    family: 'Fira Sans'
     # Style can be specified to pick a specific face.
     style: 'Light Italic'
 
@@ -253,7 +253,7 @@ hide_cursor_when_typing: false
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
-#shell:
-#  program: /bin/bash
+shell:
+ program: /usr/local/bin/fish
 #  args:
 #    - --login
