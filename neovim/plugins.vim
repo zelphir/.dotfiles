@@ -7,6 +7,7 @@ Plug 'junegunn/fzf.vim'
 
 " Integration with tmux
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Indent guides
 Plug 'Yggdroot/indentLine'
@@ -63,7 +64,6 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
-" Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript'}
 Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'styled-components/vim-styled-components', { 'for': 'javascript' }
