@@ -36,10 +36,17 @@ if [ (id -u) != 0 ]
 end
 
 # Alias
-alias v "nvim"
-alias vim "nvim"
-alias r "trash"
-alias reload ". $fish_path/config.fish"
+function v --wraps nvim -d 'alias v=nvim'
+  nvim $argv
+end
+
+function r --wraps trash -d 'alias r=trash'
+  trash $argv
+end
+
+function reload
+  . $fish_path/config.fish
+end
 
 # Source sensitive configuration
 if test -f $fish_path/local.fish
