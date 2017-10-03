@@ -1,13 +1,13 @@
 # Set env vars
-set -x GOPATH $HOME/.go
-set -x JAVA_HOME (/usr/libexec/java_home)
-set -x ANDROID_SDK_ROOT /usr/local/share/android-sdk
-set -x NVIM_HOME $HOME/.config/nvim/
-set -x N_PREFIX $HOME/.n
+set GOPATH $HOME/.go
+set JAVA_HOME (/usr/libexec/java_home)
+set ANDROID_SDK_ROOT /usr/local/share/android-sdk
+set NVIM_HOME $HOME/.config/nvim/
+set N_PREFIX $HOME/.n
 
 # Settings for Homebrew and fzf
-set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
-set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set HOMEBREW_CASK_OPTS "--appdir=/Applications"
+set FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
 set FZF_LEGACY_KEYBINDINGS 0
 set FZF_TMUX 1
 
@@ -22,7 +22,7 @@ set homebrew /usr/local/bin
 set node $HOME/.n/bin
 set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin (brew --prefix coreutils)/libexec/gnubin
-set -gx PATH $gnubin $homebrew $node $yarn $default_path
+set PATH $gnubin $homebrew $node $yarn $default_path $PATH
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -31,7 +31,7 @@ set fish_bind_mode insert
 # Start tmux
 if [ (id -u) != 0 ]
   if which tmux > /dev/null; and not set -q TMUX
-    exec env TERM=xterm-256color tmux new-session -A
+    exec tmux new-session -A
   end
 end
 
