@@ -18,11 +18,11 @@ set FZF_TMUX 1
 ### PATH ###
 set fish_path $HOME/.config/fish
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /usr/local/bin
+set homebrew /usr/local/bin /usr/local/sbin
 set node $HOME/.n/bin
 set yarn $HOME/.config/yarn/global/node_modules/.bin
-set gnubin (brew --prefix coreutils)/libexec/gnubin
-set PATH $gnubin $homebrew $node $yarn $default_path $PATH
+set gnubin /usr/local/opt/coreutils/libexec/gnubin
+set fish_user_paths $gnubin $homebrew $node $yarn $default_path $fish_user_paths
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
