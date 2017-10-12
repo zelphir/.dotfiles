@@ -83,8 +83,8 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
 
 " ALE
-let g:ale_linters                        = {'javascript': ['eslint']}
-let g:ale_fixer                          = {'javascript': ['prettier']}
+let g:ale_linters                        = {'javascript': ['eslint'], 'javascript.jsx': ['eslint']}
+let g:ale_fixer                          = {'javascript': ['prettier'], 'javascript.jsx': ['prettier']}
 let g:ale_sign_error                     = ''
 let g:ale_sign_warning                   = ''
 let g:ale_javascript_standard_use_global = 1

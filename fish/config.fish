@@ -7,9 +7,9 @@ set N_PREFIX $HOME/.n
 
 # Settings for Homebrew and fzf
 set HOMEBREW_CASK_OPTS "--appdir=/Applications"
-set FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
-set FZF_LEGACY_KEYBINDINGS 0
-set FZF_TMUX 1
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set -x FZF_LEGACY_KEYBINDINGS 0
+set -x FZF_TMUX 1
 
 # Python virtualenv
 # set WORKON_HOME ~/.virtualenvs
