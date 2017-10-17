@@ -22,7 +22,7 @@ set homebrew /usr/local/bin /usr/local/sbin
 set node $HOME/.n/bin
 set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
-set fish_user_paths $gnubin $homebrew $node $yarn $default_path $fish_user_paths
+set fish_user_paths $gnubin $homebrew $node $yarn $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -66,6 +66,6 @@ function setdm -d "Set docker machine env"
 end
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/roberto/google-cloud-sdk/path.fish.inc' ]
-  . '/Users/roberto/google-cloud-sdk/path.fish.inc'
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]
+  . '~/google-cloud-sdk/path.fish.inc'
 end
