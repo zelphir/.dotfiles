@@ -1,3 +1,8 @@
+# Source sensitive configuration
+if test -f $HOME/.config/fish/local.fish
+  source $HOME/.config/fish/local.fish
+end
+
 # Set env vars
 set GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
@@ -16,13 +21,17 @@ set -x FZF_TMUX 1
 # eval (python -m virtualfish)
 
 ### PATH ###
+if test -d /usr/local/sbin
+  set homebrew /usr/local/bin /usr/local/sbin
+else
+  set homebrew /usr/local/bin
+end
+
 set fish_path $HOME/.config/fish
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /usr/local/bin /usr/local/sbin
 set node $HOME/.n/bin
-set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
-set fish_user_paths $gnubin $homebrew $node $yarn $default_path
+set fish_user_paths $gnubin $homebrew $node $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -46,11 +55,6 @@ end
 
 function reload
   . $fish_path/config.fish
-end
-
-# Source sensitive configuration
-if test -f $fish_path/local.fish
-  source $fish_path/local.fish
 end
 
 # Docker

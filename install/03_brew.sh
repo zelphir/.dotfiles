@@ -22,7 +22,7 @@ brews=(
 
   # Install some tools"
   "bash"
-  "yarn --ignore-dependencies"
+  "yarn --without-node"
   "fzf --HEAD"
   "trash"
   "tree"
