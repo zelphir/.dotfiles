@@ -8,7 +8,7 @@ set GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
 set ANDROID_SDK_ROOT /usr/local/share/android-sdk
 set NVIM_HOME $HOME/.config/nvim/
-set N_PREFIX $HOME/.n
+set -x N_PREFIX $HOME/.n
 
 # Settings for Homebrew and fzf
 set HOMEBREW_CASK_OPTS "--appdir=/Applications"
@@ -30,8 +30,9 @@ end
 set fish_path $HOME/.config/fish
 set default_path /usr/bin /usr/sbin /bin /sbin
 set node $HOME/.n/bin
+set yarn $HOME/.config/yarn/global/node_modules/.bin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
-set fish_user_paths $gnubin $homebrew $node $default_path
+set fish_user_paths $gnubin $homebrew $node $yarn $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -67,9 +68,4 @@ end
 
 function setdm -d "Set docker machine env"
   eval (docker-machine env $argv)
-end
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.fish.inc' ]
-  . '~/google-cloud-sdk/path.fish.inc'
 end
