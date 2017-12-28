@@ -249,7 +249,20 @@ mouse:
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
+dynamic_title: true
+
 hide_cursor_when_typing: false
+
+# Style of the cursor
+#
+# Values for 'cursor_style':
+# - Block
+# - Underline
+# - Beam
+cursor_style: Beam
+
+# Live config reload (changes require restart)
+live_config_reload: true
 
 # Shell
 #

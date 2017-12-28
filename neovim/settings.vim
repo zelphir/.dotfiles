@@ -27,6 +27,7 @@ scriptencoding utf-8
   set splitright                        " create new splits to the right
   set showmatch                         " show matching brackets when text indicator is over them
   set termguicolors                     " enable true colors
+  set guicursor=n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20
   set wildmenu                          " enable wildmenu
   set wildmode=longest:full,full        " "configure wildmenu
   set visualbell                        " No Noise or bell
