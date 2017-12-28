@@ -69,3 +69,15 @@ end
 function setdm -d "Set docker machine env"
   eval (docker-machine env $argv)
 end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '~/google-cloud-sdk/path.fish.inc' ]
+  . '~/google-cloud-sdk/path.fish.inc'
+end
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/sls.fish
