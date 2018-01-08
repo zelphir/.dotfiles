@@ -5,6 +5,7 @@ e_header "Install npm packages..."
 apps=(
   create-react-app
   react-native-cli
+  exp
   eslint
   eslint-config-standard
   eslint-config-prettier

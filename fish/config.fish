@@ -7,6 +7,7 @@ end
 set GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
 set ANDROID_SDK_ROOT /usr/local/share/android-sdk
+set ANDROID_HOME /usr/local/share/android-sdk
 set NVIM_HOME $HOME/.config/nvim/
 set -x N_PREFIX $HOME/.n
 
@@ -56,6 +57,10 @@ end
 
 function reload
   . $fish_path/config.fish
+end
+
+function work
+  cd /Volumes/Data/Workspace
 end
 
 # Docker

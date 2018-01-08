@@ -17,25 +17,23 @@ apps=(
   google-chrome-canary
 
   # utility
+  lastpass
   bartender
   istat-menus
   spectacle
   the-unarchiver
-  1password
   jumpshare
   real-vnc
 
   # dev
-  java
+  caskroom/versions/java8
   android-sdk
   insomnia
   docker
-  atom-beta
   iterm2-nightly
   virtualbox-beta
   genymotion
-  screenhero
-  visual-studio-code-insiders
+  react-native-debugger
 
   # others
   sketch

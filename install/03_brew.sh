@@ -32,6 +32,7 @@ brews=(
   "fish --HEAD"
   "zplug"
   "ripgrep"
+  "icdiff"
   "git"
   "htop"
   "python"

@@ -139,7 +139,11 @@
 [diff]
   # Detect copies as well as renames
   renames = copies
-  tool = Kaleidoscope
+  ; tool = Kaleidoscope
+  tool = icdiff
+
+[difftool "icdiff"]
+  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 
 [difftool "Kaleidoscope"]
   cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
