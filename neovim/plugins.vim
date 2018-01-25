@@ -17,6 +17,7 @@ Plug 'vim-scripts/CursorLineCurrentWindow'
 Plug 'vim-scripts/RelativeNumberCurrentWindow'
 
 " Fugitive
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 
 " UI tools
@@ -68,3 +69,4 @@ Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
 Plug 'styled-components/vim-styled-components', { 'for': 'javascript' }
 Plug 'jparise/vim-graphql'
+Plug 'alexlafroscia/postcss-syntax.vim'
