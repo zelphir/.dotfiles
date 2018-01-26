@@ -98,7 +98,7 @@
   nnoremap <leader>ff :execute ':silent !standard --fix %'<CR> | execute ':redraw!'
 
   " Format with Prettier
-  nnoremap gp :silent %!prettier --stdin<CR>
+  nmap gp <Plug>(ale_fix)
 
   " Completion Manager
     " Tabbing

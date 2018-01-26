@@ -21,6 +21,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 
 " UI tools
+Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'

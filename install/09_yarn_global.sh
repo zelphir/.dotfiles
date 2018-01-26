@@ -20,6 +20,7 @@ apps=(
   prettier
   jsctags
   livedown
+  stylelint
 )
 
 if !(type_exists $HOME/.n/bin/${apps[@]}); then
