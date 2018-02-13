@@ -24,13 +24,6 @@ neovim/plug
 neovim/tmp
 neovim/local.vim
 
-# Atom
-atom/*
-!atom/*.cson
-!atom/*.less
-!atom/*.coffee
-!atom/packages.list
-
 # Karabiner
 karabiner/assets
 

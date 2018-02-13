@@ -12,6 +12,7 @@ let g:fzf_files_options =
 augroup vimrc
   autocmd VimEnter * command! -bang Colors
     \ call fzf#vim#colors({'left': '15%', 'options': '--reverse --margin 30%,0'}, <bang>0)
+
   command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,

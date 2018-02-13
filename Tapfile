@@ -1,0 +1,7 @@
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "buo/cask-upgrade"
+tap "facebook/fb"
+tap "jhawthorn/fzy"
+tap "neovim/neovim"
+tap "scaleway/scaleway"

@@ -7,6 +7,14 @@ execute 'source' Dot('settings.vim')
 execute 'source' Dot('maps.vim')
 
 " Vim-plug plugins
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  augroup vimrc
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  augroup END
+endif
+
 call plug#begin('~/.local/share/nvim/plugged')
 execute 'source' Dot('plugins.vim')
 call plug#end()

@@ -22,11 +22,11 @@ formulahendry.auto-close-tag
 formulahendry.auto-complete-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
-jdinhlife.theme-gruvbox-dark-medium
 kumar-harsh.graphql-for-vscode
 leizongmin.node-module-intellisense
 lihui.vs-color-picker
 mikestead.dotenv
+ms-vscode.node-debug2
 msjsdiag.debugger-for-chrome
 oderwat.indent-rainbow
 richie5um2.vscode-sort-json

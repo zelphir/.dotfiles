@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+apps=(
+  create-react-app
+  react-native-cli
+  exp
+  tern
+  prettier
+  jsctags
+  livedown
+)
+
+yarn global add ${apps[@]}
