@@ -2,12 +2,14 @@
 
 apps=(
   create-react-app
-  react-native-cli
+  create-react-app-native
   exp
-  tern
-  prettier
-  jsctags
+  firebase-tools
   livedown
+  prettier
+  react-native-cli
+  serve
+  tern
 )
 
 yarn global add ${apps[@]}

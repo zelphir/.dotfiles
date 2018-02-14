@@ -7,11 +7,13 @@ if ! type 'cargo' &> /dev/null; then
   curl -sSf https://static.rust-lang.org/rustup.sh | sh
 fi
 
-cd $tmp
-git clone https://github.com/jwilm/alacritty.git
-cd alacritty
-cargo build --release
-make app
-cp -r target/release/osx/Alacritty.app /Applications/Alacritty.app
+if [ ! -d "/Applications/Alacritty.app" ]; then
+  cd $tmp
+  git clone https://github.com/jwilm/alacritty.git
+  cd alacritty
+  cargo build --release
+  make app
+  cp -r target/release/osx/Alacritty.app /Applications/Alacritty.app
+fi
 
 cd $PREVDIR

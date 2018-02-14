@@ -15,10 +15,8 @@
     description: Install Alacritty
 
 - brewfile:
-  - Tapfile
-  - Brewfile
-  - Caskfile
-  - Macfile
+    file: Brewfile
+    no-upgrage: true
 
 - shell:
   -
@@ -32,20 +30,15 @@
     stderr: true
     description: Neovim plugins
   -
-    command: |
-      git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-      ~/.tmux/plugins/tpm/bin/install_plugins
+    command: scripts/tmux
     stderr: true
     description: Tmux plugins
   -
-    command: |
-      curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-      fisher
+    command: scripts/fisher
     stderr: true
     description: Fisher
   -
     command: sudo gem install coderay
-    stderr: true
     stdin: true
     description: Coderay
   -

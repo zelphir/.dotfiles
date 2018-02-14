@@ -5,5 +5,5 @@ EXTENSIONS=$(cat ~/.dotfiles/vscode/extensions)
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 
 for extension in $EXTENSIONS; do
-  code --install-extension $extension
+  code-insiders --install-extension $extension
 done
