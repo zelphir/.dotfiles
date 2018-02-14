@@ -98,8 +98,6 @@ let g:ale_fixers['css']                        = ['prettier']
 let g:ale_fixers['scss']                       = ['prettier']
 let g:ale_sign_error                           = ''
 let g:ale_sign_warning                         = ''
-let g:ale_javascript_standard_use_global       = 1
-let g:ale_javascript_standard_options          = '--parser babel-eslint'
 let g:ale_javascript_prettier_use_local_config = 1
 
 " NERDTree

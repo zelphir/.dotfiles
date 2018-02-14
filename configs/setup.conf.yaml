@@ -16,7 +16,6 @@
 
 - brewfile:
     file: Brewfile
-    no-upgrage: true
 
 - shell:
   -

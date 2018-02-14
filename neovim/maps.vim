@@ -94,9 +94,6 @@
   map <leader>g :GFiles?<cr>
   map <leader>/ :Rg!<cr>
 
-  " Format with standard
-  nnoremap <leader>ff :execute ':silent !standard --fix %'<CR> | execute ':redraw!'
-
   " Format with Prettier
   nmap gp <Plug>(ale_fix)
 

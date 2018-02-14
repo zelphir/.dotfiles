@@ -2,9 +2,10 @@
 
 apps=(
   create-react-app
-  create-react-app-native
+  create-react-native-app
   exp
   firebase-tools
+  jsctags
   livedown
   prettier
   react-native-cli

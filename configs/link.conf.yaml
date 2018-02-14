@@ -13,15 +13,11 @@
     ~/.gitignore:
     ~/.prettierrc:
     ~/.tern-project:
-
-- link:
     ~/.config/fish: fish
     ~/.config/karabiner: karabiner
     ~/.config/nvim: neovim
     ~/.config/alacritty: alacritty
     ~/.tmux.conf: tmux/tmux.conf
-
-- link:
     '~/Library/Application Support/Code - Insiders/User/custom.css': vscode/custom.css
     '~/Library/Application Support/Code - Insiders/User/keybindings.json': vscode/keybindings.json
     '~/Library/Application Support/Code - Insiders/User/settings.json': vscode/settings.json
