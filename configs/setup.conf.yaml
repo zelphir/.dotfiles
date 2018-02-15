@@ -5,6 +5,10 @@
     stderr: true
     description: Xcode
   -
+    command: scripts/homebrew
+    stderr: true
+    description: Homebrew
+  -
     command: scripts/terminal
     stderr: true
     description: Terminal colors setup
@@ -13,11 +17,11 @@
     stderr: true
     stdout: true
     description: Install Alacritty
-
-- brewfile:
-    file: Brewfile
-
-- shell:
+  -
+    command: brew bundle
+    stderr: true
+    stdout: true
+    description: Install brew bundles
   -
     command: |
       pip2 install --user neovim vim-vint
