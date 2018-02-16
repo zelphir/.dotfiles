@@ -41,7 +41,7 @@
     stderr: true
     description: Fisher
   -
-    command: sudo gem install coderay
+    command: sudo gem install coderay neovim
     stdin: true
     description: Coderay
   -
