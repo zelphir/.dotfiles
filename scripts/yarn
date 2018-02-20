@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 apps=(
+  @google-cloud/functions-emulator
   create-react-app
   create-react-native-app
   exp
