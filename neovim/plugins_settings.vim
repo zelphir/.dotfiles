@@ -93,6 +93,7 @@ let g:ale_linters['scss']                      = ['stylelint']
 let g:ale_fixers                               = {}
 let g:ale_fixers['javascript']                 = ['prettier']
 let g:ale_fixers['javascript.jsx']             = ['prettier']
+let g:ale_fixers['graphql']                    = ['prettier']
 let g:ale_fixers['json']                       = ['prettier']
 let g:ale_fixers['css']                        = ['prettier']
 let g:ale_fixers['scss']                       = ['prettier']
