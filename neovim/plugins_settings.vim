@@ -87,6 +87,7 @@ let g:polyglot_disabled = ['javascript', 'javascript.jsx']
 let g:ale_linters                              = {}
 let g:ale_linters['javascript']                = ['eslint']
 let g:ale_linters['javascript.jsx']            = ['eslint']
+let g:ale_linters['graphql']                   = ['gqlint']
 let g:ale_linters['json']                      = ['prettier']
 let g:ale_linters['css']                       = ['stylelint']
 let g:ale_linters['scss']                      = ['stylelint']
