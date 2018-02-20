@@ -6,6 +6,7 @@ apps=(
   create-react-native-app
   exp
   firebase-tools
+  graphcool
   jsctags
   livedown
   neovim
