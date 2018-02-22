@@ -7,6 +7,7 @@ tap "neovim/neovim"
 tap "scaleway/scaleway"
 
 brew "bash"
+brew "bfg"
 brew "brew-cask-completion"
 brew "coreutils"
 brew "ctags"
