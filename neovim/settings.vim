@@ -96,6 +96,7 @@ scriptencoding utf-8
 
   " Set filetype
   au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs} set filetype=javascript
+  au BufRead,BufNewFile,BufReadPre,FileReadPre .env.* set filetype=sh
 
   " Reload files if changed outside neovim
   augroup vimrc
