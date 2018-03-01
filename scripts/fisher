@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-if [ ! -e "$HOME/.config/fish/functions/fisher.fish" ]; then
-  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-  fisher
-fi

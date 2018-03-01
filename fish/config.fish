@@ -1,12 +1,8 @@
 # Source sensitive configuration
 if test -f $HOME/.config/fish/local.fish
   source $HOME/.config/fish/local.fish
-end
 
-if test -f /usr/local/opt/asdf/asdf.fish
-  source /usr/local/opt/asdf/asdf.fish
 end
-
 # Set env vars
 set GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
@@ -78,10 +74,3 @@ end
 if [ -f '~/google-cloud-sdk/path.fish.inc' ]
   . '~/google-cloud-sdk/path.fish.inc'
 end
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/sls.fish ]; and . /Users/popcorn/workspace/Sales/chromeless/node_modules/tabtab/.completions/sls.fish

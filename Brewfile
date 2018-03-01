@@ -7,7 +7,6 @@ tap "neovim/neovim"
 tap "scaleway/scaleway"
 
 brew "bash"
-brew "bfg"
 brew "brew-cask-completion"
 brew "coreutils"
 brew "ctags"
@@ -28,7 +27,7 @@ brew "python3"
 brew "reattach-to-user-namespace", args: ["HEAD"]
 brew "ripgrep"
 brew "scaleway/scaleway/docker-machine-driver-scaleway", args: ["HEAD"]
-brew "scaleway/scaleway/scw", args: ["HEAD"]
+brew "scw"
 brew "tidy-html5"
 brew "tmux", args: ["HEAD"]
 brew "trash"
@@ -48,7 +47,6 @@ cask "firefox-developer-edition"
 cask "font-fira-sans"
 cask "font-firacode-nerd-font"
 cask "font-iosevka"
-cask "genymotion"
 cask "google-backup-and-sync"
 cask "google-cloud-sdk"
 cask "google-chrome"
@@ -79,6 +77,7 @@ cask "visual-studio-code-insiders"
 cask "vlc"
 cask "webpquicklook"
 cask "whatsapp"
+cask "genymotion"
 
 mas "Evernote", id: 406056744
 mas "iMovie", id: 408981434

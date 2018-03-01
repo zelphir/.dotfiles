@@ -23,27 +23,18 @@
     stdout: true
     description: Install brew bundles
   -
-    command: |
-      pip2 install --user neovim vim-vint
-      pip3 install --user neovim vim-vint
+    command: N_PREFIX=$HOME/.n n latest
     stderr: true
-    description: Pip
+    stdout: true
+    description: Install nodeJS
   -
-    command: nvim +PlugInstall +qall
+    command: scripts/neovim
     stderr: true
     description: Neovim plugins
   -
     command: scripts/tmux
     stderr: true
     description: Tmux plugins
-  -
-    command: scripts/fisher
-    stderr: true
-    description: Fisher
-  -
-    command: sudo gem install coderay neovim
-    stdin: true
-    description: Coderay
   -
     command: scripts/yarn
     stderr: true
@@ -52,3 +43,8 @@
     command: scripts/vscode
     stderr: true
     description: Visual Studio Code extensions
+  -
+    command: scripts/macos
+    stdout: true
+    stderr: true
+    description: MacOS defaults

@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+export PATH=$HOME/.n/bin:$PATH
+
 apps=(
   @google-cloud/functions-emulator
   create-react-app
   create-react-native-app
-  exp
   firebase-tools
   gqlint
   graphcool
