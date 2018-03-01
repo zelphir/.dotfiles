@@ -78,6 +78,9 @@ cask "vlc"
 cask "webpquicklook"
 cask "whatsapp"
 cask "genymotion"
+cask "adobe-creative-cloud"
+cask "adobe-acrobat-reader"
+cask "gfxcardstatus"
 
 mas "Evernote", id: 406056744
 mas "iMovie", id: 408981434

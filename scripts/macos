@@ -83,3 +83,9 @@ defaults write com.apple.dock largesize -float 50
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Change menu bar icons
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/User.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
+
+# Show fast user switching menu as: icon
+defaults write -g userMenuExtraStyle -int 2
