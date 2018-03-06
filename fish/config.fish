@@ -1,8 +1,8 @@
 # Source sensitive configuration
 if test -f $HOME/.config/fish/local.fish
   source $HOME/.config/fish/local.fish
-
 end
+
 # Set env vars
 set GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
@@ -25,10 +25,11 @@ else
 end
 
 set fish_path $HOME/.config/fish
+set python2_path /usr/local/opt/python@2/bin
 set default_path /usr/bin /usr/sbin /bin /sbin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
 set node $HOME/.n/bin
-set fish_user_paths $gnubin $homebrew $node $default_path
+set fish_user_paths $python2_path $gnubin $homebrew $node $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings

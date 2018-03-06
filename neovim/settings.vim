@@ -106,5 +106,5 @@ scriptencoding utf-8
   augroup END
 
   " Python bins
-  let g:python_host_prog='/usr/local/bin/python2'
+  let g:python_host_prog='/usr/local/opt/python@2/bin/python2'
   let g:python3_host_prog='/usr/local/bin/python3'

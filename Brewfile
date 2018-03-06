@@ -23,7 +23,7 @@ brew "n", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "openconnect"
 brew "python"
-brew "python3"
+brew "python@2"
 brew "reattach-to-user-namespace", args: ["HEAD"]
 brew "ripgrep"
 brew "scaleway/scaleway/docker-machine-driver-scaleway", args: ["HEAD"]
