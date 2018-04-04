@@ -14,6 +14,7 @@
     ~/.gitconfig:
     ~/.gitignore:
     ~/.prettierrc:
+    ~/.stylelintrc.js:
     ~/.tern-project:
     ~/.config/fish: fish
     ~/.config/karabiner: karabiner
@@ -23,4 +24,3 @@
     '~/Library/Application Support/Code - Insiders/User/custom.css': vscode/custom.css
     '~/Library/Application Support/Code - Insiders/User/keybindings.json': vscode/keybindings.json
     '~/Library/Application Support/Code - Insiders/User/settings.json': vscode/settings.json
-    '~/Library/Application Support/Code - Insiders/User/snippets': vscode/snippets
