@@ -5,6 +5,7 @@ tap "facebook/fb"
 tap "jhawthorn/fzy"
 tap "neovim/neovim"
 tap "scaleway/scaleway"
+tap "netlify/netlifyctl"
 
 brew "bash"
 brew "brew-cask-completion"
@@ -21,6 +22,7 @@ brew "icdiff"
 brew "mas"
 brew "n", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
+brew "netlifyctl"
 brew "openconnect"
 brew "python"
 brew "python@2"
