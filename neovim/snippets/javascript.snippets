@@ -5,7 +5,7 @@ snippet f
 
 snippet if
   if (${1:true}) {
-    ${0:TARGET}
+		${0:TARGET}
   }
 
 snippet if-else
@@ -24,32 +24,32 @@ snippet cll
 
 snippet cdm
 	componentDidMount() {
-		${1}
+		${0}
 	}
 
 snippet cdup
 	componentDidUpdate(prevProps, prevState) {
-		${1}
+		${0}
 	}
 
 snippet cwm
 	componentWillMount() {
-		${1}
+		${0}
 	}
 
 snippet cwr
 	componentWillReceiveProps(nextProps) {
-		${1}
+		${0}
 	}
 
 snippet cwun
 	componentWillUnmount() {
-		${1}
+		${0}
 	}
 
 snippet cwu
 	componentWillUpdate(nextProps, nextState) {
-		${1}
+		${0}
 	}
 
 snippet pt
@@ -120,3 +120,13 @@ snippet props
 
 snippet state
 	this.state.${1}
+
+snippet ds
+	describe('${0}', () => {
+		${1}
+	})
+
+snippet it
+	it('${0}', () => {
+		${1}
+	})
