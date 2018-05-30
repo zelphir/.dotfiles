@@ -101,6 +101,7 @@ let g:ale_fixers['scss']                       = ['prettier']
 let g:ale_sign_error                           = ''
 let g:ale_sign_warning                         = ''
 let g:ale_javascript_prettier_use_local_config = 1
+let g:ale_lint_on_enter                        = 0
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -111,3 +112,21 @@ let g:multi_cursor_next_key            ='<C-d>'
 let g:multi_cursor_prev_key            ='<C-p>'
 let g:multi_cursor_skip_key            ='<C-x>'
 let g:multi_cursor_quit_key            ='<Esc>'
+
+" Emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings={
+\  'javascript.jsx' : {
+\    'extends': 'jsx',
+\    'default_attributes': {
+\      'label': [{'htmlFor': ''}],
+\      'class': {'className': ''},
+\    }
+\  },
+\}
+
+autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
+
+" Jsx
+let g:vim_jsx_pretty_colorful_config = 1

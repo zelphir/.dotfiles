@@ -59,6 +59,30 @@ snippet pt
 
 snippet rcs
 	import React from 'react'
+
+	const ${1:ClassName} = () => {
+		return (
+			${0:<div />}
+		)
+	}
+
+	export default $1
+
+snippet rcc
+	import React from 'react'
+
+	class ${1:ClassName} extends React.PureComponent {
+		render() {
+			return (
+				${0:<div />}
+			)
+		}
+	}
+
+	export default $1
+
+snippet rcsp
+	import React from 'react'
 	import PropTypes from 'prop-types'
 
 	const ${1:ClassName} = () => {
@@ -71,7 +95,7 @@ snippet rcs
 
 	export default $1
 
-snippet rcc
+snippet rccp
 	import React from 'react'
 	import PropTypes from 'prop-types'
 
@@ -127,6 +151,6 @@ snippet ds
 	})
 
 snippet it
-	it('${0}', () => {
+	it('should ${0}', () => {
 		${1}
 	})

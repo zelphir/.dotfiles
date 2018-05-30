@@ -1,5 +1,5 @@
 - shell:
-  - [mas upgrade, Update mac apps]
+  # - [mas upgrade, Update mac apps]
   - [fish -c "fisher up", Update Fish plugins]
   - [yarn global upgrade, Update Yarn global]
   - [pip2 install --upgrade neovim vim-vint; pip3 install --upgrade neovim vim-vint, Update pip]

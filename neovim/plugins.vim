@@ -1,5 +1,6 @@
 " Theme
 Plug 'morhetz/gruvbox'
+Plug 'mhartington/oceanic-next'
 
 " File search
 Plug '/usr/local/opt/fzf'
@@ -43,31 +44,32 @@ Plug 'zoubin/vim-gotofile'
 
 " Tags/braces tools
 Plug 'gorkunov/smartpairs.vim'
-Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript'] }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'javascript'] }
+Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 
 " Utils
+Plug 'soywod/vim-keepeye'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'
 Plug 'matze/vim-move'
 Plug 'shime/vim-livedown'
 Plug 'wakatime/vim-wakatime'
+Plug 'mattn/emmet-vim', { 'for': ['javascript', 'javascript.jsx', 'html', 'css', 'scss'] }
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 
 " Javascript
 Plug 'w0rp/ale' " lintiing
-Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Syntax highlight
 Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript'}
-Plug 'fleischie/vim-styled-components', { 'for': 'javascript' }
-Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
-Plug 'styled-components/vim-styled-components', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'jparise/vim-graphql'
-Plug 'alexlafroscia/postcss-syntax.vim'

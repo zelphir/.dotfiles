@@ -20,6 +20,7 @@
     ~/.config/karabiner: karabiner
     ~/.config/nvim: neovim
     ~/.config/alacritty: alacritty
+    ~/.config/kitty: kitty
     ~/.tmux.conf: tmux/tmux.conf
     '~/Library/Application Support/Code - Insiders/User/custom.css': vscode/custom.css
     '~/Library/Application Support/Code - Insiders/User/keybindings.json': vscode/keybindings.json
