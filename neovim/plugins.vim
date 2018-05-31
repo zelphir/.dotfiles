@@ -50,7 +50,6 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'javascript', 'javascript.jsx'] }
 
 " Utils
-Plug 'soywod/vim-keepeye'
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-commentary'

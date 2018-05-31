@@ -15,7 +15,7 @@
 
   # `git di $number` shows the diff between the state `$number` revisions ago and the current state
   di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
-  df = diff
+  df = icdiff
 
   # difftool
   dt = difftool -y
@@ -139,14 +139,9 @@
 [diff]
   # Detect copies as well as renames
   renames = copies
-  ; tool = Kaleidoscope
-  tool = icdiff
 
-[difftool "icdiff"]
-  cmd = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
-
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[icdiff]
+  options = --line-numbers
 
 [diff "bin"]
   # Use `hexdump` to diff binary files
@@ -162,11 +157,6 @@
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
-  tool = Kaleidoscope
-
-[mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
 
 [push]
   # Use the Git 1.x.x default to avoid errors on machines with old Git
