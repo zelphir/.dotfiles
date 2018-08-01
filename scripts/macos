@@ -17,7 +17,7 @@ sudo xcodebuild -license accept
 sudo spctl --master-disable
 
 # Dark theme
-sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+# sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
 # Keyboard/trackpad speed
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -71,7 +71,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.dock autohide -bool true
 
 # Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
+# sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -84,7 +84,7 @@ defaults write com.apple.dock largesize -float 50
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Change menu bar icons
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/User.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
+# defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/User.menu" "/System/Library/CoreServices/Menu Extras/Displays.menu"
 
 # Show fast user switching menu as: icon
 defaults write -g userMenuExtraStyle -int 2

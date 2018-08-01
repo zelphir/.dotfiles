@@ -35,9 +35,16 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tommcdo/vim-lion'
 
 " Autocomplete
-Plug 'roxma/nvim-completion-manager'
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-Plug 'roxma/ncm-flow'
+Plug 'ncm2/ncm2'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-github'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tagprefix'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-html-subscope'
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+Plug 'roxma/nvim-yarp'
 Plug 'calebeby/ncm-css'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'zoubin/vim-gotofile'

@@ -130,3 +130,7 @@ autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
 
 " Jsx
 let g:vim_jsx_pretty_colorful_config = 1
+
+" NCM2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect

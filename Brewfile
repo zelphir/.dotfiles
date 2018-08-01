@@ -26,7 +26,6 @@ brew "netlifyctl"
 brew "openconnect"
 brew "python"
 brew "python@2"
-brew "reattach-to-user-namespace", args: ["HEAD"]
 brew "ripgrep"
 brew "scaleway/scaleway/docker-machine-driver-scaleway", args: ["HEAD"]
 brew "scw"
@@ -37,6 +36,7 @@ brew "tree"
 brew "watchman"
 brew "wget", args: ["with-iri"]
 brew "yarn", args: ["without-node"]
+brew "mackup"
 
 cask_args appdir: "/Applications"
 cask "android-sdk"
@@ -64,7 +64,6 @@ cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
 cask "react-native-debugger"
-cask "real-vnc"
 cask "skype"
 cask "slack"
 cask "spectacle"
@@ -72,7 +71,6 @@ cask "suspicious-package"
 cask "the-unarchiver"
 cask "transmission"
 cask "virtualbox-beta"
-cask "visual-studio-code-insiders"
 cask "vlc"
 cask "webpquicklook"
 cask "whatsapp"
@@ -82,11 +80,11 @@ cask "adobe-acrobat-reader"
 cask "gfxcardstatus"
 cask "kitty"
 
-mas "Evernote", id: 406056744
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LastPass", id: 926036361
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Telegram", id: 747648890
-mas "Xcode", id: 497799835
+# mas "Evernote", id: 406056744
+# mas "iMovie", id: 408981434
+# mas "Keynote", id: 409183694
+# mas "LastPass", id: 926036361
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+# mas "Telegram", id: 747648890
+# mas "Xcode", id: 497799835

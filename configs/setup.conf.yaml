@@ -13,11 +13,6 @@
     stderr: true
     description: Terminal colors setup
   -
-    command: scripts/alacritty
-    stderr: true
-    stdout: true
-    description: Install Alacritty
-  -
     command: brew bundle
     stderr: true
     stdout: true
@@ -40,11 +35,12 @@
     stderr: true
     description: Yarn global
   -
-    command: scripts/vscode
-    stderr: true
-    description: Visual Studio Code extensions
-  -
     command: scripts/macos
     stdout: true
     stderr: true
     description: MacOS defaults
+  -
+    command: scripts/mackup
+    stdout: true
+    stderr: true
+    description: Mackup restore
