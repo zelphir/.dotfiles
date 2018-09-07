@@ -10,6 +10,7 @@ set ANDROID_SDK_ROOT /usr/local/share/android-sdk
 set ANDROID_HOME /usr/local/share/android-sdk
 set NVIM_HOME $HOME/.config/nvim/
 set -x N_PREFIX $HOME/.n
+set -x BAT_THEME "Oceanic Next"
 
 # Settings for Homebrew and fzf
 set HOMEBREW_CASK_OPTS "--appdir=/Applications"

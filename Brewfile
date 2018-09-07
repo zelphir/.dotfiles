@@ -37,6 +37,8 @@ brew "watchman"
 brew "wget", args: ["with-iri"]
 brew "yarn", args: ["without-node"]
 brew "mackup"
+brew "bat"
+brew luarocks
 
 cask_args appdir: "/Applications"
 cask "android-sdk"

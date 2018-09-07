@@ -5,6 +5,7 @@ scriptencoding utf-8
 
   " base
   set shell=bash
+  syntax enable
   syntax on                             " syntax highlighting
   filetype plugin indent on             " try to recognise filetype and load plugins and indent files
 
@@ -95,8 +96,10 @@ scriptencoding utf-8
   endif
 
   " Set filetype
-  au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs} set filetype=javascript
-  au BufRead,BufNewFile,BufReadPre,FileReadPre .env.* set filetype=sh
+  augroup vimrc
+    au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs,mdx} set filetype=javascript
+    au BufRead,BufNewFile,BufReadPre,FileReadPre .env.* set filetype=sh
+  augroup END
 
   " Reload files if changed outside neovim
   augroup vimrc

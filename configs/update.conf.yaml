@@ -1,7 +1,7 @@
 - shell:
   # - [mas upgrade, Update mac apps]
   - [fish -c "fisher up", Update Fish plugins]
-  - [yarn global upgrade, Update Yarn global]
+  - [yarn global upgrade --ignore-engines, Update Yarn global]
   - [pip2 install --upgrade neovim vim-vint; pip3 install --upgrade neovim vim-vint, Update pip]
   - [~/.tmux/plugins/tpm/bin/update_plugins all, Update tmux plugins]
   -
@@ -15,6 +15,6 @@
     stdout: true
     stderr: true
   -
-    command: nvim +PlugUpdate +qall
+    command: nvim +"call dein#update()" +UpdateRemotePlugins +qall
     stderr: true
     description: Update nvim plugins

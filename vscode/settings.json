@@ -1,7 +1,7 @@
 {
     "docker.enableLinting": true,
     "editor.cursorBlinking": "phase",
-    "editor.fontFamily": "Operator Mono",
+    "editor.fontFamily": "Operator Mono SSm Lig",
     "editor.fontLigatures": true,
     "editor.fontSize": 15,
     "editor.lineNumbers": "relative",
@@ -62,7 +62,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.enableBold": true,
-    "terminal.integrated.fontFamily": "FuraCodeNerdFontO-Light",
+    "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1.5,
     "terminal.integrated.rightClickCopyPaste": true,
@@ -111,11 +111,12 @@
     ],
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
-        "statusBar.background": "#5f819d",
-        "statusBar.noFolderBackground": "#5f819d",
-        "statusBar.debuggingBackground": "#5f819d"
+        "statusBar.background": "#85678f",
+        "statusBar.noFolderBackground": "#85678f",
+        "statusBar.debuggingBackground": "#85678f"
     },
-    "workbench.colorTheme": "Gruvbox Dark (Medium Contrast)",
+    "workbench.colorTheme": "Hybrid Operator",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "search.location": "panel"
 }
