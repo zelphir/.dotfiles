@@ -58,8 +58,6 @@ let g:startify_bookmarks              = [{ 'd': '~/.dotfiles' }]
 let g:startify_list_order             = [
   \ ['   LRU within this dir:'],
   \ 'dir',
-  \ ['   LRU:'],
-  \ 'files',
   \ ['   Sessions:'],
   \ 'sessions',
   \ ['   Bookmarks:'],
@@ -104,14 +102,14 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_lint_on_enter                        = 0
 
 " NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup vimrc
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
 
 " MultipleCursors
-let g:multi_cursor_use_default_mapping = 0
-let g:multi_cursor_next_key            ='<C-d>'
-let g:multi_cursor_prev_key            ='<C-p>'
-let g:multi_cursor_skip_key            ='<C-x>'
-let g:multi_cursor_quit_key            ='<Esc>'
+let g:VM_sublime_mappings = 1
+let g:VM_no_meta_mappings = 1
 
 " Emmet
 let g:user_emmet_install_global = 0
@@ -126,11 +124,14 @@ let g:user_emmet_settings={
 \  },
 \}
 
-autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
+augroup vimrc
+  autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
+augroup END
 
 " Jsx
 let g:vim_jsx_pretty_colorful_config = 1
 
 " NCM2
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+augroup vimrc
+  autocmd BufEnter * call ncm2#enable_for_buffer()
+augroup END

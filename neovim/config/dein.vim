@@ -33,7 +33,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdtree')
   call dein#add('Xuyuanp/nerdtree-git-plugin')
-  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('mg979/vim-visual-multi')
 
   " Aligning
   call dein#add('tommcdo/vim-lion')
@@ -48,10 +48,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ncm2/ncm2-tagprefix')
   call dein#add('ncm2/ncm2-cssomni')
   call dein#add('ncm2/ncm2-html-subscope')
+  call dein#add('ncm2/ncm2-markdown-subscope')
+  call dein#add('wellle/tmux-complete.vim')
   call dein#add('ludovicchabant/vim-gutentags')
   call dein#add('zoubin/vim-gotofile')
   call dein#add('ncm2/ncm2-tern',  {'build': 'npm install'})
-  " Plug 'calebeby/ncm-css'
 
   " Tags/braces tools
   call dein#add('gorkunov/smartpairs.vim')
@@ -59,6 +60,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-surround')
   call dein#add('Valloric/MatchTagAlways', { 'on_ft': ['html', 'javascript', 'javascript.jsx'] })
+  call dein#add('wellle/targets.vim')
 
   " Utils
   call dein#add('haya14busa/dein-command.vim')
@@ -74,16 +76,18 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/neosnippet.vim')
 
   " Javascript
-  call dein#add('w0rp/ale') " linter
+  call dein#add('w0rp/ale')
   call dein#add('ternjs/tern_for_vim', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('posva/vim-vue')
+  call dein#add('Galooshi/vim-import-js')
 
   " Syntax highlight
-  " Plug 'sheerun/vim-polyglot'
-  " Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-  " Plug 'leafgarland/typescript-vim'
-  " Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
-  " Plug 'styled-components/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
-  " Plug 'jparise/vim-graphql'
+  call dein#add('sheerun/vim-polyglot')
+  call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('leafgarland/typescript-vim')
+  call dein#add('maxmellon/vim-jsx-pretty', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('styled-components/vim-styled-components', { 'on_ft': ['javascript', 'javascript.jsx'] })
+  call dein#add('jparise/vim-graphql')
 
   call dein#end()
   call dein#save_state()

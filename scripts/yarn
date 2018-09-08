@@ -10,6 +10,7 @@ apps=(
   gqlint
   graphcool
   jsctags
+  import-js
   livedown
   neovim
   prettier
@@ -18,4 +19,4 @@ apps=(
   tern
 )
 
-yarn global add ${apps[@]}
+yarn global add ${apps[@]} --ignore-engines

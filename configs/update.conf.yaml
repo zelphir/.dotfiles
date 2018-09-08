@@ -16,5 +16,6 @@
     stderr: true
   -
     command: nvim +"call dein#update()" +UpdateRemotePlugins +qall
+    stdout: true
     stderr: true
     description: Update nvim plugins

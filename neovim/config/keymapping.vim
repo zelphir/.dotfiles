@@ -56,14 +56,14 @@
   vnoremap <silent> N :norm! Nzz<CR>
 
   " Same when moving up and down
-  nnoremap <C-u> <C-u>zz
-  nnoremap <C-d> <C-d>zz
-  nnoremap <C-f> <C-f>zz
-  nnoremap <C-b> <C-b>zz
-  vnoremap <C-u> <C-u>zz
-  vnoremap <C-d> <C-d>zz
-  vnoremap <C-f> <C-f>zz
-  vnoremap <C-b> <C-b>zz
+  " nnoremap <C-u> <C-u>zz
+  " nnoremap <C-d> <C-d>zz
+  " nnoremap <C-f> <C-f>zz
+  " nnoremap <C-b> <C-b>zz
+  " vnoremap <C-u> <C-u>zz
+  " vnoremap <C-d> <C-d>zz
+  " vnoremap <C-f> <C-f>zz
+  " vnoremap <C-b> <C-b>zz
 
   " Remap H and L (top, bottom of screen to left and right end of line)
   nnoremap H ^
