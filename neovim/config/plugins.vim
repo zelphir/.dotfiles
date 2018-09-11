@@ -44,6 +44,7 @@ let g:mta_filetypes = {
   \ 'xml'            : 1,
   \ 'javascript'     : 1,
   \ 'javascript.jsx' : 1,
+  \ 'vue'            : 1,
   \}
 
 " Startify
@@ -69,17 +70,14 @@ let g:gutentags_ctags_executable_javascript = 'jsctags'
 let g:gutentags_ctags_exclude               = [ 'node_modules', '.git' ]
 let g:gutentags_define_advanced_commands    = 1
 
-" Neosnippets
-let g:neosnippet#enable_completed_snippet      = 1
-let g:neosnippet#disable_runtime_snippets      = {'_': 1}
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory            = '~/.config/nvim/snippets'
+" Snippets
+let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'mysnippets']
 
 " Closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.vue'
 
 " Polyglot
-let g:polyglot_disabled = ['javascript', 'javascript.jsx']
+let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'vue']
 
 " ALE
 let g:ale_linters                              = {}
@@ -106,10 +104,6 @@ augroup vimrc
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
-
-" MultipleCursors
-let g:VM_sublime_mappings = 1
-let g:VM_no_meta_mappings = 1
 
 " Emmet
 let g:user_emmet_install_global = 0

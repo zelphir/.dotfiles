@@ -11,21 +11,17 @@ if dein#load_state('~/.cache/dein')
   call dein#add('/usr/local/opt/fzf')
   call dein#add('junegunn/fzf.vim')
 
-  " " Integration with tmux
+  " Integration with tmux
   call dein#add('christoomey/vim-tmux-navigator')
   call dein#add('tmux-plugins/vim-tmux-focus-events')
 
-  " Indent guides
+  " Improve scroll
+  call dein#add('vim-scripts/CursorLineCurrentWindow')
+  call dein#add('vim-scripts/RelativeNumberCurrentWindow')
+
+  " UI/Tools
   call dein#add('Yggdroot/indentLine')
-
-  " " Improve scroll
-  " Plug 'vim-scripts/CursorLineCurrentWindow'
-  " Plug 'vim-scripts/RelativeNumberCurrentWindow'
-
-  " Fugitive
   call dein#add('tpope/vim-fugitive')
-
-  " UI tools
   call dein#add('tpope/vim-eunuch')
   call dein#add('vim-airline/vim-airline')
   call dein#add('mhinz/vim-startify')
@@ -33,7 +29,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdtree')
   call dein#add('Xuyuanp/nerdtree-git-plugin')
-  call dein#add('mg979/vim-visual-multi')
 
   " Aligning
   call dein#add('tommcdo/vim-lion')
@@ -49,10 +44,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ncm2/ncm2-cssomni')
   call dein#add('ncm2/ncm2-html-subscope')
   call dein#add('ncm2/ncm2-markdown-subscope')
+  call dein#add('ncm2/ncm2-ultisnips')
+  call dein#add('ncm2/ncm2-tern', {'build': 'npm install'})
   call dein#add('wellle/tmux-complete.vim')
   call dein#add('ludovicchabant/vim-gutentags')
   call dein#add('zoubin/vim-gotofile')
-  call dein#add('ncm2/ncm2-tern',  {'build': 'npm install'})
 
   " Tags/braces tools
   call dein#add('gorkunov/smartpairs.vim')
@@ -63,20 +59,19 @@ if dein#load_state('~/.cache/dein')
   call dein#add('wellle/targets.vim')
 
   " Utils
+  call dein#add('w0rp/ale')
   call dein#add('haya14busa/dein-command.vim')
   call dein#add('tpope/vim-repeat')
   call dein#add('editorconfig/editorconfig-vim')
   call dein#add('tpope/vim-commentary')
   call dein#add('matze/vim-move')
-  " Plug 'shime/vim-livedown'
   call dein#add('wakatime/vim-wakatime')
   call dein#add('mattn/emmet-vim', { 'on_ft': ['javascript', 'javascript.jsx', 'html', 'css', 'scss'] })
 
   " Snippets
-  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('SirVer/ultisnips')
 
   " Javascript
-  call dein#add('w0rp/ale')
   call dein#add('ternjs/tern_for_vim', { 'on_ft': ['javascript', 'javascript.jsx'] })
   call dein#add('posva/vim-vue')
   call dein#add('Galooshi/vim-import-js')

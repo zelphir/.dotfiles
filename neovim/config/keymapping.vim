@@ -56,14 +56,14 @@
   vnoremap <silent> N :norm! Nzz<CR>
 
   " Same when moving up and down
-  " nnoremap <C-u> <C-u>zz
-  " nnoremap <C-d> <C-d>zz
-  " nnoremap <C-f> <C-f>zz
-  " nnoremap <C-b> <C-b>zz
-  " vnoremap <C-u> <C-u>zz
-  " vnoremap <C-d> <C-d>zz
-  " vnoremap <C-f> <C-f>zz
-  " vnoremap <C-b> <C-b>zz
+  nnoremap <C-u> <C-u>zz
+  nnoremap <C-d> <C-d>zz
+  nnoremap <C-f> <C-f>zz
+  nnoremap <C-b> <C-b>zz
+  vnoremap <C-u> <C-u>zz
+  vnoremap <C-d> <C-d>zz
+  vnoremap <C-f> <C-f>zz
+  vnoremap <C-b> <C-b>zz
 
   " Remap H and L (top, bottom of screen to left and right end of line)
   nnoremap H ^
@@ -88,24 +88,26 @@
 
 " Plugins
 " -----------------------------------------------------------------
-  " Fzf
-  map <leader>b :Buffers<cr>
-  map <leader>l :Files<cr>
-  map <leader>g :GFiles?<cr>
-  map <leader>/ :Rg!<cr>
+" Fzf
+map <leader>b :Buffers<cr>
+map <leader>l :Files<cr>
+map <leader>g :GFiles?<cr>
+map <leader>/ :Rg!<cr>
 
-  " Format with Prettier
-  nmap gp <Plug>(ale_fix)
+" Format with Prettier
+nmap gp <Plug>(ale_fix)
 
-  " Completion Manager
-    " Tabbing
-    inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-    " Neosnippets
-    inoremap <silent> <c-u> <c-r>=cm#sources#neosnippet#trigger_or_popup("\<Plug>(neosnippet_expand_or_jump)")<cr>
-    imap <c-j> <Plug>(neosnippet_expand_or_jump)
-    vmap <c-j> <Plug>(neosnippet_expand_or_jump)
-    vmap <c-u> <Plug>(neosnippet_expand_target)
+" Completion Manager
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or(' ')
+" c-j c-k for moving in snippet
+" let g:UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+let g:UltiSnipsJumpForwardTrigger = '<c-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
+let g:UltiSnipsRemoveSelectModeMappings = 0
 
-  " NERDTree
-  map <C-e> :NERDTreeToggle<CR>
+" Use <TAB> to select the popup menu:
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" NERDTree
+map <C-e> :NERDTreeToggle<CR>
