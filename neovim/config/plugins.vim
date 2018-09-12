@@ -1,9 +1,9 @@
 scriptencoding 'utf-8'
 
 " Indent guides
-let g:indentLine_char                = '│'
-let g:indentLine_color_gui           = '#2A3A43'
-let g:indentLine_color_term          = 155
+let g:indentLine_char       = '│'
+let g:indentLine_color_gui  = '#2A3A43'
+let g:indentLine_color_term = 155
 
 " Fzf
 let g:fzf_files_options =
@@ -74,7 +74,7 @@ let g:gutentags_define_advanced_commands    = 1
 let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'mysnippets']
 
 " Closetag
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml, *.js, *.vue'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml,*.vue,*.js'
 
 " Polyglot
 let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'vue']
@@ -107,8 +107,8 @@ augroup END
 
 " Emmet
 let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<Tab>'
-let g:user_emmet_settings={
+let g:user_emmet_leader_key     = '<Tab>'
+let g:user_emmet_settings       = {
 \  'javascript.jsx' : {
 \    'extends': 'jsx',
 \    'default_attributes': {
@@ -129,3 +129,5 @@ let g:vim_jsx_pretty_colorful_config = 1
 augroup vimrc
   autocmd BufEnter * call ncm2#enable_for_buffer()
 augroup END
+let g:UltiSnipsRemoveSelectModeMappings = 0
+let g:UltiSnipsExpandTrigger            = '<c-j>'

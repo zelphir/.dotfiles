@@ -7,7 +7,7 @@ let g:oceanic_next_terminal_italic = 1
 try
   colorscheme OceanicNext
 catch /^Vim\%((\a\+)\)\=:E185/
-  " deal with it
+  colorscheme desert
 endtry
 
 let g:airline_theme='oceanicnext'

@@ -98,12 +98,7 @@ map <leader>/ :Rg!<cr>
 nmap gp <Plug>(ale_fix)
 
 " Completion Manager
-inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or(' ')
-" c-j c-k for moving in snippet
-" let g:UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
-let g:UltiSnipsJumpForwardTrigger = '<c-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-k>'
-let g:UltiSnipsRemoveSelectModeMappings = 0
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " Use <TAB> to select the popup menu:
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
