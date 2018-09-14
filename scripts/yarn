@@ -9,7 +9,6 @@ apps=(
   firebase-tools
   gqlint
   graphcool
-  jsctags
   import-js
   livedown
   neovim

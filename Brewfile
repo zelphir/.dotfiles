@@ -81,6 +81,7 @@ cask "adobe-creative-cloud"
 cask "adobe-acrobat-reader"
 cask "gfxcardstatus"
 cask "kitty"
+cask "astro"
 
 # mas "Evernote", id: 406056744
 # mas "iMovie", id: 408981434

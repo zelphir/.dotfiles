@@ -47,16 +47,16 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ncm2/ncm2-ultisnips')
   call dein#add('ncm2/ncm2-tern', {'build': 'npm install'})
   call dein#add('wellle/tmux-complete.vim')
-  call dein#add('ludovicchabant/vim-gutentags')
   call dein#add('zoubin/vim-gotofile')
+  call dein#add('ludovicchabant/vim-gutentags')
 
   " Tags/braces tools
   call dein#add('gorkunov/smartpairs.vim')
   call dein#add('alvan/vim-closetag')
-  call dein#add('jiangmiao/auto-pairs')
   call dein#add('tpope/vim-surround')
   call dein#add('Valloric/MatchTagAlways')
   call dein#add('wellle/targets.vim')
+  call dein#add('cohama/lexima.vim')
 
   " Utils
   call dein#add('w0rp/ale')
@@ -74,7 +74,6 @@ if dein#load_state('~/.cache/dein')
   " Javascript
   call dein#add('ternjs/tern_for_vim', { 'on_ft': ['javascript', 'javascript.jsx', 'vue'] })
   call dein#add('posva/vim-vue', { 'on_ft': ['vue'] })
-  call dein#add('Galooshi/vim-import-js')
 
   " Syntax highlight
   call dein#add('sheerun/vim-polyglot')
