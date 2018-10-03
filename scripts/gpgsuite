@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd /tmp
+git clone --recursive https://github.com/macgpg/libmacgpg-free
+cd libmacgpg-free
+make
+sudo cp ./build/Release/org.gpgtools.Libmacgpg.xpc/Contents/MacOS/org.gpgtools.Libmacgpg /Library/Application\ Support/GPGTools/org.gpgtools.Libmacgpg.xpc/Contents/MacOS

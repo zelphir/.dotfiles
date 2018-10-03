@@ -44,3 +44,8 @@
     stdout: true
     stderr: true
     description: Mackup restore
+  -
+    command: scripts/gpgsuite
+    stdout: true
+    stderr: true
+    description: GPG Suite

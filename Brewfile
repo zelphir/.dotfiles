@@ -38,7 +38,8 @@ brew "wget", args: ["with-iri"]
 brew "yarn", args: ["without-node"]
 brew "mackup"
 brew "bat"
-brew luarocks
+brew "luarocks"
+brew "hub"
 
 cask_args appdir: "/Applications"
 cask "android-sdk"
@@ -81,13 +82,10 @@ cask "adobe-creative-cloud"
 cask "adobe-acrobat-reader"
 cask "gfxcardstatus"
 cask "kitty"
-cask "astro"
+cask "gpg-suite"
 
 # mas "Evernote", id: 406056744
-# mas "iMovie", id: 408981434
-# mas "Keynote", id: 409183694
-# mas "LastPass", id: 926036361
-# mas "Numbers", id: 409203825
-# mas "Pages", id: 409201541
-# mas "Telegram", id: 747648890
-# mas "Xcode", id: 497799835
+mas "LastPass", id: 926036361
+mas "Telegram", id: 747648890
+mas "Xcode", id: 497799835
+mas "Spark", id: 1176895641
