@@ -40,6 +40,7 @@ brew "mackup"
 brew "bat"
 brew "luarocks"
 brew "hub"
+brew "asdf"
 
 cask_args appdir: "/Applications"
 cask "android-sdk"
@@ -73,7 +74,7 @@ cask "spectacle"
 cask "suspicious-package"
 cask "the-unarchiver"
 cask "transmission"
-cask "virtualbox-beta"
+cask "virtualbox"
 cask "vlc"
 cask "webpquicklook"
 cask "whatsapp"
@@ -85,7 +86,7 @@ cask "kitty"
 cask "gpg-suite"
 
 # mas "Evernote", id: 406056744
-mas "LastPass", id: 926036361
-mas "Telegram", id: 747648890
-mas "Xcode", id: 497799835
-mas "Spark", id: 1176895641
+# mas "LastPass", id: 926036361
+# mas "Telegram", id: 747648890
+# mas "Xcode", id: 497799835
+# mas "Spark", id: 1176895641

@@ -13,6 +13,11 @@
     stderr: true
     description: Terminal colors setup
   -
+    command: scripts/macos
+    stdout: true
+    stderr: true
+    description: MacOS defaults
+  -
     command: brew bundle
     stderr: true
     stdout: true
@@ -34,11 +39,6 @@
     command: scripts/yarn
     stderr: true
     description: Yarn global
-  -
-    command: scripts/macos
-    stdout: true
-    stderr: true
-    description: MacOS defaults
   -
     command: scripts/mackup
     stdout: true

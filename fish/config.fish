@@ -78,4 +78,6 @@ if [ -f '~/google-cloud-sdk/path.fish.inc' ]
 end
 
 # asdf
-source ~/.asdf/asdf.fish
+if test -f $HOME/.asdf/asdf.fish
+  source $HOME/.asdf/asdf.fish
+end
