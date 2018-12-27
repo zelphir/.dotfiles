@@ -47,7 +47,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ncm2/ncm2-ultisnips')
   call dein#add('ncm2/ncm2-tern', {'build': 'npm install'})
   call dein#add('wellle/tmux-complete.vim')
-  call dein#add('zoubin/vim-gotofile')
+  " call dein#add('zoubin/vim-gotofile')
   call dein#add('ludovicchabant/vim-gutentags')
 
   " Tags/braces tools
@@ -75,13 +75,16 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ternjs/tern_for_vim', { 'on_ft': ['javascript', 'javascript.jsx', 'vue'] })
   call dein#add('posva/vim-vue', { 'on_ft': ['vue'] })
 
+  " Go
+  call dein#add('fatih/vim-go', { 'on_ft': ['go'], 'build': ':GoUpdateBinaries' })
+
   " Syntax highlight
   call dein#add('sheerun/vim-polyglot')
   call dein#add('pangloss/vim-javascript', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('leafgarland/typescript-vim')
+  call dein#add('leafgarland/typescript-vim', { 'on_ft': ['typescript'] })
   call dein#add('maxmellon/vim-jsx-pretty', { 'on_ft': ['javascript', 'javascript.jsx'] })
   call dein#add('styled-components/vim-styled-components', { 'on_ft': ['javascript', 'javascript.jsx'] })
-  call dein#add('jparise/vim-graphql')
+  call dein#add('jparise/vim-graphql', { 'on_ft': ['javascript', 'javascript.jsx'] })
 
   call dein#end()
   call dein#save_state()

@@ -1,10 +1,5 @@
-# Source sensitive configuration
-if test -f $HOME/.config/fish/local.fish
-  source $HOME/.config/fish/local.fish
-end
-
 # Set env vars
-set GOPATH $HOME/.go
+set -x GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
 set ANDROID_SDK_ROOT /usr/local/share/android-sdk
 set ANDROID_HOME /usr/local/share/android-sdk
@@ -30,7 +25,8 @@ set python2_path /usr/local/opt/python@2/bin
 set default_path /usr/bin /usr/sbin /bin /sbin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
 set node $HOME/.n/bin
-set fish_user_paths $python2_path $gnubin $homebrew $node $default_path
+set go $GOPATH/bin
+set fish_user_paths $python2_path $gnubin $homebrew $node $go $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -80,4 +76,9 @@ end
 # asdf
 if test -f $HOME/.asdf/asdf.fish
   source $HOME/.asdf/asdf.fish
+end
+
+# Source sensitive configuration
+if test -f $HOME/.config/fish/local.fish
+  source $HOME/.config/fish/local.fish
 end

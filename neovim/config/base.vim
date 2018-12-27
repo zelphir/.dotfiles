@@ -96,6 +96,10 @@ if !&readonly
   set fileencoding=utf-8
 endif
 
+" Load local vim settings
+set exrc
+set secure
+
 " Set filetype
 augroup vimrc
   au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs,mdx} set filetype=javascript
