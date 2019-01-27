@@ -1,4 +1,12 @@
+# Auto install fisher
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
+
 # Set env vars
+set -x EDITOR nvim
 set -x GOPATH $HOME/.go
 set JAVA_HOME (/usr/libexec/java_home)
 set ANDROID_SDK_ROOT /usr/local/share/android-sdk
@@ -9,9 +17,9 @@ set -x BAT_THEME "Oceanic Next"
 
 # Settings for Homebrew and fzf
 set HOMEBREW_CASK_OPTS "--appdir=/Applications"
-set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
-set -x FZF_LEGACY_KEYBINDINGS 0
-set -x FZF_TMUX 1
+set -U FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set -U FZF_LEGACY_KEYBINDINGS 0
+set -U FZF_TMUX 1
 
 ### PATH ###
 if test -d /usr/local/sbin
@@ -24,9 +32,11 @@ set fish_path $HOME/.config/fish
 set python2_path /usr/local/opt/python@2/bin
 set default_path /usr/bin /usr/sbin /bin /sbin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
+set fzf /usr/local/opt/fzf/bin
 set node $HOME/.n/bin
 set go $GOPATH/bin
-set fish_user_paths $python2_path $gnubin $homebrew $node $go $default_path
+set rust $HOME/.cargo/bin
+set fish_user_paths $fish_user_paths $fzf $python2_path $gnubin $homebrew $node $go $rust $default_path
 
 # use vi-mode
 set fish_key_bindings fish_vi_key_bindings
@@ -81,4 +91,12 @@ end
 # Source sensitive configuration
 if test -f $HOME/.config/fish/local.fish
   source $HOME/.config/fish/local.fish
+end
+
+function fco -d "Fuzzy-find and checkout a branch"
+  git branch --all | grep -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
+end
+
+function fcoc -d "Fuzzy-find and checkout a commit"
+  git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
 end
