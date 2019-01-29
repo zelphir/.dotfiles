@@ -41,6 +41,7 @@ brew "bat"
 brew "luarocks"
 brew "hub"
 brew "asdf"
+brew "diff-so-fancy"
 
 cask_args appdir: "/Applications"
 cask "android-sdk"

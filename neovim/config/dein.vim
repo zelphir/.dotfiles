@@ -28,7 +28,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('scrooloose/nerdtree')
-  call dein#add('Xuyuanp/nerdtree-git-plugin')
+  call dein#add('albfan/nerdtree-git-plugin')
 
   " Aligning
   call dein#add('tommcdo/vim-lion')
