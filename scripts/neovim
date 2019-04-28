@@ -3,7 +3,6 @@
 pip2 install neovim vim-vint
 pip3 install neovim vim-vint
 
-curl -s https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh | bash -s ~/.cache/dein
-nvim +"call dein#install()" +UpdateRemotePlugins +qall
+nvim +PlugInstall +UpdateRemotePlugins +qall
 
 sudo gem install coderay neovim

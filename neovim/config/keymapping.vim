@@ -94,15 +94,5 @@ map <leader>l :Files<cr>
 map <leader>g :GFiles?<cr>
 map <leader>/ :Rg!<cr>
 
-" Format with Prettier
-nmap gp <Plug>(ale_fix)
-
-" Completion Manager
-inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
-
-" Use <TAB> to select the popup menu:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " NERDTree
 map <C-e> :NERDTreeToggle<CR>

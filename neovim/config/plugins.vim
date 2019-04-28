@@ -21,22 +21,14 @@ augroup vimrc
     \   <bang>0)
 augroup END
 
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled     = 1
-let g:airline_powerline_fonts            = 1
-
-" Vim Lion
-let b:lion_squeeze_spaces = 1
-
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " TernJS
-let g:tern_request_timeout       = 1
-let g:tern_show_signature_in_pum = '0'
-let g:tern#command               = ['tern']
-let g:tern#arguments             = ['--persistent']
+" let g:tern_request_timeout       = 1
+" let g:tern_show_signature_in_pum = '0'
+" let g:tern#command               = ['tern']
+" let g:tern#arguments             = ['--persistent']
 
 " MatchTagAlways
 let g:mta_filetypes = {
@@ -48,43 +40,43 @@ let g:mta_filetypes = {
   \}
 
 " Startify
-let g:startify_change_to_vcs_root     = 1
-let g:startify_enable_special         = 0
-let g:startify_files_number           = 6
-let g:startify_relative_path          = 1
-let g:startify_session_autoload       = 1
-let g:startify_session_persistence    = 1
-let g:startify_session_delete_buffers = 1
-let g:startify_bookmarks              = [{ 'd': '~/.dotfiles' }]
-let g:startify_list_order             = [
-  \ ['   LRU within this dir:'],
-  \ 'dir',
-  \ ['   Sessions:'],
-  \ 'sessions',
-  \ ['   Bookmarks:'],
-  \ 'bookmarks',
-  \ ]
+" let g:startify_change_to_vcs_root     = 1
+" let g:startify_enable_special         = 0
+" let g:startify_files_number           = 6
+" let g:startify_relative_path          = 1
+" let g:startify_session_autoload       = 1
+" let g:startify_session_persistence    = 1
+" let g:startify_session_delete_buffers = 1
+" let g:startify_bookmarks              = [{ 'd': '~/.dotfiles' }]
+" let g:startify_list_order             = [
+"   \ ['   LRU within this dir:'],
+"   \ 'dir',
+"   \ ['   Sessions:'],
+"   \ 'sessions',
+"   \ ['   Bookmarks:'],
+"   \ 'bookmarks',
+"   \ ]
 
-" Gutentags
-let g:gutentags_ctags_exclude            = [
-  \ 'node_modules',
-  \ '.git',
-  \ '*.min.js',
-  \ '*.min.css',
-  \ 'build',
-  \ 'dist',
-  \ 'vendor'
-  \ ]
-let g:gutentags_define_advanced_commands = 1
+" " Gutentags
+" let g:gutentags_ctags_exclude            = [
+"   \ 'node_modules',
+"   \ '.git',
+"   \ '*.min.js',
+"   \ '*.min.css',
+"   \ 'build',
+"   \ 'dist',
+"   \ 'vendor'
+"   \ ]
+" let g:gutentags_define_advanced_commands = 1
 
 " Snippets
-let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'mysnippets']
+" let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'mysnippets']
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml,*.vue,*.js'
 
 " Polyglot
-let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'vue']
+let g:polyglot_disabled = ['typescript.jsx', 'typescript', 'javascript', 'javascript.jsx', 'vue']
 
 " ALE
 " let g:ale_linters                              = {}
@@ -101,42 +93,89 @@ let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'vue']
 " let g:ale_fixers['json']                       = ['prettier']
 " let g:ale_fixers['css']                        = ['prettier']
 " let g:ale_fixers['scss']                       = ['prettier']
-let g:ale_linters = {'javascript': ['eslint', 'flow']}
-let g:ale_sign_error                           = ''
-let g:ale_sign_warning                         = ''
-let g:ale_javascript_prettier_use_local_config = 1
-let g:ale_lint_on_enter                        = 0
+" let g:ale_linters = {'javascript': ['eslint', 'flow']}
+" let g:ale_sign_error                           = ''
+" let g:ale_sign_warning                         = ''
+" let g:ale_javascript_prettier_use_local_config = 1
+" let g:ale_lint_on_enter                        = 0
 
 " NERDTree
-let NERDTreeIgnore = ['^tags$', '^tags.lock$', '^.tern-port$']
+let NERDTreeIgnore = ['^tags.lock$', '^.tern-port$']
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+
 augroup vimrc
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
 
 " Emmet
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key     = '<Tab>'
-let g:user_emmet_settings       = {
-\  'javascript.jsx' : {
-\    'extends': 'jsx',
-\    'default_attributes': {
-\      'label': [{'htmlFor': ''}],
-\      'class': {'className': ''},
-\    }
-\  },
-\}
+" let g:user_emmet_install_global = 0
+" let g:user_emmet_leader_key     = '<Tab>'
+" let g:user_emmet_settings       = {
+" \  'javascript.jsx' : {
+" \    'extends': 'jsx',
+" \    'default_attributes': {
+" \      'label': [{'htmlFor': ''}],
+" \      'class': {'className': ''},
+" \    }
+" \  },
+" \}
 
-augroup vimrc
-  autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
-augroup END
+" augroup vimrc
+"   autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
+" augroup END
 
 " Jsx
-let g:vim_jsx_pretty_colorful_config = 1
+" let g:vim_jsx_pretty_colorful_config = 1
 
 " NCM2
-augroup vimrc
-  autocmd BufEnter * call ncm2#enable_for_buffer()
-augroup END
-let g:UltiSnipsRemoveSelectModeMappings = 0
-let g:UltiSnipsExpandTrigger            = '<c-j>'
+" augroup vimrc
+"   autocmd BufEnter * call ncm2#enable_for_buffer()
+" augroup END
+" let g:UltiSnipsRemoveSelectModeMappings = 0
+" let g:UltiSnipsExpandTrigger            = '<c-j>'
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts            = 1
+let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '│'
+let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'c'  : 'C',
+    \ 'i'  : 'I',
+    \ 'ic' : 'I',
+    \ 'ix' : 'I',
+    \ 'n'  : 'N',
+    \ 'ni' : 'N',
+    \ 'no' : 'N',
+    \ 'R'  : 'R',
+    \ 'Rv' : 'R',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ 't'  : 'T',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ }
+
+" Signify
+" let g:signify_realtime = 1
+" let g:signify_line_highlight = 1
+
+" ImportCost
+" augroup import_cost_auto_run
+"   autocmd!
+"   autocmd InsertLeave *.js,*.jsx,*.ts,*.tsx ImportCost
+"   autocmd BufEnter *.js,*.jsx,*.ts,*.tsx ImportCost
+"   autocmd CursorHold *.js,*.jsx,*.ts,*.tsx ImportCost
+" augroup END

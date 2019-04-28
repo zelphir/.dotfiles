@@ -15,7 +15,7 @@
     stdout: true
     stderr: true
   -
-    command: nvim +"Dein update" +qall; and nvim +UpdateRemotePlugins +qall
+    command: nvim +PlugUpdate +qall
     stdout: true
     stderr: true
     description: Update nvim plugins

@@ -21,7 +21,8 @@ set number                            " show line numbers
 set relativenumber                    " show relative line numbers
 set ruler                             " show current position at bottom
 set scrolloff=5                       " keep at least 5 lines above/below
-set shortmess+=I                      " disable welcome screen
+set shortmess+=c                      " don't give |ins-completion-menu| messages.
+set signcolumn=yes                    " always show signcolumns
 set showcmd                           " show any commands
 set sidescroll=1                      " smoother horizontal scrolling
 set sidescrolloff=5                   " keep at least 5 lines left/right
@@ -73,7 +74,6 @@ set smartcase                         " case sensitive searching when not all lo
 
 " background processes
 set copyindent                        " copy the previous indentation on autoindenting
-"autocmd FocusGained * silent! checktime
 set autoread                          " update file when changed outside of vim
 set autoindent                        " copy indentation from the previous line for new line
 set clipboard=unnamed                 " use native clipboard
@@ -85,6 +85,8 @@ set noerrorbells                      " no error bells please
 set noswapfile                        " no swapfiles
 set nowritebackup                     " don't save a backup while editing
 set ttyfast                           " indicates a fast terminal connection
+" set cmdheight=2                       " Better display for messages
+set updatetime=300                    " Smaller updatetime for CursorHold & CursorHoldI
 
 " persistent undo settings
 set undodir=~/.local/share/nvim/undo  " set undofile location
@@ -102,7 +104,7 @@ set secure
 
 " Set filetype
 augroup vimrc
-  au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs,mdx} set filetype=javascript
+  au BufRead,BufNewFile,BufReadPre,FileReadPre *.{es6,es6.js,js,jsx,mjs} set filetype=javascript
   au BufRead,BufNewFile,BufReadPre,FileReadPre .env.* set filetype=sh
 augroup END
 
@@ -112,6 +114,11 @@ augroup vimrc
   autocmd FileChangedShellPost *
     \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 augroup END
+
+" Delete empty buffer
+if bufname('%') == ''
+  set bufhidden=wipe
+endif
 
 " Python bins
 let g:python_host_prog='/usr/local/opt/python@2/bin/python2'

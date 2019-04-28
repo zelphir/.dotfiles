@@ -1,0 +1,36 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "go",
+    "javascript",
+    "javascript.jsx",
+    "md",
+    "scss",
+    "typescript",
+    "typescript.jsx"
+  ],
+  "diagnostic.errorSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.warningSign": "",
+  "languageserver": {
+    "flow": {
+      "args": ["lsp"],
+      "command": "flow",
+      "filetypes": ["javascript", "javascriptreact"],
+      "initializationOptions": {},
+      "requireRootPattern": true,
+      "rootPatterns": [".flowconfig"],
+      "settings": {}
+    },
+    "golang": {
+      "args": ["--diagnostics-style=instant"],
+      "command": "bingo",
+      "filetypes": ["go"],
+      "rootPatterns": [".git/", ".hg/", ".vim/", "go.mod"]
+    }
+  },
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "snippets.ultisnips.directories": ["UltiSnips", "mysnippets"]
+}

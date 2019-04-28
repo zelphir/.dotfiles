@@ -1,16 +1,32 @@
 " Theme
+set showtabline=2
 set background=dark
 
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 
+" let g:lightline = {
+"       \ 'colorscheme': 'oceanicnext',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'cocstatus', 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'gitbranch#name',
+"       \   'cocstatus': 'coc#status'
+"       \ },
+"       \ 'component_expand' : {'buffers': 'lightline#bufferline#buffers'},
+"       \ 'component_type': {'buffers': 'tabsel'},
+"       \ 'tabline': {'left': [['buffers']], 'right': [['close']]},
+"       \ }
+
 try
-  colorscheme OceanicNext
+  colorscheme oceanicnext
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme desert
 endtry
 
-let g:airline_theme='oceanicnext'
+" let g:airline_theme='oceanicnext'
 
 hi htmlArg gui=italic
 hi Comment gui=italic
