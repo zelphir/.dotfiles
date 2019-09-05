@@ -62,3 +62,11 @@ function ks --description "Kill http server processes"
     ks
   end
 end
+
+function list-docker --description "List interanl ips and names for docker containers"
+  docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}' | sed 's/ \// /'
+end
+
+function node-tnl --description "ssh tunne for node debugger"
+  ssh -nNT -L 9229:127.0.0.1:9229 $argv
+end

@@ -24,12 +24,6 @@ augroup END
 " Editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
-" TernJS
-" let g:tern_request_timeout       = 1
-" let g:tern_show_signature_in_pum = '0'
-" let g:tern#command               = ['tern']
-" let g:tern#arguments             = ['--persistent']
-
 " MatchTagAlways
 let g:mta_filetypes = {
   \ 'html'           : 1,
@@ -39,65 +33,8 @@ let g:mta_filetypes = {
   \ 'vue'            : 1,
   \}
 
-" Startify
-" let g:startify_change_to_vcs_root     = 1
-" let g:startify_enable_special         = 0
-" let g:startify_files_number           = 6
-" let g:startify_relative_path          = 1
-" let g:startify_session_autoload       = 1
-" let g:startify_session_persistence    = 1
-" let g:startify_session_delete_buffers = 1
-" let g:startify_bookmarks              = [{ 'd': '~/.dotfiles' }]
-" let g:startify_list_order             = [
-"   \ ['   LRU within this dir:'],
-"   \ 'dir',
-"   \ ['   Sessions:'],
-"   \ 'sessions',
-"   \ ['   Bookmarks:'],
-"   \ 'bookmarks',
-"   \ ]
-
-" " Gutentags
-" let g:gutentags_ctags_exclude            = [
-"   \ 'node_modules',
-"   \ '.git',
-"   \ '*.min.js',
-"   \ '*.min.css',
-"   \ 'build',
-"   \ 'dist',
-"   \ 'vendor'
-"   \ ]
-" let g:gutentags_define_advanced_commands = 1
-
-" Snippets
-" let g:UltiSnipsSnippetDirectories = ['UltiSnips', 'mysnippets']
-
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml,*.vue,*.js'
-
-" Polyglot
-let g:polyglot_disabled = ['typescript.jsx', 'typescript', 'javascript', 'javascript.jsx', 'vue']
-
-" ALE
-" let g:ale_linters                              = {}
-" let g:ale_linters['javascript']                = ['eslint']
-" let g:ale_linters['javascript.jsx']            = ['eslint']
-" let g:ale_linters['graphql']                   = ['gqlint']
-" let g:ale_linters['json']                      = ['prettier']
-" let g:ale_linters['css']                       = ['stylelint']
-" let g:ale_linters['scss']                      = ['stylelint']
-" let g:ale_fixers                               = {}
-" let g:ale_fixers['javascript']                 = ['prettier']
-" let g:ale_fixers['javascript.jsx']             = ['prettier']
-" let g:ale_fixers['graphql']                    = ['prettier']
-" let g:ale_fixers['json']                       = ['prettier']
-" let g:ale_fixers['css']                        = ['prettier']
-" let g:ale_fixers['scss']                       = ['prettier']
-" let g:ale_linters = {'javascript': ['eslint', 'flow']}
-" let g:ale_sign_error                           = ''
-" let g:ale_sign_warning                         = ''
-" let g:ale_javascript_prettier_use_local_config = 1
-" let g:ale_lint_on_enter                        = 0
 
 " NERDTree
 let NERDTreeIgnore = ['^tags.lock$', '^.tern-port$']
@@ -107,7 +44,6 @@ let NERDTreeMinimalUI = 1
 augroup vimrc
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
-
 
 " Emmet
 " let g:user_emmet_install_global = 0
@@ -123,18 +59,9 @@ augroup END
 " \}
 
 " augroup vimrc
-"   autocmd FileType html,css,javascript,javascript.jsx EmmetInstall
+"   autocmd FileType
+"   html,css,javascript,javascript.jsx,typescript.tsx EmmetInstall
 " augroup END
-
-" Jsx
-" let g:vim_jsx_pretty_colorful_config = 1
-
-" NCM2
-" augroup vimrc
-"   autocmd BufEnter * call ncm2#enable_for_buffer()
-" augroup END
-" let g:UltiSnipsRemoveSelectModeMappings = 0
-" let g:UltiSnipsExpandTrigger            = '<c-j>'
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -167,10 +94,6 @@ let g:airline_mode_map = {
     \ 'V'  : 'V',
     \ '' : 'V',
     \ }
-
-" Signify
-" let g:signify_realtime = 1
-" let g:signify_line_highlight = 1
 
 " ImportCost
 " augroup import_cost_auto_run

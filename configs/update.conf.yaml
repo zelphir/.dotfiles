@@ -1,6 +1,6 @@
 - shell:
   # - [mas upgrade, Update mac apps]
-  - [fish -c "fisher up", Update Fish plugins]
+  - [fish -c "fisher", Update Fish plugins]
   - [yarn global upgrade --ignore-engines, Update Yarn global]
   - [pip2 install --upgrade neovim vim-vint; pip3 install --upgrade neovim vim-vint, Update pip]
   - [~/.tmux/plugins/tpm/bin/update_plugins all, Update tmux plugins]
