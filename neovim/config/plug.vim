@@ -30,8 +30,9 @@ Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'ryanoasis/vim-devicons'
 
-Plug 'scrooloose/nerdtree'
-Plug 'albfan/nerdtree-git-plugin'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
+Plug 'kristijanhusak/defx-git'
 
 " Autocomplete
 Plug 'neoclide/coc.nvim', { 'do': 'yarn install' }
@@ -47,7 +48,7 @@ Plug 'cohama/lexima.vim'
 " Utils
 Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
 Plug 'matze/vim-move'
 Plug 'wakatime/vim-wakatime'
 Plug 'mattn/emmet-vim', { 'for': ['javascript', 'javascript.jsx', 'typescript.tsx', 'html', 'css', 'scss'] }
@@ -56,8 +57,10 @@ Plug 'mattn/emmet-vim', { 'for': ['javascript', 'javascript.jsx', 'typescript.ts
 Plug 'yardnsm/vim-import-cost', { 'do': 'yarn install' }
 
 " Syntax highlight
+Plug 'alexlafroscia/postcss-syntax.vim', { 'for': ['css'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'peitalin/vim-jsx-typescript', { 'for': ['typescript.tsx'] }
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
 Plug 'styled-components/vim-styled-components', { 'branch': 'main', 'for': ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx'] }
 Plug 'jparise/vim-graphql', { 'for': ['javascript', 'javascript.jsx', 'typescript', 'typescript.tsx'] }
 

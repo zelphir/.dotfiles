@@ -1,15 +1,12 @@
 .DS_Store
 
-# iTerm
-iterm/*.itermcolors
-
 # Fish
 fish/plugins
 fishd.*
 fish_history*
 fish_read_history
 fish/local.fish
-fish/functions/*
+fish/functions
 fish/completions
 fish/conf.d
 

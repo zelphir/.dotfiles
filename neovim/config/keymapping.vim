@@ -93,6 +93,3 @@ map <leader>b :Buffers<cr>
 map <leader>l :Files<cr>
 map <leader>g :GFiles?<cr>
 map <leader>/ :Rg!<cr>
-
-" NERDTree
-map <C-e> :NERDTreeToggle<CR>

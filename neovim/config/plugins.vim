@@ -1,5 +1,8 @@
 scriptencoding 'utf-8'
 
+" Ployglot
+let g:polyglot_disabled = ['typescript', 'typescript.tsx']
+
 " Indent guides
 let g:indentLine_char       = '│'
 let g:indentLine_color_gui  = '#2A3A43'
@@ -35,15 +38,6 @@ let g:mta_filetypes = {
 
 " Closetag
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.xml,*.vue,*.js'
-
-" NERDTree
-let NERDTreeIgnore = ['^tags.lock$', '^.tern-port$']
-let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeMinimalUI = 1
-
-augroup vimrc
-  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-augroup END
 
 " Emmet
 " let g:user_emmet_install_global = 0

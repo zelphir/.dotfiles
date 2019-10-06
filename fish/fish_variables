@@ -33,6 +33,7 @@ SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:brblue
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
 SETUVAR fish_greeting:Welcome\x20to\x20fish\x2c\x20the\x20friendly\x20interactive\x20shell
@@ -44,3 +45,5 @@ SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/usr/local/opt/fzf/bin\x1e/usr/local/opt/python\x402/bin\x1e/usr/local/opt/coreutils/libexec/gnubin\x1e/usr/local/bin\x1e/usr/local/sbin\x1e/Users/roberto/\x2en/bin\x1e/Users/roberto/\x2ego/bin\x1e/Users/roberto/\x2ecargo/bin\x1e/usr/bin\x1e/usr/sbin\x1e/bin\x1e/sbin
 SETUVAR fisher_active_prompt:pure
 SETUVAR pisces_pairs:\x28\x2c\x29\x1e\x5b\x2c\x5d\x1e\x7b\x2c\x7d\x1e\x22\x2c\x22\x1e\x27\x2c\x27
+SETUVAR pure_version:2\x2e1\x2e8
+SETUVAR zp_version:2\x2e1\x2e8

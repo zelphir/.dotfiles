@@ -35,10 +35,10 @@
     command: scripts/tmux
     stderr: true
     description: Tmux plugins
-#  -
-#    command: scripts/yarn
-#    stderr: true
-#    description: Yarn global
+  -
+    command: scripts/yarn
+    stderr: true
+    description: Yarn global
   -
     command: scripts/mackup
     stdout: true

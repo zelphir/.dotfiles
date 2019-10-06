@@ -5,3 +5,8 @@ if [ ! -e "$HOME/.tmux/plugins/tpm" ]; then
 fi
 
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+mkdir -p "$(bat --config-dir)/themes" && cd "$(bat --config-dir)/themes"
+git clone https://github.com/arcticicestudio/nord-sublime-text
+git checkout 8f2e9110cbd70ece0e679c5cdf9894e233134ad7 # revision with ".tmTheme" file
+bat cache --build

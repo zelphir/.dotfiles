@@ -5,16 +5,13 @@ export PATH=$HOME/.n/bin:$PATH
 apps=(
   create-react-app
   create-react-native-app
-  firebase-tools
   gqlint
-  graphcool
   import-js
   livedown
   neovim
   prettier
   react-native-cli
   serve
-  tern
 )
 
 yarn global add ${apps[@]} --ignore-engines

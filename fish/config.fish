@@ -1,3 +1,9 @@
+# Bootstrap fisher
+if not functions -q fisher
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
+end
+
 # use vi-mode
 set -U fish_key_bindings fish_vi_key_bindings
 set fish_bind_mode insert
@@ -11,7 +17,7 @@ set ANDROID_SDK_ROOT /usr/local/share/android-sdk
 set ANDROID_HOME /usr/local/share/android-sdk
 set NVIM_HOME $HOME/.config/nvim/
 set -x N_PREFIX $HOME/.n
-set -x BAT_THEME "Oceanic Next"
+set -x BAT_THEME Nord
 
 # Settings for Homebrew and fzf
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
@@ -35,12 +41,6 @@ set node $HOME/.n/bin
 set go $GOPATH/bin
 set rust $HOME/.cargo/bin
 set fish_user_paths $fzf $python2_path $gnubin $homebrew $node $go $rust $default_path
-
-# Bootstrap fisher
-if not functions -q fisher
-  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-  fish -c fisher
-end
 
 # Start tmux
 if [ (id -u) != 0 ]
@@ -73,12 +73,7 @@ if test -f $HOME/.config/fish/local.fish
   source $HOME/.config/fish/local.fish
 end
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/serverless.fish ]; and . /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/serverless.fish
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/sls.fish ]; and . /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/sls.fish
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/roberto/.config/yarn/global/node_modules/tabtab/.completions/slss.fish
+# Source completions
+if test -f $HOME/.config/fish/completions.fish
+  source $HOME/.config/fish/completions.fish
+end

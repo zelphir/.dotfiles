@@ -15,6 +15,8 @@
   "diagnostic.hintSign": "",
   "diagnostic.infoSign": "",
   "diagnostic.warningSign": "",
+  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact"],
+  "eslint.packageManager": "yarn",
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "snippets.ultisnips.directories": ["UltiSnips", "mysnippets"],

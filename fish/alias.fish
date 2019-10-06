@@ -12,7 +12,7 @@ function reload
 end
 
 function work
-  cd /Volumes/Data/Workspace
+  cd /Volumes/Workspace
 end
 
 # Docker
@@ -63,10 +63,16 @@ function ks --description "Kill http server processes"
   end
 end
 
-function list-docker --description "List interanl ips and names for docker containers"
+function list-docker --description "List internal ips and names for docker containers"
   docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}' | sed 's/ \// /'
 end
 
-function node-tnl --description "ssh tunne for node debugger"
-  ssh -nNT -L 9229:127.0.0.1:9229 $argv
+function node-tnl -a url -a port --description "ssh tunne for node debugger"
+  if test -z "$url"
+    echo "Provide a url to tunnel"
+  else
+    set -q port[1]; or set port "9230"
+    echo "Tunneling `$url` node debugger on port $port..."
+    ssh -nNT -L $port:127.0.0.1:$port $url
+  end
 end
