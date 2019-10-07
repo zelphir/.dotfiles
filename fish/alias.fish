@@ -12,7 +12,7 @@ function reload
 end
 
 function work
-  cd /Volumes/Workspace
+  cd $WORKSPACE
 end
 
 # Docker
