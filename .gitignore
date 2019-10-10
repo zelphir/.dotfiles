@@ -5,10 +5,13 @@ fish/plugins
 fishd.*
 fish_history*
 fish_read_history
-fish/local.fish
 fish/functions
 fish/completions
 fish/conf.d
+fish/fish_variables
+
+# Fish local config
+fish/local.fish
 
 # Neovim
 tags*
@@ -23,5 +26,6 @@ neovim/local.vim
 
 # Karabiner
 karabiner/assets
+karabiner/automatic_backups
 
 node_modules

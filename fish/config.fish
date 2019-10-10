@@ -37,11 +37,12 @@ end
 # set python2_path /usr/local/opt/python@2/bin
 set default_path /usr/bin /usr/sbin /bin /sbin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
+set gnused /usr/local/opt/gnu-sed/libexec/gnubin
 set fzf /usr/local/opt/fzf/bin
 set node $HOME/.n/bin
 set go $GOPATH/bin
 set rust $HOME/.cargo/bin
-set fish_user_paths $fzf $gnubin $homebrew $node $go $rust $default_path
+set fish_user_paths $fzf $gnused $gnubin $homebrew $node $go $rust $default_path
 
 # Start tmux
 if [ (id -u) != 0 ]
