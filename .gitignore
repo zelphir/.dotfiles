@@ -22,6 +22,7 @@ neovim/colors
 neovim/plugged
 neovim/plug
 neovim/tmp
+neovim/spell
 neovim/local.vim
 
 # Karabiner

@@ -1,0 +1,15 @@
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+name = 'nord'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = 'source $NVIM_HOME/layers/lightline/config.vim'
+
+[[plugins]]
+repo = 'bagrat/vim-buffet'
+hook_add = 'source $NVIM_HOME/layers/buffet/config.vim'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+merged = 0
