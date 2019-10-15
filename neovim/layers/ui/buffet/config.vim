@@ -25,9 +25,9 @@ nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 
-noremap <C-p> :bp<CR>
-noremap <C-n> :bn<CR>
-noremap <C-x> :bd<CR>
+" noremap <C-p> :bp<CR>
+" noremap <C-n> :bn<CR>
+" noremap <C-x> :bd<CR>
 " noremap <Leader><Tab> :Bw<CR>
 " noremap <Leader><S-Tab> :Bw!<CR>
-noremap <C-t> :tabnew split<CR>
+" noremap <C-t> :tabnew split<CR>

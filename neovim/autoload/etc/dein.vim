@@ -1,4 +1,4 @@
-let g:dein#auto_recache = 1
+" let g:dein#auto_recache = 1
 let g:dein#install_max_processes = 16
 
 function! etc#dein#init() abort
@@ -15,7 +15,7 @@ function! etc#dein#init() abort
   execute 'set runtimepath^=' . expand(s:dein_dir)
 
   " Plugins managed with Dein
-  if dein#load_state(expand(s:dein_dir))
+  if dein#load_state(expand(s:dein_dir)) ", [$MYVIMRC, s:dein_toml, s:dein_lazy_toml])
 
     " Plugin system initialization
     call dein#begin(expand(s:dein_dir))
@@ -43,6 +43,5 @@ function! etc#dein#init() abort
   else
     call dein#call_hook('source')
     call dein#call_hook('post_source')
-    call dein#remote_plugins()
   endif
 endfunction

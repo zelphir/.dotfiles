@@ -7,6 +7,8 @@ augroup MyAutoCmd
   autocmd CursorHold *? syntax sync minlines=300
 augroup END
 
+let $DATA_PATH = g:etc#cache_path
+
 " Disable vim distribution plugins
 let g:loaded_getscript = 1
 let g:loaded_getscriptPlugin = 1

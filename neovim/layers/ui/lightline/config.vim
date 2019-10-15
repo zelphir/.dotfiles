@@ -47,7 +47,7 @@ function! LightlineGitStatus() abort
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'oceanicnext',
       \ 'enable': { 'tabline': 0 },
       \ }
 " let g:lightline.active = {

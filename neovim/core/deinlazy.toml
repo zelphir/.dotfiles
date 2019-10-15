@@ -1,1 +1,23 @@
 # Lazy loaded
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+depends = 'coc.nvim'
+
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+hook_add = 'let g:used_javascript_libs = "underscore,react"'
+on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+on_source = ['othree/yajs.vim', 'HerringtonDarkholme/yats.vim']
+
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'jsx']
+
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']

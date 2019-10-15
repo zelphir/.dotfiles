@@ -1,14 +1,30 @@
 [[plugins]]
-repo = 'arcticicestudio/nord-vim'
-name = 'nord'
+repo = 'sheerun/vim-polyglot'
+hook_add = '''
+  let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+'''
+
+[[plugins]]
+repo = 'mhartington/oceanic-next'
+# repo = '/Volumes/Workspace/oceanic-next-ext'
+hook_add = '''
+  let g:oceanic_next_terminal_bold = 1
+  let g:oceanic_next_terminal_italic = 1
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-hook_add = 'source $NVIM_HOME/layers/lightline/config.vim'
+hook_add = 'source $NVIM_HOME/layers/ui/lightline/config.vim'
 
 [[plugins]]
 repo = 'bagrat/vim-buffet'
-hook_add = 'source $NVIM_HOME/layers/buffet/config.vim'
+hook_add = 'source $NVIM_HOME/layers/ui/buffet/config.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = 'yarn install --frozen-lockfile'
+merged = 0
+hook_add = 'source $NVIM_HOME/layers/completition/coc/config.vim'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'

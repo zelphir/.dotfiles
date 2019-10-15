@@ -4,13 +4,18 @@ if has('termguicolors')
 endif
 
 set mouse+=a
+set mousehide          " hide the mouse cursor while typing
 set nobackup
 set noswapfile
 set autoread
 set autowrite
 set confirm
 set splitbelow
+set splitright
 set bsdir=buffer
+set noshowmode
+set cursorline
+set colorcolumn=100    " show a column at 100 chars
 
 if has('vim_starting')
   set encoding=UTF-8
@@ -41,7 +46,6 @@ if has('clipboard')
   set clipboard& clipboard+=unnamedplus
 endif
 
-set history=2000
 set number
 set timeout ttimeout
 set timeoutlen=500
@@ -56,9 +60,9 @@ set backspace=indent,eol,start
 " Tabs and Indents {{{
 " ----------------
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set smarttab
 set autoindent
 set smartindent
@@ -72,8 +76,15 @@ set completefunc=emoji#complete
 set completeopt =longest,menu
 set completeopt-=preview
 set list
-set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
+set listchars=eol:¬,tab:»·,nbsp:+,trail:·,extends:→,precedes:←
+set showbreak=↪\              " Wrap lines character
+set linebreak
+set breakindent
+set breakindentopt=shift:2
+set nowrap                    " disable line wrapping
+set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap too
 
+set lazyredraw      " no unneeded redraws
 set ignorecase      " Search ignoring case
 set smartcase       " Keep case when searching with *
 set infercase       " Adjust case in insert completion mode
@@ -90,6 +101,10 @@ set wildignore+=*.so,*~,*/.git/*,*/.svn/*,*/.DS_Store,*/tmp/*
 if has('conceal')
   set conceallevel=3 concealcursor=niv
 endif
+
+" Load local vim settings
+set exrc
+set secure
 
 " Vim Directories {{{
 " ---------------
@@ -113,7 +128,6 @@ if $SUDO_USER !=# '' && $USER !=# $SUDO_USER
   set nobackup
   set nowritebackup
   set noundofile
-
   set shada="NONE"
 endif
 
@@ -136,3 +150,15 @@ if has('folding')
   set foldmethod=syntax
   set foldlevelstart=99
 endif
+
+" Delete empty buffer
+if bufname('%') == ''
+  set bufhidden=wipe
+endif
+
+" Reload files if changed outside neovim
+augroup MyAutoCmd
+  autocmd CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
+  autocmd FileChangedShellPost *
+        \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+augroup END
