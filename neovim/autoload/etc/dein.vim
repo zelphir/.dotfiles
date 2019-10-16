@@ -1,4 +1,4 @@
-" let g:dein#auto_recache = 1
+let g:dein#auto_recache = 1
 let g:dein#install_max_processes = 16
 
 function! etc#dein#init() abort
@@ -12,18 +12,11 @@ function! etc#dein#init() abort
   endif
 
   " Prepend Dein to runtime path.
-  execute 'set runtimepath^=' . expand(s:dein_dir)
+  execute 'set runtimepath^=' . s:dein_dir
 
   " Plugins managed with Dein
-  if dein#load_state(expand(s:dein_dir)) ", [$MYVIMRC, s:dein_toml, s:dein_lazy_toml])
-
-    " Plugin system initialization
-    call dein#begin(expand(s:dein_dir))
-
-    " Let Dein manage Dein.
-    call dein#add(expand(s:dein_dir))
-
-    " call dein#add('ryanoasis/vim-devicons', {'lazy': 0})
+  if dein#load_state(s:dein_dir)
+    call dein#begin(s:dein_dir)
     call dein#load_toml(s:dein_toml, {'lazy': 0})
     call dein#load_toml(s:dein_lazy_toml, {'lazy' : 1})
     call dein#end()

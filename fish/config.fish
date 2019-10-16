@@ -19,6 +19,7 @@ set -x NVIM_HOME $HOME/.config/nvim/
 set -x N_PREFIX $HOME/.n
 set -x BAT_THEME Nord
 set -x WORKSPACE /Volumes/Workspace
+set -x TSC_WATCHFILE 'UseFsEventsWithFallbackDynamicPolling'
 
 # Settings for Homebrew and fzf
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
