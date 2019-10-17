@@ -7,8 +7,12 @@ function r --wraps trash -d 'alias r=trash'
   trash $argv
 end
 
+function bat
+  env COLORTERM=truecolor bat $argv
+end
+
 function reload
-  . $fish_path/config.fish
+  source $fish_path/config.fish
 end
 
 function work

@@ -11,7 +11,7 @@ let g:fzf_action = {
 " Customize fzf colors to match your color scheme
 let g:fzf_colors = {
       \ 'fg':      ['fg', 'Normal'],
-      \ 'bg':      ['bg', '#ff0000'],
+      \ 'bg':      ['bg', 'FzfFloating'],
       \ 'hl':      ['fg', 'Comment'],
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
@@ -32,9 +32,14 @@ let g:fzf_commits_log_options = '--graph --color=always
 "let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 " ripgrep
 if executable('rg')
-  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+  let $FZF_PREVIEW_COMMAND = 'env COLORTERM=truecolor bat --color always --style numbers {}'
   set grepprg=rg\ --vimgrep
   command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+  command! -bang -nargs=* Rg
+        \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
+        \ 1,
+        \ fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}),
+        \ <bang>0)
 endif
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
@@ -64,8 +69,7 @@ endfunction
 
 " Files + devicons
 function! Fzf_dev()
-
-  let l:fzf_files_options = ' -m --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up --preview "bat --color always --style numbers {2..}"'
+  let l:fzf_files_options = ' -m --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up --preview "env COLORTERM=truecolor bat --color always --style numbers {2..}"'
 
   function! s:files()
     let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')

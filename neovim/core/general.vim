@@ -50,7 +50,7 @@ set number
 set timeout ttimeout
 set timeoutlen=500
 set ttimeoutlen=10
-set updatetime=100
+set updatetime=300
 set undofile
 set undodir=~/.tmp/undo
 set relativenumber
@@ -70,7 +70,7 @@ set shiftround
 " }}}
 "
 set hidden
-set shortmess=aFc
+set shortmess+=c
 set signcolumn=yes
 set completefunc=emoji#complete
 set completeopt =longest,menu

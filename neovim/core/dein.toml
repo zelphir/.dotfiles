@@ -9,7 +9,15 @@ merged= 0
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 hook_add = '''
-let g:polyglot_disabled = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+let g:polyglot_disabled = [
+\ 'javascript',
+\ 'javascript.jsx',
+\ 'javascriptreact',
+\ 'typescript',
+\ 'typescript.tsx',
+\ 'typescriptreact',
+\ 'jsx',
+\ 'tsx']
 '''
 
 [[plugins]]
@@ -34,11 +42,20 @@ build = 'yarn install --frozen-lockfile'
 merged = 0
 hook_add = 'source $NVIM_HOME/layers/completition/coc/config.vim'
 
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
 # Integration with tmux
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux-focus-events'
+
+# Snippets
+[[plugins]]
+repo = 'honza/vim-snippets'
+[[plugins]]
+repo = 'SirVer/ultisnips'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'

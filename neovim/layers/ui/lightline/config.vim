@@ -1,21 +1,10 @@
-" autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
-" let g:lightline#bufferline#show_number  = 2
-" let g:lightline#bufferline#enable_devicons = 1
-" let g:lightline#bufferline#unicode_symbols = 1
-" let g:lightline#bufferline#modified = ' '
-" let g:lightline#bufferline#read_only = ' '
-
-" nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-" nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-" nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-" nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-" nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-" nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-" nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-" nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-" nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-" nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+let g:lightline#bufferline#show_number  = 2
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#unicode_symbols = 1
+let g:lightline#bufferline#modified = ' '
+let g:lightline#bufferline#read_only = ' '
 
 function! s:attr(group, attr, ...) abort
   call assert_inrange(0, 1, a:0)
@@ -28,91 +17,92 @@ function! s:attr(group, attr, ...) abort
 endfunction
 
 function! LightlineGitStatus() abort
-  let symbols = ['+', '-', '~']
-  let [added, modified, removed] = sy#repo#get_stats()
-  let stats = [added, removed, modified] " reorder
-  let hunkline = ''
-
-  for i in range(3)
-    if stats[i] > 0
-      let hunkline .= printf('%s%s ', symbols[i], stats[i])
+  try
+    let git_status = split(get(b:,'coc_git_status',''), '')
+    let hunkline = ''
+    if !empty(git_status)
+      let [added, modified, removed] = git_status
+      let stats = [added, removed, modified] " reorder
+      let hunkline = join(stats, ' ')
     endif
-  endfor
 
-  if !empty(hunkline)
-    let hunkline = printf('%s', hunkline[:-2])
-  endif
-
-  return hunkline
+    return hunkline
+  catch
+    return ''
+  endtry
+  " return get(b:,'coc_git_status','')
 endfunction
 
 let g:lightline = {
       \ 'colorscheme': 'oceanicnext',
       \ 'enable': { 'tabline': 0 },
       \ }
-" let g:lightline.active = {
-"       \ 'left' : [
-"       \   ['mode', 'paste'],
-"       \   ['fugitive', 'gitstatus'],
-"       \   ['coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix'],
-"       \   ['filepath', 'filename_active', 'current_tag']
-"       \ ],
-"       \ 'right': [
-"       \   ['lineinfo'],
-"       \   ['filetype'],
-"       \   ['fileinfo']
-"       \ ]
-"       \ }
-" let g:lightline.inactive = {
-"       \ 'left' : [['filepath', 'filename_inactive']],
-"       \ 'right': [['lineinfo'], ['filetype'], ['fileinfo']]
-"       \ }
-" let g:lightline.component_function = {
-"       \ 'fugitive'         : 'LightlineFugitive',
-"       \ 'gitstatus'        : 'LightlineGitStatus',
-"       \ 'filepath'         : 'LightlineFilepath',
-"       \ 'filename_active'  : 'LightlineFilenameActive',
-"       \ 'filename_inactive': 'LightlineFilenameInactive',
-"       \ 'current_tag'      : 'LightlineCurrentTag',
-"       \ 'lineinfo'         : 'LightlineLineinfo',
-"       \ 'fileinfo'         : 'LightlineFileinfo'
-"       \ }
-" let g:lightline.component_expand = {
-"       \ 'buffers': 'lightline#bufferline#buffers',
-"       \ 'coc_error'        : 'LightlineCocErrors',
-"       \ 'coc_warning'      : 'LightlineCocWarnings',
-"       \ 'coc_info'         : 'LightlineCocInfos',
-"       \ 'coc_hint'         : 'LightlineCocHints',
-"       \ 'coc_fix'          : 'LightlineCocFixes',
-"       \ 'filetype'         : 'LightlineFiletype'
-"       \ }
-" let g:lightline.component_type = {
-"       \ 'buffers'          : 'tabsel',
-"       \ 'coc_error'        : 'error',
-"       \ 'coc_warning'      : 'warning',
-"       \ 'coc_info'         : 'tabsel',
-"       \ 'coc_hint'         : 'middle',
-"       \ 'coc_fix'          : 'middle',
-"       \ 'filetype'         : 'tabsel'
-"       \ }
-" let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
+
+let g:lightline.active = {
+      \ 'left' : [
+      \   ['mode', 'paste'],
+      \   ['fugitive', 'gitstatus'],
+      \   ['coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix'],
+      \   ['filepath', 'filename_active', 'current_tag']
+      \ ],
+      \ 'right': [
+      \   ['lineinfo'],
+      \   ['filetype'],
+      \   ['fileinfo']
+      \ ]
+      \ }
+let g:lightline.inactive = {
+      \ 'left' : [['filepath', 'filename_inactive']],
+      \ 'right': [['lineinfo'], ['filetype'], ['fileinfo']]
+      \ }
+let g:lightline.component_function = {
+      \ 'fugitive'         : 'LightlineFugitive',
+      \ 'gitstatus'        : 'LightlineGitStatus',
+      \ 'filepath'         : 'LightlineFilepath',
+      \ 'filename_active'  : 'LightlineFilenameActive',
+      \ 'filename_inactive': 'LightlineFilenameInactive',
+      \ 'current_tag'      : 'LightlineCurrentTag',
+      \ 'lineinfo'         : 'LightlineLineinfo',
+      \ 'fileinfo'         : 'LightlineFileinfo'
+      \ }
+let g:lightline.component_expand = {
+      \ 'buffers': 'lightline#bufferline#buffers',
+      \ 'coc_error'        : 'LightlineCocErrors',
+      \ 'coc_warning'      : 'LightlineCocWarnings',
+      \ 'coc_info'         : 'LightlineCocInfos',
+      \ 'coc_hint'         : 'LightlineCocHints',
+      \ 'coc_fix'          : 'LightlineCocFixes',
+      \ 'filetype'         : 'LightlineFiletype'
+      \ }
+let g:lightline.component_type = {
+      \ 'buffers'          : 'tabsel',
+      \ 'coc_error'        : 'error',
+      \ 'coc_warning'      : 'warning',
+      \ 'coc_info'         : 'tabsel',
+      \ 'coc_hint'         : 'middle',
+      \ 'coc_fix'          : 'middle',
+      \ 'filetype'         : 'tabsel'
+      \ }
+
+let g:lightline.tabline = {'left': [['buffers']], 'right': [['close']]}
 " let g:lightline.separator = {'left': '', 'right': ''}
-let g:lightline.subseparator = {'left': '', 'right': ''}
+" let g:lightline.subseparator = {'left': '', 'right': ''}
 
 function! LightlineMode() abort
   return s:lightline_is_lean() || s:lightline_is_plain() ? toupper(&filetype) : lightline#mode()
 endfunction
 
 function! LightlineFugitive() abort
-  if s:lightline_is_lean() || s:lightline_is_plain() || !exists('*fugitive#head')
-    return ''
-  endif
-  try
-    let b = fugitive#head()
-  catch
-    return ''
-  endtry
-  return b !=# '' ? '' . (winwidth(0) < 80 ? '' : ' ' . b) : ''
+  " if s:lightline_is_lean() || s:lightline_is_plain() || !exists('*fugitive#head')
+  "   return ''
+  " endif
+  " try
+  "   let b = fugitive#head()
+  " catch
+  "   return ''
+  " endtry
+  " return b !=# '' ? '' . (winwidth(0) < 80 ? '' : ' ' . b) : ''
+  return get(g:,'coc_git_status','')
 endfunction
 
 function! LightlineFilepath() abort
@@ -289,4 +279,3 @@ function! LightlineTagbarStatusFunc(current, sort, fname, ...) abort
   return lightline#statusline(0)
 endfunction
 let g:tagbar_status_func = 'LightlineTagbarStatusFunc'
-

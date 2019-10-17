@@ -2,7 +2,8 @@ call denite#custom#option('_', {
       \ 'cached_filter': v:true,
       \ 'cursor_shape': v:true,
       \ 'cursor_wrap': v:true,
-      \ 'highlight_filter_background': 'DeniteFilter',
+      \ 'highlight_filter_background': 'DeniteFilterBg',
+      \ 'highlight_window_background': 'DeniteFloatBg',
       \ 'highlight_matched_char': 'Underlined',
       \ 'matchers': 'matcher/fuzzy',
       \ 'prompt': 'λ ',
@@ -44,7 +45,7 @@ call denite#custom#source('file/rec', 'matchers', ['matcher/fuzzy'])
 
 if has('nvim') && &runtimepath =~# '\/cpsm'
   call denite#custom#source(
-        \ 'buffer,file_mru,file/old,file/rec,grep,mpc,line,neoyank',
+        \ 'buffer,file_mru,file/old,file/rec,grep,mpc,line',
         \ 'matchers', ['matcher/cpsm', 'matcher/fuzzy'])
 endif
 

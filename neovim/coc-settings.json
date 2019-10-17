@@ -82,8 +82,6 @@
   "prettier.singleQuote": true,
   //emmet
   "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
-  //imselect
-  "imselect.enableStatusItem": false,
   //multiple curssors
   "cursors.nextKey": "<C-n>",
   "cursors.previousKey": "<C-p>",

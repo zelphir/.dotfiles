@@ -1,36 +1,5 @@
 "Plugin key settings
 
-if dein#tap('denite.nvim')
-  nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
-  noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
-  noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
-  noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
-
-  nnoremap <silent> <Leader>gl :<C-u>Denite gitlog:all<CR>
-  nnoremap <silent> <Leader>gh :<C-u>Denite gitbranch<CR>
-  function! s:my_denite_outline(filetype) abort
-    execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
-  endfunction
-  function! s:my_denite_decls(filetype) abort
-    if a:filetype ==# 'go'
-      Denite decls
-    else
-      call denite#util#print_error('decls does not support filetypes except go')
-    endif
-  endfunction
-  function! s:my_denite_file_rec_goroot() abort
-    if !executable('go')
-      call denite#util#print_error('`go` executable not found')
-      return
-    endif
-    let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
-    let goroot = substitute(out, '\n', '', '')
-    call denite#start(
-          \ [{'name': 'file/rec', 'args': [goroot]}],
-          \ {'input': '.go'})
-  endfunction
-endif
-
 if dein#tap('coc.nvim')
   " Using CocList
   " Show all diagnostics
@@ -90,6 +59,14 @@ if dein#tap('coc.nvim')
   " use normal command like `<leader>xi(`
   nmap <leader>x  <Plug>(coc-cursors-operator)
 
+  " Use `:Format` to format current buffer
+  command! -nargs=0 Format :call CocAction('format')
+
+  " Use `:Fold` to fold current buffer
+  command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+  " use `:OR` for organize import of current buffer
+  command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
   function! s:select_current_word()
     if !get(g:, 'coc_cursors_activated', 0)
       return "\<Plug>(coc-cursors-word)"
@@ -109,11 +86,15 @@ if dein#tap('coc.nvim')
 endif
 
 if dein#tap('fzf.vim')
-  nnoremap <silent> <leader>fc :Colors<CR>
+  nnoremap <silent> <leader>fs :Snippets<CR>
   nnoremap <silent> <leader>fb :Buffers<CR>
+  nnoremap <silent> <leader>fg :GFiles?<CR>
   nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
   nnoremap <silent> <leader>fr :Rg<CR>
   nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
+  nnoremap <silent> <leader>fh :History<CR>
+  nnoremap <silent> <leader>fhc :History:<CR>
+  nnoremap <silent> <leader>fhs :History/<CR>
 endif
 
 if dein#tap('vim-easy-align')

@@ -17,13 +17,13 @@ set ANDROID_SDK_ROOT /usr/local/share/android-sdk
 set ANDROID_HOME /usr/local/share/android-sdk
 set -x NVIM_HOME $HOME/.config/nvim/
 set -x N_PREFIX $HOME/.n
-set -x BAT_THEME Nord
+set -x BAT_THEME "Oceanic Next"
 set -x WORKSPACE /Volumes/Workspace
 set -x TSC_WATCHFILE 'UseFsEventsWithFallbackDynamicPolling'
 
 # Settings for Homebrew and fzf
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
-set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*"'
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules/*"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 set -x FZF_TMUX 1
 
@@ -48,7 +48,7 @@ set fish_user_paths $fzf $gnused $gnubin $homebrew $node $go $rust $default_path
 # Start tmux
 if [ (id -u) != 0 ]
   if which tmux > /dev/null; and not set -q TMUX
-    exec tmux new-session -A
+    exec tmux -u new-session -A
   end
 end
 

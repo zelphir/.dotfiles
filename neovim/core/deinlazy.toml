@@ -1,10 +1,5 @@
 # Lazy loaded
 
-# Snippets
-[[plugins]]
-repo = 'honza/vim-snippets'
-depends = 'coc.nvim'
-
 # Syntax
 [[plugins]]
 repo = 'othree/javascript-libraries-syntax.vim'
@@ -28,15 +23,6 @@ on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']
 repo = 'neoclide/vim-jsx-improve'
 on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
-depends = 'vim-devicons'
-hook_source = '''
-source $NVIM_HOME/layers/completition/denite/config.vim
-source $NVIM_HOME/layers/completition/denite/denite_menu.vim
-'''
-
 # Utils
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -45,28 +31,24 @@ hook_source = 'source $NVIM_HOME/layers/ui/indentline/config.vim'
 
 [[plugins]]
 repo = 'rhysd/accelerated-jk'
-on_map = ['n: <Plug>']
-
-# [[plugins]]
-# repo = 'ludovicchabant/vim-gutentags'
-# if = 'executable("ctags")'
-# on_path = '.*'
-# hook_source = 'source $NVIM_HOME/layers/tools/vim-gutentags/config.vim'
+# on_map = {n = '<Plug>'}
 
 [[plugins]]
 repo = 'simnalamburt/vim-mundo'
-on_map = ['n: <Plug> }']
+on_map = {n = '<Plug>'}
 
 [[plugins]]
 repo = 'tpope/vim-repeat'
-on_map = ['.*']
+# on_map = '.*'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim''
 depends = 'fzf'
-on_cmd = ['Colors','Rg,Buffers']
+on_cmd = ['History', 'Rg', 'Buffers', 'GFiles', 'Snippets']
 on_func = 'Fzf_dev'
 hook_source = 'source $NVIM_HOME/layers/completition/fzf/config.vim'
 
 [[plugins]]
-repo = 'tomtom/tcomment_vim'
+repo = 'chemzqm/vim-easygit'
+on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gstatus', 'Gpush']
+hook_source = 'let g:easygit_enable_command = 1'

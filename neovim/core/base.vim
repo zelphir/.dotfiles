@@ -2,6 +2,8 @@ if &compatible
   set nocompatible
 endif
 
+" set shell=bash
+
 augroup MyAutoCmd
   autocmd!
   autocmd CursorHold *? syntax sync minlines=300
