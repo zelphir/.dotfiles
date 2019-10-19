@@ -63,10 +63,11 @@ if dein#tap('coc.nvim')
   command! -nargs=0 Format :call CocAction('format')
 
   " Use `:Fold` to fold current buffer
-  command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+  command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
   " use `:OR` for organize import of current buffer
-  command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+  command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
   function! s:select_current_word()
     if !get(g:, 'coc_cursors_activated', 0)
       return "\<Plug>(coc-cursors-word)"
@@ -74,15 +75,14 @@ if dein#tap('coc.nvim')
     return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
   endfunc
 
-  nnoremap <silent> <leader>cm ::CocSearch -w
-  nnoremap <silent> <leader>cw ::CocSearch
+  nnoremap <silent> <leader>cm :CocSearch -w
+  nnoremap <silent> <leader>cw :CocSearch
+
   " use normal command like `<leader>xi(`
   nmap <leader>x  <Plug>(coc-cursors-operator)
+
   " coc-explorer
-  noremap <silent> <leader>j :execute 'CocCommand explorer' .
-        \ ' --toggle' .
-        \ ' --sources=buffer+,file+' .
-        \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
+  noremap <silent> <leader>j :CocCommand explorer<CR>
 endif
 
 if dein#tap('fzf.vim')

@@ -1,6 +1,4 @@
 SHELL = /bin/bash
-nvim ?= nvim
-XDG_CACHE_HOME ?= $(HOME)/.cache
 DOTFILES = $(HOME)/.dotfiles
 DOTBOT = $(DOTFILES)/dotbot/bin/dotbot -d $(DOTFILES)
 

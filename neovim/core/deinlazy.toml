@@ -44,7 +44,7 @@ repo = 'tpope/vim-repeat'
 [[plugins]]
 repo = 'junegunn/fzf.vim''
 depends = 'fzf'
-on_cmd = ['History', 'Rg', 'Buffers', 'GFiles', 'Snippets']
+on_cmd = ['Colors', 'History', 'Rg', 'Buffers', 'GFiles', 'Snippets']
 on_func = 'Fzf_dev'
 hook_source = 'source $NVIM_HOME/layers/completition/fzf/config.vim'
 

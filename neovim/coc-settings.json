@@ -33,8 +33,8 @@
     "typeParameter": "",
     "default": ""
   },
+
   //diagnostic
-  "diagnostic.signOffset": 9999999,
   "diagnostic.errorSign": "●",
   "diagnostic.warningSign": "●",
   "diagnostic.hintSign": "",
@@ -42,20 +42,22 @@
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
   //git
+  "git.untrackedDecorator": "",
+  "git.changedDecorator": "",
+  "git.stagedDecorator": "",
+  "git.conflictedDecorator": "",
   "git.enableGutters": true,
   "git.addGlameToBufferVar": true,
-  "git.addGlameToVirtualText": true,
-  "git.virtualTextPrefix": " ❯❯❯ ",
+  "git.virtualTextPrefix": "❯❯❯ ",
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
-  "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-  "git.addedSign.text":"▎",
-  "git.changedSign.text":"▎",
-  "git.removedSign.text":"▏",
+  "git.addedSign.text": "▎",
+  "git.changedSign.text": "▎",
+  "git.removedSign.text": "▎",
   "git.topRemovedSign.text": "▔",
-  "git.changeRemovedSign.text": "▋",
+  "git.changeRemovedSign.text": "▎",
   //Snippet
   "coc.preferences.snippetStatusText": "Ⓢ ",
   //CocList
@@ -89,17 +91,40 @@
   //sessions
   "session.directory": "~/.cache/vim/session",
   // coc-explorer
+  "explorer.file.autoExpandSingleDirectory": false,
   "explorer.icon.expanded": "▾",
   "explorer.icon.shrinked": "▸",
   "explorer.icon.enableNerdfont": true,
-  "explorer.keyMappings": {
-    "l" : "expandOrShrink"
-  },
+  "explorer.sources": [
+    {
+      "name": "buffer",
+      "expand": true
+    },
+    {
+      "name": "file",
+      "expand": true
+    }
+  ],
+  "explorer.buffer.columns": [
+    "selection",
+    "name",
+    "modified"
+  ],
+  "explorer.file.columns": [
+    "git",
+    "selection",
+    "clip",
+    "diagnosticError",
+    "indent",
+    "icon",
+    "filename",
+    "readonly"
+  ],
   // eslint
   "eslint.filetypes": ["javascript", "javascript.jsx", "typescript", "typescriptreact", "javascriptreact"],
   "eslint.packageManager": "yarn",
   "eslint.autoFix": true,
   "eslint.autoFixOnSave": true,
-  // add your languageServer into this list
+  // custom languageservers
   "languageserver": {}
 }
