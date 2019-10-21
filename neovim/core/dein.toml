@@ -57,3 +57,33 @@ repo = 'SirVer/ultisnips'
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 merged = 0
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'gorkunov/smartpairs.vim'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+
+[[plugins]]
+repo = 'tpope/vim-eunuch'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'Valloric/MatchTagAlways'
+
+[[plugins]]
+repo = 'wellle/targets.vim'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'matze/vim-move'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'

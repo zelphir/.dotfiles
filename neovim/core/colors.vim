@@ -52,7 +52,6 @@ endif
 hi Normal guibg=NONE guifg=NONE
 hi EndOfBuffer guibg=NONE
 
-
 " Show the syntax group (for debugging themes)
 nnoremap <leader>sg :call <SID>SynStack()<CR>
 function! <SID>SynStack()

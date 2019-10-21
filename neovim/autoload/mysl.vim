@@ -236,7 +236,7 @@ function! mysl#shouldShow() abort
 endfunction
 
 function! mysl#IsUtils() abort
-  return &filetype =~? '\v^list|help|denite|defx|vista(_kind)|magit|tagbar|coc-explorer|mundo(diff)?$'
+  return &filetype =~? '\v^list|fugitive|help|denite|defx|vista(_kind)|magit|tagbar|coc-explorer|mundo(diff)?$'
 endfunction
 
 function! mysl#IsTerminal() abort

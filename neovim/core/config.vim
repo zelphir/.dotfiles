@@ -110,14 +110,11 @@ endif
 "   nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
 " endif
 
-" if dein#tap('vim-easygit')
-"   nnoremap <silent> <Leader>gd :Gdiff<CR>
-"   nnoremap <silent> <Leader>gc :Gcommit<CR>
-"   nnoremap <silent> <Leader>gb :Gblame<CR>
-"   nnoremap <silent> <Leader>gB :Gbrowse<CR>
-"   nnoremap <silent> <Leader>gS :Gstatus<CR>
-"   " nnoremap <silent> <localleader>gp :Gpush<CR>
-" endif
+if dein#tap('vim-fugitive')
+  nnoremap <silent> <Leader>gd :Gdiff<CR>
+  nnoremap <silent> <Leader>gb :Gblame<CR>
+  nnoremap <silent> <Leader>gs :Gstatus<CR>
+endif
 
 " if dein#tap('magit.vim')
 "   nnoremap <silent> mg :Magit<CR>

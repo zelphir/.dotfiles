@@ -85,8 +85,8 @@ set nowrap                    " disable line wrapping
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap too
 
 set lazyredraw      " no unneeded redraws
-set ignorecase      " Search ignoring case
-set smartcase       " Keep case when searching with *
+" set ignorecase      " Search ignoring case
+" set smartcase       " Keep case when searching with *
 set infercase       " Adjust case in insert completion mode
 set incsearch       " Incremental search
 set hlsearch        " Highlight search results
