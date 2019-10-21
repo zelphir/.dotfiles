@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export PATH=$HOME/.n/bin:$PATH
-
+# export PATH=$HOME/.n/bin:$PATH
+#
 apps=(
   create-react-app
   create-react-native-app

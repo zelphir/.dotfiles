@@ -5,7 +5,7 @@
 let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
       \ 'ctrl-x': 'split',
-      \ 'ctrl-v': 'vsplit' 
+      \ 'ctrl-v': 'vsplit'
       \ }
 
 " Customize fzf colors to match your color scheme
@@ -85,7 +85,7 @@ endfunction
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = '--preview-window right:70% --preview "env COLORTERM=truecolor bat --color always --style numbers {2..} | head -'.&lines.'"'
+  let l:fzf_files_options = '--preview-window right:50% --preview "env COLORTERM=truecolor bat --color always --style numbers {2..} | head -'.&lines.'"'
 
   function! s:edit_devicon_prepended_file(items)
     let items = a:items
@@ -111,7 +111,7 @@ function! Fzf_dev()
 endfunction
 
 function! Fzf_git_dev()
-  let l:fzf_files_options = '--preview-window right:70% --ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d;'
+  let l:fzf_files_options = '--preview-window right:50% --ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d;'
         \ .' env COLORTERM=truecolor bat --color always --style numbers {3..}) | head -'.&lines.'\""'
 
   function! s:edit_devicon_prepended_file_diff(item)

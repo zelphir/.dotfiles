@@ -71,7 +71,7 @@ set shiftround
 "
 set hidden
 set shortmess+=cI
-set signcolumn=auto:2
+set signcolumn=yes:2
 set completefunc=emoji#complete
 set completeopt =longest,menu
 set completeopt-=preview

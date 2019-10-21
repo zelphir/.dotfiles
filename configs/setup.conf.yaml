@@ -1,5 +1,4 @@
 - shell:
-  - [git submodule update --init --recursive, git submodules]
   -
     command: scripts/xcode
     stderr: true
@@ -23,10 +22,9 @@
     stdout: true
     description: Install brew bundles
   -
-    command: N_PREFIX=$HOME/.n n latest
+    command: scripts/asdf
     stderr: true
-    stdout: true
-    description: Install nodeJS
+    description: Install asdf versions of nodejs/go/rust
   -
     command: scripts/neovim
     stderr: true
@@ -40,11 +38,11 @@
     stderr: true
     description: Yarn global
   -
+    command: curl https://sh.rustup.rs -sSf | sh -s -- -y
+    stderr: true
+    description: Cargo/Rust
+  -
     command: scripts/mackup
     stdout: true
     stderr: true
     description: Mackup restore
-  -
-    command: curl https://sh.rustup.rs -sSf | sh -s -- -y
-    stderr: true
-    description: Cargo/rust
