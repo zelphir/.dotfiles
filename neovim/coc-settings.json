@@ -102,7 +102,7 @@
   // coc-explorer
   "explorer.keyMappings": {
     "openInVsplit": "v",
-    "openInsplit": "s"
+    "openInSplit": "s"
   },
   "explorer.file.autoExpandSingleDirectory": false,
   "explorer.icon.expanded": "▾",

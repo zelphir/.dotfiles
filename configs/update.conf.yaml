@@ -14,7 +14,7 @@
     stdout: true
     stderr: true
   -
-    command: nvim -V1 -es -i NONE -N -u neovim/init.vim -c "try | call dein#clear_state() | call dein#update() | finally | qall! | endtry"
+    command: nvim -V1 -es -i NONE -N -u $HOME/.config/nvim/init.vim -c "try | call dein#clear_state() | call dein#update() | finally | qall! | endtry"
     stdout: true
     stderr: true
     description: Update nvim plugins

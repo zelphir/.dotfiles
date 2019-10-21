@@ -1,18 +1,24 @@
 SHELL = /bin/bash
 DOTFILES = $(HOME)/.dotfiles
-DOTBOT = $(DOTFILES)/dotbot/bin/dotbot -d $(DOTFILES)
+DOTBOT := $(shell command -v dotbot 2> /dev/null)
 
 default: install
 
-link:
-	@$(DOTBOT) -c configs/link.conf.yaml
+install-dotbot:
+ifndef DOTBOT
+	@pip install dotbot
+endif
 
-install: link
+link:
+	@dotbot -d $(CURDIR) -c configs/link.conf.yaml
+
+install: install-dotbot link
 	@git submodule update --init --recursive dotbot
-	@$(DOTBOT) -c configs/setup.conf.yaml
+	@dotbot -d $(CURDIR) --plugin-dir dotbot-brewfile -c configs/install.conf.yaml
 
 update: link
-	@$(DOTBOT) -c configs/update.conf.yaml
+	@dotbot -d $(CURDIR) --plugin-dir dotbot-brewfile -c configs/update.conf.yaml
 
 uninstall:
+	@pip uninstall dotbot
 	rm -rf $(DOTFILES)

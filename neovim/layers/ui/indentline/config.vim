@@ -1,4 +1,4 @@
-let g:indentLine_char       = '│'
+let g:indentLine_char       = ''
 let g:indentLine_color_gui  = '#2A3A43'
 let g:indentLine_color_term = 155
 let g:indentline_enabled = 1

@@ -19,6 +19,6 @@
 #
 # tic -x "$tmp"
 
-if [ ! -e "$HOME/.config/fish/functions/fisher.fish" ]; then
-  curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
-fi
+# if [ ! -e "$HOME/.config/fish/functions/fisher.fish" ]; then
+#   curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+# fi

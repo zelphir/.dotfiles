@@ -34,7 +34,7 @@ on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'types
 # Utils
 [[plugins]]
 repo = 'Yggdroot/indentLine'
-on_ft = ['python', 'html', 'css', 'vim', 'javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+on_path = '.*'
 hook_source = 'source $NVIM_HOME/layers/ui/indentline/config.vim'
 
 [[plugins]]
@@ -58,4 +58,18 @@ hook_add = '''
 let g:far#window_layout = "current"
 let g:far#preview_window_height = &lines/2
 let g:far#source = "rgnvim"
+'''
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+on_ft = ['vim', 'json', 'go', 'html', 'css', 'toml', 'xml', 'Dockerfile', 'Makefile']
+
+[[plugins]]
+repo = 'liuchengxu/vim-which-key'
+on_cmd = ['WhichKey', 'WhichKey!']
+hook_add = '''
+" let g:mapleader = "\<Space>"
+" let g:maplocalleader = ','
+" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+" nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 '''

@@ -1,21 +1,21 @@
 " From oceanic-next/colors/OceanicNext.vim
-let s:base00 = '#1b2b34'
-let s:base01 = '#343d46'
-let s:base02 = '#4f5b66'
-let s:base03 = '#65737e'
-let s:base04 = '#a7adba'
-let s:base05 = '#c0c5ce'
-let s:base06 = '#cdd3de'
-let s:base07 = '#d8dee9'
-let s:base08 = '#ec5f67'
-let s:base09 = '#f99157'
-let s:base0A = '#fac863'
-let s:base0B = '#99c794'
-let s:base0C = '#62b3b2'
-let s:base0D = '#6699cc'
-let s:base0E = '#c594c5'
-let s:base0F = '#ab7967'
-let s:base10 = '#ffffff'
+let s:base00            = '#1b2b34'
+let s:base01            = '#343d46'
+let s:base02            = '#4f5b66'
+let s:base03            = '#65737e'
+let s:base04            = '#a7adba'
+let s:base05            = '#c0c5ce'
+let s:base06            = '#cdd3de'
+let s:base07            = '#d8dee9'
+let s:base08            = '#ec5f67'
+let s:base09            = '#f99157'
+let s:base0A            = '#fac863'
+let s:base0B            = '#99c794'
+let s:base0C            = '#62b3b2'
+let s:base0D            = '#6699cc'
+let s:base0E            = '#c594c5'
+let s:base0F            = '#ab7967'
+let s:base10            = '#ffffff'
 
 let g:terminal_color_0  = s:base00
 let g:terminal_color_1  = s:base08
@@ -35,7 +35,7 @@ let g:terminal_color_14 = '#82c9c9'
 let g:terminal_color_15 = '#d8dee9'
 
 " Custom colors
-let s:base00d = '#18252c' " darker bg
+let s:base00d           = '#18252c' " darker bg
 
 "coc settings
 " ---------------------------------------------------------

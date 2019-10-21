@@ -3,4 +3,4 @@
 pip install neovim vim-vint
 cargo install devicon-lookup
 
-# nvim -V1 -es -i NONE -N -u $HOME/.config/nvim/init.vim -c "try | call dein#update() | finally | echomsg '' | qall! | endtry"
+nvim -V1 -es -i NONE -N -u $HOME/.config/nvim/init.vim -c "try | call dein#update() | finally | echomsg '' | qall! | endtry"

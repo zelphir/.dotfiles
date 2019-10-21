@@ -1,7 +1,3 @@
-"autocmd! FileType fzf
-"autocmd  FileType fzf set laststatus=0 noshowmode noruler
-"\| autocmd BufLeave <buffer> set laststatus=0 showmode ruler
-
 let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
       \ 'ctrl-x': 'split',
@@ -85,7 +81,8 @@ endfunction
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = '--preview-window right:50% --preview "env COLORTERM=truecolor bat --color always --style numbers {2..} | head -'.&lines.'"'
+  let l:previewLayout = winwidth(0) > 160 ? 'right:60%' : 'down:70%'
+  let l:fzf_files_options = '--preview-window ' . l:previewLayout . ' --preview "env COLORTERM=truecolor bat --color always --style numbers {2..} | head -'.&lines.'"'
 
   function! s:edit_devicon_prepended_file(items)
     let items = a:items
@@ -111,7 +108,8 @@ function! Fzf_dev()
 endfunction
 
 function! Fzf_git_dev()
-  let l:fzf_files_options = '--preview-window right:50% --ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d;'
+  let l:previewLayout = winwidth(0) > 160 ? 'right:60%' : 'down:70%'
+  let l:fzf_files_options = '--preview-window ' . l:previewLayout . ' --ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d;'
         \ .' env COLORTERM=truecolor bat --color always --style numbers {3..}) | head -'.&lines.'\""'
 
   function! s:edit_devicon_prepended_file_diff(item)

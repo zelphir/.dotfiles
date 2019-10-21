@@ -8,10 +8,6 @@
     stderr: true
     description: Homebrew
   -
-    command: scripts/terminal
-    stderr: true
-    description: Terminal colors setup
-  -
     command: scripts/macos
     stdout: true
     stderr: true
@@ -23,8 +19,7 @@
     description: Install brew bundles
   -
     command: scripts/asdf
-    stderr: true
-    description: Install asdf versions of nodejs/go/rust
+    description: Install asdf versions of nodejs and go
   -
     command: scripts/neovim
     stderr: true

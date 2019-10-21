@@ -9,7 +9,7 @@ brew "brew-cask-completion"
 brew "coreutils"
 brew "findutils"
 brew "fish"
-brew "fzf", args: ["HEAD"]
+brew "fzf"
 brew "git"
 brew "gnu-sed"
 brew "htop"

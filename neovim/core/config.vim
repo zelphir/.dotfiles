@@ -4,22 +4,22 @@ if dein#tap('coc.nvim')
   " Using CocList
   "
   " Show all diagnostics
-  nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
+  nnoremap <silent> <leader>cd :<C-u>CocList diagnostics<cr>
 
   " Manage extensions
-  nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
-  nnoremap <silent> <leader>cm  :<C-u>CocList marketplace<cr>
-  nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+  nnoremap <silent> <leader>ce :<C-u>CocList extensions<cr>
+  nnoremap <silent> <leader>cm :<C-u>CocList marketplace<cr>
+  nnoremap <silent> <leader>cc :<C-u>CocList commands<cr>
   " Find symbol of current document
-  nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+  nnoremap <silent> <leader>co :<C-u>CocList outline<cr>
   " Search workspace symbols
-  nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+  nnoremap <silent> <leader>cs :<C-u>CocList -I symbols<cr>
   " Do default action for next item.
-  nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
+  nnoremap <silent> <leader>cj :<C-u>CocNext<CR>
   " Do default action for previous item.
-  nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
-  nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
-  nnoremap <silent> <leader>cy  :<C-u>CocList -A yank<cr>
+  nnoremap <silent> <leader>ck :<C-u>CocPrev<CR>
+  nnoremap <silent> <leader>cr :<C-u>CocListResume<CR>
+  nnoremap <silent> <leader>cy :<C-u>CocList -A yank<cr>
   nnoremap <silent> <C-e> :CocCommand explorer<CR>
 
   nmap <leader>cn <Plug>(coc-rename)
@@ -63,7 +63,7 @@ if dein#tap('coc.nvim')
   nmap <expr> <silent> <C-m> <SID>select_current_word()
   xmap <silent> <C-d> <Plug>(coc-cursors-range)
   " use normal command like `<leader>xi(`
-  nmap <leader>x  <Plug>(coc-cursors-operator)
+  nmap <leader>x <Plug>(coc-cursors-operator)
 
   " Use `:Format` to format current buffer
   command! -nargs=0 Format :call CocAction('format')
@@ -94,21 +94,12 @@ if dein#tap('fzf.vim')
   nnoremap <silent> <leader>fhs :History/<CR>
 endif
 
-" if dein#tap('vim-easy-align')
-"   " Start interactive EasyAlign in visual mode (e.g. vipga)
-"   xmap ga <Plug>(EasyAlign)
-"   " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-"   nmap ga <Plug>(EasyAlign)
-" endif
-
-
-" if dein#tap('vim-go')
-"   nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
-"   nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
-"   nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
-"   nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
-"   nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
-" endif
+if dein#tap('vim-easy-align')
+  " Start interactive EasyAlign in visual mode (e.g. vipga)
+  xmap ga <Plug>(EasyAlign)
+  " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+  nmap ga <Plug>(EasyAlign)
+endif
 
 if dein#tap('vim-fugitive')
   nnoremap <silent> <Leader>gd :Gdiff<CR>

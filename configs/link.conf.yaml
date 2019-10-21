@@ -15,7 +15,6 @@
     ~/.gitignore:
     ~/.prettierrc:
     ~/.stylelintrc.js:
-    ~/.tern-project:
     ~/.config/fish: fish
     ~/.config/karabiner: karabiner
     ~/.config/nvim: neovim
