@@ -12,7 +12,7 @@ function bat
 end
 
 function reload
-  source $fish_path/config.fish
+  source $HOME/.config/fish/config.fish
 end
 
 function work

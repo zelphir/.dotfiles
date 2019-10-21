@@ -14,12 +14,10 @@ brew "fzf", args: ["HEAD"]
 brew "git"
 brew "gnu-sed"
 brew "htop"
-brew "icdiff"
 brew "n", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "openconnect"
 brew "python"
-brew "python@2"
 brew "ripgrep"
 brew "universal-ctags", args: ["HEAD"]
 brew "tidy-html5"
@@ -31,8 +29,6 @@ brew "wget"
 brew "yarn", args: ["ignore-dependencies"]
 brew "mackup"
 brew "bat"
-brew "utf8proc"
-brew "hub"
 brew "asdf"
 brew "diff-so-fancy"
 brew "rename"

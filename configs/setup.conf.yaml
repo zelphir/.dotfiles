@@ -44,3 +44,7 @@
     stdout: true
     stderr: true
     description: Mackup restore
+  -
+    command: curl https://sh.rustup.rs -sSf | sh -s -- -y
+    stderr: true
+    description: Cargo/rust

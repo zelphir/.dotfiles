@@ -23,7 +23,7 @@ set -x TSC_WATCHFILE 'UseFsEventsWithFallbackDynamicPolling'
 
 # Settings for Homebrew and fzf
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
-set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules/*"'
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*" --glob "!package-lock.json" --glob "!yarn.lock" --glob "!node_modules/*"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 set -x FZF_TMUX 1
 

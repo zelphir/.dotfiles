@@ -90,11 +90,11 @@ function! mysl#Filename() abort
   if mysl#IsUtils()
     let l:filename = ''
   elseif mysl#IsTerminal()
-    let l:filename = b:term_title . ' (' . b:terminal_job_pid . ')'
+    let l:filename = b:term_title . ' (' . b:terminal_job_pid . ') '
   elseif empty(expand('%:t'))
-    let l:filename = ' *'
+    let l:filename = ' * '
   else
-    let l:filename = s:getFilenameWithIcon()
+    let l:filename = s:getFilenameWithIcon() . ' '
   endif
 
   return l:filename
@@ -104,7 +104,7 @@ function! mysl#modifiedStatus(active) abort
   let mo = s:modified()
   if !empty(mo) && a:active
     call s:callHighlight('FileName', 'base01', 'base0A')
-    return mo
+    return ' ' . mo . ' '
   else
     call s:callHighlight('FileName', 'base07', 'base01')
     return ''
@@ -177,7 +177,7 @@ function! mysl#Fileformat() abort
 endfunction
 
 function! mysl#LineInfo() abort
-  return printf('  %d:%d %d%%', line('.'), col('.'), 100*line('.')/line('$')). ' '
+  return printf(' %d:%d %d%%', line('.'), col('.'), 100*line('.')/line('$'))
 endfunction
 
 function! mysl#UtilsInfo() abort

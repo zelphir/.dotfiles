@@ -1,6 +1,5 @@
 augroup MyAutoCmd
   autocmd WinEnter,InsertLeave * set cursorline
-
   autocmd WinLeave,InsertEnter * set nocursorline
 
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -31,5 +30,6 @@ augroup MyAutoCmd
   " Comment highlighting for jsoc
   autocmd FileType json syntax match Comment +\/\/.\+$+
 
+  " Quit if coc-explorer is the last buffer
   autocmd bufenter * if (winnr('$') == 1 && exists('b:coc_explorer_inited')) | q | endif
 augroup END

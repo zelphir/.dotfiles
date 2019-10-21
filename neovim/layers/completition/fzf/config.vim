@@ -29,38 +29,54 @@ let g:fzf_commits_log_options = '--graph --color=always
       \ --format="%C(yellow)%h%C(red)%d%C(reset)
       \ - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
 
-"let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 " ripgrep
+let $FZF_DEFAULT_OPTS='--layout=reverse'
+let g:fzf_layout = { 'window': 'call FloatingFZF(0)' }
+
 if executable('rg')
   let $FZF_PREVIEW_COMMAND = 'env COLORTERM=truecolor bat --color always --style numbers {}'
   set grepprg=rg\ --vimgrep
-  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
+
   command! -bang -nargs=* Rg
         \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
         \ 1,
-        \ fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}),
+        \ fzf#vim#with_preview({'options': '--delimiter : --nth 2..', 'window': 'call FloatingFZF()'}, 'down:70%'),
+        \ <bang>0)
+  command! -bang -nargs=* F
+        \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case '
+        \ .'"" '.<q-args>,
+        \ 1,
+        \ fzf#vim#with_preview({'options': '--delimiter : --nth 2..', 'window': 'call FloatingFZF()'}, 'down:70%'),
         \ <bang>0)
 endif
 
-let $FZF_DEFAULT_OPTS='--layout=reverse'
-let g:fzf_layout = { 'window': 'call FloatingFZF()' }
-
-function! FloatingFZF()
+function! FloatingFZF(...)
+  let size = get(a:, 0, 1) ? 'small' : 'big'
+  let resizes = {
+        \ 'big': [10, 15],
+        \ 'small': [&lines/1.8, &columns/2]
+        \ }
   let buf = nvim_create_buf(v:false, v:true)
   call setbufvar(buf, 'number', 'no')
 
-  let height = float2nr(&lines/2)
-  let width = float2nr(&columns - (&columns * 2 / 10))
-  "let width = &columns
-  let row = float2nr(&lines / 3)
-  let col = float2nr((&columns - width) / 3)
+  if winwidth(0) > 160
+    let resizes = {
+          \ 'big': [&lines/3, &columns/4],
+          \ 'small': [&lines/1.4, &columns/1.8]
+          \ }
+  endif
+
+  let height = float2nr(&lines - (resizes[size][0]))
+  let width = float2nr(&columns - (resizes[size][1]))
+  let row = float2nr((&lines - height) / 2)
+  let col = float2nr((&columns - width) / 2)
 
   let opts = {
         \ 'relative': 'editor',
         \ 'row': row,
         \ 'col': col,
         \ 'width': width,
-        \ 'height':height,
+        \ 'height': height,
         \ }
   let win =  nvim_open_win(buf, v:true, opts)
   call setwinvar(win, '&number', 0)
@@ -69,25 +85,9 @@ endfunction
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = ' -m --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up --preview "env COLORTERM=truecolor bat --color always --style numbers {2..}"'
+  let l:fzf_files_options = '--preview-window right:70% --preview "env COLORTERM=truecolor bat --color always --style numbers {2..} | head -'.&lines.'"'
 
-  function! s:files()
-    let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')
-    return s:prepend_icon(l:files)
-  endfunction
-
-  function! s:prepend_icon(candidates)
-    let result = []
-    for candidate in a:candidates
-      let filename = fnamemodify(candidate, ':p:t')
-      let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
-      call add(result, printf("%s %s", icon, candidate))
-    endfor
-
-    return result
-  endfunction
-
-  function! s:edit_file(items)
+  function! s:edit_devicon_prepended_file(items)
     let items = a:items
     let i = 1
     let ln = len(items)
@@ -102,9 +102,29 @@ function! Fzf_dev()
   endfunction
 
   let opts = fzf#wrap({})
-  let opts.source = <sid>files()
+  let opts.source = $FZF_DEFAULT_COMMAND.' | devicon-lookup'
   let s:Sink = opts['sink*']
-  let opts['sink*'] = function('s:edit_file')
-  let opts.options .= l:fzf_files_options
+  let opts.window = 'call FloatingFZF()'
+  let opts['sink*'] = function('s:edit_devicon_prepended_file')
+  let opts.options .= ' -m --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up '. l:fzf_files_options
   call fzf#run(opts)
+endfunction
+
+function! Fzf_git_dev()
+  let l:fzf_files_options = '--preview-window right:70% --ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d;'
+        \ .' env COLORTERM=truecolor bat --color always --style numbers {3..}) | head -'.&lines.'\""'
+
+  function! s:edit_devicon_prepended_file_diff(item)
+    let l:file_path = a:item[7:-1]
+    let l:first_diff_line_number = system("git diff -U0 ".l:file_path." | rg '^@@.*\+' -o | rg '[0-9]+' -o | head -1")
+    execute 'silent e' l:file_path
+    execute l:first_diff_line_number
+  endfunction
+
+  call fzf#run(fzf#wrap({
+        \ 'source': 'git -c color.status=always status --short --untracked-files=all | devicon-lookup',
+        \ 'sink':   function('s:edit_devicon_prepended_file_diff'),
+        \ 'window': 'call FloatingFZF()',
+        \ 'options': '-m --bind ctrl-d:preview-page-down,ctrl-u:preview-page-up ' . l:fzf_files_options,
+        \ }))
 endfunction

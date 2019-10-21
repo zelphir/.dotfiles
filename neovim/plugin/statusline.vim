@@ -13,7 +13,6 @@ function! s:ActiveStatusLine()
   if mysl#IsUtils()
     let s:statusline.="%#FileName#"
     let s:statusline.="%{mysl#Filename()}"
-    let s:statusline.="\ "
     let s:statusline.="%{mysl#modifiedStatus(0)}"
     let s:statusline.="%="
     let s:statusline.="%#UtilsInfo#%{mysl#UtilsInfo()}"
@@ -36,13 +35,11 @@ function! s:ActiveStatusLine()
     let s:statusline.="%#FileName#"
     let s:statusline.="\ "
     let s:statusline.="%{mysl#Filename()}"
+    let s:statusline.="%{mysl#modifiedStatus(1)}"
+  else
+    let s:statusline.="%#FileName#"
+    let s:statusline.="%{mysl#modifiedStatus(1)}"
   endif
-
-  let s:statusline.="%#FileName#"
-  let s:statusline.="\ "
-  let s:statusline.="%{mysl#modifiedStatus(1)}"
-  let s:statusline.="\ "
-  let s:statusline.="%#Reset#"
 
   if !empty(get(g:,'coc_git_status', ''))
     let s:statusline.="%#GitBranch#"
@@ -108,7 +105,6 @@ function! s:InactiveStatusLine()
   let s:statusline=""
   let s:statusline.="%#FileName#"
   let s:statusline.="%{mysl#Filename()}"
-  let s:statusline.="\ "
   let s:statusline.="%{mysl#modifiedStatus(0)}"
   let s:statusline.="%#Reset#"
   let s:statusline.="%="
