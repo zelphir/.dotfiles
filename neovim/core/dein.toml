@@ -2,14 +2,14 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo= 'junegunn/fzf'
-build= './install --all'
+repo= '/usr/local/opt/fzf'
 merged= 0
 
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
 hook_add = '''
 let g:polyglot_disabled = [
+\ 'markdown',
 \ 'javascript',
 \ 'javascript.jsx',
 \ 'javascriptreact',
@@ -87,3 +87,11 @@ repo = 'matze/vim-move'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+let g:EasyMotion_prompt = "Jump to → "
+let g:EasyMotion_keys = "fjdkswbeoavn"
+let g:EasyMotion_smartcase = 1
+'''

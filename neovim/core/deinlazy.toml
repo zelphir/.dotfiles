@@ -8,6 +8,10 @@ on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'types
 on_source = ['othree/yajs.vim', 'HerringtonDarkholme/yats.vim']
 
 [[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
 repo = 'MaxMEllon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
 

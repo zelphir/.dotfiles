@@ -150,11 +150,11 @@ endif
 "   nnoremap <silent><leader>fv     :Vista finder coc<CR>
 " endif
 
-" if dein#tap('vim-easymotion')
-"   nmap <Leader><Leader>w <Plug>(easymotion-w)
-"   nmap <Leader><Leader>f <Plug>(easymotion-f)
-"   nmap <Leader><Leader>b <Plug>(easymotion-b)
-" endif
+if dein#tap('vim-easymotion')
+  nmap <Leader><Leader>w <Plug>(easymotion-w)
+  nmap <Leader><Leader>f <Plug>(easymotion-f)
+  nmap <Leader><Leader>b <Plug>(easymotion-b)
+endif
 
 " if dein#tap('vim-niceblock')
 "   xmap I  <Plug>(niceblock-I)

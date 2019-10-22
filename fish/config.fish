@@ -1,3 +1,14 @@
+# Bootstrap fisher
+if not functions -q fisher
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
+end
+
+# asdf
+if test -f /usr/local/opt/asdf/asdf.fish
+  source /usr/local/opt/asdf/asdf.fish
+end
+
 # Set env vars
 set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME $HOME/.config
 set -x EDITOR nvim
@@ -11,12 +22,6 @@ set -x TSC_WATCHFILE 'UseFsEventsWithFallbackDynamicPolling'
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*" --glob "!package-lock.json" --glob "!yarn.lock" --glob "!node_modules/*"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 set -x FZF_TMUX 1
-
-# Bootstrap fisher
-if not functions -q fisher
-  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-  fish -c fisher
-end
 
 # use vi-mode
 set -U fish_key_bindings fish_vi_key_bindings
@@ -36,11 +41,11 @@ set fzf /usr/local/opt/fzf/bin
 set go $GOPATH/bin
 set rust $HOME/.cargo/bin
 set yarn $HOME/.yarn/bin
-set fish_user_paths $fzf $yarn $gnused $gnubin $homebrew $node $go $rust $default_path
+set fish_user_paths $fzf $yarn $gnused $gnubin $homebrew $go $rust $default_path
 
 # Start tmux
 if [ (id -u) != 0 ]
-  if which tmux > /dev/null; and not set -q TMUX
+  if not set -q TMUX
     exec tmux -u new-session -A
   end
 end
@@ -52,11 +57,6 @@ end
 # The next line updates PATH for the Google Cloud SDK.
 if test -f $HOME/google-cloud-sdk/path.fish.inc
   source $HOME/google-cloud-sdk/path.fish.inc
-end
-
-# asdf
-if test -f /usr/local/opt/asdf/asdf.fish
-  source /usr/local/opt/asdf/asdf.fish
 end
 
 # Source aliases

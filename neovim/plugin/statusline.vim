@@ -103,10 +103,11 @@ endfunction
 
 function! s:InactiveStatusLine()
   let s:statusline=""
-  let s:statusline.="%#FileName#"
+  let s:statusline.="%#DarkBgSep#"
+  let s:statusline.="\ "
   let s:statusline.="%{mysl#Filename()}"
   let s:statusline.="%{mysl#modifiedStatus(0)}"
-  let s:statusline.="%#Reset#"
+  let s:statusline.="%#DarkBgSep#"
   let s:statusline.="%="
 
   if mysl#IsUtils()

@@ -1,26 +1,26 @@
 let s:slc={}
 
 " From oceanic-next/colors/OceanicNext.vim
-let s:slc.base00 = '#1b2b34'
-let s:slc.base01 = '#343d46'
-let s:slc.base02 = '#4f5b66'
-let s:slc.base03 = '#65737e'
-let s:slc.base04 = '#a7adba'
-let s:slc.base05 = '#c0c5ce'
-let s:slc.base06 = '#cdd3de'
-let s:slc.base07 = '#d8dee9'
-let s:slc.base08 = '#ec5f67'
-let s:slc.base09 = '#f99157'
-let s:slc.base0A = '#fac863'
-let s:slc.base0B = '#99c794'
-let s:slc.base0C = '#62b3b2'
-let s:slc.base0D = '#6699cc'
-let s:slc.base0E = '#c594c5'
-let s:slc.base0F = '#ab7967'
-let s:slc.base10 = '#ffffff'
+let s:slc.base00 = g:base00
+let s:slc.base01 = g:base01
+let s:slc.base02 = g:base02
+let s:slc.base03 = g:base03
+let s:slc.base04 = g:base04
+let s:slc.base05 = g:base05
+let s:slc.base06 = g:base06
+let s:slc.base07 = g:base07
+let s:slc.base08 = g:base08
+let s:slc.base09 = g:base09
+let s:slc.base0A = g:base0A
+let s:slc.base0B = g:base0B
+let s:slc.base0C = g:base0C
+let s:slc.base0D = g:base0D
+let s:slc.base0E = g:base0E
+let s:slc.base0F = g:base0F
+let s:slc.base10 = g:base10
 
 " Custom colors
-let s:slc.base00d = '#18252c' " darker base00d
+let s:slc.base00d =  g:base00d " darker base00d
 
 function! mysl#SetColors() abort
   call s:callHighlight('VimMode', 'base00', 'base0C')
@@ -40,6 +40,7 @@ function! mysl#SetColors() abort
   call s:callHighlight('UtilsInfo', 'base0C', 'base01')
   call s:callHighlight('Reset', 'base00', 'base01')
   call s:callHighlight('DarkBgSep', 'base02', 'base00d')
+  call s:callHighlight('FileNameInactive', 'base05', 'base00d')
 endfunction
 
 " {{{ StatusLine functions
@@ -53,7 +54,7 @@ function! mysl#VimMode() abort
   elseif l:mode==?'v'
     call s:callHighlight('VimMode', 'base00', 'base0A')
     let l:label = 'V'
-  elseif l:mode==#'\<C-v>'
+  elseif l:mode==#'\<C-V>' || l:mode==''
     call s:callHighlight('VimMode', 'base00', 'base09')
     let l:label = 'V-B'
   elseif l:mode==#'i'
@@ -68,9 +69,6 @@ function! mysl#VimMode() abort
   elseif l:mode==#'c'
     call s:callHighlight('VimMode', 'base00', 'base0E')
     let l:label = 'C'
-  else
-    call s:callHighlight('VimMode', 'base07',  'base01')
-    let l:label = '-'
   endif
 
   return l:label
@@ -102,8 +100,10 @@ endfunction
 
 function! mysl#modifiedStatus(active) abort
   let mo = s:modified()
-  if !empty(mo) && a:active
-    call s:callHighlight('FileName', 'base01', 'base0A')
+  if !empty(mo)
+    if a:active
+      call s:callHighlight('FileName', 'base01', 'base0A')
+    endif
     return ' ' . mo . ' '
   else
     call s:callHighlight('FileName', 'base07', 'base01')
@@ -199,7 +199,7 @@ function! mysl#shouldShow() abort
   let totalWidth = 2 * 5 " empty spaces
   let totalWidth += len(mysl#VimMode()
         \ .mysl#Filename()
-        \ .mysl#modifiedStatus(1)
+        \ .mysl#modifiedStatus(0)
         \ .mysl#CocInfo()
         \ .mysl#FileEncoding()
         \ .mysl#LineInfo()

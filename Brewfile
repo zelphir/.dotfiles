@@ -13,6 +13,7 @@ brew "fzf"
 brew "git"
 brew "gnu-sed"
 brew "htop"
+brew "nodejs"
 brew "neovim", args: ["HEAD"]
 brew "python"
 brew "ripgrep"
