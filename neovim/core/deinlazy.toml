@@ -1,11 +1,11 @@
 # Lazy loaded
 
 # Syntax
-[[plugins]]
-repo = 'othree/javascript-libraries-syntax.vim'
-hook_add = 'let g:used_javascript_libs = "underscore,react"'
-on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
-on_source = ['othree/yajs.vim', 'HerringtonDarkholme/yats.vim']
+# [[plugins]]
+# repo = 'othree/javascript-libraries-syntax.vim'
+# hook_add = 'let g:used_javascript_libs = "underscore,react"'
+# on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
+# on_source = ['othree/yajs.vim', 'HerringtonDarkholme/yats.vim']
 
 [[plugins]]
 repo = 'tpope/vim-markdown'
@@ -15,13 +15,15 @@ on_ft = ['markdown']
 repo = 'MaxMEllon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact', 'jsx', 'tsx']
 
-[[plugins]]
-repo = 'othree/yajs.vim'
-on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'jsx']
+# [[plugins]]
+# repo = 'othree/yajs.vim'
+# on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'jsx']
 
 [[plugins]]
-repo = 'HerringtonDarkholme/yats.vim'
-on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']
+repo = 'leafgarland/typescript-vim'
+# [[plugins]]
+# repo = 'HerringtonDarkholme/yats.vim'
+# on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']
 
 [[plugins]]
 repo = 'neoclide/vim-jsx-improve'
@@ -40,9 +42,6 @@ on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'types
 repo = 'Yggdroot/indentLine'
 on_path = '.*'
 hook_source = 'source $NVIM_HOME/layers/ui/indentline/config.vim'
-
-[[plugins]]
-repo = 'rhysd/accelerated-jk'
 
 [[plugins]]
 repo = 'simnalamburt/vim-mundo'
@@ -69,11 +68,14 @@ repo = 'junegunn/vim-easy-align'
 on_ft = ['vim', 'json', 'go', 'html', 'css', 'toml', 'xml', 'Dockerfile', 'Makefile']
 
 [[plugins]]
-repo = 'liuchengxu/vim-which-key'
-on_cmd = ['WhichKey', 'WhichKey!']
-hook_add = '''
-" let g:mapleader = "\<Space>"
-" let g:maplocalleader = ','
-" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-" nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-'''
+repo = 'kizza/actionmenu.nvim'
+on_path = '.*'
+
+[[plugins]]
+repo = 'chrisbra/Colorizer'
+on_cmd = ['ColorHighlight', 'ColorToggle']
+hook_add = """
+let g:colorizer_fgcontrast = 0
+let g:colorizer_hex_pattern = ['#\?', '\%(\x\{6}\)', '']
+"""
+

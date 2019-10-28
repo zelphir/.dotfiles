@@ -84,14 +84,15 @@ endif
 
 if dein#tap('fzf.vim')
   nnoremap <silent> <leader>l :call Fzf_dev()<CR>
+  nnoremap <silent> <leader>fc :Commits<CR>
   nnoremap <silent> <leader>fs :Snippets<CR>
   nnoremap <silent> <leader>fb :Buffers<CR>
   nnoremap <silent> <leader>fg :call Fzf_git_dev()<CR>
   nnoremap <silent> <leader>fr :Rg<CR>
   nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
   nnoremap <silent> <leader>fh :History<CR>
-  nnoremap <silent> <leader>fhc :History:<CR>
-  nnoremap <silent> <leader>fhs :History/<CR>
+  nnoremap <silent> <LocalLeader>hc :History:<CR>
+  nnoremap <silent> <LocalLeader>hs :History/<CR>
 endif
 
 if dein#tap('vim-easy-align')
@@ -107,48 +108,14 @@ if dein#tap('vim-fugitive')
   nnoremap <silent> <Leader>gs :Gstatus<CR>
 endif
 
-" if dein#tap('magit.vim')
-"   nnoremap <silent> mg :Magit<CR>
-" endif
-
-" if dein#tap('gina.vim')
-"   nnoremap <silent><Leader>gp :Gina push<CR>
-" endif
-
 if dein#tap('vim-mundo')
   nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
-
-" if dein#tap('vim-choosewin')
-"   nmap -         <Plug>(choosewin)
-"   nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
-" endif
 
 if dein#tap('accelerated-jk')
   nmap <silent>j <Plug>(accelerated_jk_gj)
   nmap <silent>k <Plug>(accelerated_jk_gk)
 endif
-
-" if dein#tap('goyo.vim')
-"   nnoremap <Leader>G :Goyo<CR>
-" endif
-
-" if dein#tap('defx.nvim')
-"   nnoremap <silent> <Leader>e
-"         \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-"   nnoremap <silent> <Leader>F
-"         \ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
-" endif
-
-" if dein#tap('vim-expand-region')
-"   xmap v <Plug>(expand_region_expand)
-"   xmap V <Plug>(expand_region_shrink)
-" endif
-
-" if dein#tap('vista.vim')
-"   nnoremap <silent><localleader>v :Vista!!<CR>
-"   nnoremap <silent><leader>fv     :Vista finder coc<CR>
-" endif
 
 if dein#tap('vim-easymotion')
   nmap <Leader><Leader>w <Plug>(easymotion-w)
@@ -156,56 +123,20 @@ if dein#tap('vim-easymotion')
   nmap <Leader><Leader>b <Plug>(easymotion-b)
 endif
 
-" if dein#tap('vim-niceblock')
-"   xmap I  <Plug>(niceblock-I)
-"   xmap A  <Plug>(niceblock-A)
-" endif
+if dein#tap('actionmenu.nvim')
+  nmap <silent> <LocalLeader>s :call ActionMenuCodeActions()<CR>
+  let s:code_actions = []
 
-" if dein#tap('vim-sandwich')
-"   nmap <silent> sa <Plug>(operator-sandwich-add)
-"   xmap <silent> sa <Plug>(operator-sandwich-add)
-"   omap <silent> sa <Plug>(operator-sandwich-g@)
-"   nmap <silent> sd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
-"   xmap <silent> sd <Plug>(operator-sandwich-delete)
-"   nmap <silent> sr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
-"   xmap <silent> sr <Plug>(operator-sandwich-replace)
-"   nmap <silent> sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
-"   nmap <silent> srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
-"   omap ib <Plug>(textobj-sandwich-auto-i)
-"   xmap ib <Plug>(textobj-sandwich-auto-i)
-"   omap ab <Plug>(textobj-sandwich-auto-a)
-"   xmap ab <Plug>(textobj-sandwich-auto-a)
-"   omap is <Plug>(textobj-sandwich-query-i)
-"   xmap is <Plug>(textobj-sandwich-query-i)
-"   omap as <Plug>(textobj-sandwich-query-a)
-"   xmap as <Plug>(textobj-sandwich-query-a)
-" endif
+  func! ActionMenuCodeActions() abort
+    let s:code_actions = CocAction('codeActions')
+    let l:menu_items = map(copy(s:code_actions), { index, item -> item['title'] })
+    call actionmenu#open(l:menu_items, 'ActionMenuCodeActionsCallback')
+  endfunc
 
-" if dein#tap('actionmenu.nvim')
-"   nmap <silent> <LocalLeader>s :call ActionMenuCodeActions()<CR>
-"   let s:code_actions = []
-"
-"   func! ActionMenuCodeActions() abort
-"     let s:code_actions = CocAction('codeActions')
-"     let l:menu_items = map(copy(s:code_actions), { index, item -> item['title'] })
-"     call actionmenu#open(l:menu_items, 'ActionMenuCodeActionsCallback')
-"   endfunc
-"
-"   func! ActionMenuCodeActionsCallback(index, item) abort
-"     if a:index >= 0
-"       let l:selected_code_action = s:code_actions[a:index]
-"       let l:response = CocAction('doCodeAction', l:selected_code_action)
-"     endif
-"   endfunc
-" endif
-
-" if dein#tap('vim-operator-replace')
-"   xmap p <Plug>(operator-replace)
-" endif
-
-" if dein#tap('vim-textobj-multiblock')
-"   omap <silent> ab <Plug>(textobj-multiblock-a)
-"   omap <silent> ib <Plug>(textobj-multiblock-i)
-"   xmap <silent> ab <Plug>(textobj-multiblock-a)
-"   xmap <silent> ib <Plug>(textobj-multiblock-i)
-" endif
+  func! ActionMenuCodeActionsCallback(index, item) abort
+    if a:index >= 0
+      let l:selected_code_action = s:code_actions[a:index]
+      let l:response = CocAction('doCodeAction', l:selected_code_action)
+    endif
+  endfunc
+endif

@@ -121,20 +121,19 @@ function! mysl#GitFileStatus(type) abort
 
   if a:type == 'added'
     let n = matchstr(b:coc_git_status, '\v\+\zs(\d)')
-    let val.added = !empty(n) ? "\U02D6".n : ''
+    let val.added = !empty(n) ? '˖'.n : ''
   elseif a:type == 'modified'
     let n = matchstr(b:coc_git_status, '\v\~\zs(\d)')
-    let val.modified = !empty(n) ? "\U00B7".n : ''
+    let val.modified = !empty(n) ? '•'.n : ''
   elseif a:type == 'removed'
     let n = matchstr(b:coc_git_status, '\v\-\zs(\d)')
-    let val.removed = !empty(n) ? "\U02D7".n : ''
+    let val.removed = !empty(n) ? '˗'.n : ''
   endif
 
   return get(val, a:type, '')
 endfunction
 
 function! mysl#CocMsg(type) abort
-  let symbol = get(g:, 'coc_status_' . a:type . '_sign', '')
   let info = get(b:, 'coc_diagnostic_info', {})
   let msgs = []
 
@@ -143,7 +142,7 @@ function! mysl#CocMsg(type) abort
   endif
 
   if get(info, a:type, 0)
-    call add(msgs, symbol . info[a:type])
+    call add(msgs, ' ' . info[a:type])
   endif
 
   return join(msgs, ' ')

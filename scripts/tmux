@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+# Tmux plugins
 if [ ! -e "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 fi
 
 ~/.tmux/plugins/tpm/bin/install_plugins
 
+# Bat theme
 mkdir -p "$(bat --config-dir)/themes" && cd "$(bat --config-dir)/themes"
 git clone https://github.com/mhartington/oceanic-next-iterm
 bat cache --build

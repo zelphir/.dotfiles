@@ -65,13 +65,18 @@ function! s:ActiveStatusLine()
     if !empty(get(b:, 'coc_diagnostic_info', {}))
       let s:statusline.="%#DiagnosticSymbol#"
       let s:statusline.="\ "
-      let s:statusline.=""
+      let s:statusline.=""
       let s:statusline.="\ "
     endif
 
     let s:statusline.="%#CocError#"
     let s:statusline.="\ "
     let s:statusline.="%{mysl#CocMsg('error')}"
+
+    if !empty(mysl#CocMsg('error')) && !empty(mysl#CocMsg('warning'))
+      let s:statusline.="\ "
+    endif
+
     let s:statusline.="%#CocWarn#"
     let s:statusline.="%{mysl#CocMsg('warning')}"
     let s:statusline.="\ "
@@ -103,11 +108,19 @@ endfunction
 
 function! s:InactiveStatusLine()
   let s:statusline=""
-  let s:statusline.="%#DarkBgSep#"
+  if mysl#IsUtils()
+    let s:statusline.="%#Reset#"
+  else
+    let s:statusline.="%#DarkBgSep#"
+  endif
   let s:statusline.="\ "
   let s:statusline.="%{mysl#Filename()}"
   let s:statusline.="%{mysl#modifiedStatus(0)}"
-  let s:statusline.="%#DarkBgSep#"
+  if mysl#IsUtils()
+    let s:statusline.="%#Reset#"
+  else
+    let s:statusline.="%#DarkBgSep#"
+  endif
   let s:statusline.="%="
 
   if mysl#IsUtils()

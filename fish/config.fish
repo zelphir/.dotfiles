@@ -44,11 +44,11 @@ set yarn $HOME/.yarn/bin
 set fish_user_paths $fzf $yarn $gnused $gnubin $homebrew $go $rust $default_path
 
 # Start tmux
-if [ (id -u) != 0 ]
-  if not set -q TMUX
-    exec tmux -u new-session -A
-  end
-end
+# if [ (id -u) != 0 ]
+#   if not set -q TMUX
+#     exec tmux -u new-session -A
+#   end
+# end
 
 if type -q fizzygit
   fizzygit

@@ -48,36 +48,55 @@ endif
 
 function! FloatingFZF(...)
   let size = get(a:, 0, 1) ? 'small' : 'big'
-  let resizes = {
-        \ 'big': [10, 15],
-        \ 'small': [&lines/1.8, &columns/2]
-        \ }
-  let buf = nvim_create_buf(v:false, v:true)
-  call setbufvar(buf, 'number', 'no')
-
-  if winwidth(0) > 160
-    let resizes = {
-          \ 'big': [&lines/3, &columns/4],
-          \ 'small': [&lines/1.4, &columns/1.8]
-          \ }
-  endif
-
-  let height = float2nr(&lines - (resizes[size][0]))
-  let width = float2nr(&columns - (resizes[size][1]))
+  let height = float2nr((&lines - 2) / 1.5)
   let row = float2nr((&lines - height) / 2)
+  let width = float2nr(&columns / 1.5)
   let col = float2nr((&columns - width) / 2)
 
   let opts = {
-        \ 'relative': 'editor',
-        \ 'row': row,
-        \ 'col': col,
-        \ 'width': width,
-        \ 'height': height,
-        \ }
-  let win =  nvim_open_win(buf, v:true, opts)
-  call setwinvar(win, '&number', 0)
-  call setwinvar(win, '&relativenumber', 0)
+    \ 'relative': 'win',
+    \ 'row': row,
+    \ 'col': col,
+    \ 'width': width,
+    \ 'height': height,
+    \ 'style': 'minimal'
+    \ }
+  let buf = nvim_create_buf(v:false, v:true)
+  let win = nvim_open_win(buf, v:true, opts)
 endfunction
+
+" function! FloatingFZF(...)
+"   let size = get(a:, 0, 1) ? 'small' : 'big'
+"   let resizes = {
+"         \ 'big': [10, 15],
+"         \ 'small': [&lines/1.8, &columns/2]
+"         \ }
+"   let buf = nvim_create_buf(v:false, v:true)
+"   call setbufvar(buf, 'number', 'no')
+"
+"   if winwidth(0) > 160
+"     let resizes = {
+"           \ 'big': [&lines/3, &columns/4],
+"           \ 'small': [&lines/1.4, &columns/1.8]
+"           \ }
+"   endif
+"
+"   let height = float2nr(&lines - (resizes[size][0]))
+"   let width = float2nr(&columns - (resizes[size][1]))
+"   let row = float2nr((&lines - height) / 2)
+"   let col = float2nr((&columns - width) / 2)
+"
+"   let opts = {
+"         \ 'relative': 'editor',
+"         \ 'row': row,
+"         \ 'col': col,
+"         \ 'width': width,
+"         \ 'height': height,
+"         \ }
+"   let win =  nvim_open_win(buf, v:true, opts)
+"   call setwinvar(win, '&number', 0)
+"   call setwinvar(win, '&relativenumber', 0)
+" endfunction
 
 " Files + devicons
 function! Fzf_dev()

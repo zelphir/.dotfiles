@@ -67,8 +67,7 @@ nnoremap <C-p> :bp<CR>
 nnoremap <C-x> :bd!<CR>
 
 " Buffer
-nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly
+nnoremap <Leader>bo :BOnly
 
 " Buffer selection
 nmap <leader>1 <Plug>BuffetSwitch(1)
@@ -109,3 +108,17 @@ nnoremap <leader>w :set wrap!<CR>
 " Remap Capital letters for save and quit
 command! -nargs=* -bang W w<bang> <args>
 command! -nargs=* -bang Q q<bang> <args>
+
+" Refresh syntax if it gets out of whack pumvisible() ? coc#_select_confirm() : "\\
+" (sometimes useful for large files of deeply-nested syntaxes (e.g. <script> tags)))
+nnoremap <Leader>ss :syntax sync fromstart<enter>
+
+" https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
+
+" Quickly Edit Your Macros: https://github.com/mhinz/vim-galore#quickly-edit-your-macros
+nnoremap <LocalLeader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+
+" execute [:h QUERY] to open help page in vertical split buffer
+:cabbrev h vert h

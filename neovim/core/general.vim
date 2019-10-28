@@ -73,8 +73,7 @@ set hidden
 set shortmess+=cI
 set signcolumn=yes:2
 set completefunc=emoji#complete
-set completeopt =longest,menu
-set completeopt-=preview
+set completeopt=menuone,longest,preview
 set list
 set listchars=eol:¬,tab:»·,nbsp:+,trail:·,extends:→,precedes:←
 set showbreak=↪\              " Wrap lines character

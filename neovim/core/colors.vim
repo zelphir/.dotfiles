@@ -21,18 +21,18 @@ let g:base00d           = '#18252c' " darker bg
 
 "coc settings
 " ---------------------------------------------------------
-if dein#tap('coc.nvim')
-  exe 'hi CocFloating guibg='.g:base00d
-  exe 'hi CocCodeLens guifg='.g:base02 .' gui=italic'
-endif
-
-if dein#tap('fzf.vim')
-  exe 'hi FzfFloating guibg='.g:base00d
-endif
+" if dein#tap('coc.nvim')
+"   exe 'hi CocFloating guibg='.g:base00d
+"   exe 'hi CocCodeLens guifg='.g:base02 .' gui=italic'
+" endif
+"
+" if dein#tap('fzf.vim')
+"   exe 'hi FzfFloating guibg='.g:base00d
+" endif
 
 " Set transparent bg
-hi Normal guibg=NONE guifg=NONE
-hi EndOfBuffer guibg=NONE
+" hi Normal guibg=NONE guifg=NONE
+" hi EndOfBuffer guibg=NONE
 
 " Show the syntax group (for debugging themes)
 nnoremap <leader>sg :call <SID>SynStack()<CR>
@@ -42,3 +42,52 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Background colors for active vs inactive windows
+hi ActiveWindow guibg=#17252c
+hi InactiveWindow guibg=#0D1B22
+
+" Call method on window enter
+augroup WindowManagement
+  autocmd!
+  autocmd BufEnter * call Handle_Win_Enter()
+augroup END
+
+" Change highlight group of active/inactive windows
+function! Handle_Win_Enter()
+  setlocal winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
+endfunction
+
+" Underline error text
+fun! s:matchUnderlineToColorscheme()
+  let l:errormsg_color = synIDattr(synIDtrans(hlID("ErrorMsg")), "fg#")
+  hi clear CocUnderline
+  exec 'hi CocUnderline guifg=red gui=undercurl guisp=' . l:errormsg_color
+endfun
+augroup coc_custom
+  au!
+  autocmd ColorScheme * call s:matchUnderlineToColorscheme()
+augroup end
+
+func! HighlightTrailingSpace()
+  highlight TrailingSpace ctermbg=red ctermfg=white guibg=#592929
+  match TrailingSpace /\s\+\n/
+endfu
+command! TrailingSpaceHighlight call HighlightTrailingSpace()
+command! TrailingSpaceDeleteAll :%s/\s\+\n/\r/gc
+
+func! HighlightOverlength()
+  highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+  match OverLength /\%81v.\+/
+endfu
+
+" Change Cursor Style Dependent On Mode: https://github.com/mhinz/vim-galore#change-cursor-style-dependent-on-mode {{{
+if empty($TMUX)
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+else
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+endif

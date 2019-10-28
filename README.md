@@ -1,5 +1,5 @@
 # .dotfiles
-My OSX setup (Tested on MacOS Sierra). It comes with:
+My *OSX* **setup** (Tested on MacOS Sierra). It ***comes*** with:
 * [Neovim](https://neovim.io/)
 * [fish shell](https://fishshell.com/)
 * [tmux](https://tmux.github.io/)
@@ -8,6 +8,14 @@ My OSX setup (Tested on MacOS Sierra). It comes with:
 ...and more
 
 ## Getting started
+[] ==> a || b d && f >>> <> != !==    ~>~~>-<> <=> >= => \ \n \\ 0xFF [:]
+
+0123456789
+pumvisible() ? "\" : "\\
+@ & r // \\ \n /n 
+[] aaa
+[x] bbb
+flags function
 #### Clone the repo in your `$HOME`
 
     cd ~

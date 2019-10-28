@@ -41,6 +41,10 @@
   "diagnostic.infoSign": "",
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.enableSign": false,
+  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
+  "codeLens.enable": true,
 
   //git
   "git.untrackedDecorator": "",
@@ -49,7 +53,7 @@
   "git.conflictedDecorator": "",
   "git.enableGutters": true,
   "git.addGlameToBufferVar": true,
-  "git.addGlameToVirtualText": true,
+  "git.addGlameToVirtualText": false,
   "git.virtualTextPrefix": " ❯❯❯ ",
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
@@ -121,7 +125,8 @@
   "explorer.buffer.columns": [
     "selection",
     "name",
-    "modified"
+    "modified",
+    "readonly"
   ],
   "explorer.file.columns": [
     "git",
@@ -133,6 +138,17 @@
     "filename",
     "readonly"
   ],
+  "explorer.file.showHiddenFiles": true,
+  // "explorer.file.column.git.icon.mixed": "*",
+  // "explorer.file.column.git.icon.unmodified": "",
+  // "explorer.file.column.git.icon.modified": "•",
+  "explorer.file.column.git.icon.added": "+",
+  // "explorer.file.column.git.icon.deleted": "˗",
+  // "explorer.file.column.git.icon.renamed": "R",
+  // "explorer.file.column.git.icon.copied": "C",
+  // "explorer.file.column.git.icon.unmerged": "U",
+  // "explorer.file.column.git.icon.untracked": "?",
+  // "explorer.file.column.git.icon.ignored": "!",
 
   // eslint
   "eslint.filetypes": ["javascript", "javascript.jsx", "typescript", "typescriptreact", "javascriptreact"],

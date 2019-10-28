@@ -4,7 +4,7 @@ let g:indentLine_color_term           = 155
 let g:indentline_enabled              = 1
 let g:indentLine_fileTypeExclude      = [
       \'coc-explorer',
-      \'denite',
+      \'defx',
       \'startify',
       \'tagbar',
       \'vista_kind',
