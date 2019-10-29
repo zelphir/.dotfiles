@@ -109,7 +109,7 @@ nnoremap <leader>w :set wrap!<CR>
 command! -nargs=* -bang W w<bang> <args>
 command! -nargs=* -bang Q q<bang> <args>
 
-" Refresh syntax if it gets out of whack pumvisible() ? coc#_select_confirm() : "\\
+" Refresh syntax if it gets out of whack
 " (sometimes useful for large files of deeply-nested syntaxes (e.g. <script> tags)))
 nnoremap <Leader>ss :syntax sync fromstart<enter>
 

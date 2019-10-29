@@ -1,3 +1,5 @@
+set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME $HOME/.config
+
 # Bootstrap fisher
 if not functions -q fisher
   curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
@@ -10,7 +12,6 @@ if test -f /usr/local/opt/asdf/asdf.fish
 end
 
 # Set env vars
-set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME $HOME/.config
 set -x EDITOR nvim
 set -x GOPATH $HOME/.go
 set -x NVIM_HOME $HOME/.config/nvim/
@@ -44,11 +45,11 @@ set yarn $HOME/.yarn/bin
 set fish_user_paths $fzf $yarn $gnused $gnubin $homebrew $go $rust $default_path
 
 # Start tmux
-# if [ (id -u) != 0 ]
-#   if not set -q TMUX
-#     exec tmux -u new-session -A
-#   end
-# end
+if [ (id -u) != 0 ]
+  if not set -q TMUX
+    exec tmux -u new-session -A
+  end
+end
 
 if type -q fizzygit
   fizzygit

@@ -11,8 +11,13 @@ function bat
   env COLORTERM=truecolor bat $argv
 end
 
+function htop
+  env TERM=xterm htop
+end
+
 function reload
   source $HOME/.config/fish/config.fish
+  echo ""
 end
 
 function work

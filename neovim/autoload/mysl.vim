@@ -111,6 +111,7 @@ function! mysl#modifiedStatus(active) abort
   endif
 endfunction
 
+
 function! mysl#GitBranch() abort
   return trim(get(g:, 'coc_git_status', ''))
 endfunction
@@ -121,13 +122,13 @@ function! mysl#GitFileStatus(type) abort
 
   if a:type == 'added'
     let n = matchstr(b:coc_git_status, '\v\+\zs(\d)')
-    let val.added = !empty(n) ? '˖'.n : ''
+    let val.added = !empty(n) ? '+'.n : ''
   elseif a:type == 'modified'
     let n = matchstr(b:coc_git_status, '\v\~\zs(\d)')
-    let val.modified = !empty(n) ? '•'.n : ''
+    let val.modified = !empty(n) ? '~'.n : ''
   elseif a:type == 'removed'
     let n = matchstr(b:coc_git_status, '\v\-\zs(\d)')
-    let val.removed = !empty(n) ? '˗'.n : ''
+    let val.removed = !empty(n) ? '-'.n : ''
   endif
 
   return get(val, a:type, '')
@@ -150,15 +151,8 @@ endfunction
 
 function! mysl#CocInfo() abort
   let status=get(g:, 'coc_status', '')
-  let regstatus=substitute(status, 'TSC', 'Ⓣ ', '')
-  let statusbar= split(regstatus)
-
-  if &filetype ==? 'go'
-    let gobar = 'Ⓖ '
-    call add(statusbar, gobar)
-  endif
-
-  let s = join(statusbar, '  ')
+  let statusbar= split(status)
+  let s = join(statusbar, ' ')
 
   if empty(s)
     return ''
@@ -184,10 +178,7 @@ function! mysl#UtilsInfo() abort
         \ &filetype ==? 'help'             ? '  '  :
         \ &filetype ==? 'defx'             ? '   ' :
         \ &filetype ==? 'coc-explorer'     ? '   ' :
-        \ &filetype ==? 'denite'           ? '   ' :
         \ &filetype ==? 'tagbar'           ? '   ' :
-        \ &filetype ==? 'vista_kind'       ? '   ' :
-        \ &filetype ==? 'magit'            ? '   ' :
         \ &filetype =~? '\v^mundo(diff)?$' ? '   ' :
         \ ''
 endfunction

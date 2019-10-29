@@ -57,9 +57,6 @@ repo = 'tmux-plugins/vim-tmux-focus-events'
 repo = 'honza/vim-snippets'
 
 [[plugins]]
-repo = 'SirVer/ultisnips'
-
-[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]

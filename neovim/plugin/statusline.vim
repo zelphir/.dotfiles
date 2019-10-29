@@ -98,6 +98,7 @@ function! s:ActiveStatusLine()
     let s:statusline.="%{mysl#FileEncoding()}"
     let s:statusline.="\ "
     let s:statusline.="%#FileFormat#%{mysl#Fileformat()}"
+    let s:statusline.="\ "
   endif
 
   let s:statusline.="\ "

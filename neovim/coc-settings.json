@@ -35,15 +35,13 @@
   },
 
   //diagnostic
-  "diagnostic.errorSign": "●",
-  "diagnostic.warningSign": "●",
-  "diagnostic.hintSign": "",
-  "diagnostic.infoSign": "",
+  // "diagnostic.errorSign": "●",
+  // "diagnostic.warningSign": "●",
+  // "diagnostic.hintSign": "",
+  // "diagnostic.infoSign": "",
   "diagnostic.displayByAle": false,
   "diagnostic.refreshOnInsertMode": true,
-  "diagnostic.virtualText": true,
   "diagnostic.enableSign": false,
-  "diagnostic.virtualTextPrefix": " ❯❯❯ ",
   "codeLens.enable": true,
 
   //git
@@ -52,8 +50,8 @@
   "git.stagedDecorator": "",
   "git.conflictedDecorator": "",
   "git.enableGutters": true,
-  "git.addGlameToBufferVar": true,
-  "git.addGlameToVirtualText": false,
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": true,
   "git.virtualTextPrefix": " ❯❯❯ ",
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
@@ -85,7 +83,7 @@
     "typescriptreact",
     "javascriptreact"
   ],
-  "prettier.statusItemText": "ⓟ ",
+  "prettier.statusItemText": "P ",
   "prettier.eslintIntegration": true,
   "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,

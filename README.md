@@ -11,11 +11,7 @@ My *OSX* **setup** (Tested on MacOS Sierra). It ***comes*** with:
 [] ==> a || b d && f >>> <> != !==    ~>~~>-<> <=> >= => \ \n \\ 0xFF [:]
 
 0123456789
-pumvisible() ? "\" : "\\
 @ & r // \\ \n /n 
-[] aaa
-[x] bbb
-flags function
 #### Clone the repo in your `$HOME`
 
     cd ~

@@ -20,5 +20,4 @@
     ~/.config/nvim: neovim
     ~/.config/alacritty: alacritty
     ~/.config/kitty: kitty
-    ~/.config/htop/htoprc: htoprc
     ~/.tmux.conf: tmux/tmux.conf
