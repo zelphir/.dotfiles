@@ -39,11 +39,6 @@ on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'types
 
 # Utils
 [[plugins]]
-repo = 'Yggdroot/indentLine'
-on_path = '.*'
-hook_source = 'source $NVIM_HOME/layers/ui/indentline/config.vim'
-
-[[plugins]]
 repo = 'simnalamburt/vim-mundo'
 on_map = {n = '<Plug>'}
 
@@ -70,12 +65,3 @@ on_ft = ['vim', 'json', 'go', 'html', 'css', 'toml', 'xml', 'Dockerfile', 'Makef
 [[plugins]]
 repo = 'kizza/actionmenu.nvim'
 on_path = '.*'
-
-[[plugins]]
-repo = 'chrisbra/Colorizer'
-on_cmd = ['ColorHighlight', 'ColorToggle']
-hook_add = """
-let g:colorizer_fgcontrast = 0
-let g:colorizer_hex_pattern = ['#\?', '\%(\x\{6}\)', '']
-"""
-

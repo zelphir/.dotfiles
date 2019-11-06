@@ -21,10 +21,13 @@ let g:base00d           = '#18252c' " darker bg
 
 "coc settings
 " ---------------------------------------------------------
-" if dein#tap('coc.nvim')
-"   exe 'hi CocFloating guibg='.g:base00d
-"   exe 'hi CocCodeLens guifg='.g:base02 .' gui=italic'
-" endif
+if dein#tap('coc.nvim')
+  exe 'hi CocFloating guibg='.g:base00d
+  exe 'hi CocCodeLens guifg='.g:base02 .' gui=italic'
+  hi CocErrorHighlight gui=undercurl,bold guifg=red guisp=red
+  hi CocWarningHighlight gui=undercurl,bold guisp=yellow
+  hi CocInfoHighlight gui=undercurl guisp=cyan
+endif
 "
 " if dein#tap('fzf.vim')
 "   exe 'hi FzfFloating guibg='.g:base00d

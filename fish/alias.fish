@@ -76,12 +76,12 @@ function list-docker --description "List internal ips and names for docker conta
   docker ps -q | xargs -n 1 docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}' | sed 's/ \// /'
 end
 
-function node-tnl -a url -a port --description "ssh tunne for node debugger"
+function ssh-tnl -a url -a port --description "ssh tunnel i.e. for node debugger"
   if test -z "$url"
     echo "Provide a url to tunnel"
   else
     set -q port[1]; or set port "9230"
-    echo "Tunneling `$url` node debugger on port $port..."
+    echo "Tunneling `$url` on port $port..."
     ssh -nNT -L $port:127.0.0.1:$port $url
   end
 end

@@ -51,7 +51,7 @@
   "git.conflictedDecorator": "",
   "git.enableGutters": true,
   "git.addGBlameToBufferVar": true,
-  "git.addGBlameToVirtualText": true,
+  // "git.addGBlameToVirtualText": true,
   "git.virtualTextPrefix": " ❯❯❯ ",
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",

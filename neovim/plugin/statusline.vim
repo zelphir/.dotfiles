@@ -65,7 +65,7 @@ function! s:ActiveStatusLine()
     if !empty(get(b:, 'coc_diagnostic_info', {}))
       let s:statusline.="%#DiagnosticSymbol#"
       let s:statusline.="\ "
-      let s:statusline.=""
+      let s:statusline.="  "
       let s:statusline.="\ "
     endif
 

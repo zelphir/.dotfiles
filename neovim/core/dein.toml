@@ -21,10 +21,8 @@ let g:polyglot_disabled = [
 '''
 
 [[plugins]]
-# repo = 'taigacute/gruvbox9'
 repo = 'mhartington/oceanic-next'
 # repo = '/Volumes/Workspace/oceanic-next-ext'
-# repo = 'sainnhe/vim-color-forest-night'
 hook_add = '''
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
@@ -34,14 +32,14 @@ let g:oceanic_next_terminal_italic = 1
 repo = 'lifepillar/vim-colortemplate'
 
 [[plugins]]
-repo = 'bagrat/vim-buffet'
-hook_add = 'source $NVIM_HOME/layers/ui/buffet/config.vim'
-
-[[plugins]]
 repo = 'neoclide/coc.nvim'
 build = 'yarn install --frozen-lockfile'
 merged = 0
 hook_add = 'source $NVIM_HOME/layers/completition/coc/config.vim'
+
+[[plugins]]
+repo = 'rrethy/vim-hexokinase'
+build = 'make hexokinase'
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
@@ -105,6 +103,10 @@ repo = 'junegunn/rainbow_parentheses.vim'
 hook_add = """
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 """
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_source = 'source $NVIM_HOME/layers/ui/indentline/config.vim'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'

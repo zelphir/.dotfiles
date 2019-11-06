@@ -15,5 +15,5 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[Makefile]
+[Makefile, *.go]
 indent_style = tab

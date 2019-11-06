@@ -75,7 +75,7 @@ set signcolumn=auto
 set completefunc=emoji#complete
 set completeopt=menuone,longest,preview
 set list
-set listchars=eol:¬,tab:»·,nbsp:+,trail:·,extends:→,precedes:←
+set listchars=eol:¬,tab:▸\ ,nbsp:+,trail:•,extends:→,precedes:←
 set showbreak=↪\              " Wrap lines character
 set linebreak
 set breakindent
