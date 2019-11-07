@@ -161,6 +161,15 @@ function! s:GetVisibleRange(length_limit, buffer_padding)
   return [left_i, right_i]
 endfunction
 
+func AddIndex(index, elem)
+  let a:elem.index = a:index
+  return a:elem
+endfunc
+
+function! SortById(i1, i2)
+  return get(a:i1, 'buffer_id') - get(a:i2, 'buffer_id')
+endfunction
+
 function! s:GetBufferElements(capacity, buffer_padding)
   let [left_i, right_i] = s:GetVisibleRange(a:capacity, a:buffer_padding)
   " TODO: evaluate if calling this ^ twice will get better visuals
@@ -170,14 +179,6 @@ function! s:GetBufferElements(capacity, buffer_padding)
   endif
 
   let buffer_elems = []
-
-  let trunced_left = left_i
-  if trunced_left
-    let left_trunc_elem = {}
-    let left_trunc_elem.type = "LeftTrunc"
-    let left_trunc_elem.value = g:mytl_left_trunc_icon . " " . trunced_left
-    call add(buffer_elems, left_trunc_elem)
-  endif
 
   for i in range(left_i, right_i)
     let buffer_id = s:buffer_ids[i]
@@ -192,7 +193,6 @@ function! s:GetBufferElements(capacity, buffer_padding)
     endif
 
     let elem = {}
-    let elem.index = i + 1
     let elem.value = buffer.name
     let elem.buffer_id = buffer_id
     let elem.is_modified = getbufvar(buffer_id, '&mod')
@@ -206,6 +206,19 @@ function! s:GetBufferElements(capacity, buffer_padding)
     call add(buffer_elems, elem)
   endfor
 
+  " Sort buffers by buffer_id"
+  let buffer_elems = sort(buffer_elems, "SortById")
+  " Add index to dict
+  call map(buffer_elems, function('AddIndex'))
+
+  let trunced_left = left_i
+  if trunced_left
+    let left_trunc_elem = {}
+    let left_trunc_elem.type = "LeftTrunc"
+    let left_trunc_elem.value = g:mytl_left_trunc_icon . " " . trunced_left
+    call insert(buffer_elems, left_trunc_elem)
+  endif
+
   let trunced_right = (len(s:buffers) - right_i - 1)
   if trunced_right > 0
     let right_trunc_elem = {}
@@ -215,10 +228,6 @@ function! s:GetBufferElements(capacity, buffer_padding)
   endif
 
   return buffer_elems
-endfunction
-
-function! SortById(i1, i2)
-  return get(a:i1, 'buffer_id') - get(a:i2, 'buffer_id')
 endfunction
 
 function! s:GetAllElements(capacity, buffer_padding)
@@ -238,7 +247,6 @@ function! s:GetAllElements(capacity, buffer_padding)
     endif
   endfor
 
-  let tab_elems = sort(tab_elems, "SortById")
   let end_elem = {"type": "End", "value": ""}
   call add(tab_elems, end_elem)
 
@@ -431,4 +439,3 @@ function! mytl#bonly(bang, buffer)
     call mytl#bwipe(a:bang, b)
   endfor
 endfunction
-
