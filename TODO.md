@@ -7,3 +7,5 @@
 * spaces for unicode chars
 * sudo fish warnig TERM
 * vim match tags
+* weird chars in prompt
+* Fix tabline ModCurrentBuffer

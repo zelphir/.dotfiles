@@ -23,6 +23,7 @@ set -x TSC_WATCHFILE 'UseFsEventsWithFallbackDynamicPolling'
 set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --glob "!.git/*" --glob "!package-lock.json" --glob "!yarn.lock" --glob "!node_modules/*"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 set -x FZF_TMUX 1
+# set -x JENV_ROOT /usr/local/opt/jenv
 
 # use vi-mode
 set -U fish_key_bindings fish_vi_key_bindings
@@ -35,6 +36,7 @@ else
   set homebrew /usr/local/bin
 end
 
+# set jenv /usr/local/opt/jenv/bin
 set default_path /usr/bin /usr/sbin /bin /sbin
 set gnubin /usr/local/opt/coreutils/libexec/gnubin
 set gnused /usr/local/opt/gnu-sed/libexec/gnubin
@@ -42,7 +44,8 @@ set fzf /usr/local/opt/fzf/bin
 set go $GOPATH/bin
 set rust $HOME/.cargo/bin
 set yarn $HOME/.yarn/bin
-set fish_user_paths $fzf $yarn $gnused $gnubin $homebrew $go $rust $default_path
+set yarn_global (yarn global bin)
+set fish_user_paths $fzf $yarn $yarn_global $gnused $gnubin $homebrew $go $rust $default_path
 
 # Start tmux
 if [ (id -u) != 0 ]
@@ -74,3 +77,15 @@ end
 if test -f $HOME/.config/fish/completions.fish
   source $HOME/.config/fish/completions.fish
 end
+
+# status --is-interactive; and source (jenv init -|psub)
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/serverless.fish ]; and . /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/sls.fish ]; and . /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/sls.fish
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/slss.fish ]; and . /Volumes/Workspace/Kraken/slack-release-bot/node_modules/tabtab/.completions/slss.fish

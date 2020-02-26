@@ -19,11 +19,11 @@ on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'types
 # repo = 'othree/yajs.vim'
 # on_ft = ['javascript', 'javascript.jsx', 'javascriptreact', 'jsx']
 
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
 # [[plugins]]
-# repo = 'HerringtonDarkholme/yats.vim'
-# on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']
+# repo = 'leafgarland/typescript-vim'
+[[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescript', 'typescript.tsx', 'typescriptreact', 'tsx']
 
 [[plugins]]
 repo = 'neoclide/vim-jsx-improve'
@@ -65,3 +65,8 @@ on_ft = ['vim', 'json', 'go', 'html', 'css', 'toml', 'xml', 'Dockerfile', 'Makef
 [[plugins]]
 repo = 'kizza/actionmenu.nvim'
 on_path = '.*'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+build = 'GoUpdateBinaries'

@@ -155,5 +155,11 @@
   "eslint.autoFixOnSave": true,
 
   // custom languageservers
-  "languageserver": {}
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
 }

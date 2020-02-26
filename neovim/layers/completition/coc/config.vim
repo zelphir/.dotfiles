@@ -17,7 +17,6 @@ let g:coc_global_extensions = [
       \ 'coc-gitignore',
       \ 'coc-yank',
       \ 'coc-explorer',
-      \ 'coc-go',
       \ 'coc-rls'
       \ ]
 
